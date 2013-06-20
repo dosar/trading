@@ -1,25 +1,19 @@
 import org.joda.time.LocalDate
 import scala.io.Source
+import tradinganalyzers.{TradingDaysAnalyzer, TradingOp}
+import tradingideas.TradingIdea
 import tradingsystems._
-import tradingsystems.Candle
-import tradingsystems.Candle
-import tradingsystems.CandleCalculator._
-import tradingsystems.TradingAnalytics._
-import tradingsystems.TradingIdea._
-import tradingsystems.YearProfit
+import TradingIdea._
 
 trait AnalyticalStatisticsPrinter
 {
-    import CandleCalculator._
-    import TradingAnalytics._
-
     val data: List[Candle]
 
-    def analyzeIdea(candles: List[(Candle, Profit)]) =
+    def analyzeIdea(candleOps: (List[Candle], TradingOp)*) =
     {
         println("all days count " + data.size)
-        println("idea days count " + candles.size)
-        println(analyzeProfit(candles).map
+        println("idea days count " + candleOps.map(_._1.size).sum)
+        println(TradingDaysAnalyzer(candleOps:_*).getStatistics.map
         {
             case yp: YearProfit =>
                 val plusProfits = yp.monthProfits.filter(_.profit > 0).map(_.month)
@@ -32,38 +26,16 @@ trait AnalyticalStatisticsPrinter
         }.mkString("\n", "\n", "\n"))
     }
 
-    def fastAnalyzeIdea(candles: List[(Candle, Profit)], prefix: String = "") =
-        println(getStringStatistics(candles, prefix))
-
-    def getStringStatistics(candles: List[(Candle, Profit)], prefix: String = "") =
+    def getStringStatistics(prefix: String, candleOps: (List[Candle], TradingOp)*) =
     {
-        val yearProfits = analyzeProfit(candles).filter
+        val yearProfits = TradingDaysAnalyzer(candleOps:_*).getStatistics
+        if(yearProfits.exists(yp => yp.year == 2013 && yp.yearProfit / yp.avgPrice > 0.19))
         {
-            case yearProfit: YearProfit => true
-            case x => false
-        }.map(_.asInstanceOf[YearProfit])
-        val yearProfitsDescription: String = yearProfits.map(_.yearProfitString).mkString(", ")
-        val monthAvgs = yearProfits.map(yp => yp.avgSlumpString + " " +  yp.monthSlumpsString).mkString(", ")
-        prefix + " " + candles.size + "/" + data.size + " " + yearProfitsDescription + " slumps: " + monthAvgs
-    }
-
-    def standardTest(initialStop: Double = 1)
-    {
-        val input = for(trendyDay <- 2 to 10; stop <- List(initialStop, initialStop / 2, initialStop / 4)) yield (trendyDay, stop)
-        val statistics = for((trendyDay, stop) <- input.par) yield
-        {
-            val tooPositive = zipWithProfit(tooTrendyCandles(data, _.buyProfit > 0, trendyDay), _.sellProfit, _.sellSlump, stop)
-            val tooNegative = zipWithProfit(tooTrendyCandles(data, _.sellProfit > 0, trendyDay), _.buyProfit, _.buySlump, stop)
-            getStringStatistics(tooPositive ++ tooNegative, "days:" + trendyDay + " stop:" + stop.formatted("%.2f"))
+            val yearProfitsDescription: String = yearProfits.map(_.yearProfitString).mkString(", ")
+            val monthAvgs = yearProfits.map(yp => yp.avgSlumpString + " " +  yp.monthSlumpsString).mkString(", ")
+            prefix + " " + candleOps.map(_._1.size).sum.formatted("%03d") + "/" + data.size + " " + yearProfitsDescription + " slumps: " + monthAvgs
         }
-        statistics.toList.sortBy(_.take(6)).foreach(println)
-    }
-
-    def detailedTest(stop: Double = 1, trendyDay: Int = 2)
-    {
-        val tooPositive = zipWithProfit(tooTrendyCandles(data, _.buyProfit > 0, trendyDay), _.sellProfit, _.sellSlump, stop)
-        val tooNegative = zipWithProfit(tooTrendyCandles(data, _.sellProfit > 0, trendyDay), _.buyProfit, _.buySlump, stop)
-        analyzeIdea(tooPositive ++ tooNegative)
+        else null
     }
 
     def standardImport(importFile: String) =
