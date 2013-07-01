@@ -1,7 +1,7 @@
 package tradingideas
 
 import tradingsystems.Candle
-import tradinganalyzers.TradingOp
+import tradinganalyzers.{TradingPosition, TradingOp}
 
 object TradingIdea
 {
@@ -13,16 +13,19 @@ object TradingIdea
 //    def tooNegative3Days(list: List[Candle]) = tooTrendyCandles(list, _.sellProfit > 0, 3)
 //    def tooNegative4Days(list: List[Candle]) = tooTrendyCandles(list, _.sellProfit > 0, 4)
 //
-    def tooTrendyCandles(list: List[Candle], condition: Candle => Boolean, trendDays: Int) =
-        new TooTrendyCandles(condition, trendDays, null).filterInterestingDays(list).map(_._1)
+    def tooTrendyCandles(list: Vector[Candle], condition: Candle => Boolean, trendDays: Int) =
+        new TooTrendyCandles(condition, trendDays).filterInterestingDays(list)
 }
 
 trait TradingIdea
 {
-    def filterInterestingDays(list: List[Candle]): List[(Candle, TradingOp)]
+    def filterInterestingDays(list: Vector[Candle]): Vector[TradingPosition]
 
-    protected def checkCondition(list: List[Candle], condition: Candle => Boolean, range: Range): Boolean =
+    protected def checkCondition(list: Vector[Candle], condition: Candle => Boolean, range: Range): Boolean =
         range.forall(index => condition(list(index)))
 
-    protected def shiftList(list: List[Candle], shift: Int) = list.zipWithIndex.drop(shift)
+    protected def checkCondition(list: Vector[Candle], condition: Candle => Boolean): Boolean =
+        list.forall(condition)
+
+    protected def shiftList(list: Vector[Candle], shift: Int) = list.zipWithIndex.drop(shift)
 }

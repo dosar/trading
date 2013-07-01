@@ -1,0 +1,39 @@
+package logic
+
+import org.junit.runner.RunWith
+import org.scalatest.junit.JUnitRunner
+import org.scalatest.FunSuite
+import tradinganalyzers.{TradingOp, TradingPosition, TradingPositionAnalyzer}
+import tradingsystems.{MonthProfit, YearProfit, Candle}
+import tradingideas.VolatileCandles
+import org.joda.time.LocalDate
+
+@RunWith(classOf[JUnitRunner])
+class TradingPositionAnalyzer_Test extends FunSuite with TestUtils with AnalyticalStatisticsPrinter
+{
+    lazy val data = standardImport("g:\\work\\trademachine\\SBER_2010_2013_1day.txt")
+        .filter(_.date.getYear == 2013)
+    val sell = TradingOp.sell(1, 5)
+    val tradingPositions = new VolatileCandles(3, 3, _.buyProfit > 0).filterInterestingDays(data).map((_, sell))
+    val profit = new TradingPositionAnalyzer(tradingPositions).positionDatesProfit
+    val statistics = new TradingPositionAnalyzer(tradingPositions).getStatistics
+    val yearProfit = statistics(0)
+    val monthProfits = yearProfit.monthProfits
+
+    test("1 day"){ assert((new LocalDate(2013, 1, 15), new LocalDate(2013, 1, 17), -0.45) === profit(0)) }
+    test("2 day"){ assert((new LocalDate(2013, 1, 21), new LocalDate(2013, 1, 23), 0.10) === profit(1)) }
+    test("3 day"){ assert((new LocalDate(2013, 2, 13), new LocalDate(2013, 2, 14), -1.09) === profit(2)) }
+    test("4 day"){ assert((new LocalDate(2013, 3, 7), new LocalDate(2013, 3, 11), -1.05) === profit(3)) }
+    test("5 day"){ assert((new LocalDate(2013, 4, 5), new LocalDate(2013, 4, 9), -1) === profit(4)) }
+    test("6 day"){ assert((new LocalDate(2013, 4, 11), new LocalDate(2013, 4, 12), 5.15) === profit(5)) }
+    test("7 day"){ assert((new LocalDate(2013, 5, 6), new LocalDate(2013, 5, 7), -1.03) === profit(6)) }
+    test("8 day"){ assert((new LocalDate(2013, 5, 22), new LocalDate(2013, 5, 22), -1.08) === profit(7)) }
+    test("9 day"){ assert((new LocalDate(2013, 5, 23), new LocalDate(2013, 5, 24), 5.442) === profit(8)) }
+
+    test("test profit statistics 1 month"){assert(MonthProfit(1, -0.35, -0.45, 2) === monthProfits(0))}
+    test("test profit statistics 2 month"){assert(MonthProfit(2, -1.09, -1.09, 1) === monthProfits(1))}
+    test("test profit statistics 3 month"){assert(MonthProfit(3, -1.05, -1.05, 1) === monthProfits(2))}
+    test("test profit statistics 4 month"){assert(MonthProfit(4, 4.15, -1, 2) === monthProfits(3))}
+    test("test profit statistics 5 month"){assert(MonthProfit(5, 3.332, -2.11, 3) === monthProfits(4))}
+    test("test profit statistics year"){ assert(YearProfit(2013, 4.992, -3.49, 100, monthProfits) === yearProfit) }
+}

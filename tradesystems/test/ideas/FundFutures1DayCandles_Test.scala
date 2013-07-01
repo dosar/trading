@@ -1,3 +1,6 @@
+package ideas
+
+import logic.TooTrendyDaysStatisticalPrinter
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.junit.JUnitRunner
@@ -10,9 +13,9 @@ import tradingsystems.Candle
 @RunWith(classOf[JUnitRunner])
 class FundFutures1DayCandles_Test extends FunSuite
 {
-    class SimpleTest(tiker: String) extends AnalyticalStatisticsPrinter
+    class SimpleTest(tiker: String) extends TooTrendyDaysStatisticalPrinter
     {
-        val data: List[Candle] = standardImport("g:\\work\\trademachine\\goods\\" + tiker + "_2010_2013_1day.txt")
+        val data = standardImport("g:\\work\\trademachine\\goods\\" + tiker + "_2010_2013_1day.txt")
     }
 
     test("brent 1 day candles standard test") { new SimpleTest("BRENT").standardTest(5, 1) }
@@ -25,7 +28,7 @@ class FundFutures1DayCandles_Test extends FunSuite
     test("gold detailed")
     {
         val tester = new SimpleTest("GOLD")
-        tester.detailedTest(stop = 12, trendyDays = 4)//the best
-        tester.detailedTest(stop = 3, trendyDays = 3)
+        tester.detailedTest(12, 1, 4, 4)//the best
+        tester.detailedTest(3, 1, 3, 3)
     }
 }

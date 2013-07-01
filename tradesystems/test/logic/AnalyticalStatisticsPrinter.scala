@@ -1,19 +1,19 @@
+package logic
+
 import org.joda.time.LocalDate
 import scala.io.Source
-import tradinganalyzers.{TradingDaysAnalyzer, TradingOp}
+import tradinganalyzers.{TradingPositionAnalyzer, TradingPosition, TradingDaysAnalyzer, TradingOp}
 import tradingideas.TradingIdea
 import tradingsystems._
 import TradingIdea._
 
 trait AnalyticalStatisticsPrinter
 {
-    val data: List[Candle]
-
-    def analyzeIdea(candleOps: (List[Candle], TradingOp)*) =
+    def analyzeIdea(candleOps: (Vector[TradingPosition], TradingOp)*) =
     {
-        println("all days count " + data.size)
         println("idea days count " + candleOps.map(_._1.size).sum)
-        println(TradingDaysAnalyzer(candleOps:_*).getStatistics.map
+        val positionOps = candleOps.flatMap{case (positions, op) => positions.map((_, op))}.toVector
+        println(new TradingPositionAnalyzer(positionOps).getStatistics.map
         {
             case yp: YearProfit =>
                 val plusProfits = yp.monthProfits.filter(_.profit > 0).map(_.month)
@@ -26,17 +26,22 @@ trait AnalyticalStatisticsPrinter
         }.mkString("\n", "\n", "\n"))
     }
 
-    def getStringStatistics(prefix: String, candleOps: (List[Candle], TradingOp)*) =
+    def getStringStatistics(prefix: String, candleOps: (Vector[TradingPosition], TradingOp)*) =
     {
-        val yearProfits = TradingDaysAnalyzer(candleOps:_*).getStatistics
-        if(yearProfits.exists(yp => yp.year == 2013 && yp.yearProfit / yp.avgPrice > 0.19))
+        val positionOps = candleOps.flatMap{case (positions, op) => positions.map((_, op))}.toVector
+        val yearProfits = new TradingPositionAnalyzer(positionOps).getStatistics
+        if(isUsefulOutput(yearProfits))
         {
-            val yearProfitsDescription: String = yearProfits.map(_.yearProfitString).mkString(", ")
-            val monthAvgs = yearProfits.map(yp => yp.avgSlumpString + " " +  yp.monthSlumpsString).mkString(", ")
-            prefix + " " + candleOps.map(_._1.size).sum.formatted("%03d") + "/" + data.size + " " + yearProfitsDescription + " slumps: " + monthAvgs
+            val yearProfitsDescription: String = yearProfits.map(_.yearProfitString).mkString("|")
+            val monthAvgs = yearProfits.map(yp => yp.avgSlumpString + "|" +  yp.monthSlumpsString).mkString("|")
+//            prefix + " " + candleOps.map(_._1.size).sum.formatted("%03d") + "/" + data.size + " " + yearProfitsDescription + " slumps: " + monthAvgs
+            prefix + " | " + yearProfitsDescription + " | " + monthAvgs
         }
         else null
     }
+
+    def isUsefulOutput(yearProfits: Vector[YearProfit]): Boolean =
+        yearProfits.exists(yp => yp.year == 2013 && (yp.yearProfit / yp.avgPrice) > 0.19)
 
     def standardImport(importFile: String) =
     {
@@ -46,6 +51,6 @@ trait AnalyticalStatisticsPrinter
         {
             Candle(date = new LocalDate(date.take(4).toInt, date.take(6).drop(4).toInt, date.take(8).drop(6).toInt),
                 open.toDouble, high.toDouble, low.toDouble, close.toDouble)
-        }).toList
+        }).toVector
     }
 }

@@ -1,16 +1,16 @@
 package tradingideas
 
 import tradingsystems.Candle
-import tradinganalyzers.TradingOp
+import tradinganalyzers.{TradingPosition, TradingOp}
 
-class VolatileCandles(checkDays: Int, positionDays: Int, op: TradingOp, condition: Candle => Boolean) extends TradingIdea
+case class VolatileCandles(checkDays: Int, positionDays: Int, checkDaysCondition: Candle => Boolean) extends TradingIdea
 {
-    def filterInterestingDays(list: List[Candle]): List[(Candle, TradingOp)] =
+    def filterInterestingDays(list: Vector[Candle]): Vector[TradingPosition] =
     {
-        for((candle, index) <- shiftList(list, checkDays)
-            if checkCondition(list, condition, index - checkDays to index - 1) && list.size - index >= positionDays;
-            posCandles = list.slice(index, index + positionDays)
-        )
-        yield (Candle(candle.date, candle.open, posCandles.map(_.high).max, posCandles.map(_.low).min, posCandles.last.close), op)
+        val listView = list.view
+        val result = listView.zipWithIndex.slice(checkDays, list.size - positionDays + 1)
+            .filter{case (candle, index) => listView.slice(index - checkDays, index).forall(checkDaysCondition)}
+            .map{case (candle, index) => TradingPosition(listView.slice(index, index + positionDays).toVector)}
+        result.toVector
     }
 }
