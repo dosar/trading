@@ -17,29 +17,20 @@ class VolatileCandles_Test extends FunSuite with TestUtils with AnalyticalStatis
     lazy val data = standardImport("g:\\work\\trademachine\\SBER_2010_2013_1day.txt")
         .filter(_.date.getYear == 2013)
 
-    test("smoke")
-    {
-        val candles = new VolatileCandles(3, 2, _.buyProfit > 0).filterInterestingDays(Vector(
-            Candle(null, 100, 103, 99, 101),
-            Candle(null, 100, 103, 99, 101),
-            Candle(null, 100, 103, 99, 101),
-            Candle(new LocalDate(2013, 6, 21), 100, 103, 99, 101),
-            Candle(null, 105, 101, 88, 110),
-            Candle(null, 105, 101, 88, 110),
-            Candle(null, 105, 101, 88, 110),
-            Candle(null, 105, 101, 88, 110),
-            Candle(null, 105, 101, 88, 110),
-            Candle(null, 105, 101, 88, 110),
-            Candle(null, 105, 101, 88, 110),
-            Candle(null, 105, 101, 88, 110)
-        ))
-        assert(1 === candles.size)
-        assert(Candle(new LocalDate(2013, 6, 21), 100, 103, 88, 110) === candles.head)
-    }
-
     test("filter trading days for 3 days rising SBER")
     {
-        def position(candles: Candle*) = TradingPosition(candles.toVector)
+        def position(candles: Candle*) = new TradingPosition(candles:_*)
+        {
+            override def equals(obj: Any): Boolean =
+            {
+                obj match
+                {
+                    case TradingPosition(anotherCandles) => candles.toList == anotherCandles.toList
+                    case x => false
+                }
+            }
+        }
+
         val tradingPositions = new VolatileCandles(3, 3, _.buyProfit > 0).filterInterestingDays(data)
         assert(position(Candle(new LocalDate(2013, 1, 15), 100.7, 101.00, 99.78, 99.85),
             Candle(new LocalDate(2013, 1, 16), 99.93, 100.13, 99.19, 99.97),

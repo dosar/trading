@@ -10,40 +10,41 @@ import util.TradingImplicits.toSeqImplicits
  * @since 23.06.13
  */
 
-case class TradingPosition(candles: Vector[Candle])
+case class TradingPosition(candles: Array[Candle])
 {
-    def this(candles: Candle*) = this(candles.toVector)
+    def this(candles: Candle*) = this(candles.toArray)
 
     val positionDate = candles.head.date
     val open = candles.head.open
-    val (highCandle, highCandleIndex) = candles.view.zipWithIndex.maxBy{case (candle, index) => candle.high}
+    val (highCandle, highCandleIndex) = candles.zipWithIndex.maxBy{case (candle, index) => candle.high}
     val high = highCandle.high
-    val (lowCandle, lowCandleIndex) = candles.view.zipWithIndex.minBy{case (candle, index) => candle.low}
+    val (lowCandle, lowCandleIndex) = candles.zipWithIndex.minBy{case (candle, index) => candle.low}
     val low = lowCandle.low
     val close = candles.last.close
 }
 
+//часто неотсортированный массив здесь приходит
 class TradingPositionAnalyzer(positions: Vector[(TradingPosition, TradingOp)])
 {
     def getStatistics =
     {
         val datesProfits = positionDatesProfit
         val yearProfits = datesProfits
-            .groupBy{case (date, _, _) => (date.getYear, date.getMonthOfYear)}.toVector
-            .map{case ((year, month), profits) => (year, new MonthProfit(month, balanceHistory(profits.view.map(_._3))))}
-            .groupBy{case (year, _) => year}.toVector
+            .groupBy{case (date, _, _) => (date.getYear, date.getMonthOfYear)}.toArray
+            .map{case ((year, month), profits) => (year, new MonthProfit(month, balanceHistory(profits.map(_._3))))}
+            .groupBy{case (year, _) => year}.toArray
             .map
             {
                 case (year, yearMonthProfits) =>
-                    val monthProfits = yearMonthProfits.view.map(_._2).sortBy(_.month)
-                    val yearBalanceHistory = balanceHistory(datesProfits.view.filter(_._1.getYear == year).map(_._3))
+                    val monthProfits = yearMonthProfits.map(_._2).sortBy(_.month)
+                    val yearBalanceHistory = balanceHistory(datesProfits.filter(_._1.getYear == year).map(_._3))
                     new YearProfit(year, yearBalanceHistory, avgPrice(positions, year), monthProfits.toVector)
             }
-        yearProfits.toVector.sortBy(_.year)
+        yearProfits.sortBy(_.year).toVector
     }
 
-    def positionDatesProfit = positions.view.sortBy(_._1.positionDate.toDate)
-        .map
+    def positionDatesProfit =
+        positions.sortBy(_._1.positionDate.toDate).map
         {
             case (position, op) =>
                 val (profit, index) = op.profit(position)
@@ -56,7 +57,7 @@ class TradingPositionAnalyzer(positions: Vector[(TradingPosition, TradingOp)])
                 if(previousEndDate.isEmpty || previousEndDate.get.compareTo(startDate) < 0)
                     (startDate, endDate, profit) :: list
                 else list
-        }.reverse.toVector
+        }.toVector
 
     private def avgPrice(positions: Vector[(TradingPosition, TradingOp)], year: Int) =
         positions.view.filter(_._1.positionDate.getYear == year).avg(_._1.open)

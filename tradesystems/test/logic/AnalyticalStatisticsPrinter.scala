@@ -9,6 +9,8 @@ import TradingIdea._
 
 trait AnalyticalStatisticsPrinter
 {
+    val targetProfit: Double = 0.19
+
     def analyzeIdea(candleOps: (Vector[TradingPosition], TradingOp)*) =
     {
         println("idea days count " + candleOps.map(_._1.size).sum)
@@ -41,7 +43,8 @@ trait AnalyticalStatisticsPrinter
     }
 
     def isUsefulOutput(yearProfits: Vector[YearProfit]): Boolean =
-        yearProfits.exists(yp => yp.year == 2013 && (yp.yearProfit / yp.avgPrice) > 0.19)
+        yearProfits.length == 4 && yearProfits(3).strictProfit(targetProfit) && yearProfits(2).positiveProfit &&
+            yearProfits(1).positiveProfit && yearProfits(0).positiveProfit
 
     def standardImport(importFile: String) =
     {

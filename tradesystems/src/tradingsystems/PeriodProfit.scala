@@ -17,6 +17,10 @@ case class YearProfit(year: Int, yearProfit: Double, yearSlump: Double, avgPrice
     lazy val monthAverageSlump = monthProfits.map(_.slump).sum / monthProfits.size
     lazy val daysCount = monthProfits.map(_.daysCount).sum.formatted("%03d")
 
+    def positiveProfit = yearProfit > 0
+
+    def strictProfit(targetProfit: Double) = yearProfit / avgPrice > targetProfit
+
     override def toString: String = "year:" + year + " profit:" + yearProfit.formatted("%.2f") +
         " yearSlump:" + yearSlump.formatted("%.2f") + " monthAverageProfit:" + monthAverageProfit.formatted("%.2f") +
         " monthAverageSlump:" + monthAverageSlump.formatted("%.2f")

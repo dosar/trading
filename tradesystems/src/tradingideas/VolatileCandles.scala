@@ -7,10 +7,14 @@ case class VolatileCandles(checkDays: Int, positionDays: Int, checkDaysCondition
 {
     def filterInterestingDays(list: Vector[Candle]): Vector[TradingPosition] =
     {
-        val listView = list.view
-        val result = listView.zipWithIndex.slice(checkDays, list.size - positionDays + 1)
-            .filter{case (candle, index) => listView.slice(index - checkDays, index).forall(checkDaysCondition)}
-            .map{case (candle, index) => TradingPosition(listView.slice(index, index + positionDays).toVector)}
+        val checkRange = 0 until checkDays
+        val positionRange = 0 until positionDays
+        def checkPreDaysCond(index: Int) = checkRange.forall(checkInd => checkDaysCondition(list(index + checkInd)))
+        def toVector(index: Int) = positionRange.map(ind => list(index + ind)).toArray
+
+        val result = list.zipWithIndex.slice(checkDays, list.size - positionDays + 1)
+            .filter{case (_, index) => checkPreDaysCond(index - checkDays)}
+            .map{case (_, index) => TradingPosition(toVector(index))}
         result.toVector
     }
 }

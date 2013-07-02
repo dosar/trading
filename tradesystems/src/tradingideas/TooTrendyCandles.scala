@@ -9,6 +9,6 @@ class TooTrendyCandles(condition: Candle => Boolean, trendDays: Int) extends Tra
     {
         for((candle, index) <- shiftList(list, trendDays)
             if checkCondition(list, condition, index - trendDays to index - 1))
-        yield TradingPosition(Vector(candle))
+        yield new TradingPosition(candle)
     }
 }

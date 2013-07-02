@@ -13,7 +13,7 @@ import org.joda.time.LocalDate
 @RunWith(classOf[JUnitRunner])
 class Stocks1DayCandlesVolatileDays_Test extends FunSuite
 {
-    class SimpleTest(tiker: String, targetProfit: Double = 0.19) extends VolatileDaysStatisticalPrinter
+    class SimpleTest(tiker: String, override val targetProfit: Double = 0.19) extends VolatileDaysStatisticalPrinter
     {
         val data = standardImport("g:\\work\\trademachine\\" + tiker + "_2010_2013_1day.txt")
 
@@ -29,9 +29,6 @@ class Stocks1DayCandlesVolatileDays_Test extends FunSuite
             println(tiker)
             super.standardTest(initialStopPercent, initialTakeProfitPercent)
         }
-
-        override def isUsefulOutput(yearProfits: Vector[YearProfit]): Boolean =
-            yearProfits.exists(yp => yp.year == 2013 && (yp.yearProfit / yp.avgPrice) > targetProfit)
     }
 
     test("sberbank 1 day candles percent stop, take profit") { new SimpleTest("SBER").standardTest(5, 1) }
@@ -41,6 +38,14 @@ class Stocks1DayCandlesVolatileDays_Test extends FunSuite
     test("novatek 1 day candles percent stop, take profit") { new SimpleTest("NVTK").standardTest(5, 1) }
     test("rosneft 1 day candles percent stop, take profit") { new SimpleTest("ROSN").standardTest(5, 1) }
     test("rostelecom 1 day candles percent stop, take profit") { new SimpleTest("RTKM", 0.25).standardTest(5, 1) }
+
+    test("2, 5 sell buy")
+    {
+        new SimpleTest("SBER")
+        {
+            analyze(2, 5, TradingOp.sell(4, 3), TradingOp.buy(4, 3))//few slump months
+        }
+    }
 
     test("sberbank volatile candles details")
     {
