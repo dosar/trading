@@ -23,12 +23,14 @@ case class TradingPosition(candles: Array[Candle])
     val close = candles.last.close
 }
 
-//часто неотсортированный массив здесь приходит
-class TradingPositionAnalyzer(positions: Vector[(TradingPosition, TradingOp)])
+class TradingPositionAnalyzer(positionOps: (Vector[TradingPosition], TradingOp)*)
 {
-    def getStatistics =
+    val positions = positionOps.flatMap{case (positionsOnly, op) => positionsOnly.map((_, op))}.toVector
+
+    def getStatistics: Vector[YearProfit] = getStatistics(positionDatesProfit)
+
+    def getStatistics(datesProfits: Vector[(LocalDate, LocalDate, Double)]): Vector[YearProfit] =
     {
-        val datesProfits = positionDatesProfit
         val yearProfits = datesProfits
             .groupBy{case (date, _, _) => (date.getYear, date.getMonthOfYear)}.toArray
             .map{case ((year, month), profits) => (year, new MonthProfit(month, balanceHistory(profits.map(_._3))))}
@@ -44,20 +46,22 @@ class TradingPositionAnalyzer(positions: Vector[(TradingPosition, TradingOp)])
     }
 
     def positionDatesProfit =
+    {
         positions.sortBy(_._1.positionDate.toDate).map
-        {
-            case (position, op) =>
-                val (profit, index) = op.profit(position)
-                (position.positionDate, position.candles(index).date, profit)
-        }
-        .foldLeft(List[(LocalDate, LocalDate, Double)]())
-        {
-            case (list, (startDate, endDate, profit)) =>
-                val previousEndDate = list.headOption.map(_._2)
-                if(previousEndDate.isEmpty || previousEndDate.get.compareTo(startDate) < 0)
-                    (startDate, endDate, profit) :: list
-                else list
-        }.toVector
+            {
+                case (position, op) =>
+                    val (profit, index) = op.profit(position)
+                    (position.positionDate, position.candles(index).date, profit)
+            }
+            .foldLeft(List[(LocalDate, LocalDate, Double)]())
+            {
+                case (list, (startDate, endDate, profit)) =>
+                    val previousEndDate = list.headOption.map(_._2)
+                    if(previousEndDate.isEmpty || previousEndDate.get.compareTo(startDate) < 0)
+                        (startDate, endDate, profit) :: list
+                    else list
+            }.reverse.toVector
+    }
 
     private def avgPrice(positions: Vector[(TradingPosition, TradingOp)], year: Int) =
         positions.view.filter(_._1.positionDate.getYear == year).avg(_._1.open)

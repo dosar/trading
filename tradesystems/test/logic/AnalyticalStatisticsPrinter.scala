@@ -2,10 +2,8 @@ package logic
 
 import org.joda.time.LocalDate
 import scala.io.Source
-import tradinganalyzers.{TradingPositionAnalyzer, TradingPosition, TradingDaysAnalyzer, TradingOp}
-import tradingideas.TradingIdea
+import tradinganalyzers.{TradingPositionAnalyzer, TradingPosition, TradingOp}
 import tradingsystems._
-import TradingIdea._
 
 trait AnalyticalStatisticsPrinter
 {
@@ -14,8 +12,7 @@ trait AnalyticalStatisticsPrinter
     def analyzeIdea(candleOps: (Vector[TradingPosition], TradingOp)*) =
     {
         println("idea days count " + candleOps.map(_._1.size).sum)
-        val positionOps = candleOps.flatMap{case (positions, op) => positions.map((_, op))}.toVector
-        println(new TradingPositionAnalyzer(positionOps).getStatistics.map
+        println(new TradingPositionAnalyzer(candleOps:_*).getStatistics.map
         {
             case yp: YearProfit =>
                 val plusProfits = yp.monthProfits.filter(_.profit > 0).map(_.month)
@@ -28,15 +25,16 @@ trait AnalyticalStatisticsPrinter
         }.mkString("\n", "\n", "\n"))
     }
 
-    def getStringStatistics(prefix: String, candleOps: (Vector[TradingPosition], TradingOp)*) =
+    def getStringStatistics(prefix: String, candleOps: (Vector[TradingPosition], TradingOp)*): String =
+        getStringStatistics(prefix, new TradingPositionAnalyzer(candleOps:_*).getStatistics)
+
+    def getStringStatistics(prefix: String, yearProfits: Vector[YearProfit]): String =
     {
-        val positionOps = candleOps.flatMap{case (positions, op) => positions.map((_, op))}.toVector
-        val yearProfits = new TradingPositionAnalyzer(positionOps).getStatistics
         if(isUsefulOutput(yearProfits))
         {
             val yearProfitsDescription: String = yearProfits.map(_.yearProfitString).mkString("|")
-            val monthAvgs = yearProfits.map(yp => yp.avgSlumpString + "|" +  yp.monthSlumpsString).mkString("|")
-//            prefix + " " + candleOps.map(_._1.size).sum.formatted("%03d") + "/" + data.size + " " + yearProfitsDescription + " slumps: " + monthAvgs
+            val monthAvgs = yearProfits.map(yp => yp.avgSlumpString + "|" + yp.monthSlumpsString).mkString("|")
+            //            prefix + " " + candleOps.map(_._1.size).sum.formatted("%03d") + "/" + data.size + " " + yearProfitsDescription + " slumps: " + monthAvgs
             prefix + " | " + yearProfitsDescription + " | " + monthAvgs
         }
         else null
