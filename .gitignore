@@ -1,2 +1,4 @@
 tradesystems/lib/*.jar
 tradesystems/target
+out
+*.iws
