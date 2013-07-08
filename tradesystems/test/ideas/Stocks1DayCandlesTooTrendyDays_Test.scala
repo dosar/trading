@@ -15,22 +15,7 @@ import TradingIdea._
 @RunWith(classOf[JUnitRunner])
 class Stocks1DayCandlesTooTrendyDays_Test extends FunSuite
 {
-    class SimpleTest(tiker: String) extends TooTrendyDaysStatisticalPrinter
-    {
-        val data = standardImport("g:\\work\\trademachine\\" + tiker + "_2010_2013_1day.txt")
-
-        override def standardTest(initialStopPercent: Double, initialTakeProfitPercent: Double)
-        {
-            println(tiker)
-            super.standardTest(initialStopPercent, initialTakeProfitPercent)
-        }
-
-        override def detailedTest(stop: Double, takeProfit: Double, positiveDays: Int, negativeDays: Int)
-        {
-            println(tiker)
-            super.detailedTest(stop, takeProfit, positiveDays, negativeDays)
-        }
-    }
+    class SimpleTest(val ticker: String) extends TooTrendyDaysStatisticalPrinter
 
     test("sberbank 1 day candles percent stop, take profit") { new SimpleTest("SBER").standardTest(5, 1) }
     test("gazprom 1 day candles percent stop, take profit") { new SimpleTest("GAZP").standardTest(5, 1) }

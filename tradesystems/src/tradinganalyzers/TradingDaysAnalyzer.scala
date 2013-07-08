@@ -13,18 +13,20 @@ case class TradingDaysAnalyzer(candleOps: (Vector[Candle], TradingOp)*)
 
     def getStatistics =
     {
-        val ymProfits = (for(((year, month), ymCandles) <- getCandleOps.sortBy(_._1.date.toDate)
-            .groupBy{case (c, _) => (c.date.getYear, c.date.getMonthOfYear)};
-            balance = balanceHistory(ymCandles.view.map{case (candle, op) => op.profit(candle)}))
-        yield (year, new MonthProfit(month, balance), ymCandles.view.map(_._1)))
-            .toList.view.sortBy{case (year, mp, _) => (year, mp.month) }
+        val groupedCandleOps = getCandleOps.sortBy(_._1.date.toDate)
+            .groupBy{case (c, _) => (c.date.getYear, c.date.getMonthOfYear)}
+        val ymProfits =
+        (for(((year, month), ymCandles) <- groupedCandleOps;
+            balance = balanceHistory(ymCandles.map{case (candle, op) => (candle.date, op.profit(candle))}))
+        yield (year, new MonthProfit(month, balance), ymCandles.map(_._1)))
+            .toVector.sortBy{case (year, mp, _) => (year, mp.month) }
 
         val yps = for((year, list) <- ymProfits.groupBy{case (year, _, _) => year};
-            monthProfits = list.view.map(_._2);
-            balance = balanceHistory(monthProfits.view.map(_.profit));
-            candles = list.view.flatMap(_._3))
-        yield YearProfit(year, balance.profit, balance.slump, candles.avg(_.open), monthProfits.toVector)
-        yps.toList.sortBy(_.year)
+            monthProfits = list.map(_._2);
+            balance = balanceHistory(monthProfits);
+            candles = list.flatMap(_._3))
+        yield YearProfit(year, balance, candles.avg(_.open), monthProfits.toVector)
+        yps.toVector.sortBy(_.year)
 //        getCandleOps.map{case (c, op) => (c, op.profit(c))}.sortBy(_._1.date.toDate)
 //            .groupBy{case (c, _) => c.date.getYear -> c.date.getMonthOfYear}.toList.sortBy{case (gr, list) => gr}
 //            .map{case (ym, monthCandle) => ym -> balanceHistory(monthCandle.map(_._2))}

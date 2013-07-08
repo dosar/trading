@@ -7,12 +7,14 @@ import tradingsystems._
 
 trait AnalyticalStatisticsPrinter
 {
+    val ticker: String
+    lazy val data: TradingData = standardImport("g:\\work\\trademachine\\" + ticker + "_2010_2013_1day.txt")
     val targetProfit: Double = 0.19
 
     def analyzeIdea(candleOps: (Vector[TradingPosition], TradingOp)*) =
     {
         println("idea days count " + candleOps.map(_._1.size).sum)
-        println(new TradingPositionAnalyzer(candleOps:_*).getStatistics.map
+        println(new TradingPositionAnalyzer(data, candleOps:_*).getStatistics.map
         {
             case yp: YearProfit =>
                 val plusProfits = yp.monthProfits.filter(_.profit > 0).map(_.month)
@@ -26,15 +28,16 @@ trait AnalyticalStatisticsPrinter
     }
 
     def getStringStatistics(prefix: String, candleOps: (Vector[TradingPosition], TradingOp)*): String =
-        getStringStatistics(prefix, new TradingPositionAnalyzer(candleOps:_*).getStatistics)
+        getStringStatistics(prefix, new TradingPositionAnalyzer(data, candleOps:_*).getStatistics)
 
     def getStringStatistics(prefix: String, yearProfits: Vector[YearProfit]): String =
     {
         if(isUsefulOutput(yearProfits))
         {
             val yearProfitsDescription: String = yearProfits.map(_.yearProfitString).mkString("|")
-            val monthAvgs = yearProfits.map(yp => yp.avgSlumpString + "|" + yp.monthSlumpsString).mkString("|")
-            //            prefix + " " + candleOps.map(_._1.size).sum.formatted("%03d") + "/" + data.size + " " + yearProfitsDescription + " slumps: " + monthAvgs
+//            val monthAvgs = yearProfits.map(yp => yp.worstMonthSlumpString +
+//                yp.balance.negativeStartDatePositions.mkString("|", "|", "|") + yp.monthSlumpsString).mkString("|")
+            val monthAvgs = yearProfits.map(_.monthSlumpsString).mkString("|")
             prefix + " | " + yearProfitsDescription + " | " + monthAvgs
         }
         else null
@@ -46,12 +49,13 @@ trait AnalyticalStatisticsPrinter
 
     def standardImport(importFile: String) =
     {
-        (for(line <- Source.fromFile(importFile).getLines(); cells = line.split(',');
+        val data = (for(line <- Source.fromFile(importFile).getLines(); cells = line.split(',');
             date = cells(0); open = cells(2); high = cells(3); low = cells(4); close = cells(5))
         yield
         {
             Candle(date = new LocalDate(date.take(4).toInt, date.take(6).drop(4).toInt, date.take(8).drop(6).toInt),
                 open.toDouble, high.toDouble, low.toDouble, close.toDouble)
         }).toVector
+        TradingData(data)
     }
 }

@@ -7,11 +7,10 @@ import tradingsystems.Candle
 
 trait TooTrendyDaysStatisticalPrinter extends AnalyticalStatisticsPrinter
 {
-    val data: Vector[Candle]
-
     import TradingIdea._
     def standardTest(initialStopPercent: Double = 1, initialTakeProfitPercent: Double = 1)
     {
+        println(ticker)
         import TradingOp._
         val tp = initialTakeProfitPercent
         val sp = initialStopPercent
@@ -38,6 +37,7 @@ trait TooTrendyDaysStatisticalPrinter extends AnalyticalStatisticsPrinter
 
     def detailedTest(stop: Double = 1, takeProfit: Double = 1, positiveDays: Int = 2, negativeDays: Int = 3)
     {
+        println(ticker)
         val tooPositive = (tooTrendyCandles(data, _.buyProfit > 0, positiveDays), TradingOp.sell(stop, takeProfit))
         val tooNegative = (tooTrendyCandles(data, _.sellProfit > 0, negativeDays), TradingOp.buy(stop, takeProfit))
         analyzeIdea(tooPositive, tooNegative)

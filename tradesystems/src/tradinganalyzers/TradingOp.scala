@@ -4,11 +4,11 @@ import tradingsystems.Candle
 
 object TradingOp
 {
-     def buy(stopPercent: Double, takeProfitPercent: Double) =
-         new BuyTradingOp(stopPercent, takeProfitPercent)
+    def buy(stopPercent: Double, takeProfitPercent: Double) =
+        new BuyTradingOp(stopPercent, takeProfitPercent)
 
-     def sell(stopPercent: Double, takeProfitPercent: Double) =
-         new SellTradingOp(stopPercent, takeProfitPercent)
+    def sell(stopPercent: Double, takeProfitPercent: Double) =
+        new SellTradingOp(stopPercent, takeProfitPercent)
 }
 
 trait TradingOp

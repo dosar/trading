@@ -38,7 +38,7 @@ class StocksCombinationDayCandlesVolatileDays_Test extends FunSuite
     {
         def getPositionAnalyzer = new SimplePrinter(ticker)
         {
-            val analyzer = new TradingPositionAnalyzer(
+            val analyzer = new TradingPositionAnalyzer(data,
                 (VolatileCandles(op1CheckDays, op1PositionDays, _.buyProfit > 0).filterInterestingDays(data), op1),
                 (VolatileCandles(op2CheckDays, op2PositionDays, _.sellProfit > 0).filterInterestingDays(data), op2))
         }.analyzer
@@ -57,6 +57,7 @@ class StocksCombinationDayCandlesVolatileDays_Test extends FunSuite
 
         new AnalyticalStatisticsPrinter
         {
+            val ticker: String = null
             override def isUsefulOutput(yearProfits: Vector[YearProfit]): Boolean = true
             val oneProfits = oneAnalyzer.positionDatesProfit
             val twoProfits = twoAnalyzer.positionDatesProfit

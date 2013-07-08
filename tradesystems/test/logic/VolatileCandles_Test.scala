@@ -4,7 +4,7 @@ import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 import org.scalatest.FunSuite
 import tradingideas.VolatileCandles
-import tradingsystems.Candle
+import tradingsystems.{TradingData, Candle}
 import org.joda.time.LocalDate
 import tradinganalyzers.TradingPosition
 
@@ -13,9 +13,9 @@ class VolatileCandles_Test extends FunSuite with TestUtils with AnalyticalStatis
 {
 //    нужно чтобы было минимум 2 торговых дня
 //    также нужно чтобы было вытряхивание по стопу тому или другому
-
-    lazy val data = standardImport("g:\\work\\trademachine\\SBER_2010_2013_1day.txt")
-        .filter(_.date.getYear == 2013)
+    val ticker: String = null
+    override lazy val data = new TradingData(standardImport("g:\\work\\trademachine\\SBER_2010_2013_1day.txt")
+        .data.filter(_.date.getYear == 2013))
 
     test("filter trading days for 3 days rising SBER")
     {

@@ -1,67 +1,74 @@
 package logic
 
-import tradinganalyzers.TradingOp
+import tradinganalyzers.{TradingPosition, TradingPositionAnalyzer, TradingOp}
 import tradingideas.VolatileCandles
-import tradingsystems.Candle
+import tradingsystems.{TradingData, Candle}
 
 trait VolatileDaysStatisticalPrinter extends AnalyticalStatisticsPrinter
 {
-    val ticker: String
-    val data: Vector[Candle] = standardImport("g:\\work\\trademachine\\" + ticker + "_2010_2013_1day.txt")
+    val oneStrategyDays = for(checkDays <- 2 to 7; positionDays <- 2 to 7) yield (checkDays, positionDays)
+    val twoStrategiesDays =
+        for((op1CheckDays, op1PositionDays) <- oneStrategyDays; (op2CheckDays, op2PositionDays) <- oneStrategyDays)
+            yield (op1CheckDays, op1PositionDays, op2CheckDays, op2PositionDays)
 
-    def standardTest(initialStopPercent: Int = 1, initialTakeProfitPercent: Int = 1)
+    def standardTest(stopMultiplierSteps: Int = 5, stopMultiplierStep: Double = 0.1, takeProfitStart: Int = 3)
     {
         println(ticker)
-        import TradingOp._
-        val input = for(op1CheckDays <- 2 to 5; op1PositionDays <- 2 to 5;
-            op2CheckDays <- 2 to 5; op2PositionDays <- 2 to 5)
-        yield (op1CheckDays, op1PositionDays, op2CheckDays, op2PositionDays)
 
-        val statistics = (for((op1CheckDays, op1PositionDays, op2CheckDays, op2PositionDays) <- input.par)
+        val takeProfitRange = takeProfitStart to takeProfitStart + 5
+        val stopRange = (1 to stopMultiplierSteps).map(_ * stopMultiplierStep)
+        val statistics = twoStrategiesStatistics(stopRange, takeProfitRange) ++
+            oneStrategyStatistics(stopRange, takeProfitRange, _.buyProfit > 0, "роста", " " * 30) ++
+            oneStrategyStatistics(stopRange, takeProfitRange, _.sellProfit > 0, "падения", " " * 27)
+
+        val result = statistics.flatten.toList
+        result.sortBy(_.take(48)).foreach(println)
+    }
+
+    import TradingOp._
+
+    def oneStrategyStatistics(stopRange: IndexedSeq[Double], takeProfitRange: Range,
+        checkDaysCondition: (Candle) => Boolean, checkConditionDescription: String, opDescPostfix: String) =
+    {
+        for((checkDays, daysInPosition) <- oneStrategyDays.par) yield
+        {
+            val positionDays = VolatileCandles(checkDays, daysInPosition, checkDaysCondition).filterInterestingDays(data)
+            (for(opf <- Array(sell _, buy _); stop <- stopRange; takeProfit <- takeProfitRange) yield
+            {
+                val op = opf(stop, takeProfit)
+                val opDesc = checkDays + " дня " + checkConditionDescription + ", " + daysInPosition + " дня в " + op.desc
+                getStringStatistics(opDesc + opDescPostfix, getYearProfits(positionDays.map((_, op))))
+
+            }).filter(_ != null).toArray
+        }
+    }
+
+    def twoStrategiesStatistics(stopRange: IndexedSeq[Double], takeProfitRange: Range.Inclusive) =
+    {
+        for((op1CheckDays, op1PositionDays, op2CheckDays, op2PositionDays) <- twoStrategiesDays.par)
         yield
         {
-            val op1Candles = VolatileCandles(op1CheckDays, op1PositionDays, _.buyProfit > 0).filterInterestingDays(data)
-            val op2Candles = VolatileCandles(op2CheckDays, op2PositionDays, _.sellProfit > 0).filterInterestingDays(data)
+            val daysOp1 = VolatileCandles(op1CheckDays, op1PositionDays, _.buyProfit > 0).filterInterestingDays(data)
+                .zipAll(Vector(), null, 1)
+            val daysOp2 = VolatileCandles(op2CheckDays, op2PositionDays, _.sellProfit > 0).filterInterestingDays(data)
+                .zipAll(Vector(), null, 2)
+            val allDaysOp = (daysOp1 ++ daysOp2).sortBy(_._1.positionDate.toDate)
 
-            (for((op1f, op2f) <- Array((sell _, buy _), (sell _, sell _), (buy _, buy _), (buy _, sell _));
-                op1Stop <- initialStopPercent.to(1, -1);
-                op1TakeProfit <- initialTakeProfitPercent to initialTakeProfitPercent + 4;
-                op2Stop <- initialStopPercent.to(1, -1);
-                op2TakeProfit <- initialTakeProfitPercent to initialTakeProfitPercent + 4) yield
+            val result = (for((op1f, op2f) <- Array((sell _, buy _), (sell _, sell _), (buy _, buy _), (buy _, sell _));
+                op1Stop <- stopRange; op1TakeProfit <- takeProfitRange;
+                op2Stop <- stopRange; op2TakeProfit <- takeProfitRange) yield
             {
                 val op1 = op1f(op1Stop, op1TakeProfit)
                 val op2 = op2f(op2Stop, op2TakeProfit)
                 val op1Desc = op1CheckDays + " дня роста, " + op1PositionDays + " дня в " + op1.desc
                 val op2Desc = op2CheckDays + " дня падения, " + op2PositionDays + " дня в " + op2.desc
-                getStringStatistics(op1Desc + " и " + op2Desc, (op1Candles, op1), (op2Candles, op2))
+                val yearProfits = getYearProfits(allDaysOp.map{case (position, opType) => (position, if(opType == 1) op1 else op2)})
+                getStringStatistics(op1Desc + " и " + op2Desc, yearProfits)
             }).filter(_ != null)
-        }) ++
-        (for(op1f <- Array(sell _, buy _); op1CheckDays <- 2 to 5; op1PositionDays <- 2 to 5) yield
-        {
-            val op1Candles = VolatileCandles(op1CheckDays, op1PositionDays, _.buyProfit > 0).filterInterestingDays(data)
-
-            (for(op1Stop <- initialStopPercent.to(1, -1); op1TakeProfit <- initialTakeProfitPercent to initialTakeProfitPercent + 4)
-            yield
-            {
-                val op1 = op1f(op1Stop, op1TakeProfit)
-                val op1Desc = op1CheckDays + " дня роста, " + op1PositionDays + " дня в " + op1.desc
-                getStringStatistics(op1Desc + " " * 30, (op1Candles, op1))
-            }).filter(_ != null).toArray
-        }) ++
-        (for(op2f <- Array(sell _, buy _); op2CheckDays <- 2 to 5; op2PositionDays <- 2 to 5) yield
-        {
-            val op2Candles = VolatileCandles(op2CheckDays, op2PositionDays, _.sellProfit > 0).filterInterestingDays(data)
-
-            (for(op2Stop <- initialStopPercent.to(1, -1); op2TakeProfit <- initialTakeProfitPercent to initialTakeProfitPercent + 4)
-            yield
-            {
-                val op2 = op2f(op2Stop, op2TakeProfit)
-                val op2Desc = op2CheckDays + " дня роста, " + op2PositionDays + " дня в " + op2.desc
-                getStringStatistics(op2Desc + " " * 27, (op2Candles, op2))
-            }).filter(_ != null).toArray
-        })
-
-        val result = statistics.flatten.toList
-        result.sortBy(_.take(48)).foreach(println)
+            result
+        }
     }
+
+    def getYearProfits(tradingPositionOps: Vector[(TradingPosition, TradingOp)]) =
+        new TradingPositionAnalyzer(data, tradingPositionOps).getStatistics
 }

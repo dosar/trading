@@ -1,6 +1,6 @@
 package tradingsystems
 
-trait PeriodProfit;
+trait PeriodProfit
 
 case class MonthProfit(month: Int, balance: Balance) extends PeriodProfit
 {
@@ -11,17 +11,16 @@ case class MonthProfit(month: Int, balance: Balance) extends PeriodProfit
     lazy val negativeDeals = balance.negativeDeals
 }
 
-case class YearProfit(year: Int, yearProfit: Double, yearSlump: Double, avgPrice: Double, monthProfits: Vector[MonthProfit])
+case class YearProfit(year: Int, balance: Balance, avgPrice: Double, monthProfits: Vector[MonthProfit])
     extends PeriodProfit
 {
-    def this(year: Int, balance: Balance, avgPrice: Double, monthProfits: Vector[MonthProfit]) =
-        this(year, balance.profit, balance.slump, avgPrice, monthProfits)
-
+    lazy val yearProfit = balance.profit
+    lazy val yearSlump = balance.slump
     lazy val monthAverageProfit = monthProfits.map(_.profit).sum / monthProfits.size
-    lazy val monthAverageSlump = monthProfits.map(_.slump).sum / monthProfits.size
-    lazy val daysCount = monthProfits.map(_.daysCount).sum.formatted("%03d")
-    lazy val positiveDeals = monthProfits.map(_.positiveDeals).sum.formatted("%03d")
-    lazy val negativeDeals = monthProfits.map(_.negativeDeals).sum.formatted("%03d")
+    lazy val worstMonthSlump = monthProfits.minBy(_.slump).slump
+    lazy val daysCount = balance.daysCount.formatted("%03d")
+    lazy val positiveDeals = balance.positiveDeals.formatted("%03d")
+    lazy val negativeDeals = balance.negativeDeals.formatted("%03d")
 
     def positiveProfit = yearProfit > 0
 
@@ -29,13 +28,14 @@ case class YearProfit(year: Int, yearProfit: Double, yearSlump: Double, avgPrice
 
     override def toString: String = "year:" + year + " profit:" + yearProfit.formatted("%.2f") +
         " yearSlump:" + yearSlump.formatted("%.2f") + " monthAverageProfit:" + monthAverageProfit.formatted("%.2f") +
-        " monthAverageSlump:" + monthAverageSlump.formatted("%.2f")
+        " monthAverageSlump:" + worstMonthSlump.formatted("%.2f")
 
-    def yearProfitString = List(year, daysCount, positiveDeals + "/" + negativeDeals, yearProfit.formatted("%7.2f"),
-        "(" + avgPrice.formatted("%7.2f") + ")").mkString("|")
+    def yearProfitString = List(year, positiveDeals, negativeDeals, yearProfit.formatted("%7.2f"),
+        yearSlump.formatted("%.2f"), worstMonthSlumpString, avgPrice.formatted("%7.2f")).mkString("|")
 
-    def avgSlumpString = year + ":avg = " + monthAverageSlump.formatted("%.2f")
+    def worstMonthSlumpString = worstMonthSlump.formatted("%6.2f")
 
     def monthSlumpsString = monthProfits
-        .map(mp => mp.month + " | " + mp.daysCount.formatted("%03d") + " | " + mp.profit.formatted("%.2f") + "/" + mp.slump.formatted("%.2f")).mkString(" | ")
+//        .map(mp => "|" + mp.month + " | " + mp.daysCount.formatted("%03d") + " | " + mp.profit.formatted("%.2f") + "/" + mp.slump.formatted("%.2f")).mkString(" | ")
+        .flatMap(mp => Array(mp.month, mp.daysCount.formatted("%03d"), mp.profit.formatted("%.2f"), mp.slump.formatted("%.2f"))).mkString(" | ", " | ", "")
 }

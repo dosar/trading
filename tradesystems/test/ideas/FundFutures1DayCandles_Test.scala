@@ -13,9 +13,9 @@ import tradingsystems.Candle
 @RunWith(classOf[JUnitRunner])
 class FundFutures1DayCandles_Test extends FunSuite
 {
-    class SimpleTest(tiker: String) extends TooTrendyDaysStatisticalPrinter
+    class SimpleTest(val ticker: String) extends TooTrendyDaysStatisticalPrinter
     {
-        val data = standardImport("g:\\work\\trademachine\\goods\\" + tiker + "_2010_2013_1day.txt")
+        override lazy val data = standardImport("g:\\work\\trademachine\\goods\\" + ticker + "_2010_2013_1day.txt")
     }
 
     test("brent 1 day candles standard test") { new SimpleTest("BRENT").standardTest(5, 1) }
