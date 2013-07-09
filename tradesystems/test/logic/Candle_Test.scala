@@ -3,7 +3,11 @@ package logic
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 import org.scalatest.FunSuite
+import tradingsystems._
+import org.joda.time.LocalDate
+import tradingsystems.Balance
 import tradingsystems.Candle
+import tradingsystems.Profit
 
 trait TestUtils
 {
@@ -12,6 +16,40 @@ trait TestUtils
     def abs(x: Double) = if(x < 0) -x else x
 
     def isCloseEnough(x: Double, y: Double) = x == y || abs((x - y) / x) / x < tolerance
+
+    type Start = Double; type Change = Double
+    type Profits = Vector[(Start, Change)]
+    type Year = Int; type Month = Int; type Day = Int
+    type Dates = Vector[(Year, Month, Day)]
+
+    def createBalance(profits: Profits, positiveStartDatePositions: Dates, negativeStartDatePositions: Dates) =
+        Balance(AccumulatedProfit.Accumulator(profits.map(p => Profit(p._1, p._2))),
+            positiveStartDatePositions.map(d => new LocalDate(d._1, d._2, d._3)),
+            negativeStartDatePositions.map(date => new LocalDate(date._1, date._2, date._3)))
+
+    def createProfits(profits: Profits): Vector[Profit] = profits.map(p => Profit(p._1, p._2))
+
+    val m1 = MonthProfit(1, createBalance(Vector((50.0, 2.1), (20, -4)), Vector((2013, 1, 1)), Vector((2013, 1, 2))))
+    val m2 = MonthProfit(2, createBalance(Vector((100.0, 3.5)), Vector((2013, 2, 1)), Vector()))
+    val m3 = MonthProfit(3, createBalance(Vector((80.0, -2.0)), Vector(), Vector((2013, 3, 2))))
+
+    protected implicit def nonStrict(origin: Double) =
+    {
+        class DoubleWrapper(val d: Double)
+        {
+            override def equals(obj: Any): Boolean = obj match
+            {
+                case number: Double => isCloseEnough(d, number)
+                case dw: DoubleWrapper => dw.equals(d)
+                case x => false
+            }
+
+            override def toString: String = d.toString
+
+            def nonStrict = this
+        }
+        new DoubleWrapper(origin)
+    }
 }
 
 @RunWith(classOf[JUnitRunner])

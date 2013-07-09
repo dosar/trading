@@ -3,24 +3,31 @@ package formatting
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 import org.scalatest.FunSuite
-import tradingsystems.{MonthProfit, Balance, YearProfit}
-import tradingsystems.MonthProfit
+import tradingsystems._
 import org.joda.time.LocalDate
+import tradingsystems.MonthProfit
+import tradingsystems.YearProfit
+import tradingsystems.Balance
+import logic.TestUtils
 
 /**
  * @author alespuh
  * @since 06.07.13
  */
 @RunWith(classOf[JUnitRunner])
-class YearProfit_Test  extends FunSuite
+class YearProfit_Test extends FunSuite with TestUtils
 {
-    test("test year part of statistics formatting")
-    {
-        val yp = YearProfit(2013, Balance(10, -2, 36, 12, 24, Vector(), Vector()), 100, Vector(
-            MonthProfit(1, Balance(2, -1, 2, 1, 1, Vector(new LocalDate(2013, 1, 1), new LocalDate(2013, 5, 3)), Vector())),
-            MonthProfit(2, Balance(2, -1, 2, 1, 1, Vector(), Vector(new LocalDate(2013, 3, 11), new LocalDate(2013, 6, 18))))
-        ))
-        println(yp.yearProfitString)
-        println(yp.monthSlumpsString)
-    }
+    val mps = Vector(m1, m2, m3)
+    val balance = BalanceCalculator.balanceHistoryM(mps)
+    val yearProfit = YearProfit(2013, balance, 78.3, mps)
+    test("profit"){ assert(balance.profit.profitPct === yearProfit.yearProfitPct) }
+    test("yearSlump"){ assert(balance.profit.slumpPct === yearProfit.yearSlumpPct) }
+    test("monthAverageProfitPct"){ assert(-4.93.nonStrict === yearProfit.monthAverageProfitPct) }
+    test("worstMonthSlumpPct"){ assert(-15.8 === yearProfit.worstMonthSlumpPct) }
+    test("daysCount"){ assert("004" === yearProfit.daysCount) }
+    test("positiveDeals"){ assert("002" === yearProfit.positiveDeals) }
+    test("negativeDeals"){ assert("002" === yearProfit.negativeDeals) }
+    test("positiveProfit"){ assert(false === yearProfit.positiveProfit) }
+    test("strictProfit -15"){ assert(true === yearProfit.strictProfit(-15)) }
+    test("strictProfit -14"){ assert(false === yearProfit.strictProfit(-14)) }
 }

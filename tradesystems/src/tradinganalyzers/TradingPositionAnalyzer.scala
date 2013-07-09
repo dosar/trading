@@ -1,9 +1,13 @@
 package tradinganalyzers
 
-import tradingsystems.{TradingData, YearProfit, MonthProfit, Candle}
+import tradingsystems._
 import org.joda.time.LocalDate
-import tradingsystems.CandleCalculator._
+import tradingsystems.BalanceCalculator._
 import util.TradingImplicits.toSeqImplicits
+import tradingsystems.TradingData
+import tradingsystems.MonthProfit
+import tradingsystems.Candle
+import tradingsystems.YearProfit
 
 /**
  * @author alespuh
@@ -30,7 +34,7 @@ class TradingPositionAnalyzer(data: TradingData, positions: Vector[(TradingPosit
 
     def getStatistics: Vector[YearProfit] = getStatistics(positionDatesProfit)
 
-    def getStatistics(datesProfits: Vector[(LocalDate, LocalDate, Double)]): Vector[YearProfit] =
+    def getStatistics(datesProfits: Vector[(LocalDate, LocalDate, Profit)]): Vector[YearProfit] =
     {
         val yearProfits = datesProfits
             .groupBy{case (date, _, _) => (date.getYear, date.getMonthOfYear)}.toArray
@@ -53,7 +57,7 @@ class TradingPositionAnalyzer(data: TradingData, positions: Vector[(TradingPosit
             case (position, op) =>
                 val (profit, index) = op.profit(position)
                 (position.positionDate, position.candles(index).date, profit)
-        }.foldLeft(List[(LocalDate, LocalDate, Double)]())
+        }.foldLeft(List[(LocalDate, LocalDate, Profit)]())
         {
             case (list, (startDate, endDate, profit)) =>
                 val previousEndDate = list.headOption.map(_._2)

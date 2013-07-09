@@ -31,7 +31,7 @@ class StocksCombinationDayCandlesVolatileDays_Test extends FunSuite
         }
     }
 
-    class SimplePrinter(val ticker: String, override val targetProfit: Double = 0.19) extends VolatileDaysStatisticalPrinter
+    class SimplePrinter(val ticker: String, override val targetProfit: Double = 19) extends VolatileDaysStatisticalPrinter
 
     case class CombinationElement(ticker: String, op1: TradingOp, op2: TradingOp, op1CheckDays: Int,
         op1PositionDays: Int, op2CheckDays: Int, op2PositionDays: Int)

@@ -1,6 +1,6 @@
 package tradinganalyzers
 
-import tradingsystems.{YearProfit, MonthProfit, CandleCalculator, Candle}
+import tradingsystems.{YearProfit, MonthProfit, BalanceCalculator, Candle}
 import util.TradingImplicits.toSeqImplicits
 
 /**
@@ -9,7 +9,7 @@ import util.TradingImplicits.toSeqImplicits
  */
 case class TradingDaysAnalyzer(candleOps: (Vector[Candle], TradingOp)*)
 {
-    import CandleCalculator._
+    import BalanceCalculator._
 
     def getStatistics =
     {
@@ -23,7 +23,7 @@ case class TradingDaysAnalyzer(candleOps: (Vector[Candle], TradingOp)*)
 
         val yps = for((year, list) <- ymProfits.groupBy{case (year, _, _) => year};
             monthProfits = list.map(_._2);
-            balance = balanceHistory(monthProfits);
+            balance = balanceHistoryM(monthProfits);
             candles = list.flatMap(_._3))
         yield YearProfit(year, balance, candles.avg(_.open), monthProfits.toVector)
         yps.toVector.sortBy(_.year)
@@ -43,5 +43,5 @@ case class TradingDaysAnalyzer(candleOps: (Vector[Candle], TradingOp)*)
     }
 
     private def getCandleOps =
-        for((candles, op) <- candleOps; candle <- candles.view) yield (candle, op)
+        for((candles, op) <- candleOps.toVector; candle <- candles) yield (candle, op)
 }

@@ -1,6 +1,6 @@
 package tradinganalyzers
 
-import tradingsystems.Candle
+import tradingsystems.{ProfitBase, Profit, Candle}
 
 object TradingOp
 {
@@ -29,9 +29,9 @@ trait TradingOp
     def desc: String =
         "op:" + opStr + " p:" + takeProfitPercent.formatted("%5.2f") + " s:" + stopPercent.formatted("%5.2f")
 
-    def profit(candle: Candle): Double
+    def profit(candle: Candle): Profit
 
-    def profit(position: TradingPosition): (Double, Int)
+    def profit(position: TradingPosition): (Profit, Int)
 
     def ret(candle: Candle) = (candle.close / candle.open) - 1 //это так для памяти
 }
@@ -40,21 +40,21 @@ class BuyTradingOp(val stopPercent: Double, val takeProfitPercent: Double) exten
 {
     val opStr: String = "buy "
 
-    def profit(candle: Candle): Double =
-        if(candle.buySlump / candle.open >= stop) -stop * candle.open
-        else if(candle.sellSlump / candle.open >= takeProfit) takeProfit * candle.open
-        else candle.buyProfit
+    def profit(candle: Candle): Profit =
+        if(candle.buySlump / candle.open >= stop) Profit(candle.open, -stop * candle.open)
+        else if(candle.sellSlump / candle.open >= takeProfit) Profit(candle.open, takeProfit * candle.open)
+        else Profit(candle.open, candle.buyProfit)
 
-    def profit(position: TradingPosition): (Double, Int) =
+    def profit(position: TradingPosition): (Profit, Int) =
     {
         for((candle, index) <- position.candles.zipWithIndex)
         {
             if((position.open - candle.low) / position.open >= stop)
-                return (-stop * position.open, index)
+                return (Profit(position.open, -stop * position.open), index)
             if((candle.high - position.open) / position.open >= takeProfit)
-                return (takeProfit * position.open, index)
+                return (Profit(position.open, takeProfit * position.open), index)
         }
-        (position.close - position.open, position.candles.length - 1)
+        (Profit(position.open, position.close - position.open), position.candles.length - 1)
     }
 }
 
@@ -62,20 +62,20 @@ class SellTradingOp(val stopPercent: Double, val takeProfitPercent: Double) exte
 {
     val opStr: String = "sell"
 
-    def profit(candle: Candle): Double =
-        if(candle.sellSlump / candle.open >= stop) -stop * candle.open
-        else if(candle.buySlump / candle.open >= takeProfit) takeProfit * candle.open
-        else candle.sellProfit
+    def profit(candle: Candle): Profit =
+        if(candle.sellSlump / candle.open >= stop) Profit(candle.open, -stop * candle.open)
+        else if(candle.buySlump / candle.open >= takeProfit) Profit(candle.open, takeProfit * candle.open)
+        else Profit(candle.open, candle.sellProfit)
 
-    def profit(position: TradingPosition): (Double, Int) =
+    def profit(position: TradingPosition): (Profit, Int) =
     {
         for((candle, index) <- position.candles.zipWithIndex)
         {
             if((candle.high - position.open) / position.open >= stop)
-                return (-stop * position.open, index)
+                return (Profit(position.open, -stop * position.open), index)
             if((position.open - candle.low) / position.open >= takeProfit)
-                return (takeProfit * position.open, index)
+                return (Profit(position.open, takeProfit * position.open), index)
         }
-        (position.open - position.close, position.candles.length - 1)
+        (Profit(position.open, position.open - position.close), position.candles.length - 1)
     }
 }

@@ -9,7 +9,7 @@ trait AnalyticalStatisticsPrinter
 {
     val ticker: String
     lazy val data: TradingData = standardImport("g:\\work\\trademachine\\" + ticker + "_2010_2013_1day.txt")
-    val targetProfit: Double = 0.19
+    val targetProfit: Double = 19.0
 
     def analyzeIdea(candleOps: (Vector[TradingPosition], TradingOp)*) =
     {
@@ -17,9 +17,9 @@ trait AnalyticalStatisticsPrinter
         println(new TradingPositionAnalyzer(data, candleOps:_*).getStatistics.map
         {
             case yp: YearProfit =>
-                val plusProfits = yp.monthProfits.filter(_.profit > 0).map(_.month)
-                val minusProfits = yp.monthProfits.filter(_.profit < 0).map(_.month)
-                val highSlumps = yp.monthProfits.filter(_.slump < -2).map(_.month)
+                val plusProfits = yp.monthProfits.filter(_.profitPct > 0).map(_.month)
+                val minusProfits = yp.monthProfits.filter(_.profitPct < 0).map(_.month)
+                val highSlumps = yp.monthProfits.filter(_.slumpPct < -2).map(_.month)
                 yp.toString + "\n" + "profit: " + plusProfits.size + "/" + minusProfits.size +
                     " >0: " + plusProfits.mkString(", ") + " <0: " + minusProfits.mkString(", ") + "\n" +
                     "slump2: " + highSlumps.size + "/12 " + highSlumps.mkString(", ") + "\n"
