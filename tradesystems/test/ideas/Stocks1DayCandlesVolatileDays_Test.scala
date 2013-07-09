@@ -17,7 +17,7 @@ class Stocks1DayCandlesVolatileDays_Test extends FunSuite
 
     test("sberbank 1 day candles percent stop, take profit") { new SimpleTest("SBER", 30).standardTest(stopMultiplierStep = 1) }
     test("gazprom 1 day candles percent stop, take profit") { new SimpleTest("GAZP", 35).standardTest(stopMultiplierStep = 1) }
-    test("nornikel 1 day candles percent stop, take profit") { new SimpleTest("GMKN", 25).standardTest(stopMultiplierStep = 1) }
+    test("nornikel 1 day candles percent stop, take profit") { new SimpleTest("GMKN", 27).standardTest(stopMultiplierStep = 1) }
     test("lukoil 1 day candles percent stop, take profit") { new SimpleTest("LKOH").standardTest(stopMultiplierStep = 1) }
     test("novatek 1 day candles percent stop, take profit") { new SimpleTest("NVTK", 25).standardTest(stopMultiplierStep = 1) }
     test("rosneft 1 day candles percent stop, take profit") { new SimpleTest("ROSN", 25).standardTest(stopMultiplierStep = 1) }
