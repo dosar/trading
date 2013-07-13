@@ -15,6 +15,15 @@ import org.joda.time.LocalDate
 class TradingOp_Test extends FunSuite with TestUtils
 {
     import TradingOp._
+
+    test("test fromDesc")
+    {
+        assert(sell(2, 6) === fromDesc("op:sell p: 6,00 s: 2,00"))
+        assert(sell(3, 2) === fromDesc("op:sell p: 2,00 s: 3,00"))
+        assert(buy(2, 6) === fromDesc("op:buy  p: 6,00 s: 2,00"))
+        assert(buy(3, 2) === fromDesc("op:buy  p: 2,00 s: 3,00"))
+    }
+
     test("test positive buy operation")
     {
         val candle = Candle(null, 100, 108, 99, 101)

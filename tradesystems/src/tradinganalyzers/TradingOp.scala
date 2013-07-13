@@ -9,6 +9,17 @@ object TradingOp
 
     def sell(stopPercent: Double, takeProfitPercent: Double) =
         new SellTradingOp(stopPercent, takeProfitPercent)
+
+    def fromDesc(desc: String) =
+    {
+        def partValue(str: String) = str.replace(',', '.').toDouble
+
+        val parts: Array[String] = desc.split(' ').filter(_ != "")
+        val opType: String = parts(0).split(':')(1)
+        if(opType == "sell") sell(partValue(parts(4)), partValue(parts(2)))
+        else if(opType == "buy") buy(partValue(parts(4)), partValue(parts(2)))
+        else throw new Error("cant parse operation")
+    }
 }
 
 trait TradingOp
@@ -36,7 +47,7 @@ trait TradingOp
     def ret(candle: Candle) = (candle.close / candle.open) - 1 //это так для памяти
 }
 
-class BuyTradingOp(val stopPercent: Double, val takeProfitPercent: Double) extends TradingOp
+case class BuyTradingOp(stopPercent: Double, takeProfitPercent: Double) extends TradingOp
 {
     val opStr: String = "buy "
 
@@ -58,7 +69,7 @@ class BuyTradingOp(val stopPercent: Double, val takeProfitPercent: Double) exten
     }
 }
 
-class SellTradingOp(val stopPercent: Double, val takeProfitPercent: Double) extends TradingOp
+case class SellTradingOp(stopPercent: Double, takeProfitPercent: Double) extends TradingOp
 {
     val opStr: String = "sell"
 

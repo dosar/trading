@@ -1,8 +1,8 @@
-package logic
+package tradinganalyzers.statistics
 
 import tradinganalyzers.{TradingPosition, TradingPositionAnalyzer, TradingOp}
-import tradingideas.VolatileCandles
-import tradingsystems.{TradingData, Candle}
+import tradingideas.{NegativeTrendCandles, PositiveTrendCandles, LongTrendCandles}
+import tradingsystems.Candle
 
 trait VolatileDaysStatisticalPrinter extends AnalyticalStatisticsPrinter
 {
@@ -11,6 +11,9 @@ trait VolatileDaysStatisticalPrinter extends AnalyticalStatisticsPrinter
         for((op1CheckDays, op1PositionDays) <- oneStrategyDays; (op2CheckDays, op2PositionDays) <- oneStrategyDays)
             yield (op1CheckDays, op1PositionDays, op2CheckDays, op2PositionDays)
 
+    def positiveCandle(c: Candle): Boolean = c.buyProfit > 0
+    def negativeCandle(c: Candle): Boolean = c.sellProfit > 0
+
     def standardTest(stopMultiplierSteps: Int = 5, stopMultiplierStep: Double = 0.1, takeProfitStart: Int = 3)
     {
         println(ticker)
@@ -18,8 +21,8 @@ trait VolatileDaysStatisticalPrinter extends AnalyticalStatisticsPrinter
         val takeProfitRange = takeProfitStart to takeProfitStart + 5
         val stopRange = (1 to stopMultiplierSteps).map(_ * stopMultiplierStep)
         val statistics = twoStrategiesStatistics(stopRange, takeProfitRange) ++
-            oneStrategyStatistics(stopRange, takeProfitRange, _.buyProfit > 0, "роста", " " * 30) ++
-            oneStrategyStatistics(stopRange, takeProfitRange, _.sellProfit > 0, "падения", " " * 27)
+            oneStrategyStatistics(stopRange, takeProfitRange, positiveCandle, "роста", " " * 30) ++
+            oneStrategyStatistics(stopRange, takeProfitRange, negativeCandle, "падения", " " * 27)
 
         val result = statistics.flatten.toList
         result.sortBy(_.take(48)).foreach(println)
@@ -32,7 +35,7 @@ trait VolatileDaysStatisticalPrinter extends AnalyticalStatisticsPrinter
     {
         for((checkDays, daysInPosition) <- oneStrategyDays.par) yield
         {
-            val positionDays = VolatileCandles(checkDays, daysInPosition, checkDaysCondition).filterInterestingDays(data)
+            val positionDays = new LongTrendCandles(checkDays, daysInPosition, checkDaysCondition).filterInterestingDays(data)
             (for(opf <- Array(sell _, buy _); stop <- stopRange; takeProfit <- takeProfitRange) yield
             {
                 val op = opf(stop, takeProfit)
@@ -48,9 +51,9 @@ trait VolatileDaysStatisticalPrinter extends AnalyticalStatisticsPrinter
         for((op1CheckDays, op1PositionDays, op2CheckDays, op2PositionDays) <- twoStrategiesDays.par)
         yield
         {
-            val daysOp1 = VolatileCandles(op1CheckDays, op1PositionDays, _.buyProfit > 0).filterInterestingDays(data)
+            val daysOp1 = new LongTrendCandles(op1CheckDays, op1PositionDays, positiveCandle).filterInterestingDays(data)
                 .zipAll(Vector(), null, 1)
-            val daysOp2 = VolatileCandles(op2CheckDays, op2PositionDays, _.sellProfit > 0).filterInterestingDays(data)
+            val daysOp2 = new LongTrendCandles(op2CheckDays, op2PositionDays, negativeCandle).filterInterestingDays(data)
                 .zipAll(Vector(), null, 2)
             val allDaysOp = (daysOp1 ++ daysOp2).sortBy(_._1.positionDate.toDate)
 

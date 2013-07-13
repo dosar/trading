@@ -67,5 +67,5 @@ class TradingPositionAnalyzer(data: TradingData, positions: Vector[(TradingPosit
         }.reverse.toVector
     }
 
-    private def avgPrice(year: Int) = data.avgPrice(year)
+    protected def avgPrice(year: Int): Double = data.avgPrice(year)
 }

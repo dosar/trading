@@ -6,10 +6,11 @@ import org.scalatest.FunSuite
 import tradinganalyzers.{TradingOp, TradingPosition, TradingPositionAnalyzer}
 import tradingsystems._
 import org.joda.time.LocalDate
-import tradingideas.VolatileCandles
+import tradingideas.LongTrendCandles
 import tradingsystems.Balance
 import tradingsystems.MonthProfit
 import tradingsystems.YearProfit
+import tradinganalyzers.statistics.AnalyticalStatisticsPrinter
 
 @RunWith(classOf[JUnitRunner])
 class TradingPositionAnalyzer_Test extends FunSuite with TestUtils with AnalyticalStatisticsPrinter
@@ -18,7 +19,7 @@ class TradingPositionAnalyzer_Test extends FunSuite with TestUtils with Analytic
     override lazy val data = new TradingData(standardImport("g:\\work\\trademachine\\SBER_2010_2013_1day.txt")
         .data.filter(_.date.getYear == 2013))
     val sell = TradingOp.sell(1, 5)
-    val tradingPositions = new VolatileCandles(3, 3, _.buyProfit > 0).filterInterestingDays(data)
+    val tradingPositions = new LongTrendCandles(3, 3, _.buyProfit > 0).filterInterestingDays(data)
     val profits = new TradingPositionAnalyzer(data, (tradingPositions, sell)).positionDatesProfit
     val statistics = new TradingPositionAnalyzer(data, (tradingPositions, sell)).getStatistics
     val yearProfit = statistics(0)

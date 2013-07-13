@@ -1,9 +1,7 @@
-package logic
+package tradinganalyzers.statistics
 
 import tradinganalyzers.TradingOp
-import tradinganalyzers.TradingOp._
 import tradingideas.TradingIdea
-import tradingsystems.Candle
 
 trait TooTrendyDaysStatisticalPrinter extends AnalyticalStatisticsPrinter
 {

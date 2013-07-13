@@ -6,7 +6,7 @@ object TradingImplicits
 {
     implicit def toAnyImplicits[T](obj: T) = new AnyImplicits(obj)
 
-    implicit def toSeqImplicits[T](seq: GenTraversableOnce[T]) = new SeqImplicits[T](seq)
+    implicit def toSeqImplicits[T](seq: IndexedSeq[T]) = new SeqImplicits[T](seq)
 }
 
 class AnyImplicits[T](obj: T)
@@ -14,7 +14,9 @@ class AnyImplicits[T](obj: T)
     def mapOr[B](f: T => B, dfv: => B) = Option(obj).map(f).getOrElse(dfv)
 }
 
-class SeqImplicits[T](seq: GenTraversableOnce[T])
+class SeqImplicits[T](seq: IndexedSeq[T])
 {
-    def avg(f: T => Double) = seq.toList.map(f).sum / seq.size
+    def avg(f: T => Double) = sumBy(f) / seq.size
+
+    def sumBy(f: T => Double) = seq.map(f).sum
 }

@@ -1,4 +1,4 @@
-package logic
+package tradinganalyzers.statistics
 
 import org.joda.time.LocalDate
 import scala.io.Source

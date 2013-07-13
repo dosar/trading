@@ -1,12 +1,12 @@
 package ideas
 
-import logic.TooTrendyDaysStatisticalPrinter
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.junit.JUnitRunner
 import tradingideas.TradingIdea
 import tradingsystems.Candle
 import TradingIdea._
+import tradinganalyzers.statistics.TooTrendyDaysStatisticalPrinter
 
 /**
  * @author alespuh

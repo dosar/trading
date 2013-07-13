@@ -3,10 +3,11 @@ package logic
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 import org.scalatest.FunSuite
-import tradingideas.VolatileCandles
+import tradingideas.LongTrendCandles
 import tradingsystems.{TradingData, Candle}
 import org.joda.time.LocalDate
 import tradinganalyzers.TradingPosition
+import tradinganalyzers.statistics.AnalyticalStatisticsPrinter
 
 @RunWith(classOf[JUnitRunner])
 class VolatileCandles_Test extends FunSuite with TestUtils with AnalyticalStatisticsPrinter
@@ -31,7 +32,7 @@ class VolatileCandles_Test extends FunSuite with TestUtils with AnalyticalStatis
             }
         }
 
-        val tradingPositions = new VolatileCandles(3, 3, _.buyProfit > 0).filterInterestingDays(data)
+        val tradingPositions = new LongTrendCandles(3, 3, _.buyProfit > 0).filterInterestingDays(data)
         assert(position(Candle(new LocalDate(2013, 1, 15), 100.7, 101.00, 99.78, 99.85),
             Candle(new LocalDate(2013, 1, 16), 99.93, 100.13, 99.19, 99.97),
             Candle(new LocalDate(2013, 1, 17), 99.90, 101.33, 99.54, 101.15)) === tradingPositions(0))
