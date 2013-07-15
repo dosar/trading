@@ -41,7 +41,6 @@ trait VolatileDaysStatisticalPrinter extends AnalyticalStatisticsPrinter
                 val op = opf(stop, takeProfit)
                 val opDesc = checkDays + " дня " + checkConditionDescription + ", " + daysInPosition + " дня в " + op.desc
                 getStringStatistics(opDesc + opDescPostfix, getYearProfits(positionDays.map((_, op))))
-
             }).filter(_ != null).toArray
         }
     }
@@ -73,5 +72,5 @@ trait VolatileDaysStatisticalPrinter extends AnalyticalStatisticsPrinter
     }
 
     def getYearProfits(tradingPositionOps: Vector[(TradingPosition, TradingOp)]) =
-        new TradingPositionAnalyzer(data, tradingPositionOps).getStatistics
+        new TradingPositionAnalyzer(tradingPositionOps).getStatistics
 }

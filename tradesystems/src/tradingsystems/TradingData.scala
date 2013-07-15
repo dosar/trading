@@ -10,9 +10,4 @@ case class TradingData(data: Vector[Candle])
 
     type Year = Int
     type Price = Double
-
-    def avgPrice(year: Int) = avgPrices(year)
-
-    private lazy val avgPrices: Map[Year, Price] = data.groupBy(_.date.getYear)
-        .map{case (year, yearCandles) => (year, yearCandles.map(_.open).sum / yearCandles.length)}
 }

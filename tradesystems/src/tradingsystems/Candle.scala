@@ -2,7 +2,7 @@ package tradingsystems
 
 import org.joda.time.LocalDate
 
-case class Candle(date: LocalDate, open: Double, high: Double, low:Double, close:Double)
+case class Candle(date: LocalDate, open: Double, high: Double, low:Double, close:Double, volume: Int = 0)
 {
     //dosarTODO: подразумевается, что сюда потом добавится комиссия
     lazy val buyProfitPct: Double = (close/open - 1) * 100

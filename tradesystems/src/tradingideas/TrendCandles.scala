@@ -29,6 +29,7 @@ trait TrendCandles extends TradingIdea
 }
 
 class LongTrendCandles(override val checkDays: Int, override val positionDays: Int, override val checkDaysCondition: Candle => Boolean) extends TrendCandles
+
 class PositiveTrendCandles(checkDays: Int, positionDays: Int)
     extends LongTrendCandles(checkDays, positionDays, _.buyProfit > 0)
 class NegativeTrendCandles(checkDays: Int, positionDays: Int)

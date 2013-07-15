@@ -25,7 +25,7 @@ case class TradingDaysAnalyzer(candleOps: (Vector[Candle], TradingOp)*)
             monthProfits = list.map(_._2);
             balance = balanceHistoryM(monthProfits);
             candles = list.flatMap(_._3))
-        yield YearProfit(year, balance, candles.avg(_.open), monthProfits.toVector)
+        yield YearProfit(year, balance, monthProfits.toVector)
         yps.toVector.sortBy(_.year)
 //        getCandleOps.map{case (c, op) => (c, op.profit(c))}.sortBy(_._1.date.toDate)
 //            .groupBy{case (c, _) => c.date.getYear -> c.date.getMonthOfYear}.toList.sortBy{case (gr, list) => gr}

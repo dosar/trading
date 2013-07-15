@@ -9,8 +9,7 @@ import tradinganalyzers.statistics.VolatileDaysCombinationStatisticalPrinter
 @RunWith(classOf[JUnitRunner])
 class StocksCombinationDayCandlesVolatileDays_Test extends FunSuite with VolatileDaysCombinationStatisticalPrinter
 {
-    test("brute force all two strategies combinations"){ test2StrategiesCombination() }
+    override val targetProfit: Double = 65
 
-    override def isUsefulOutput(yps: Vector[YearProfit]): Boolean =
-        yps.length == 4 && yps.take(3).forall(_.yearProfitPct >= 65)
+    test("brute force all two strategies combinations"){ test2StrategiesCombination() }
 }

@@ -19,7 +19,7 @@ class YearProfit_Test extends FunSuite with TestUtils
 {
     val mps = Vector(m1, m2, m3)
     val balance = BalanceCalculator.balanceHistoryM(mps)
-    val yearProfit = YearProfit(2013, balance, 78.3, mps)
+    val yearProfit = YearProfit(2013, balance, mps)
     test("profit"){ assert(balance.profit.profitPct === yearProfit.yearProfitPct) }
     test("yearSlump"){ assert(balance.profit.slumpPct === yearProfit.yearSlumpPct) }
     test("monthAverageProfitPct"){ assert(-4.93.nonStrict === yearProfit.monthAverageProfitPct) }

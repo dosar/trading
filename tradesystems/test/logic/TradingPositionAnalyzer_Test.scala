@@ -16,12 +16,12 @@ import tradinganalyzers.statistics.AnalyticalStatisticsPrinter
 class TradingPositionAnalyzer_Test extends FunSuite with TestUtils with AnalyticalStatisticsPrinter
 {
     val ticker: String = null
-    override lazy val data = new TradingData(standardImport("g:\\work\\trademachine\\SBER_2010_2013_1day.txt")
+    override lazy val data = new TradingData(AnalyticalStatisticsPrinter.standardImportSber
         .data.filter(_.date.getYear == 2013))
     val sell = TradingOp.sell(1, 5)
     val tradingPositions = new LongTrendCandles(3, 3, _.buyProfit > 0).filterInterestingDays(data)
-    val profits = new TradingPositionAnalyzer(data, (tradingPositions, sell)).positionDatesProfit
-    val statistics = new TradingPositionAnalyzer(data, (tradingPositions, sell)).getStatistics
+    val profits = new TradingPositionAnalyzer((tradingPositions, sell)).positionDatesProfit
+    val statistics = new TradingPositionAnalyzer((tradingPositions, sell)).getStatistics
     val yearProfit = statistics(0)
     val monthProfits = yearProfit.monthProfits
     val profitsIterator = profits.iterator

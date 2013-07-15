@@ -7,6 +7,7 @@ package tradingsystems
 object AccumulatedProfit
 {
     final val Accumulator = SummedProfit
+//    final val Accumulator = MultipliedProfit
 }
 
 trait ProfitBase
@@ -36,11 +37,16 @@ case class SummedProfit(profits: Vector[Profit]) extends AccumulatedProfit
 //исходим из того, что торгуем "на все"
 case class MultipliedProfit(profits: Vector[Profit]) extends AccumulatedProfit
 {
-    override lazy val (profit, slump) = profits.foldLeft((1.0, 0.0))
+    override lazy val (profit, slump) =
     {
-        case((tempProfit, tempSlump), p) =>
-            val newProfit = tempProfit * (1 + p.profit)
-            (newProfit, java.lang.Math.min(newProfit - 1, tempSlump)) //newProfit - 1 - это мы смотрим на сколько мы просели от первоначальной 1. что и есть просадка
+        val results = profits.foldLeft((1.0, 0.0))
+        {
+            case((tempProfit, tempSlump), p) =>
+                val newProfit = tempProfit * (1 + p.profit)
+                (newProfit, java.lang.Math.min(newProfit - 1, tempSlump)) //newProfit - 1 - это мы смотрим на сколько мы просели от первоначальной 1. что и есть просадка
+        }
+
+        (results._1 - 1.0, results._2)
     }
 }
 

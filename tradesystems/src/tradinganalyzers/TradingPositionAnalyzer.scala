@@ -27,10 +27,10 @@ case class TradingPosition(candles: Array[Candle])
     val close = candles.last.close
 }
 
-class TradingPositionAnalyzer(data: TradingData, positions: Vector[(TradingPosition, TradingOp)])
+class TradingPositionAnalyzer(positions: Vector[(TradingPosition, TradingOp)])
 {
-    def this(data: TradingData, positionOps: (Vector[TradingPosition], TradingOp)*) =
-        this(data, positionOps.flatMap{case (positionsOnly, op) => positionsOnly.map((_, op))}.toVector.sortBy(_._1.positionDate.toDate))
+    def this(positionOps: (Vector[TradingPosition], TradingOp)*) =
+        this(positionOps.flatMap{case (positionsOnly, op) => positionsOnly.map((_, op))}.toVector.sortBy(_._1.positionDate.toDate))
 
     def getStatistics: Vector[YearProfit] = getStatistics(positionDatesProfit)
 
@@ -45,7 +45,7 @@ class TradingPositionAnalyzer(data: TradingData, positions: Vector[(TradingPosit
                 case (year, yearMonthProfits) =>
                     val monthProfits = yearMonthProfits.map(_._2).sortBy(_.month)
                     val yearBalanceHistory = balanceHistoryP(datesProfits.filter(_._1.getYear == year))
-                    new YearProfit(year, yearBalanceHistory, avgPrice(year), monthProfits.toVector)
+                    new YearProfit(year, yearBalanceHistory, monthProfits.toVector)
             }
         yearProfits.sortBy(_.year).toVector
     }
@@ -66,6 +66,4 @@ class TradingPositionAnalyzer(data: TradingData, positions: Vector[(TradingPosit
                 else list
         }.reverse.toVector
     }
-
-    protected def avgPrice(year: Int): Double = data.avgPrice(year)
 }

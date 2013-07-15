@@ -15,7 +15,7 @@ class VolatileCandles_Test extends FunSuite with TestUtils with AnalyticalStatis
 //    нужно чтобы было минимум 2 торговых дня
 //    также нужно чтобы было вытряхивание по стопу тому или другому
     val ticker: String = null
-    override lazy val data = new TradingData(standardImport("g:\\work\\trademachine\\SBER_2010_2013_1day.txt")
+    override lazy val data = new TradingData(AnalyticalStatisticsPrinter.standardImportSber
         .data.filter(_.date.getYear == 2013))
 
     test("filter trading days for 3 days rising SBER")

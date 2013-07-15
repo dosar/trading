@@ -16,6 +16,8 @@ trait VolatileDaysCombinationStatisticalPrinter
 {
     class SimplePrinter(val ticker: String, override val targetProfit: Double = 19) extends VolatileDaysStatisticalPrinter
 
+    val targetProfit: Double = 50
+
     lazy val data =
         Array("SBER", "GAZP", "GMKN", "NVTK", "ROSN", "RTKM").map(t => (t, new SimplePrinter(t).data)).toMap
 
@@ -24,9 +26,9 @@ trait VolatileDaysCombinationStatisticalPrinter
     case class CombinationElement(ticker: String, op1: TradingOp, op2: TradingOp, op1CheckDays: Int,
         op1PositionDays: Int, op2CheckDays: Int, op2PositionDays: Int)
     {
-        def getPositionAnalyzer = new TradingPositionAnalyzer(data(ticker),
-                (new LongTrendCandles(op1CheckDays, op1PositionDays, _.buyProfit > 0).filterInterestingDays(data(ticker)), op1),
-                (new LongTrendCandles(op2CheckDays, op2PositionDays, _.sellProfit > 0).filterInterestingDays(data(ticker)), op2))
+        def getPositionAnalyzer = new TradingPositionAnalyzer(
+            (new LongTrendCandles(op1CheckDays, op1PositionDays, _.buyProfit > 0).filterInterestingDays(data(ticker)), op1),
+            (new LongTrendCandles(op2CheckDays, op2PositionDays, _.sellProfit > 0).filterInterestingDays(data(ticker)), op2))
 
         def desc = ticker + " " + List(op1CheckDays, op1PositionDays, op1.opStr, op1.takeProfitPercent.formatted("%5.2f"),
             op1.stopPercent.formatted("%5.2f"), op2CheckDays, op2PositionDays, op2.opStr,
@@ -59,27 +61,28 @@ trait VolatileDaysCombinationStatisticalPrinter
         else null
     }
 
-    def isUsefulOutput(yps: Vector[YearProfit]): Boolean = yps.forall(_.strictProfit(50))
+    def isUsefulOutput(yps: Vector[YearProfit]): Boolean = yps.length == 4 &&
+        yps(3).strictProfit(targetProfit / 2) &&
+        yps(2).strictProfit(targetProfit) &&
+        yps(1).strictProfit(targetProfit) &&
+        yps(0).strictProfit(targetProfit)
 
     def getYearProfits(strategy1: CombinationElement, strategy2: CombinationElement): Vector[YearProfit] =
     {
-        def dateIn(date: LocalDate, range: (LocalDate, LocalDate, _)) =
-            date.compareTo(range._1) >= 0 && date.compareTo(range._2) <= 0
-
-        def hasIntersection(left: (LocalDate, LocalDate, _), right: (LocalDate, LocalDate, _)) =
-            dateIn(left._1, right) || dateIn(left._2, right) || dateIn(right._1, left) || dateIn(right._2, left)
-
         //get positions from 1 and 2 strategy
         val oneProfits = strategy1.getPositionAnalyzer.positionDatesProfit
         val twoProfits = strategy2.getPositionAnalyzer.positionDatesProfit
         //filter 2 strategy positions not to be included in 1 strategy
         val twoMinusOneProfits = twoProfits.filter(gp => oneProfits.exists(hasIntersection(gp, _)))
         //analyze positions set
-        new TradingPositionAnalyzer(null, Vector())
-        {
-            override protected def avgPrice(year: Int) = 0.0
-        }.getStatistics((oneProfits ++ twoMinusOneProfits).sortBy(_._1.toDate))
+        new TradingPositionAnalyzer(Vector()).getStatistics((oneProfits ++ twoMinusOneProfits).sortBy(_._1.toDate))
     }
+
+    def dateIn(date: LocalDate, range: (LocalDate, LocalDate, _)) =
+        date.compareTo(range._1) >= 0 && date.compareTo(range._2) <= 0
+
+    def hasIntersection(left: (LocalDate, LocalDate, _), right: (LocalDate, LocalDate, _)) =
+        dateIn(left._1, right) || dateIn(left._2, right) || dateIn(right._1, left) || dateIn(right._2, left)
 
     def parseInput(input: Iterator[String]): Map[Ticker, Vector[CombinationElement]] =
     {

@@ -11,7 +11,7 @@ case class MonthProfit(month: Int, balance: Balance) extends PeriodProfit
     lazy val negativeDeals = balance.negativeDeals
 }
 
-case class YearProfit(year: Int, balance: Balance, avgPrice: Double, monthProfits: Vector[MonthProfit])
+case class YearProfit(year: Int, balance: Balance, monthProfits: Vector[MonthProfit])
     extends PeriodProfit
 {
     lazy val yearProfitPct = balance.profit.profitPct
@@ -31,7 +31,7 @@ case class YearProfit(year: Int, balance: Balance, avgPrice: Double, monthProfit
         " monthAverageSlump:" + worstMonthSlumpPct.formatted("%.2f")
 
     def yearProfitString = List(year, positiveDeals, negativeDeals, yearProfitPct.formatted("%7.2f"),
-        yearSlumpPct.formatted("%.2f"), worstMonthSlumpString, avgPrice.formatted("%7.2f")).mkString("|")
+        yearSlumpPct.formatted("%.2f"), worstMonthSlumpString).mkString("|")
 
     def worstMonthSlumpString = worstMonthSlumpPct.formatted("%6.2f")
 
