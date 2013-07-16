@@ -39,7 +39,7 @@ trait VolatileDaysCombinationStatisticalPrinter
     {
         //parseFile and get groups of strategies, Map[Ticker, Vector[CombinationElement]]
         val strategies: Map[Ticker, Vector[CombinationElement]] =
-            parseInput(Source.fromFile("g:\\work\\trademachine\\trading_ideas.txt").getLines())
+            parseInput(Source.fromFile("trading_ideas.txt").getLines())
         //analyze all combination of each pair strategies
         for(first <- strategies; second <- strategies if first != second;
             firstStrategy <- first._2; secondStrategy <- second._2)

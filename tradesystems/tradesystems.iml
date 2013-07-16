@@ -4,7 +4,7 @@
     <facet type="scala" name="Scala">
       <configuration>
         <option name="compilerLibraryLevel" value="Global" />
-        <option name="compilerLibraryName" value="scalalib" />
+        <option name="compilerLibraryName" value="org.scala-lang:scala-compiler:2.10.0" />
         <option name="fsc" value="true" />
       </configuration>
     </facet>
@@ -22,6 +22,7 @@
     <orderEntry type="library" name="junit:junit:4.10" level="application" />
     <orderEntry type="library" name="joda-time:joda-time:2.2" level="application" />
     <orderEntry type="library" name="org.joda:joda-convert:1.2" level="application" />
+    <orderEntry type="library" name="org.scala-lang:scala-library:2.10.0" level="application" />
   </component>
 </module>
 

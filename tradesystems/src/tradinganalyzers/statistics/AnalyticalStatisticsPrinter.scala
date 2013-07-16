@@ -9,7 +9,7 @@ object AnalyticalStatisticsPrinter
 {
     def standardImport(ticker: String): TradingData =
     {
-        val importFile = "g:\\work\\trademachine\\" + ticker + "_2010_2013_1day.txt"
+        val importFile = ".\\" + ticker + "_2010_2013_1day.txt"
         val data = (for(line <- Source.fromFile(importFile).getLines(); cells = line.split(',');
             date = cells(0); open = cells(2); high = cells(3); low = cells(4); close = cells(5); volume = cells(6))
         yield

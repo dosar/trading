@@ -624,6 +624,11 @@
       </item>
     </group>
   </component>
+  <component name="ProjectCodeStyleSettingsManager">
+    <option name="PER_PROJECT_SETTINGS">
+      <value />
+    </option>
+  </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/tradesystems/tradesystems.iml" filepath="$PROJECT_DIR$/tradesystems/tradesystems.iml" />
@@ -633,7 +638,7 @@
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="ScalacSettings">
-    <option name="COMPILER_LIBRARY_NAME" value="scalalib" />
+    <option name="COMPILER_LIBRARY_NAME" value="org.scala-lang:scala-compiler:2.10.0" />
     <option name="COMPILER_LIBRARY_LEVEL" value="Global" />
   </component>
   <component name="VcsDirectoryMappings">
