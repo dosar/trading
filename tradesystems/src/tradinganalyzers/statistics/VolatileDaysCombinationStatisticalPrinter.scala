@@ -16,10 +16,11 @@ trait VolatileDaysCombinationStatisticalPrinter
 {
     class SimplePrinter(val ticker: String, override val targetProfit: Double = 19) extends VolatileDaysStatisticalPrinter
 
+    val strategiesFile = "trading_ideas.txt"
     val targetProfit: Double = 50
 
     lazy val data =
-        Array("SBER", "GAZP", "GMKN", "NVTK", "ROSN", "RTKM").map(t => (t, new SimplePrinter(t).data)).toMap
+        Array("SBER", "GAZP", "GMKN", "NVTK", "ROSN", "RTKM", "LKOH").map(t => (t, new SimplePrinter(t).data)).toMap
 
     type Ticker = String
 
@@ -39,12 +40,27 @@ trait VolatileDaysCombinationStatisticalPrinter
     {
         //parseFile and get groups of strategies, Map[Ticker, Vector[CombinationElement]]
         val strategies: Map[Ticker, Vector[CombinationElement]] =
-            parseInput(Source.fromFile("trading_ideas.txt").getLines())
+            parseInput(Source.fromFile(strategiesFile).getLines())
         //analyze all combination of each pair strategies
         for(first <- strategies; second <- strategies if first != second;
             firstStrategy <- first._2; secondStrategy <- second._2)
         {
             val statistics = getYearProfitsStatistics(firstStrategy, secondStrategy)
+            if(statistics != null) println(statistics)
+        }
+    }
+
+    def test3StrategiesCombination()
+    {
+        //parseFile and get groups of strategies, Map[Ticker, Vector[CombinationElement]]
+        val strategies: Map[Ticker, Vector[CombinationElement]] =
+            parseInput(Source.fromFile(strategiesFile).getLines())
+        //analyze all combination of each tripple strategies
+        for(first <- strategies; second <- strategies; third <- strategies
+            if first != second && second != third && first != third;
+            firstStrategy <- first._2; secondStrategy <- second._2; thirdStrategy <- third._2)
+        {
+            val statistics = getYearProfitsStatistics(firstStrategy, secondStrategy, thirdStrategy)
             if(statistics != null) println(statistics)
         }
     }
@@ -55,6 +71,18 @@ trait VolatileDaysCombinationStatisticalPrinter
         if(isUsefulOutput(yps))
         {
             strategy1.desc + " over " + strategy2.desc + " | " +
+                yps.flatMap(yp => Vector(yp.year, yp.yearProfitPct.formatted("%7.2f"), yp.yearSlumpPct.formatted("%7.2f"),
+                    yp.worstMonthSlumpPct.formatted("%7.2f"))).mkString(" | ")
+        }
+        else null
+    }
+
+    def getYearProfitsStatistics(strategy1: CombinationElement, strategy2: CombinationElement, strategy3: CombinationElement) =
+    {
+        val yps = getYearProfits(strategy1, strategy2, strategy3)
+        if(isUsefulOutput(yps))
+        {
+            strategy1.desc + " over " + strategy2.desc + " over " + strategy3.desc + " | " +
                 yps.flatMap(yp => Vector(yp.year, yp.yearProfitPct.formatted("%7.2f"), yp.yearSlumpPct.formatted("%7.2f"),
                     yp.worstMonthSlumpPct.formatted("%7.2f"))).mkString(" | ")
         }
@@ -76,6 +104,20 @@ trait VolatileDaysCombinationStatisticalPrinter
         val twoMinusOneProfits = twoProfits.filter(gp => oneProfits.exists(hasIntersection(gp, _)))
         //analyze positions set
         new TradingPositionAnalyzer(Vector()).getStatistics((oneProfits ++ twoMinusOneProfits).sortBy(_._1.toDate))
+    }
+
+    def getYearProfits(strategy1: CombinationElement, strategy2: CombinationElement, strategy3: CombinationElement): Vector[YearProfit] =
+    {
+        //get positions from 1 and 2 strategy
+        val profits1 = strategy1.getPositionAnalyzer.positionDatesProfit
+        val profits2 = strategy2.getPositionAnalyzer.positionDatesProfit
+        val profits3 = strategy3.getPositionAnalyzer.positionDatesProfit
+        //filter 2 and 3 strategy positions not to be included in each one and 1 strategy
+        val twoMinusOneProfits = profits2.filter(gp => profits1.exists(hasIntersection(gp, _)))
+        val thirdMinusTwoOneProfits = profits3.filter(gp =>
+            profits1.exists(hasIntersection(gp, _)) || twoMinusOneProfits.exists(hasIntersection(gp, _)))
+        //analyze positions set
+        new TradingPositionAnalyzer(Vector()).getStatistics((profits1 ++ twoMinusOneProfits ++ thirdMinusTwoOneProfits).sortBy(_._1.toDate))
     }
 
     def dateIn(date: LocalDate, range: (LocalDate, LocalDate, _)) =

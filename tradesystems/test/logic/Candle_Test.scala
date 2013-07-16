@@ -33,6 +33,9 @@ trait TestUtils
     val m2 = MonthProfit(2, createBalance(Vector((100.0, 3.5)), Vector((2013, 2, 1)), Vector()))
     val m3 = MonthProfit(3, createBalance(Vector((80.0, -2.0)), Vector(), Vector((2013, 3, 2))))
 
+    protected implicit def toLocalDate(origin: (Year, Month, Day)) =
+        new Object { def toLocalDate = new LocalDate(origin._1, origin._2, origin._3) }
+
     protected implicit def nonStrict(origin: Double) =
     {
         class DoubleWrapper(val d: Double)

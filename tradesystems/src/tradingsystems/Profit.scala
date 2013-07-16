@@ -6,8 +6,8 @@ package tradingsystems
  */
 object AccumulatedProfit
 {
-    final val Accumulator = SummedProfit
-//    final val Accumulator = MultipliedProfit
+//    final val Accumulator = SummedProfit
+    final val Accumulator = MultipliedProfit
 }
 
 trait ProfitBase

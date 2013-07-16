@@ -8,6 +8,7 @@ import tradinganalyzers.statistics.VolatileDaysCombinationStatisticalPrinter
 import tradinganalyzers.TradingOp
 import tradinganalyzers.TradingOp._
 import tradingsystems.YearProfit
+import org.joda.time.LocalDate
 
 /**
  * @author alespuh
@@ -16,6 +17,23 @@ import tradingsystems.YearProfit
 @RunWith(classOf[JUnitRunner])
 class VolatileDaysCombinationStatisticalPrinter_Test extends FunSuite with TestUtils
 {
+    test("hasIntersection")
+    {
+        new VolatileDaysCombinationStatisticalPrinter
+        {
+            def hasIntersection(oneLeft: (Year, Month, Day), oneRight: (Year, Month, Day), twoLeft: (Year, Month, Day), twoRight: (Year, Month, Day)):Boolean =
+                hasIntersection((oneLeft.toLocalDate, oneRight.toLocalDate, ""), (twoLeft.toLocalDate, twoRight.toLocalDate, ""))
+
+            assert(true === hasIntersection((2013, 1, 10), (2013, 1, 15), (2013, 1, 15), (2013, 1, 15)))
+            assert(true === hasIntersection((2013, 1, 10), (2013, 1, 15), (2013, 1, 5), (2013, 1, 10)))
+            assert(true === hasIntersection((2013, 1, 10), (2013, 1, 15), (2013, 1, 10), (2013, 1, 15)))
+            assert(true === hasIntersection((2013, 1, 10), (2013, 1, 15), (2013, 1, 11), (2013, 1, 14)))
+            assert(true === hasIntersection((2013, 1, 10), (2013, 1, 15), (2013, 1, 11), (2013, 1, 16)))
+            assert(true === hasIntersection((2013, 1, 10), (2013, 1, 15), (2013, 1, 1), (2013, 1, 11)))
+            assert(false === hasIntersection((2013, 1, 10), (2013, 1, 15), (2013, 1, 1), (2013, 1, 9)))
+            assert(false === hasIntersection((2013, 1, 10), (2013, 1, 15), (2013, 1, 16), (2013, 1, 20)))
+        }
+    }
     test("sber + gazp combination")
     {
         //must output
