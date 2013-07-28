@@ -8,6 +8,8 @@ import tradingsystems.TradingData
 import tradingsystems.MonthProfit
 import tradingsystems.Candle
 import tradingsystems.YearProfit
+import scala.collection.immutable.{Seq, Queue}
+import scala.collection.{AbstractSeq, LinearSeqLike}
 
 /**
  * @author alespuh
@@ -18,6 +20,9 @@ case class TradingPosition(candles: Array[Candle])
 {
     def this(candles: Candle*) = this(candles.toArray)
 
+    def this(candles: Vector[Candle]) = this(candles.toArray)
+
+    lazy val candlesRange = 0 until candles.length
     val positionDate = candles.head.date
     val open = candles.head.open
     val (highCandle, highCandleIndex) = candles.zipWithIndex.maxBy{case (candle, index) => candle.high}
@@ -27,19 +32,20 @@ case class TradingPosition(candles: Array[Candle])
     val close = candles.last.close
 }
 
-class TradingPositionAnalyzer(positions: Vector[(TradingPosition, TradingOp)])
+class TradingPositionAnalyzer(positions: Array[(TradingPosition, TradingOp)])
 {
-    def this(positionOps: (Vector[TradingPosition], TradingOp)*) =
-        this(positionOps.flatMap{case (positionsOnly, op) => positionsOnly.map((_, op))}.toVector.sortBy(_._1.positionDate.toDate))
+    def this(positionOps: Vector[(Vector[TradingPosition], TradingOp)]) =
+        this(positionOps.flatMap{case (positionsOnly, op) => positionsOnly.map((_, op))}
+            .sortBy(_._1.positionDate.toDate).toArray)
 
-    def getStatistics: Vector[YearProfit] = getStatistics(positionDatesProfit)
+    def getStatistics: Array[YearProfit] = getStatistics(positionDatesProfit)
 
-    def getStatistics(datesProfits: Vector[(LocalDate, LocalDate, Profit)]): Vector[YearProfit] =
+    def getStatistics(datesProfits: Array[(LocalDate, LocalDate, Profit)]): Array[YearProfit] =
     {
         val yearProfits = datesProfits
-            .groupBy{case (date, _, _) => (date.getYear, date.getMonthOfYear)}.toArray
+            .groupBy{case (date, _, _) => (date.getYear, date.getMonthOfYear)}.toVector
             .map{case ((year, month), profits) => (year, new MonthProfit(month, balanceHistoryP(profits)))}
-            .groupBy{case (year, _) => year}.toArray
+            .groupBy{case (year, _) => year}.toVector
             .map
             {
                 case (year, yearMonthProfits) =>
@@ -47,23 +53,31 @@ class TradingPositionAnalyzer(positions: Vector[(TradingPosition, TradingOp)])
                     val yearBalanceHistory = balanceHistoryP(datesProfits.filter(_._1.getYear == year))
                     new YearProfit(year, yearBalanceHistory, monthProfits.toVector)
             }
-        yearProfits.sortBy(_.year).toVector
+        yearProfits.sortBy(_.year).toArray
     }
 
-    def positionDatesProfit =
+    def positionDatesProfit: Array[(LocalDate, LocalDate, Profit)] =
     {
-        positions.map
+        //считаем профиты по позициям и определяем период в течение которого позиция по факту удерживалась
+        val profitPositions = positions.map
         {
             case (position, op) =>
                 val (profit, index) = op.profit(position)
                 (position.positionDate, position.candles(index).date, profit)
-        }.foldLeft(List[(LocalDate, LocalDate, Profit)]())
+        }
+        filterOverlappedPositions(profitPositions)
+    }
+
+    //фильтруем пересекающиеся позиции, оставляя более ранние
+    def filterOverlappedPositions(profitPositions: Array[(LocalDate, LocalDate, Profit)]) =
+    {
+        profitPositions.foldLeft(Vector[(LocalDate, LocalDate, Profit)]())
         {
-            case (list, (startDate, endDate, profit)) =>
-                val previousEndDate = list.headOption.map(_._2)
+            case (vector, (startDate, endDate, profit)) =>
+                val previousEndDate = vector.lastOption.map(_._2)
                 if(previousEndDate.isEmpty || previousEndDate.get.compareTo(startDate) < 0)
-                    (startDate, endDate, profit) :: list
-                else list
-        }.reverse.toVector
+                    vector :+ (startDate, endDate, profit)
+                else vector
+        }.toArray
     }
 }

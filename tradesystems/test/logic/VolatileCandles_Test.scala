@@ -3,11 +3,11 @@ package logic
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 import org.scalatest.FunSuite
-import tradingideas.LongTrendCandles
+import tradingideas.{PositiveTrendCandles, LongTrendCandles}
 import tradingsystems.{TradingData, Candle}
 import org.joda.time.LocalDate
 import tradinganalyzers.TradingPosition
-import tradinganalyzers.statistics.AnalyticalStatisticsPrinter
+import tradinganalyzers.statistics.{StandardImporter, AnalyticalStatisticsPrinter}
 
 @RunWith(classOf[JUnitRunner])
 class VolatileCandles_Test extends FunSuite with TestUtils with AnalyticalStatisticsPrinter
@@ -15,8 +15,19 @@ class VolatileCandles_Test extends FunSuite with TestUtils with AnalyticalStatis
 //    нужно чтобы было минимум 2 торговых дня
 //    также нужно чтобы было вытряхивание по стопу тому или другому
     val ticker: String = null
-    override lazy val data = new TradingData(AnalyticalStatisticsPrinter.standardImportSber
-        .data.filter(_.date.getYear == 2013))
+    override lazy val data = new TradingData(StandardImporter.importSber.data.filter(_.date.getYear == 2013))
+
+    test("filter for 2 days rising and position for 4 days")
+    {
+        val tradingPositions = new PositiveTrendCandles(2, 4).filterInterestingPositions(
+            TradingData(Vector(candle(2), candle(3.4), candle(-1.7), candle(2.1), candle(8.14), candle(7.41), candle(93.4))))
+        assert(1 === tradingPositions.length)
+        assert(4 === tradingPositions(0).candles.length)
+        assert(candle(-1.7) == tradingPositions(0).candles(0))
+        assert(candle(2.1) == tradingPositions(0).candles(1))
+        assert(candle(8.14) == tradingPositions(0).candles(2))
+        assert(candle(7.41) == tradingPositions(0).candles(3))
+    }
 
     test("filter trading days for 3 days rising SBER")
     {
@@ -32,7 +43,7 @@ class VolatileCandles_Test extends FunSuite with TestUtils with AnalyticalStatis
             }
         }
 
-        val tradingPositions = new LongTrendCandles(3, 3, _.buyProfit > 0).filterInterestingDays(data)
+        val tradingPositions = new PositiveTrendCandles(3, 3).filterInterestingPositions(data)
         assert(position(Candle(new LocalDate(2013, 1, 15), 100.7, 101.00, 99.78, 99.85),
             Candle(new LocalDate(2013, 1, 16), 99.93, 100.13, 99.19, 99.97),
             Candle(new LocalDate(2013, 1, 17), 99.90, 101.33, 99.54, 101.15)) === tradingPositions(0))

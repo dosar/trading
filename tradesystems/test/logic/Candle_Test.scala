@@ -17,17 +17,24 @@ trait TestUtils
 
     def isCloseEnough(x: Double, y: Double) = x == y || abs((x - y) / x) / x < tolerance
 
-    type Start = Double; type Change = Double
-    type Profits = Vector[(Start, Change)]
+    type Start = Double; type CloseMinusOpen = Double
+    type Profits = Vector[(Start, CloseMinusOpen)]
     type Year = Int; type Month = Int; type Day = Int
     type Dates = Vector[(Year, Month, Day)]
+    type Open = Double; type Close = Double
+
+    def candle(change: CloseMinusOpen): Candle = Candle(toLocalDate((2013, 1, 1)).toLocalDate, 100, 101, 99, 100 + change)
+    def candle(year: Year, month: Month, day: Day): Candle = Candle(toLocalDate((year, month, day)).toLocalDate, 0, 0, 0, 0)
+    def candle(open: Double, close: Double): Candle = Candle(null, open, 101, 99, close)
+    def inputCandles(changes: Double*) = TradingData(changes.map(candle).toVector)
+    def inputCandles(changes: Vector[(Open, Close)]) = TradingData(changes.map(pair => candle(pair._1, pair._2)).toVector)
 
     def createBalance(profits: Profits, positiveStartDatePositions: Dates, negativeStartDatePositions: Dates) =
-        Balance(AccumulatedProfit.Accumulator(profits.map(p => Profit(p._1, p._2))),
-            positiveStartDatePositions.map(d => new LocalDate(d._1, d._2, d._3)),
-            negativeStartDatePositions.map(date => new LocalDate(date._1, date._2, date._3)))
+        Balance(AccumulatedProfit.Accumulator(profits.map(p => Profit(p._1, p._2)).toArray),
+            positiveStartDatePositions.map(d => new LocalDate(d._1, d._2, d._3)).toArray,
+            negativeStartDatePositions.map(date => new LocalDate(date._1, date._2, date._3)).toArray)
 
-    def createProfits(profits: Profits): Vector[Profit] = profits.map(p => Profit(p._1, p._2))
+    def createProfits(profits: Profits): Array[Profit] = profits.map(p => Profit(p._1, p._2)).toArray
 
     val m1 = MonthProfit(1, createBalance(Vector((50.0, 2.1), (20, -4)), Vector((2013, 1, 1)), Vector((2013, 1, 2))))
     val m2 = MonthProfit(2, createBalance(Vector((100.0, 3.5)), Vector((2013, 2, 1)), Vector()))

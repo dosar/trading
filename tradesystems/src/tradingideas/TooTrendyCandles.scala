@@ -5,10 +5,12 @@ import tradinganalyzers.{TradingPosition, TradingOp}
 
 class TooTrendyCandles(condition: Candle => Boolean, trendDays: Int) extends TradingIdea
 {
-    def filterInterestingDays(list: TradingData): Vector[TradingPosition] =
+    def filterInterestingPositions(list: TradingData): Vector[TradingPosition] =
     {
-        for((candle, index) <- shiftList(list.data, trendDays)
-            if checkCondition(list.data, condition, index - trendDays to index - 1))
+        for((candle, index) <- list.data.zipWithIndex.drop(trendDays)
+            if (index - trendDays to index - 1).forall(i => condition(list.data(i))))
         yield new TradingPosition(candle)
     }
+
+    def desc: String = "тренд в " + trendDays + " дней"
 }

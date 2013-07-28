@@ -13,7 +13,7 @@ trait TrendCandles extends TradingIdea
     def checkDays: Int
     def positionDays: Int
 
-    def filterInterestingDays(list: TradingData): Vector[TradingPosition] =
+    def filterInterestingPositions(list: TradingData): Vector[TradingPosition] =
     {
         val data = list.data
         val checkRange = 0 until checkDays
@@ -23,18 +23,22 @@ trait TrendCandles extends TradingIdea
 
         val result = data.zipWithIndex.slice(checkDays, data.size - positionDays + 1)
             .filter{case (_, index) => checkPreDaysCond(index - checkDays)}
-            .map{case (_, index) => TradingPosition(toVector(index))}
+            .map{case (_, index) => new TradingPosition(toVector(index))}
         result.toVector
     }
 }
 
-class LongTrendCandles(override val checkDays: Int, override val positionDays: Int, override val checkDaysCondition: Candle => Boolean) extends TrendCandles
+class LongTrendCandles(override val checkDays: Int, override val positionDays: Int,
+    override val checkDaysCondition: Candle => Boolean, direction: String) extends TrendCandles
+{
+    override val desc: String = checkDays + " дня " + direction + ", " + positionDays + " дня в "
+}
 
 class PositiveTrendCandles(checkDays: Int, positionDays: Int)
-    extends LongTrendCandles(checkDays, positionDays, _.buyProfit > 0)
+    extends LongTrendCandles(checkDays, positionDays, _.buyProfit > 0, "роста")
 class NegativeTrendCandles(checkDays: Int, positionDays: Int)
-    extends LongTrendCandles(checkDays, positionDays, _.sellProfit > 0)
+    extends LongTrendCandles(checkDays, positionDays, _.sellProfit > 0, "падения")
 class PositiveEnoughTrendCandles(checkDays: Int, positionDays: Int)
-    extends LongTrendCandles(checkDays, positionDays, _.buyProfitPct > 0.15)
+    extends LongTrendCandles(checkDays, positionDays, _.buyProfitPct > 0.15, "уверенного роста")
 class NegativeEnoughTrendCandles(checkDays: Int, positionDays: Int)
-    extends LongTrendCandles(checkDays, positionDays, _.sellProfit > 0.15)
+    extends LongTrendCandles(checkDays, positionDays, _.sellProfitPct > 0.15, "уверенного падения")

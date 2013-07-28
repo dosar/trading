@@ -18,7 +18,7 @@ import logic.TestUtils
 class YearProfit_Test extends FunSuite with TestUtils
 {
     val mps = Vector(m1, m2, m3)
-    val balance = BalanceCalculator.balanceHistoryM(mps)
+    val balance = BalanceCalculator.balanceHistoryM(mps.toArray)
     val yearProfit = YearProfit(2013, balance, mps)
     test("profit"){ assert(balance.profit.profitPct === yearProfit.yearProfitPct) }
     test("yearSlump"){ assert(balance.profit.slumpPct === yearProfit.yearSlumpPct) }

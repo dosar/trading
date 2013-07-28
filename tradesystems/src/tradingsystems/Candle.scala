@@ -13,6 +13,7 @@ case class Candle(date: LocalDate, open: Double, high: Double, low:Double, close
     lazy val sellProfit: Double = open - close
     lazy val buySlump = open - low //на сколько просели от покупки
     lazy val sellSlump = high - open //на сколько просели от продажи
+    lazy val volatility = high - low
 
     lazy val sellString = toString + ("sellProfit", sellProfit) + ("sellSlump", sellSlump)
     lazy val buyString = toString + ("buyProfit", buyProfit) + ("buySlump", buySlump)

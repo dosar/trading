@@ -1,7 +1,7 @@
 package tradinganalyzers.statistics
 
 import tradinganalyzers.{TradingPositionAnalyzer, TradingOp}
-import tradingideas.LongTrendCandles
+import tradingideas.{NegativeTrendCandles, PositiveTrendCandles, LongTrendCandles}
 import scala.io.Source
 import scala.collection.mutable.ArrayBuffer
 import scala.util.matching.Regex
@@ -27,9 +27,9 @@ trait VolatileDaysCombinationStatisticalPrinter
     case class CombinationElement(ticker: String, op1: TradingOp, op2: TradingOp, op1CheckDays: Int,
         op1PositionDays: Int, op2CheckDays: Int, op2PositionDays: Int)
     {
-        def getPositionAnalyzer = new TradingPositionAnalyzer(
-            (new LongTrendCandles(op1CheckDays, op1PositionDays, _.buyProfit > 0).filterInterestingDays(data(ticker)), op1),
-            (new LongTrendCandles(op2CheckDays, op2PositionDays, _.sellProfit > 0).filterInterestingDays(data(ticker)), op2))
+        def getPositionAnalyzer = new TradingPositionAnalyzer(Vector(
+            (new PositiveTrendCandles(op1CheckDays, op1PositionDays).filterInterestingPositions(data(ticker)), op1),
+            (new NegativeTrendCandles(op2CheckDays, op2PositionDays).filterInterestingPositions(data(ticker)), op2)))
 
         def desc = ticker + " " + List(op1CheckDays, op1PositionDays, op1.opStr, op1.takeProfitPercent.formatted("%5.2f"),
             op1.stopPercent.formatted("%5.2f"), op2CheckDays, op2PositionDays, op2.opStr,
@@ -98,27 +98,24 @@ trait VolatileDaysCombinationStatisticalPrinter
     def getYearProfits(strategy1: CombinationElement, strategy2: CombinationElement): Vector[YearProfit] =
     {
         //get positions from 1 and 2 strategy
-        val oneProfits = strategy1.getPositionAnalyzer.positionDatesProfit
-        val twoProfits = strategy2.getPositionAnalyzer.positionDatesProfit
-        //filter 2 strategy positions not to be included in 1 strategy
-        val twoMinusOneProfits = twoProfits.filter(gp => oneProfits.exists(hasIntersection(gp, _)))
-        //analyze positions set
-        new TradingPositionAnalyzer(Vector()).getStatistics((oneProfits ++ twoMinusOneProfits).sortBy(_._1.toDate))
+        val profits1 = strategy1.getPositionAnalyzer.positionDatesProfit.toVector
+        val profits2 = strategy2.getPositionAnalyzer.positionDatesProfit.toVector
+        new TradingPositionAnalyzer(Vector()).getStatistics(mergeUnique(profits1, profits2).sortBy(_._1.toDate).toArray).toVector
     }
 
     def getYearProfits(strategy1: CombinationElement, strategy2: CombinationElement, strategy3: CombinationElement): Vector[YearProfit] =
     {
-        //get positions from 1 and 2 strategy
-        val profits1 = strategy1.getPositionAnalyzer.positionDatesProfit
-        val profits2 = strategy2.getPositionAnalyzer.positionDatesProfit
-        val profits3 = strategy3.getPositionAnalyzer.positionDatesProfit
-        //filter 2 and 3 strategy positions not to be included in each one and 1 strategy
-        val twoMinusOneProfits = profits2.filter(gp => profits1.exists(hasIntersection(gp, _)))
-        val thirdMinusTwoOneProfits = profits3.filter(gp =>
-            profits1.exists(hasIntersection(gp, _)) || twoMinusOneProfits.exists(hasIntersection(gp, _)))
+        //get positions from 1 and 2 and 3 strategy
+        val profits1 = strategy1.getPositionAnalyzer.positionDatesProfit.toVector
+        val profits2 = strategy2.getPositionAnalyzer.positionDatesProfit.toVector
+        val profits3 = strategy3.getPositionAnalyzer.positionDatesProfit.toVector
         //analyze positions set
-        new TradingPositionAnalyzer(Vector()).getStatistics((profits1 ++ twoMinusOneProfits ++ thirdMinusTwoOneProfits).sortBy(_._1.toDate))
+        val mergedDays = mergeUnique(mergeUnique(profits1, profits2), profits3)
+        new TradingPositionAnalyzer(Vector()).getStatistics(mergedDays.sortBy(_._1.toDate).toArray).toVector
     }
+
+    def mergeUnique[TP](master: Vector[(LocalDate, LocalDate, TP)], slave: Vector[(LocalDate, LocalDate, TP)]) =
+        master ++ slave.filterNot(gp => master.exists(hasIntersection(gp, _)))
 
     def dateIn(date: LocalDate, range: (LocalDate, LocalDate, _)) =
         date.compareTo(range._1) >= 0 && date.compareTo(range._2) <= 0

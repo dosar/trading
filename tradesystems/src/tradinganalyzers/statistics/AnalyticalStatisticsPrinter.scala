@@ -5,7 +5,7 @@ import scala.io.Source
 import tradinganalyzers.{TradingPositionAnalyzer, TradingPosition, TradingOp}
 import tradingsystems._
 
-object AnalyticalStatisticsPrinter
+object StandardImporter
 {
     def standardImport(ticker: String): TradingData =
     {
@@ -20,26 +20,25 @@ object AnalyticalStatisticsPrinter
         TradingData(data)
     }
 
-    def standardImportSber = standardImport("SBER")
-    def standardImportGazp = standardImport("GAZP")
-    def standardImportNvtk = standardImport("NVTK")
-    def standardImportGmkn = standardImport("GMKN")
-    def standardImportRosn = standardImport("ROSN")
-    def standardImportRtkm = standardImport("RTKM")
-    def standardImportLkoh = standardImport("LKOH")
+    def importSber = standardImport("SBER")
+    def importGazp = standardImport("GAZP")
+    def importNvtk = standardImport("NVTK")
+    def importGmkn = standardImport("GMKN")
+    def importRosn = standardImport("ROSN")
+    def importRtkm = standardImport("RTKM")
+    def importLkoh = standardImport("LKOH")
 }
 
 trait AnalyticalStatisticsPrinter
 {
-    import AnalyticalStatisticsPrinter._
     val ticker: String
-    lazy val data: TradingData = standardImport(ticker)
+    lazy val data: TradingData = StandardImporter.standardImport(ticker)
     val targetProfit: Double = 19.0
 
     def analyzeIdea(candleOps: (Vector[TradingPosition], TradingOp)*) =
     {
         println("idea days count " + candleOps.map(_._1.size).sum)
-        println(new TradingPositionAnalyzer(candleOps:_*).getStatistics.map
+        println(new TradingPositionAnalyzer(candleOps.toVector).getStatistics.map
         {
             case yp: YearProfit =>
                 val plusProfits = yp.monthProfits.filter(_.profitPct > 0).map(_.month)
@@ -53,20 +52,10 @@ trait AnalyticalStatisticsPrinter
     }
 
     def getStringStatistics(prefix: String, candleOps: (Vector[TradingPosition], TradingOp)*): String =
-        getStringStatistics(prefix, new TradingPositionAnalyzer(candleOps:_*).getStatistics)
+        getStringStatistics(prefix, new TradingPositionAnalyzer(candleOps.toVector).getStatistics)
 
-    def getStringStatistics(prefix: String, yearProfits: Vector[YearProfit]): String =
-    {
-        if(isUsefulOutput(yearProfits))
-        {
-            val yearProfitsDescription: String = yearProfits.map(_.yearProfitString).mkString("|")
-//            val monthAvgs = yearProfits.map(yp => yp.worstMonthSlumpString +
-//                yp.balance.negativeStartDatePositions.mkString("|", "|", "|") + yp.monthSlumpsString).mkString("|")
-            val monthAvgs = yearProfits.map(_.monthSlumpsString).mkString("|")
-            prefix + " | " + yearProfitsDescription + " | " + monthAvgs
-        }
-        else null
-    }
+    def getStringStatistics(prefix: String, yearProfits: Array[YearProfit]): String =
+        new YearProfitStatistics(yearProfits).compactStat(isUsefulOutput(yearProfits.toVector), prefix)
 
     def isUsefulOutput(yearProfits: Vector[YearProfit]): Boolean = yearProfits.length == 4 &&
             yearProfits(3).strictProfit(targetProfit / 2) &&

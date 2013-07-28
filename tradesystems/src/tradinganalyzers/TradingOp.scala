@@ -4,10 +4,10 @@ import tradingsystems.{ProfitBase, Profit, Candle}
 
 object TradingOp
 {
-    def buy(stopPercent: Double, takeProfitPercent: Double) =
+    def buy(stopPercent: Double, takeProfitPercent: Double): TradingOp =
         new BuyTradingOp(stopPercent, takeProfitPercent)
 
-    def sell(stopPercent: Double, takeProfitPercent: Double) =
+    def sell(stopPercent: Double, takeProfitPercent: Double): TradingOp =
         new SellTradingOp(stopPercent, takeProfitPercent)
 
     def fromDesc(desc: String) =
@@ -58,8 +58,9 @@ case class BuyTradingOp(stopPercent: Double, takeProfitPercent: Double) extends 
 
     def profit(position: TradingPosition): (Profit, Int) =
     {
-        for((candle, index) <- position.candles.zipWithIndex)
+        for(index <- position.candlesRange)
         {
+            val candle = position.candles(index)
             if((position.open - candle.low) / position.open >= stop)
                 return (Profit(position.open, -stop * position.open), index)
             if((candle.high - position.open) / position.open >= takeProfit)
@@ -80,8 +81,9 @@ case class SellTradingOp(stopPercent: Double, takeProfitPercent: Double) extends
 
     def profit(position: TradingPosition): (Profit, Int) =
     {
-        for((candle, index) <- position.candles.zipWithIndex)
+        for(index <- position.candlesRange)
         {
+            val candle = position.candles(index)
             if((candle.high - position.open) / position.open >= stop)
                 return (Profit(position.open, -stop * position.open), index)
             if((position.open - candle.low) / position.open >= takeProfit)

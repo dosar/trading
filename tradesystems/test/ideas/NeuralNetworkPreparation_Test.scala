@@ -3,7 +3,7 @@ package ideas
 import org.scalatest.FunSuite
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
-import tradinganalyzers.statistics.{AnalyticalStatisticsPrinter, VolatileDaysStatisticalPrinter}
+import tradinganalyzers.statistics.{StandardImporter, AnalyticalStatisticsPrinter, VolatileDaysStatisticalPrinter}
 import util.TradingImplicits.toSeqImplicits
 import java.lang.Math._
 import featuresextractors.SimpleFeatureExtractor
@@ -23,7 +23,7 @@ class NeuralNetworkPreparation_Test extends FunSuite with TestUtils
 {
     class SimpleTest(val ticker: String, override val targetProfit: Double = 19) extends VolatileDaysStatisticalPrinter
 
-    val sber: TradingData = AnalyticalStatisticsPrinter.standardImportSber
+    val sber: TradingData = StandardImporter.importSber
 
     test("profit limit for stocks 1 day of 2013 year")
     {
@@ -51,7 +51,7 @@ class NeuralNetworkPreparation_Test extends FunSuite with TestUtils
     test("check predictions")
     {
         val labels = Source.fromFile("g:\\work\\trademachine\\labels.txt").getLines().toVector.map(_.substring(1).toDouble)
-//        assert(labels(0).nonStrict === sber.data(10).buyProfit)
+//        assert(labels(0).nonStrict === sber.candles(10).buyProfit)
 
         new SimpleTest("", 10)
         {
@@ -63,10 +63,10 @@ class NeuralNetworkPreparation_Test extends FunSuite with TestUtils
                 {
                     val op = if(label > 0) buy(stop, takeProfit)
                     else sell(stop, takeProfit)
-//                    (TradingPosition(Array(sber.data(index + 10))), op)
-                    (TradingPosition(Array(sber.data(index + 748))), op)
+//                    (TradingPosition(Array(sber.candles(index + 10))), op)
+                    (new TradingPosition(Array(sber.data(index + 748))), op)
                 }
-                val yearProfits = new TradingPositionAnalyzer(tradingPositionOps).getStatistics
+                val yearProfits = new TradingPositionAnalyzer(tradingPositionOps.toArray).getStatistics
                 getStringStatistics(stop.formatted("%.2f") + " | " + takeProfit.formatted("%.2f"), yearProfits)
             }).filter(_ != null).toArray
             result foreach println

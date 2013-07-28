@@ -4,19 +4,19 @@ import org.joda.time.LocalDate
 
 object BalanceCalculator
 {
-    type StartDate = LocalDate
+    type StartDate = LocalDate; type EndDate = LocalDate
 
-    def balanceHistoryM(monthProfits: Vector[MonthProfit]): Balance =
+    def balanceHistoryM(monthProfits: Array[MonthProfit]): Balance =
     {
         Balance(AccumulatedProfit.Accumulator(monthProfits.flatMap(_.balance.profit.profits)),
             monthProfits.flatMap(_.balance.positiveStartDatePositions),
             monthProfits.flatMap(_.balance.negativeStartDatePositions))
     }
 
-    def balanceHistoryP(positionsProfits: Vector[(StartDate, _, Profit)]): Balance =
+    def balanceHistoryP(positionsProfits: Array[(StartDate, EndDate, Profit)]): Balance =
         balanceHistory(positionsProfits.map(triple => (triple._1, triple._3)))
 
-    def balanceHistory(positionsProfits: Vector[(StartDate, Profit)]): Balance =
+    def balanceHistory(positionsProfits: Array[(StartDate, Profit)]): Balance =
     {
         val (positiveDeals, negativeDeals) = positionsProfits.partition{case (_, profit) => profit.profit > 0}
         val accProfit = AccumulatedProfit.Accumulator(positionsProfits.map(_._2))
@@ -24,7 +24,7 @@ object BalanceCalculator
     }
 }
 
-case class Balance(profit: AccumulatedProfit, positiveStartDatePositions: Vector[LocalDate], negativeStartDatePositions: Vector[LocalDate])
+case class Balance(profit: AccumulatedProfit, positiveStartDatePositions: Array[LocalDate], negativeStartDatePositions: Array[LocalDate])
 {
     lazy val daysCount = profit.profits.length
     lazy val positiveDeals = positiveStartDatePositions.length

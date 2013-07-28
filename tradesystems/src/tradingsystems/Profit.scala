@@ -6,8 +6,8 @@ package tradingsystems
  */
 object AccumulatedProfit
 {
-//    final val Accumulator = SummedProfit
-    final val Accumulator = MultipliedProfit
+    final val Accumulator = SummedProfit
+//    final val Accumulator = MultipliedProfit
 }
 
 trait ProfitBase
@@ -20,11 +20,11 @@ trait ProfitBase
 
 trait AccumulatedProfit extends ProfitBase
 {
-    val profits: Vector[Profit]
+    val profits: Array[Profit]
 }
 
 //исходим из того, что торгуем все время постоянной суммой и заработанное откладываем, а потерянное восполняем
-case class SummedProfit(profits: Vector[Profit]) extends AccumulatedProfit
+case class SummedProfit(profits: Array[Profit]) extends AccumulatedProfit
 {
     override lazy val (profit, slump) = profits.foldLeft((0.0, 0.0))
     {
@@ -35,7 +35,7 @@ case class SummedProfit(profits: Vector[Profit]) extends AccumulatedProfit
 }
 
 //исходим из того, что торгуем "на все"
-case class MultipliedProfit(profits: Vector[Profit]) extends AccumulatedProfit
+case class MultipliedProfit(profits: Array[Profit]) extends AccumulatedProfit
 {
     override lazy val (profit, slump) =
     {

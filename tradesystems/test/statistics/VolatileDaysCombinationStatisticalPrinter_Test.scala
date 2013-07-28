@@ -34,6 +34,44 @@ class VolatileDaysCombinationStatisticalPrinter_Test extends FunSuite with TestU
             assert(false === hasIntersection((2013, 1, 10), (2013, 1, 15), (2013, 1, 16), (2013, 1, 20)))
         }
     }
+
+    test("mergeUnique")
+    {
+        new VolatileDaysCombinationStatisticalPrinter
+        {
+            def merge(master: Vector[((Year, Month, Day), (Year, Month, Day))], slave: Vector[((Year, Month, Day), (Year, Month, Day))]) =
+                mergeUnique(master.map(p => (p._1.toLocalDate, p._2.toLocalDate, "")), slave.map(p => (p._1.toLocalDate, p._2.toLocalDate, "")))
+
+            def check(start: (Year, Month, Day), end: (Year, Month, Day), ind: Int) =
+                assert((start.toLocalDate, end.toLocalDate, "") === mergedRanges(ind))
+
+            val mergedRanges = merge(
+                Vector(((2013, 1, 10), (2013, 1, 15)),
+                        ((2013, 1, 17), (2013, 1, 18)),
+                        ((2013, 1, 20), (2013, 1, 30)),
+                        ((2013, 2, 1), (2013, 2, 1))),
+                Vector(((2013, 1, 9), (2013, 1, 9)),
+                        ((2013, 1, 9), (2013, 1, 10)),
+                        ((2013, 1, 10), (2013, 1, 11)),
+                        ((2013, 1, 11), (2013, 1, 13)),
+                        ((2013, 1, 15), (2013, 1, 15)),
+                        ((2013, 1, 16), (2013, 1, 16)),
+                        ((2013, 1, 19), (2013, 1, 19)),
+                        ((2013, 2, 1), (2013, 2, 1)),
+                        ((2013, 2, 9), (2013, 2, 19))))
+
+            check((2013, 1, 10), (2013, 1, 15), 0)
+            check((2013, 1, 17), (2013, 1, 18), 1)
+            check((2013, 1, 20), (2013, 1, 30), 2)
+            check((2013, 2, 1), (2013, 2, 1), 3)
+            check((2013, 1, 9), (2013, 1, 9), 4)
+            check((2013, 1, 16), (2013, 1, 16), 5)
+            check((2013, 1, 19), (2013, 1, 19), 6)
+            check((2013, 2, 9), (2013, 2, 19), 7)
+            assert(8 === mergedRanges.length)
+        }
+    }
+
     test("sber + gazp combination")
     {
         //must output

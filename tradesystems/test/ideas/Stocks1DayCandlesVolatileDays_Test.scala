@@ -3,10 +3,10 @@ package ideas
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.junit.JUnitRunner
-import tradinganalyzers.TradingPositionAnalyzer
+import tradinganalyzers.{TradingPosition, TradingPositionAnalyzer}
 import tradinganalyzers.TradingOp._
 import tradingideas.TradingIdea._
-import tradingideas.{NegativeTrendCandles, PositiveTrendCandles, LongTrendCandles}
+import tradingideas._
 import tradingsystems.{YearProfit, Candle}
 import org.joda.time.LocalDate
 import tradinganalyzers.statistics.VolatileDaysStatisticalPrinter
@@ -20,26 +20,26 @@ class Stocks1DayCandlesVolatileDays_Test extends FunSuite
     {
         new SimpleTest("SBER", 30)
         {
-            override def isUsefulOutput(yearProfits: Vector[YearProfit]): Boolean = yearProfits.length == 4 &&
-                yearProfits.forall(_.strictProfit(25))
-            override def positiveCandle(c: Candle): Boolean = c.buyProfitPct > 0.25
-            override def negativeCandle(c: Candle): Boolean = c.sellProfitPct > 0.25
+            override def getOp2Idea(op2CheckDays: Int, op2PositionDays: Int): TradingIdea =
+                new PositiveEnoughTrendCandles(op2CheckDays, op2PositionDays)
+
+            override def getOp1Idea(op1CheckDays: Int, op1PositionDays: Int): TradingIdea =
+                new NegativeEnoughTrendCandles(op1CheckDays, op1PositionDays)
         }.standardTest(stopMultiplierStep = 1)
     }
 
     test("sberbank concrete example")
     {
-        new SimpleTest("SBER", 10)
+        new SimpleTest("SBER", -1000)
         {
-            val op1 = sell(3, 8)
-            val op2 = buy(5, 7)
-            val (op1CheckDays, op1PositionDays, op2CheckDays, op2PositionDays) = (2, 3, 2, 7)
-            val op1Desc = op1CheckDays + " дня роста, " + op1PositionDays + " дня в " + op1.desc
-            val op2Desc = op2CheckDays + " дня падения, " + op2PositionDays + " дня в " + op2.desc
-            println(getStringStatistics(op1Desc + " и " + op2Desc,
-                (new PositiveTrendCandles(2, 3).filterInterestingDays(data), op1),
-                (new NegativeTrendCandles(2, 7).filterInterestingDays(data), op2)
-            ))
+            val risingPositions = new PositiveTrendCandles(2, 5).filterInterestingPositions(data).map((_, sell(3, 8))).toArray
+            val fallingPositions = new NegativeTrendCandles(2, 7).filterInterestingPositions(data).map((_, buy(2, 8))).toArray
+//            val risingPositions = (new SignalCandles(Vector(1, 1), 1 to 5).filterInterestingPositions(candles), sell(3, 8))
+//            val fallingPositions = (new SignalCandles(Vector(-1, -1), 1 to 7).filterInterestingPositions(candles), buy(2, 8))
+            println(getStringStatistics("", new TradingPositionAnalyzer(risingPositions).getStatistics))
+            println(getStringStatistics("", new TradingPositionAnalyzer(fallingPositions).getStatistics))
+            println(getStringStatistics("",
+                new TradingPositionAnalyzer((risingPositions ++ fallingPositions).sortBy(_._1.positionDate.toDate)).getStatistics))
         }
     }
 
@@ -158,25 +158,4 @@ class Stocks1DayCandlesVolatileDays_Test extends FunSuite
 //MultipliedProfit
 
     test("rostelecom 1 day candles percent stop, take profit") { new SimpleTest("RTKM", 28).standardTest(stopMultiplierStep = 1) }
-
-    test("print negative position days")
-    {
-        new SimpleTest("SBER")
-        {
-            val op1positions = new LongTrendCandles(2, 5, _.buyProfitPct > 0.15).filterInterestingDays(data)
-            val op2Positions = new LongTrendCandles(2, 5, _.sellProfitPct > 0).filterInterestingDays(data)
-            val statistics = new TradingPositionAnalyzer((op1positions, sell(5, 8)), (op2Positions, buy(5, 8))).getStatistics
-            println(statistics.flatMap(yp =>
-                List(yp.yearProfitPct.formatted("%7.2f"), yp.yearSlumpPct.formatted("%7.2f"), yp.worstMonthSlumpString)).mkString(" | "))
-            for(yp <- statistics)
-            {
-                println(List(yp.year, yp.negativeDeals, yp.positiveDeals).mkString(" | "))
-                for(mp <- yp.monthProfits)
-                {
-                    println((mp.month :: mp.balance.negativeStartDatePositions.toList.map(d => d.getDayOfMonth)).mkString(" | "))
-                    println((mp.month :: mp.balance.positiveStartDatePositions.toList.map(d => d.getDayOfMonth)).mkString(" | "))
-                }
-            }
-        }
-    }
 }
