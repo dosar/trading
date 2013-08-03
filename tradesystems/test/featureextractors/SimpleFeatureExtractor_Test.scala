@@ -34,7 +34,7 @@ class SimpleFeatureExtractor_Test extends FunSuite with TestUtils
         assert(volume === currentDay.next)
     }
 
-    test("empty input"){ assert(Array.empty === extractor.generateFor(TradingData(Vector.empty))) }
+    test("empty input"){ assert(Array.empty === extractor.generateFor(TradingData(Vector.empty, ""))) }
     test("real data input")
     {
         val featureMatrix = extractor.generateFor(sberCandles)

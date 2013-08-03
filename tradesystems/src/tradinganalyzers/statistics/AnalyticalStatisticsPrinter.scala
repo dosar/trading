@@ -17,7 +17,7 @@ object StandardImporter
             Candle(date = new LocalDate(date.take(4).toInt, date.take(6).drop(4).toInt, date.take(8).drop(6).toInt),
                 open.toDouble, high.toDouble, low.toDouble, close.toDouble, volume.toInt)
         }).toVector
-        TradingData(data)
+        TradingData(data, ticker)
     }
 
     def importSber = standardImport("SBER")

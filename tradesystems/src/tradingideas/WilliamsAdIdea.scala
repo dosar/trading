@@ -18,7 +18,7 @@ class WilliamsAdIdea(periodForMovingFunc: Int, positionDays: Int, daysAfter: Int
             yield new TradingPosition(positionRange.map(_ + i + daysAfter).map(data(_)).toArray)).toVector
     }
 
-    def desc: String = "Williams A/D " + List(daysAfter, periodForMovingFunc.formatted("%2d"), positionDays).mkString("|", "|", "|")
+    def desc: String = "Williams A/D " + List(periodForMovingFunc.formatted("%2d"), positionDays, daysAfter).mkString("|", "|", "|")
 }
 
 class WilliamsAdMax(periodForMax: Int, positionDays: Int, daysAfter: Int) extends

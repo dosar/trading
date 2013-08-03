@@ -15,12 +15,12 @@ class VolatileCandles_Test extends FunSuite with TestUtils with AnalyticalStatis
 //    нужно чтобы было минимум 2 торговых дня
 //    также нужно чтобы было вытряхивание по стопу тому или другому
     val ticker: String = null
-    override lazy val data = new TradingData(StandardImporter.importSber.data.filter(_.date.getYear == 2013))
+    override lazy val data = new TradingData(StandardImporter.importSber.data.filter(_.date.getYear == 2013), "SBER")
 
     test("filter for 2 days rising and position for 4 days")
     {
         val tradingPositions = new PositiveTrendCandles(2, 4).filterInterestingPositions(
-            TradingData(Vector(candle(2), candle(3.4), candle(-1.7), candle(2.1), candle(8.14), candle(7.41), candle(93.4))))
+            TradingData(Vector(candle(2), candle(3.4), candle(-1.7), candle(2.1), candle(8.14), candle(7.41), candle(93.4)), ""))
         assert(1 === tradingPositions.length)
         assert(4 === tradingPositions(0).candles.length)
         assert(candle(-1.7) == tradingPositions(0).candles(0))

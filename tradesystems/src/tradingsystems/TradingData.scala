@@ -8,9 +8,9 @@ import scala.collection.mutable
  * @author alespuh
  * @since 08.07.13
  */
-case class TradingData(data: Vector[Candle])
+case class TradingData(data: Vector[Candle], ticker: String)
 {
-    def this(anotherData: TradingData) = this(anotherData.data)
+    def this(anotherData: TradingData) = this(anotherData.data, anotherData.ticker)
     def apply(index: Int) = data(index)
 
     type MovingRange = Range
@@ -21,10 +21,18 @@ case class TradingData(data: Vector[Candle])
             yield func(max(candleInd - (period - 1), 0) to candleInd)
     }
 
+    def desc = ticker
     lazy val length = data.length
     lazy val atr14: Vector[Double] = AverageTrueRange(this, 14).values
     lazy val williamsAD: Vector[Double] = WilliamsAD(this).values
 }
+
+// в курсе он рассказывает о другой стратегии, берем 14 дневное среднее из цен close - open
+// и если оно растет а цена падает, значит скоро разворот
+// и наоборот если оно падает а цена растет значит скоро разворот
+// фракталы из 3 свечек. это когда вокруг свечи лоу выше слева и справа или хаи ниже слева и справа. это краткосрочные хаи и лоу
+// средне срочные хаи это когда слева и справа краткосрочные хаи меньше
+// внутренние свечи - зло, не участвуют в определении краткосорочных лоу и хаев
 
 case class WilliamsAD(candles: TradingData)
 {

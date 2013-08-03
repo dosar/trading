@@ -26,8 +26,9 @@ trait TestUtils
     def candle(change: CloseMinusOpen): Candle = Candle(toLocalDate((2013, 1, 1)).toLocalDate, 100, 101, 99, 100 + change)
     def candle(year: Year, month: Month, day: Day): Candle = Candle(toLocalDate((year, month, day)).toLocalDate, 0, 0, 0, 0)
     def candle(open: Double, close: Double): Candle = Candle(null, open, 101, 99, close)
-    def inputCandles(changes: Double*) = TradingData(changes.map(candle).toVector)
-    def inputCandles(changes: Vector[(Open, Close)]) = TradingData(changes.map(pair => candle(pair._1, pair._2)).toVector)
+    def inputCandles(changes: Double*) = TradingData(changes.map(candle).toVector, "")
+    def inputCandles(changes: Vector[(Open, Close)]) =
+        TradingData(changes.map(pair => candle(pair._1, pair._2)).toVector, "")
 
     def createBalance(profits: Profits, positiveStartDatePositions: Dates, negativeStartDatePositions: Dates) =
         Balance(AccumulatedProfit.Accumulator(profits.map(p => Profit(p._1, p._2)).toArray),

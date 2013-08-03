@@ -15,7 +15,7 @@ class MergingFigureCandles_Test extends FunSuite with TestUtils
 {
     test("test 1 opposite day")
     {
-        val data = TradingData(Vector(candle(1), candle(2), candle(-1), candle(100), candle(20), candle(10)))
+        val data = TradingData(Vector(candle(1), candle(2), candle(-1), candle(100), candle(20), candle(10)), "")
         val filteredPositions = new MergingFigureCandles(2, 3, 1, _.buyProfit > 0).filterInterestingPositions(data)
         assert(1 === filteredPositions.length)
         assert(candle(100) === filteredPositions(0).candles(0))
@@ -25,7 +25,7 @@ class MergingFigureCandles_Test extends FunSuite with TestUtils
 
     test("test 2 opposite day")
     {
-        val data = TradingData(Vector(candle(1), candle(2), candle(-1), candle(-100), candle(20), candle(10), candle(12)))
+        val data = TradingData(Vector(candle(1), candle(2), candle(-1), candle(-100), candle(20), candle(10), candle(12)), "")
         val filteredPositions = new MergingFigureCandles(2, 2, 2, _.buyProfit > 0).filterInterestingPositions(data)
         assert(1 === filteredPositions.length)
         assert(candle(20) === filteredPositions(0).candles(0))

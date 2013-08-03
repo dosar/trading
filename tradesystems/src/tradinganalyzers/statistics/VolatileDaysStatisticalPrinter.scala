@@ -25,9 +25,7 @@ trait VolatileDaysStatisticalPrinter extends AnalyticalStatisticsPrinter
             oneStrategyStatistics(stopRange, takeProfitRange, getOp2Idea, "падения", " " * 27)
 
         val result = statistics.flatten.toVector
-//        result.sortBy(_.take(48)).foreach(println)
-        for ((prefix, yps) <- result.sortBy{case (prefix, yps) => min(yps.take(3).map(_.yearProfitPct).min, yps(3).yearProfitPct * 2)})
-            println(getStringStatistics(prefix, yps))
+        YearProfitStatistics.printStatistics(result)
     }
 
     import TradingOp._

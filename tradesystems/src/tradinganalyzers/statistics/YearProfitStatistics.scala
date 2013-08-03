@@ -1,6 +1,21 @@
 package tradinganalyzers.statistics
 
 import tradingsystems.YearProfit
+import scala.math._
+import tradingsystems.YearProfit
+
+object YearProfitStatistics
+{
+    type Prefix = String
+
+    def minProfit(yps: Array[YearProfit]) = min(yps.take(3).map(_.yearProfitPct).min, yps(3).yearProfitPct * 2)
+
+    def printStatistics(statistics: Vector[(Prefix, Array[YearProfit])]) =
+    {
+        for ((prefix, yps) <- statistics.sortBy{case (prefix, yps) => minProfit(yps)})
+            println(new YearProfitStatistics(yps).compactStat(prefix))
+    }
+}
 
 /**
  * @author alespuh

@@ -55,7 +55,7 @@ class DaysDirectionSignalExtractor_Test extends FunSuite with TestUtils
     test("getSignal")
     {
         val candles = inputCandles(Vector[(Open, Close)]((100, 101), (99, 100.2), (100, 99), (100, 102), (99, 100.1), (98, 99), (100, 105), (99.4, 99.9), (98, 99.8))).data
-        val extractor = new DaysDirectionSignalExtractor(TradingData(Vector.empty))
+        val extractor = new DaysDirectionSignalExtractor(TradingData(Vector.empty, ""))
         assert(Vector(1, 1, -1, 1) === extractor.getSignal(candles, 4, 4))
         assert(Vector(1, 1, -1) === extractor.getSignal(candles, 3, 3))
         assert(Vector(1, 1) === extractor.getSignal(candles, 2, 2))
@@ -68,7 +68,7 @@ class DaysDirectionSignalExtractor_Test extends FunSuite with TestUtils
     test("getTrendStatistics")
     {
         val candles = inputCandles(Vector[(Open, Close)]((100, 101), (99, 100.2), (100, 99), (100, 102), (99, 100.1), (98, 99), (100, 105), (99.4, 99.9), (98, 99.8))).data
-        val extractor = new DaysDirectionSignalExtractor(TradingData(Vector.empty))
+        val extractor = new DaysDirectionSignalExtractor(TradingData(Vector.empty, ""))
         assert(Vector((1, 0), (1, 0), (0, 1), (1, 0), (1, 0), (0, 1), (1, 0)) === extractor.getTrendStatistics(candles, 0)(0))
         assert(Vector((1, 0), (0, 1), (1, 0), (1, 0), (0, 1), (1, 0)) === extractor.getTrendStatistics(candles, 0)(1))
         assert(Vector((0, 1), (1, 0), (1, 0), (0, 1), (1, 0)) === extractor.getTrendStatistics(candles, 0)(2))
@@ -94,7 +94,7 @@ class DaysDirectionSignalExtractor_Test extends FunSuite with TestUtils
             }
         }
 
-        val extractor = new DaysDirectionSignalExtractor(TradingData(Vector.empty))
+        val extractor = new DaysDirectionSignalExtractor(TradingData(Vector.empty, ""))
         val summed = extractor.sum(Vector(
             Vector(
                 Vector((02, -01), (03, 04), (-05, 03), (01, 0)),
@@ -115,7 +115,7 @@ class DaysDirectionSignalExtractor_Test extends FunSuite with TestUtils
     test("getAccumulatedTrend")
     {
         val candles = inputCandles(Vector[(Open, Close)]((100, 101), (99, 100.2), (100, 99), (100, 102))).data
-        val extractor = new DaysDirectionSignalExtractor(TradingData(Vector.empty))
+        val extractor = new DaysDirectionSignalExtractor(TradingData(Vector.empty, ""))
         val trend0 = extractor.getTrendStatistics(candles, 0)
         assert(Vector((1, 0), (1, 0), (0, 1), (1, 0)) === trend0(0))
         assert(Vector((1, 0), (0, 1), (1, 0)) === trend0(1))

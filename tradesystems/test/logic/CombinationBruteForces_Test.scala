@@ -22,7 +22,7 @@ class CombinationBruteForces_Test extends FunSuite with TestUtils
         new StrategiesCombinator
         {
             override lazy val targetProfit: Int = 60
-        }.bruteForceCombinations(
+        }.rearrangeStrategiesOps(
             StrategyElement(sber, new PositiveTrendCandles(2, 5), new NegativeTrendCandles(2, 7)),
 //            StrategyElement(rtkm, new WilliamsAdMax(10, 2, 1), new WilliamsAdMin(5, 2, 1)),
             StrategyElement(nvtk, new WilliamsAdMax(5, 6, 2), new WilliamsAdMin(5, 7, 2)))

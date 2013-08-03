@@ -12,6 +12,7 @@ import tradinganalyzers.{TradingOp, TradingPositionAnalyzer}
 case class StrategyIdeaData(data: TradingData, idea: TradingIdea)
 {
     def filterInterestingPositions = idea.filterInterestingPositions(data)
+    def desc = data.desc + "|" + idea.desc
 }
 
 case class StrategyElement(data: TradingData, ideas: TradingIdea*)
@@ -43,21 +44,44 @@ trait StrategiesCombinator
     lazy val profitRange = 8 to 13
     lazy val targetProfit = 50
 
-    def bruteForceCombinations(strategyElements: StrategyElement*)
+    def rearrangeStrategies(strategies: (StrategyIdeaData, (Double, Double) => TradingOp)*)
+    {
+        val combinator = new CombinationBruteForces()
+        val result = for(ideasCombination <- combinator.rearrange(strategies.toVector))
+        yield
+        {
+            val positionTemplate = ideasCombination.map(_._1.filterInterestingPositions).zip(ideasCombination.map(_._2))
+                .flatMap{case (positions, op) => positions.map(position => (position, op))}.sortBy(_._1.positionDate.toDate).toArray
+            (for(opStop <- stopRange; opTakeProfit <- profitRange) yield
+            {
+                val positionsWithOp = positionTemplate.map{case (position, opf) => (position, opf(opStop, opTakeProfit): TradingOp)}
+                //for different stop/profit run TradingPositionAnalyzer
+                val yps = new TradingPositionAnalyzer(positionsWithOp).getStatistics
+                if(isUsefulOutput(yps))
+                {
+                    val prefix = ideasCombination
+                        .map{case (ideaData, opf) => (ideaData, opf(opStop, opTakeProfit))}
+                        .map{case (ideaData, op) => ideaData.desc + op.desc}.mkString("|", "|", "|")
+                    (prefix, yps)
+                }
+                else null
+            }).filter(_ != null)
+        }
+        YearProfitStatistics.printStatistics(result.flatten.toVector)
+    }
+
+    def rearrangeStrategiesOps(strategyElements: StrategyElement*)
     {
         val strategies = strategyElements.flatMap(se => se.ideas.map(idea => StrategyIdeaData(se.data, idea)))
         val combinator = new CombinationBruteForces()
         val opCombinations = combinator.completeEnumeration(Vector(sell _, buy _), strategies.length)
-        for(ideasCombination <- combinator.rearrange(strategies.toVector); opCombination <- opCombinations)
+        val result = for(ideasCombination <- combinator.rearrange(strategies.toVector).par; opCombination <- opCombinations)
+        yield
         {
             //get positions with ops
             val positionTemplate = ideasCombination.map(_.filterInterestingPositions).zip(opCombination)
                 .flatMap{case (positions, op) => positions.map(position => (position, op))}.sortBy(_._1.positionDate.toDate).toArray
-//            val positionTemplate = ideasCombination.map(_.filterInterestingPositions).zip(opCombination)
-//                .flatMap{case (positions, op) => positions.map(position => (position, op))}
-//                .groupBy{case (position, op) => position.positionDate}.toArray.map{case (_, datePositions) => datePositions.head}
-//                .sortBy(_._1.positionDate.toDate).toArray
-            for(opStop <- stopRange; opTakeProfit <- profitRange)
+            (for(opStop <- stopRange; opTakeProfit <- profitRange) yield
             {
                 val positionsWithOp = positionTemplate.map{case (position, opf) => (position, opf(opStop, opTakeProfit): TradingOp)}
                 //for different stop/profit run TradingPositionAnalyzer
@@ -66,11 +90,13 @@ trait StrategiesCombinator
                 {
                     val prefix = ideasCombination.zip(opCombination)
                         .map{case (ideaData, opf) => (ideaData, opf(opStop, opTakeProfit))}
-                        .map{case (ideaData, op) => ideaData.idea.desc + op.desc}.mkString("|", "|", "|")
-                    println(new YearProfitStatistics(yps).compactStat(prefix))//print results
+                        .map{case (ideaData, op) => ideaData.desc + op.desc}.mkString("|", "|", "|")
+                    (prefix, yps)//print results
                 }
-            }
+                else null
+            }).filter(_ != null)
         }
+        YearProfitStatistics.printStatistics(result.flatten.toVector)
     }
 
     def isUsefulOutput(yearProfits: Array[YearProfit]): Boolean = yearProfits.length == 4 &&
