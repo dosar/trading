@@ -25,6 +25,8 @@ class DoubleImplicits(d: Double)
 class AnyImplicits[T](obj: T)
 {
     def mapOr[B](f: T => B, dfv: => B) = Option(obj).map(f).getOrElse(dfv)
+
+    def in(list: GenTraversableOnce[T]) = list.find(_ == obj).isDefined
 }
 
 class VectorImplicits[T](vector: Vector[T])

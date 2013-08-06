@@ -8,6 +8,13 @@ import tradinganalyzers.TradingPosition
  * @since 25.07.13
  */
 
+class WilliamsAdDivergenceIdea extends TradingIdea
+{
+    def desc: String = "Williams A/D divergence"
+
+    def filterInterestingPositions(list: TradingData): Vector[TradingPosition] = Vector()
+}
+
 class WilliamsAdIdea(periodForMovingFunc: Int, positionDays: Int, daysAfter: Int, movingFunc: (Range, TradingData) => Double) extends TradingIdea
 {
     def filterInterestingPositions(data: TradingData): Vector[TradingPosition] =
@@ -21,13 +28,13 @@ class WilliamsAdIdea(periodForMovingFunc: Int, positionDays: Int, daysAfter: Int
     def desc: String = "Williams A/D " + List(periodForMovingFunc.formatted("%2d"), positionDays, daysAfter).mkString("|", "|", "|")
 }
 
-class WilliamsAdMax(periodForMax: Int, positionDays: Int, daysAfter: Int) extends
+case class WilliamsAdMax(periodForMax: Int, positionDays: Int, daysAfter: Int) extends
     WilliamsAdIdea(periodForMax, positionDays, daysAfter, (r, d) => r.map(d.williamsAD).max)
 {
     override def desc: String = "Max " + super.desc
 }
 
-class WilliamsAdMin(periodForMin: Int, positionDays: Int, daysAfter: Int) extends
+case class WilliamsAdMin(periodForMin: Int, positionDays: Int, daysAfter: Int) extends
     WilliamsAdIdea(periodForMin, positionDays, daysAfter, (r, d) => r.map(d.williamsAD).min)
 {
     override def desc: String = "Min " + super.desc

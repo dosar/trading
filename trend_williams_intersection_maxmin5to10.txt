@@ -1,0 +1,1685 @@
+ 0,00 GAZP|302|36|Max Williams A/D | 3|1|3||5 дня падения, 1 дня в 
+ 0,00 GAZP|248|36|Max Williams A/D | 4|1|1||5 дня падения, 1 дня в 
+ 0,00 GAZP|248|36|Max Williams A/D | 4|1|2||5 дня падения, 1 дня в 
+ 0,00 GAZP|248|36|Max Williams A/D | 4|1|3||5 дня падения, 1 дня в 
+ 0,00 GAZP|214|36|Max Williams A/D | 5|1|1||5 дня падения, 1 дня в 
+ 0,00 GAZP|214|36|Max Williams A/D | 5|1|2||5 дня падения, 1 дня в 
+ 0,00 GAZP|214|36|Max Williams A/D | 5|1|3||5 дня падения, 1 дня в 
+ 0,00 GAZP|185|36|Max Williams A/D | 6|1|1||5 дня падения, 1 дня в 
+ 0,00 GAZP|185|36|Max Williams A/D | 6|1|2||5 дня падения, 1 дня в 
+ 0,00 GAZP|185|36|Max Williams A/D | 6|1|3||5 дня падения, 1 дня в 
+ 0,00 GAZP|132|14|Max Williams A/D |10|1|1||6 дня падения, 1 дня в 
+ 0,00 GAZP|132|14|Max Williams A/D |10|1|2||6 дня падения, 1 дня в 
+ 0,00 GAZP|132|14|Max Williams A/D |10|1|3||6 дня падения, 1 дня в 
+ 0,00 GAZP|127|14|Max Williams A/D |11|1|1||6 дня падения, 1 дня в 
+ 0,00 GAZP|127|14|Max Williams A/D |11|1|2||6 дня падения, 1 дня в 
+ 0,00 GAZP|127|14|Max Williams A/D |11|1|3||6 дня падения, 1 дня в 
+ 0,00 GAZP|121|14|Max Williams A/D |12|1|1||6 дня падения, 1 дня в 
+ 0,00 GAZP|121|14|Max Williams A/D |12|1|2||6 дня падения, 1 дня в 
+ 0,00 GAZP|121|14|Max Williams A/D |12|1|3||6 дня падения, 1 дня в 
+ 0,00 GAZP|112|14|Max Williams A/D |13|1|1||6 дня падения, 1 дня в 
+ 0,00 GAZP|112|14|Max Williams A/D |13|1|2||6 дня падения, 1 дня в 
+ 0,00 GAZP|112|14|Max Williams A/D |13|1|3||6 дня падения, 1 дня в 
+ 0,00 GAZP|107|14|Max Williams A/D |14|1|1||6 дня падения, 1 дня в 
+ 0,00 GAZP|107|14|Max Williams A/D |14|1|2||6 дня падения, 1 дня в 
+ 0,00 GAZP|107|14|Max Williams A/D |14|1|3||6 дня падения, 1 дня в 
+ 0,00 GAZP|103|14|Max Williams A/D |15|1|1||6 дня падения, 1 дня в 
+ 0,00 GAZP|103|14|Max Williams A/D |15|1|2||6 дня падения, 1 дня в 
+ 0,00 GAZP|103|14|Max Williams A/D |15|1|3||6 дня падения, 1 дня в 
+ 0,00 GAZP|97|14|Max Williams A/D |16|1|1||6 дня падения, 1 дня в 
+ 0,00 GAZP|97|14|Max Williams A/D |16|1|2||6 дня падения, 1 дня в 
+ 0,00 GAZP|97|14|Max Williams A/D |16|1|3||6 дня падения, 1 дня в 
+ 0,00 GAZP|92|14|Max Williams A/D |17|1|1||6 дня падения, 1 дня в 
+ 0,00 GAZP|92|14|Max Williams A/D |17|1|2||6 дня падения, 1 дня в 
+ 0,00 GAZP|92|14|Max Williams A/D |17|1|3||6 дня падения, 1 дня в 
+ 0,00 GAZP|89|14|Max Williams A/D |18|1|1||6 дня падения, 1 дня в 
+ 0,00 GAZP|89|14|Max Williams A/D |18|1|2||6 дня падения, 1 дня в 
+ 0,00 GAZP|89|14|Max Williams A/D |18|1|3||6 дня падения, 1 дня в 
+ 0,00 GAZP|87|14|Max Williams A/D |19|1|1||6 дня падения, 1 дня в 
+ 0,00 GAZP|87|14|Max Williams A/D |19|1|2||6 дня падения, 1 дня в 
+ 0,00 GAZP|87|14|Max Williams A/D |19|1|3||6 дня падения, 1 дня в 
+ 0,00 GAZP|82|14|Max Williams A/D |20|1|1||6 дня падения, 1 дня в 
+ 0,00 GAZP|82|14|Max Williams A/D |20|1|2||6 дня падения, 1 дня в 
+ 0,00 GAZP|82|14|Max Williams A/D |20|1|3||6 дня падения, 1 дня в 
+ 0,00 GAZP|80|14|Max Williams A/D |21|1|1||6 дня падения, 1 дня в 
+ 0,00 GAZP|80|14|Max Williams A/D |21|1|2||6 дня падения, 1 дня в 
+ 0,00 GAZP|80|14|Max Williams A/D |21|1|3||6 дня падения, 1 дня в 
+ 0,00 GAZP|75|14|Max Williams A/D |22|1|1||6 дня падения, 1 дня в 
+ 0,00 GAZP|75|14|Max Williams A/D |22|1|2||6 дня падения, 1 дня в 
+ 0,00 GAZP|75|14|Max Williams A/D |22|1|3||6 дня падения, 1 дня в 
+ 0,00 GAZP|71|14|Max Williams A/D |23|1|1||6 дня падения, 1 дня в 
+ 0,00 GAZP|71|14|Max Williams A/D |23|1|2||6 дня падения, 1 дня в 
+ 0,00 GAZP|71|14|Max Williams A/D |23|1|3||6 дня падения, 1 дня в 
+ 0,00 GAZP|349|35|Min Williams A/D | 3|1|1||4 дня роста, 1 дня в 
+ 0,00 GAZP|348|35|Min Williams A/D | 3|1|2||4 дня роста, 1 дня в 
+ 0,00 GAZP|288|35|Min Williams A/D | 4|1|1||4 дня роста, 1 дня в 
+ 0,00 GAZP|287|35|Min Williams A/D | 4|1|2||4 дня роста, 1 дня в 
+ 0,00 GAZP|253|35|Min Williams A/D | 5|1|1||4 дня роста, 1 дня в 
+ 0,00 GAZP|252|35|Min Williams A/D | 5|1|2||4 дня роста, 1 дня в 
+ 0,00 GAZP|230|35|Min Williams A/D | 6|1|1||4 дня роста, 1 дня в 
+ 0,00 GAZP|229|35|Min Williams A/D | 6|1|2||4 дня роста, 1 дня в 
+ 0,00 GAZP|214|35|Min Williams A/D | 7|1|1||4 дня роста, 1 дня в 
+ 0,00 GAZP|213|35|Min Williams A/D | 7|1|2||4 дня роста, 1 дня в 
+ 0,00 GAZP|202|35|Min Williams A/D | 8|1|1||4 дня роста, 1 дня в 
+ 0,00 GAZP|201|35|Min Williams A/D | 8|1|2||4 дня роста, 1 дня в 
+ 0,00 GAZP|190|35|Min Williams A/D | 9|1|1||4 дня роста, 1 дня в 
+ 0,00 GAZP|189|35|Min Williams A/D | 9|1|2||4 дня роста, 1 дня в 
+ 0,00 GAZP|179|35|Min Williams A/D |10|1|1||4 дня роста, 1 дня в 
+ 0,00 GAZP|178|35|Min Williams A/D |10|1|2||4 дня роста, 1 дня в 
+ 0,00 GMKN|262|49|Max Williams A/D | 4|1|2||4 дня падения, 1 дня в 
+ 0,00 GMKN|178|19|Max Williams A/D | 7|1|1||5 дня падения, 1 дня в 
+ 0,00 GMKN|178|19|Max Williams A/D | 7|1|2||5 дня падения, 1 дня в 
+ 0,00 GMKN|178|19|Max Williams A/D | 7|1|3||5 дня падения, 1 дня в 
+ 0,00 GMKN|156|19|Max Williams A/D | 8|1|1||5 дня падения, 1 дня в 
+ 0,00 GMKN|156|19|Max Williams A/D | 8|1|2||5 дня падения, 1 дня в 
+ 0,00 GMKN|156|19|Max Williams A/D | 8|1|3||5 дня падения, 1 дня в 
+ 0,00 GMKN|148|19|Max Williams A/D | 9|1|1||5 дня падения, 1 дня в 
+ 0,00 GMKN|148|19|Max Williams A/D | 9|1|2||5 дня падения, 1 дня в 
+ 0,00 GMKN|148|19|Max Williams A/D | 9|1|3||5 дня падения, 1 дня в 
+ 0,00 GMKN|136|19|Max Williams A/D |10|1|1||5 дня падения, 1 дня в 
+ 0,00 GMKN|136|19|Max Williams A/D |10|1|2||5 дня падения, 1 дня в 
+ 0,00 GMKN|136|19|Max Williams A/D |10|1|3||5 дня падения, 1 дня в 
+ 0,00 GMKN|132|19|Max Williams A/D |11|1|1||5 дня падения, 1 дня в 
+ 0,00 GMKN|132|19|Max Williams A/D |11|1|2||5 дня падения, 1 дня в 
+ 0,00 GMKN|132|19|Max Williams A/D |11|1|3||5 дня падения, 1 дня в 
+ 0,00 GMKN|129|19|Max Williams A/D |12|1|1||5 дня падения, 1 дня в 
+ 0,00 GMKN|129|19|Max Williams A/D |12|1|2||5 дня падения, 1 дня в 
+ 0,00 GMKN|129|19|Max Williams A/D |12|1|3||5 дня падения, 1 дня в 
+ 0,00 GMKN|122|19|Max Williams A/D |13|1|1||5 дня падения, 1 дня в 
+ 0,00 GMKN|122|19|Max Williams A/D |13|1|2||5 дня падения, 1 дня в 
+ 0,00 GMKN|122|19|Max Williams A/D |13|1|3||5 дня падения, 1 дня в 
+ 0,00 GMKN|118|19|Max Williams A/D |14|1|1||5 дня падения, 1 дня в 
+ 0,00 GMKN|118|19|Max Williams A/D |14|1|2||5 дня падения, 1 дня в 
+ 0,00 GMKN|118|19|Max Williams A/D |14|1|3||5 дня падения, 1 дня в 
+ 0,00 GMKN|115|19|Max Williams A/D |15|1|1||5 дня падения, 1 дня в 
+ 0,00 GMKN|115|19|Max Williams A/D |15|1|2||5 дня падения, 1 дня в 
+ 0,00 GMKN|115|19|Max Williams A/D |15|1|3||5 дня падения, 1 дня в 
+ 0,00 GMKN|113|19|Max Williams A/D |16|1|1||5 дня падения, 1 дня в 
+ 0,00 GMKN|113|19|Max Williams A/D |16|1|2||5 дня падения, 1 дня в 
+ 0,00 GMKN|113|19|Max Williams A/D |16|1|3||5 дня падения, 1 дня в 
+ 0,00 GMKN|108|19|Max Williams A/D |17|1|1||5 дня падения, 1 дня в 
+ 0,00 GMKN|108|19|Max Williams A/D |17|1|2||5 дня падения, 1 дня в 
+ 0,00 GMKN|108|19|Max Williams A/D |17|1|3||5 дня падения, 1 дня в 
+ 0,00 GMKN|106|19|Max Williams A/D |18|1|1||5 дня падения, 1 дня в 
+ 0,00 GMKN|106|19|Max Williams A/D |18|1|2||5 дня падения, 1 дня в 
+ 0,00 GMKN|106|19|Max Williams A/D |18|1|3||5 дня падения, 1 дня в 
+ 0,00 GMKN|103|19|Max Williams A/D |19|1|1||5 дня падения, 1 дня в 
+ 0,00 GMKN|103|19|Max Williams A/D |19|1|2||5 дня падения, 1 дня в 
+ 0,00 GMKN|103|19|Max Williams A/D |19|1|3||5 дня падения, 1 дня в 
+ 0,00 GMKN|102|19|Max Williams A/D |20|1|1||5 дня падения, 1 дня в 
+ 0,00 GMKN|102|19|Max Williams A/D |20|1|2||5 дня падения, 1 дня в 
+ 0,00 GMKN|102|19|Max Williams A/D |20|1|3||5 дня падения, 1 дня в 
+ 0,00 GMKN|99|19|Max Williams A/D |21|1|1||5 дня падения, 1 дня в 
+ 0,00 GMKN|99|19|Max Williams A/D |21|1|2||5 дня падения, 1 дня в 
+ 0,00 GMKN|99|19|Max Williams A/D |21|1|3||5 дня падения, 1 дня в 
+ 0,00 GMKN|96|19|Max Williams A/D |22|1|1||5 дня падения, 1 дня в 
+ 0,00 GMKN|96|19|Max Williams A/D |22|1|2||5 дня падения, 1 дня в 
+ 0,00 GMKN|96|19|Max Williams A/D |22|1|3||5 дня падения, 1 дня в 
+ 0,00 GMKN|96|19|Max Williams A/D |23|1|1||5 дня падения, 1 дня в 
+ 0,00 GMKN|96|19|Max Williams A/D |23|1|2||5 дня падения, 1 дня в 
+ 0,00 GMKN|96|19|Max Williams A/D |23|1|3||5 дня падения, 1 дня в 
+ 0,00 GMKN|245|30|Min Williams A/D | 4|1|1||4 дня роста, 1 дня в 
+ 0,00 GMKN|244|30|Min Williams A/D | 4|1|2||4 дня роста, 1 дня в 
+ 0,00 GMKN|244|30|Min Williams A/D | 4|1|3||4 дня роста, 1 дня в 
+ 0,00 GMKN|215|30|Min Williams A/D | 5|1|1||4 дня роста, 1 дня в 
+ 0,00 GMKN|214|30|Min Williams A/D | 5|1|2||4 дня роста, 1 дня в 
+ 0,00 GMKN|214|30|Min Williams A/D | 5|1|3||4 дня роста, 1 дня в 
+ 0,00 GMKN|191|30|Min Williams A/D | 6|1|1||4 дня роста, 1 дня в 
+ 0,00 GMKN|190|30|Min Williams A/D | 6|1|2||4 дня роста, 1 дня в 
+ 0,00 GMKN|190|30|Min Williams A/D | 6|1|3||4 дня роста, 1 дня в 
+ 0,00 GMKN|177|30|Min Williams A/D | 7|1|1||4 дня роста, 1 дня в 
+ 0,00 GMKN|176|30|Min Williams A/D | 7|1|2||4 дня роста, 1 дня в 
+ 0,00 GMKN|176|30|Min Williams A/D | 7|1|3||4 дня роста, 1 дня в 
+ 0,00 GMKN|162|30|Min Williams A/D | 8|1|1||4 дня роста, 1 дня в 
+ 0,00 GMKN|161|30|Min Williams A/D | 8|1|2||4 дня роста, 1 дня в 
+ 0,00 GMKN|161|30|Min Williams A/D | 8|1|3||4 дня роста, 1 дня в 
+ 0,00 GMKN|119|12|Min Williams A/D |14|1|1||5 дня роста, 1 дня в 
+ 0,00 GMKN|118|12|Min Williams A/D |14|1|2||5 дня роста, 1 дня в 
+ 0,00 GMKN|118|12|Min Williams A/D |14|1|3||5 дня роста, 1 дня в 
+ 0,00 GMKN|118|12|Min Williams A/D |15|1|1||5 дня роста, 1 дня в 
+ 0,00 GMKN|117|12|Min Williams A/D |15|1|2||5 дня роста, 1 дня в 
+ 0,00 GMKN|117|12|Min Williams A/D |15|1|3||5 дня роста, 1 дня в 
+ 0,00 GMKN|118|12|Min Williams A/D |16|1|1||5 дня роста, 1 дня в 
+ 0,00 GMKN|117|12|Min Williams A/D |16|1|2||5 дня роста, 1 дня в 
+ 0,00 GMKN|117|12|Min Williams A/D |16|1|3||5 дня роста, 1 дня в 
+ 0,00 GMKN|115|12|Min Williams A/D |17|1|1||5 дня роста, 1 дня в 
+ 0,00 GMKN|114|12|Min Williams A/D |17|1|2||5 дня роста, 1 дня в 
+ 0,00 GMKN|114|12|Min Williams A/D |17|1|3||5 дня роста, 1 дня в 
+ 0,00 GMKN|112|12|Min Williams A/D |18|1|1||5 дня роста, 1 дня в 
+ 0,00 GMKN|111|12|Min Williams A/D |18|1|2||5 дня роста, 1 дня в 
+ 0,00 GMKN|111|12|Min Williams A/D |18|1|3||5 дня роста, 1 дня в 
+ 0,00 GMKN|111|12|Min Williams A/D |19|1|1||5 дня роста, 1 дня в 
+ 0,00 GMKN|110|12|Min Williams A/D |19|1|2||5 дня роста, 1 дня в 
+ 0,00 GMKN|110|12|Min Williams A/D |19|1|3||5 дня роста, 1 дня в 
+ 0,00 GMKN|105|12|Min Williams A/D |20|1|1||5 дня роста, 1 дня в 
+ 0,00 GMKN|104|12|Min Williams A/D |20|1|2||5 дня роста, 1 дня в 
+ 0,00 GMKN|104|12|Min Williams A/D |20|1|3||5 дня роста, 1 дня в 
+ 0,00 GMKN|104|12|Min Williams A/D |21|1|1||5 дня роста, 1 дня в 
+ 0,00 GMKN|103|12|Min Williams A/D |21|1|2||5 дня роста, 1 дня в 
+ 0,00 GMKN|103|12|Min Williams A/D |21|1|3||5 дня роста, 1 дня в 
+ 0,00 GMKN|102|12|Min Williams A/D |22|1|1||5 дня роста, 1 дня в 
+ 0,00 GMKN|101|12|Min Williams A/D |22|1|2||5 дня роста, 1 дня в 
+ 0,00 GMKN|101|12|Min Williams A/D |22|1|3||5 дня роста, 1 дня в 
+ 0,00 GMKN|98|12|Min Williams A/D |23|1|1||5 дня роста, 1 дня в 
+ 0,00 GMKN|97|12|Min Williams A/D |23|1|2||5 дня роста, 1 дня в 
+ 0,00 GMKN|97|12|Min Williams A/D |23|1|3||5 дня роста, 1 дня в 
+ 0,00 GMKN|93|12|Min Williams A/D |24|1|1||5 дня роста, 1 дня в 
+ 0,00 GMKN|92|12|Min Williams A/D |24|1|2||5 дня роста, 1 дня в 
+ 0,00 GMKN|92|12|Min Williams A/D |24|1|3||5 дня роста, 1 дня в 
+ 0,00 GMKN|91|12|Min Williams A/D |25|1|1||5 дня роста, 1 дня в 
+ 0,00 GMKN|90|12|Min Williams A/D |25|1|2||5 дня роста, 1 дня в 
+ 0,00 GMKN|90|12|Min Williams A/D |25|1|3||5 дня роста, 1 дня в 
+ 0,00 LKOH|266|28|Max Williams A/D | 4|1|1||5 дня падения, 1 дня в 
+ 0,00 LKOH|266|28|Max Williams A/D | 4|1|3||5 дня падения, 1 дня в 
+ 0,00 LKOH|237|28|Max Williams A/D | 5|1|1||5 дня падения, 1 дня в 
+ 0,00 LKOH|237|28|Max Williams A/D | 5|1|3||5 дня падения, 1 дня в 
+ 0,00 LKOH|217|28|Max Williams A/D | 6|1|1||5 дня падения, 1 дня в 
+ 0,00 LKOH|217|28|Max Williams A/D | 6|1|3||5 дня падения, 1 дня в 
+ 0,00 LKOH|200|28|Max Williams A/D | 7|1|1||5 дня падения, 1 дня в 
+ 0,00 LKOH|200|28|Max Williams A/D | 7|1|3||5 дня падения, 1 дня в 
+ 0,00 LKOH|191|28|Max Williams A/D | 8|1|1||5 дня падения, 1 дня в 
+ 0,00 LKOH|191|28|Max Williams A/D | 8|1|3||5 дня падения, 1 дня в 
+ 0,00 LKOH|176|28|Max Williams A/D | 9|1|1||5 дня падения, 1 дня в 
+ 0,00 LKOH|176|28|Max Williams A/D | 9|1|3||5 дня падения, 1 дня в 
+ 0,00 LKOH|166|28|Max Williams A/D |10|1|1||5 дня падения, 1 дня в 
+ 0,00 LKOH|166|28|Max Williams A/D |10|1|3||5 дня падения, 1 дня в 
+ 0,00 LKOH|159|28|Max Williams A/D |11|1|1||5 дня падения, 1 дня в 
+ 0,00 LKOH|159|28|Max Williams A/D |11|1|3||5 дня падения, 1 дня в 
+ 0,00 LKOH|153|28|Max Williams A/D |12|1|1||5 дня падения, 1 дня в 
+ 0,00 LKOH|153|28|Max Williams A/D |12|1|3||5 дня падения, 1 дня в 
+ 0,00 LKOH|144|28|Max Williams A/D |13|1|1||5 дня падения, 1 дня в 
+ 0,00 LKOH|144|28|Max Williams A/D |13|1|3||5 дня падения, 1 дня в 
+ 0,00 LKOH|117|12|Max Williams A/D |19|1|1||6 дня падения, 1 дня в 
+ 0,00 LKOH|117|12|Max Williams A/D |19|1|2||6 дня падения, 1 дня в 
+ 0,00 LKOH|117|12|Max Williams A/D |19|1|3||6 дня падения, 1 дня в 
+ 0,00 LKOH|115|12|Max Williams A/D |20|1|1||6 дня падения, 1 дня в 
+ 0,00 LKOH|115|12|Max Williams A/D |20|1|2||6 дня падения, 1 дня в 
+ 0,00 LKOH|115|12|Max Williams A/D |20|1|3||6 дня падения, 1 дня в 
+ 0,00 LKOH|111|12|Max Williams A/D |21|1|1||6 дня падения, 1 дня в 
+ 0,00 LKOH|111|12|Max Williams A/D |21|1|2||6 дня падения, 1 дня в 
+ 0,00 LKOH|111|12|Max Williams A/D |21|1|3||6 дня падения, 1 дня в 
+ 0,00 LKOH|108|12|Max Williams A/D |22|1|1||6 дня падения, 1 дня в 
+ 0,00 LKOH|108|12|Max Williams A/D |22|1|2||6 дня падения, 1 дня в 
+ 0,00 LKOH|108|12|Max Williams A/D |22|1|3||6 дня падения, 1 дня в 
+ 0,00 LKOH|104|12|Max Williams A/D |23|1|1||6 дня падения, 1 дня в 
+ 0,00 LKOH|104|12|Max Williams A/D |23|1|2||6 дня падения, 1 дня в 
+ 0,00 LKOH|104|12|Max Williams A/D |23|1|3||6 дня падения, 1 дня в 
+ 0,00 LKOH|100|12|Max Williams A/D |24|1|1||6 дня падения, 1 дня в 
+ 0,00 LKOH|100|12|Max Williams A/D |24|1|2||6 дня падения, 1 дня в 
+ 0,00 LKOH|100|12|Max Williams A/D |24|1|3||6 дня падения, 1 дня в 
+ 0,00 LKOH|99|12|Max Williams A/D |25|1|1||6 дня падения, 1 дня в 
+ 0,00 LKOH|99|12|Max Williams A/D |25|1|2||6 дня падения, 1 дня в 
+ 0,00 LKOH|99|12|Max Williams A/D |25|1|3||6 дня падения, 1 дня в 
+ 0,00 LKOH|215|23|Min Williams A/D | 5|1|1||5 дня роста, 1 дня в 
+ 0,00 LKOH|189|23|Min Williams A/D | 6|1|1||5 дня роста, 1 дня в 
+ 0,00 LKOH|167|23|Min Williams A/D | 7|1|1||5 дня роста, 1 дня в 
+ 0,00 LKOH|166|23|Min Williams A/D | 7|1|2||5 дня роста, 1 дня в 
+ 0,00 LKOH|165|23|Min Williams A/D | 7|1|3||5 дня роста, 1 дня в 
+ 0,00 LKOH|153|23|Min Williams A/D | 8|1|1||5 дня роста, 1 дня в 
+ 0,00 LKOH|152|23|Min Williams A/D | 8|1|2||5 дня роста, 1 дня в 
+ 0,00 LKOH|151|23|Min Williams A/D | 8|1|3||5 дня роста, 1 дня в 
+ 0,00 LKOH|143|23|Min Williams A/D | 9|1|1||5 дня роста, 1 дня в 
+ 0,00 LKOH|142|23|Min Williams A/D | 9|1|2||5 дня роста, 1 дня в 
+ 0,00 LKOH|141|23|Min Williams A/D | 9|1|3||5 дня роста, 1 дня в 
+ 0,00 LKOH|134|23|Min Williams A/D |10|1|1||5 дня роста, 1 дня в 
+ 0,00 LKOH|133|23|Min Williams A/D |10|1|2||5 дня роста, 1 дня в 
+ 0,00 LKOH|132|23|Min Williams A/D |10|1|3||5 дня роста, 1 дня в 
+ 0,00 LKOH|124|23|Min Williams A/D |11|1|1||5 дня роста, 1 дня в 
+ 0,00 LKOH|123|23|Min Williams A/D |11|1|2||5 дня роста, 1 дня в 
+ 0,00 LKOH|122|23|Min Williams A/D |11|1|3||5 дня роста, 1 дня в 
+ 0,00 LKOH|116|23|Min Williams A/D |12|1|1||5 дня роста, 1 дня в 
+ 0,00 LKOH|110|11|Min Williams A/D |13|1|2||6 дня роста, 1 дня в 
+ 0,00 LKOH|109|11|Min Williams A/D |13|1|3||6 дня роста, 1 дня в 
+ 0,00 LKOH|106|11|Min Williams A/D |14|1|1||6 дня роста, 1 дня в 
+ 0,00 LKOH|105|11|Min Williams A/D |14|1|2||6 дня роста, 1 дня в 
+ 0,00 LKOH|104|11|Min Williams A/D |14|1|3||6 дня роста, 1 дня в 
+ 0,00 LKOH|100|11|Min Williams A/D |15|1|1||6 дня роста, 1 дня в 
+ 0,00 LKOH|99|11|Min Williams A/D |15|1|2||6 дня роста, 1 дня в 
+ 0,00 LKOH|98|11|Min Williams A/D |15|1|3||6 дня роста, 1 дня в 
+ 0,00 LKOH|94|11|Min Williams A/D |16|1|1||6 дня роста, 1 дня в 
+ 0,00 LKOH|93|11|Min Williams A/D |16|1|2||6 дня роста, 1 дня в 
+ 0,00 LKOH|92|11|Min Williams A/D |16|1|3||6 дня роста, 1 дня в 
+ 0,00 LKOH|90|11|Min Williams A/D |17|1|1||6 дня роста, 1 дня в 
+ 0,00 LKOH|89|11|Min Williams A/D |17|1|2||6 дня роста, 1 дня в 
+ 0,00 LKOH|88|11|Min Williams A/D |17|1|3||6 дня роста, 1 дня в 
+ 0,00 LKOH|86|11|Min Williams A/D |18|1|1||6 дня роста, 1 дня в 
+ 0,00 LKOH|85|11|Min Williams A/D |18|1|2||6 дня роста, 1 дня в 
+ 0,00 LKOH|84|11|Min Williams A/D |18|1|3||6 дня роста, 1 дня в 
+ 0,00 LKOH|79|11|Min Williams A/D |19|1|1||6 дня роста, 1 дня в 
+ 0,00 LKOH|78|11|Min Williams A/D |19|1|2||6 дня роста, 1 дня в 
+ 0,00 LKOH|77|11|Min Williams A/D |19|1|3||6 дня роста, 1 дня в 
+ 0,00 LKOH|75|11|Min Williams A/D |20|1|1||6 дня роста, 1 дня в 
+ 0,00 LKOH|74|11|Min Williams A/D |20|1|2||6 дня роста, 1 дня в 
+ 0,00 LKOH|73|11|Min Williams A/D |20|1|3||6 дня роста, 1 дня в 
+ 0,00 LKOH|71|11|Min Williams A/D |21|1|1||6 дня роста, 1 дня в 
+ 0,00 LKOH|70|11|Min Williams A/D |21|1|2||6 дня роста, 1 дня в 
+ 0,00 LKOH|69|11|Min Williams A/D |21|1|3||6 дня роста, 1 дня в 
+ 0,00 LKOH|66|11|Min Williams A/D |22|1|1||6 дня роста, 1 дня в 
+ 0,00 LKOH|65|11|Min Williams A/D |22|1|2||6 дня роста, 1 дня в 
+ 0,00 LKOH|64|11|Min Williams A/D |22|1|3||6 дня роста, 1 дня в 
+ 0,00 LKOH|64|11|Min Williams A/D |23|1|1||6 дня роста, 1 дня в 
+ 0,00 LKOH|63|11|Min Williams A/D |23|1|2||6 дня роста, 1 дня в 
+ 0,00 LKOH|62|11|Min Williams A/D |23|1|3||6 дня роста, 1 дня в 
+ 0,00 LKOH|62|11|Min Williams A/D |24|1|1||6 дня роста, 1 дня в 
+ 0,00 LKOH|61|11|Min Williams A/D |24|1|2||6 дня роста, 1 дня в 
+ 0,00 LKOH|60|11|Min Williams A/D |24|1|3||6 дня роста, 1 дня в 
+ 0,00 LKOH|60|6|Min Williams A/D |24|1|3||7 дня роста, 1 дня в 
+ 0,00 LKOH|59|11|Min Williams A/D |25|1|1||6 дня роста, 1 дня в 
+ 0,00 LKOH|59|6|Min Williams A/D |25|1|1||7 дня роста, 1 дня в 
+ 0,00 LKOH|58|11|Min Williams A/D |25|1|2||6 дня роста, 1 дня в 
+ 0,00 LKOH|58|6|Min Williams A/D |25|1|2||7 дня роста, 1 дня в 
+ 0,00 LKOH|57|11|Min Williams A/D |25|1|3||6 дня роста, 1 дня в 
+ 0,00 LKOH|57|6|Min Williams A/D |25|1|3||7 дня роста, 1 дня в 
+ 0,00 NVTK|341|40|Max Williams A/D | 3|1|2||4 дня падения, 1 дня в 
+ 0,00 NVTK|283|40|Max Williams A/D | 4|1|2||4 дня падения, 1 дня в 
+ 0,00 NVTK|246|40|Max Williams A/D | 5|1|1||4 дня падения, 1 дня в 
+ 0,00 NVTK|246|40|Max Williams A/D | 5|1|2||4 дня падения, 1 дня в 
+ 0,00 NVTK|222|40|Max Williams A/D | 6|1|1||4 дня падения, 1 дня в 
+ 0,00 NVTK|222|40|Max Williams A/D | 6|1|2||4 дня падения, 1 дня в 
+ 0,00 NVTK|203|40|Max Williams A/D | 7|1|1||4 дня падения, 1 дня в 
+ 0,00 NVTK|203|40|Max Williams A/D | 7|1|2||4 дня падения, 1 дня в 
+ 0,00 NVTK|168|17|Max Williams A/D | 9|1|1||5 дня падения, 1 дня в 
+ 0,00 NVTK|168|17|Max Williams A/D | 9|1|2||5 дня падения, 1 дня в 
+ 0,00 NVTK|168|17|Max Williams A/D | 9|1|3||5 дня падения, 1 дня в 
+ 0,00 NVTK|159|17|Max Williams A/D |10|1|1||5 дня падения, 1 дня в 
+ 0,00 NVTK|159|17|Max Williams A/D |10|1|2||5 дня падения, 1 дня в 
+ 0,00 NVTK|159|17|Max Williams A/D |10|1|3||5 дня падения, 1 дня в 
+ 0,00 NVTK|152|17|Max Williams A/D |11|1|1||5 дня падения, 1 дня в 
+ 0,00 NVTK|152|17|Max Williams A/D |11|1|2||5 дня падения, 1 дня в 
+ 0,00 NVTK|152|17|Max Williams A/D |11|1|3||5 дня падения, 1 дня в 
+ 0,00 NVTK|143|17|Max Williams A/D |12|1|1||5 дня падения, 1 дня в 
+ 0,00 NVTK|143|17|Max Williams A/D |12|1|2||5 дня падения, 1 дня в 
+ 0,00 NVTK|143|17|Max Williams A/D |12|1|3||5 дня падения, 1 дня в 
+ 0,00 NVTK|141|17|Max Williams A/D |13|1|1||5 дня падения, 1 дня в 
+ 0,00 NVTK|141|17|Max Williams A/D |13|1|2||5 дня падения, 1 дня в 
+ 0,00 NVTK|141|17|Max Williams A/D |13|1|3||5 дня падения, 1 дня в 
+ 0,00 NVTK|133|17|Max Williams A/D |14|1|1||5 дня падения, 1 дня в 
+ 0,00 NVTK|133|17|Max Williams A/D |14|1|2||5 дня падения, 1 дня в 
+ 0,00 NVTK|133|17|Max Williams A/D |14|1|3||5 дня падения, 1 дня в 
+ 0,00 NVTK|129|17|Max Williams A/D |15|1|1||5 дня падения, 1 дня в 
+ 0,00 NVTK|129|17|Max Williams A/D |15|1|2||5 дня падения, 1 дня в 
+ 0,00 NVTK|129|17|Max Williams A/D |15|1|3||5 дня падения, 1 дня в 
+ 0,00 NVTK|125|17|Max Williams A/D |16|1|1||5 дня падения, 1 дня в 
+ 0,00 NVTK|125|17|Max Williams A/D |16|1|2||5 дня падения, 1 дня в 
+ 0,00 NVTK|125|17|Max Williams A/D |16|1|3||5 дня падения, 1 дня в 
+ 0,00 NVTK|120|17|Max Williams A/D |17|1|1||5 дня падения, 1 дня в 
+ 0,00 NVTK|120|17|Max Williams A/D |17|1|2||5 дня падения, 1 дня в 
+ 0,00 NVTK|120|17|Max Williams A/D |17|1|3||5 дня падения, 1 дня в 
+ 0,00 NVTK|114|17|Max Williams A/D |18|1|1||5 дня падения, 1 дня в 
+ 0,00 NVTK|114|17|Max Williams A/D |18|1|2||5 дня падения, 1 дня в 
+ 0,00 NVTK|114|17|Max Williams A/D |18|1|3||5 дня падения, 1 дня в 
+ 0,00 NVTK|112|17|Max Williams A/D |19|1|1||5 дня падения, 1 дня в 
+ 0,00 NVTK|112|17|Max Williams A/D |19|1|2||5 дня падения, 1 дня в 
+ 0,00 NVTK|112|17|Max Williams A/D |19|1|3||5 дня падения, 1 дня в 
+ 0,00 NVTK|108|17|Max Williams A/D |20|1|1||5 дня падения, 1 дня в 
+ 0,00 NVTK|108|17|Max Williams A/D |20|1|2||5 дня падения, 1 дня в 
+ 0,00 NVTK|108|17|Max Williams A/D |20|1|3||5 дня падения, 1 дня в 
+ 0,00 NVTK|106|17|Max Williams A/D |21|1|1||5 дня падения, 1 дня в 
+ 0,00 NVTK|106|17|Max Williams A/D |21|1|2||5 дня падения, 1 дня в 
+ 0,00 NVTK|106|17|Max Williams A/D |21|1|3||5 дня падения, 1 дня в 
+ 0,00 NVTK|102|17|Max Williams A/D |22|1|1||5 дня падения, 1 дня в 
+ 0,00 NVTK|102|17|Max Williams A/D |22|1|2||5 дня падения, 1 дня в 
+ 0,00 NVTK|102|17|Max Williams A/D |22|1|3||5 дня падения, 1 дня в 
+ 0,00 NVTK|101|17|Max Williams A/D |23|1|1||5 дня падения, 1 дня в 
+ 0,00 NVTK|101|17|Max Williams A/D |23|1|2||5 дня падения, 1 дня в 
+ 0,00 NVTK|101|17|Max Williams A/D |23|1|3||5 дня падения, 1 дня в 
+ 0,00 NVTK|99|17|Max Williams A/D |24|1|1||5 дня падения, 1 дня в 
+ 0,00 NVTK|99|17|Max Williams A/D |24|1|2||5 дня падения, 1 дня в 
+ 0,00 NVTK|99|17|Max Williams A/D |24|1|3||5 дня падения, 1 дня в 
+ 0,00 NVTK|98|17|Max Williams A/D |25|1|1||5 дня падения, 1 дня в 
+ 0,00 NVTK|98|17|Max Williams A/D |25|1|2||5 дня падения, 1 дня в 
+ 0,00 NVTK|98|17|Max Williams A/D |25|1|3||5 дня падения, 1 дня в 
+ 0,00 NVTK|301|48|Min Williams A/D | 3|1|2||4 дня роста, 1 дня в 
+ 0,00 NVTK|301|48|Min Williams A/D | 3|1|3||4 дня роста, 1 дня в 
+ 0,00 NVTK|205|22|Min Williams A/D | 5|1|1||5 дня роста, 1 дня в 
+ 0,00 NVTK|205|22|Min Williams A/D | 5|1|2||5 дня роста, 1 дня в 
+ 0,00 NVTK|205|22|Min Williams A/D | 5|1|3||5 дня роста, 1 дня в 
+ 0,00 NVTK|184|22|Min Williams A/D | 6|1|1||5 дня роста, 1 дня в 
+ 0,00 NVTK|184|22|Min Williams A/D | 6|1|2||5 дня роста, 1 дня в 
+ 0,00 NVTK|184|22|Min Williams A/D | 6|1|3||5 дня роста, 1 дня в 
+ 0,00 NVTK|175|22|Min Williams A/D | 7|1|1||5 дня роста, 1 дня в 
+ 0,00 NVTK|175|22|Min Williams A/D | 7|1|2||5 дня роста, 1 дня в 
+ 0,00 NVTK|175|22|Min Williams A/D | 7|1|3||5 дня роста, 1 дня в 
+ 0,00 NVTK|148|22|Min Williams A/D | 8|1|1||5 дня роста, 1 дня в 
+ 0,00 NVTK|148|22|Min Williams A/D | 8|1|2||5 дня роста, 1 дня в 
+ 0,00 NVTK|148|22|Min Williams A/D | 8|1|3||5 дня роста, 1 дня в 
+ 0,00 NVTK|136|22|Min Williams A/D | 9|1|1||5 дня роста, 1 дня в 
+ 0,00 NVTK|136|14|Min Williams A/D | 9|1|1||6 дня роста, 1 дня в 
+ 0,00 NVTK|136|22|Min Williams A/D | 9|1|2||5 дня роста, 1 дня в 
+ 0,00 NVTK|136|14|Min Williams A/D | 9|1|2||6 дня роста, 1 дня в 
+ 0,00 NVTK|136|22|Min Williams A/D | 9|1|3||5 дня роста, 1 дня в 
+ 0,00 NVTK|136|14|Min Williams A/D | 9|1|3||6 дня роста, 1 дня в 
+ 0,00 NVTK|122|22|Min Williams A/D |10|1|1||5 дня роста, 1 дня в 
+ 0,00 NVTK|122|14|Min Williams A/D |10|1|1||6 дня роста, 1 дня в 
+ 0,00 NVTK|122|22|Min Williams A/D |10|1|2||5 дня роста, 1 дня в 
+ 0,00 NVTK|122|14|Min Williams A/D |10|1|2||6 дня роста, 1 дня в 
+ 0,00 NVTK|122|22|Min Williams A/D |10|1|3||5 дня роста, 1 дня в 
+ 0,00 NVTK|122|14|Min Williams A/D |10|1|3||6 дня роста, 1 дня в 
+ 0,00 NVTK|116|22|Min Williams A/D |11|1|1||5 дня роста, 1 дня в 
+ 0,00 NVTK|116|14|Min Williams A/D |11|1|1||6 дня роста, 1 дня в 
+ 0,00 NVTK|116|22|Min Williams A/D |11|1|2||5 дня роста, 1 дня в 
+ 0,00 NVTK|116|14|Min Williams A/D |11|1|2||6 дня роста, 1 дня в 
+ 0,00 NVTK|116|22|Min Williams A/D |11|1|3||5 дня роста, 1 дня в 
+ 0,00 NVTK|116|14|Min Williams A/D |11|1|3||6 дня роста, 1 дня в 
+ 0,00 NVTK|105|14|Min Williams A/D |12|1|1||6 дня роста, 1 дня в 
+ 0,00 NVTK|105|14|Min Williams A/D |12|1|2||6 дня роста, 1 дня в 
+ 0,00 NVTK|105|14|Min Williams A/D |12|1|3||6 дня роста, 1 дня в 
+ 0,00 NVTK|100|14|Min Williams A/D |13|1|1||6 дня роста, 1 дня в 
+ 0,00 NVTK|100|14|Min Williams A/D |13|1|2||6 дня роста, 1 дня в 
+ 0,00 NVTK|100|14|Min Williams A/D |13|1|3||6 дня роста, 1 дня в 
+ 0,00 NVTK|94|14|Min Williams A/D |14|1|1||6 дня роста, 1 дня в 
+ 0,00 NVTK|94|14|Min Williams A/D |14|1|2||6 дня роста, 1 дня в 
+ 0,00 NVTK|94|14|Min Williams A/D |14|1|3||6 дня роста, 1 дня в 
+ 0,00 NVTK|92|14|Min Williams A/D |15|1|1||6 дня роста, 1 дня в 
+ 0,00 NVTK|92|14|Min Williams A/D |15|1|2||6 дня роста, 1 дня в 
+ 0,00 NVTK|92|14|Min Williams A/D |15|1|3||6 дня роста, 1 дня в 
+ 0,00 NVTK|87|14|Min Williams A/D |16|1|1||6 дня роста, 1 дня в 
+ 0,00 NVTK|87|9|Min Williams A/D |16|1|1||7 дня роста, 1 дня в 
+ 0,00 NVTK|87|14|Min Williams A/D |16|1|2||6 дня роста, 1 дня в 
+ 0,00 NVTK|87|9|Min Williams A/D |16|1|2||7 дня роста, 1 дня в 
+ 0,00 NVTK|87|14|Min Williams A/D |16|1|3||6 дня роста, 1 дня в 
+ 0,00 NVTK|87|9|Min Williams A/D |16|1|3||7 дня роста, 1 дня в 
+ 0,00 NVTK|86|14|Min Williams A/D |17|1|1||6 дня роста, 1 дня в 
+ 0,00 NVTK|86|9|Min Williams A/D |17|1|1||7 дня роста, 1 дня в 
+ 0,00 NVTK|86|14|Min Williams A/D |17|1|2||6 дня роста, 1 дня в 
+ 0,00 NVTK|86|9|Min Williams A/D |17|1|2||7 дня роста, 1 дня в 
+ 0,00 NVTK|86|14|Min Williams A/D |17|1|3||6 дня роста, 1 дня в 
+ 0,00 NVTK|86|9|Min Williams A/D |17|1|3||7 дня роста, 1 дня в 
+ 0,00 NVTK|81|14|Min Williams A/D |18|1|1||6 дня роста, 1 дня в 
+ 0,00 NVTK|81|9|Min Williams A/D |18|1|1||7 дня роста, 1 дня в 
+ 0,00 NVTK|81|14|Min Williams A/D |18|1|2||6 дня роста, 1 дня в 
+ 0,00 NVTK|81|9|Min Williams A/D |18|1|2||7 дня роста, 1 дня в 
+ 0,00 NVTK|81|14|Min Williams A/D |18|1|3||6 дня роста, 1 дня в 
+ 0,00 NVTK|81|9|Min Williams A/D |18|1|3||7 дня роста, 1 дня в 
+ 0,00 NVTK|77|14|Min Williams A/D |19|1|1||6 дня роста, 1 дня в 
+ 0,00 NVTK|77|9|Min Williams A/D |19|1|1||7 дня роста, 1 дня в 
+ 0,00 NVTK|77|14|Min Williams A/D |19|1|2||6 дня роста, 1 дня в 
+ 0,00 NVTK|77|9|Min Williams A/D |19|1|2||7 дня роста, 1 дня в 
+ 0,00 NVTK|77|14|Min Williams A/D |19|1|3||6 дня роста, 1 дня в 
+ 0,00 NVTK|77|9|Min Williams A/D |19|1|3||7 дня роста, 1 дня в 
+ 0,00 NVTK|74|14|Min Williams A/D |20|1|1||6 дня роста, 1 дня в 
+ 0,00 NVTK|74|9|Min Williams A/D |20|1|1||7 дня роста, 1 дня в 
+ 0,00 NVTK|74|14|Min Williams A/D |20|1|2||6 дня роста, 1 дня в 
+ 0,00 NVTK|74|9|Min Williams A/D |20|1|2||7 дня роста, 1 дня в 
+ 0,00 NVTK|74|14|Min Williams A/D |20|1|3||6 дня роста, 1 дня в 
+ 0,00 NVTK|74|9|Min Williams A/D |20|1|3||7 дня роста, 1 дня в 
+ 0,00 NVTK|72|14|Min Williams A/D |21|1|1||6 дня роста, 1 дня в 
+ 0,00 NVTK|72|9|Min Williams A/D |21|1|1||7 дня роста, 1 дня в 
+ 0,00 NVTK|72|14|Min Williams A/D |21|1|2||6 дня роста, 1 дня в 
+ 0,00 NVTK|72|9|Min Williams A/D |21|1|2||7 дня роста, 1 дня в 
+ 0,00 NVTK|72|14|Min Williams A/D |21|1|3||6 дня роста, 1 дня в 
+ 0,00 NVTK|72|9|Min Williams A/D |21|1|3||7 дня роста, 1 дня в 
+ 0,00 NVTK|69|9|Min Williams A/D |22|1|1||7 дня роста, 1 дня в 
+ 0,00 NVTK|69|9|Min Williams A/D |22|1|2||7 дня роста, 1 дня в 
+ 0,00 NVTK|69|9|Min Williams A/D |22|1|3||7 дня роста, 1 дня в 
+ 0,00 NVTK|66|9|Min Williams A/D |23|1|1||7 дня роста, 1 дня в 
+ 0,00 NVTK|66|9|Min Williams A/D |23|1|2||7 дня роста, 1 дня в 
+ 0,00 NVTK|66|9|Min Williams A/D |23|1|3||7 дня роста, 1 дня в 
+ 0,00 NVTK|63|9|Min Williams A/D |24|1|1||7 дня роста, 1 дня в 
+ 0,00 NVTK|63|9|Min Williams A/D |24|1|2||7 дня роста, 1 дня в 
+ 0,00 NVTK|63|9|Min Williams A/D |24|1|3||7 дня роста, 1 дня в 
+ 0,00 NVTK|61|9|Min Williams A/D |25|1|1||7 дня роста, 1 дня в 
+ 0,00 NVTK|61|9|Min Williams A/D |25|1|2||7 дня роста, 1 дня в 
+ 0,00 NVTK|61|9|Min Williams A/D |25|1|3||7 дня роста, 1 дня в 
+ 0,00 ROSN|254|46|Max Williams A/D | 4|1|1||4 дня падения, 1 дня в 
+ 0,00 ROSN|254|46|Max Williams A/D | 4|1|2||4 дня падения, 1 дня в 
+ 0,00 ROSN|225|24|Max Williams A/D | 5|1|1||5 дня падения, 1 дня в 
+ 0,00 ROSN|225|24|Max Williams A/D | 5|1|2||5 дня падения, 1 дня в 
+ 0,00 ROSN|224|24|Max Williams A/D | 5|1|3||5 дня падения, 1 дня в 
+ 0,00 ROSN|200|24|Max Williams A/D | 6|1|1||5 дня падения, 1 дня в 
+ 0,00 ROSN|200|24|Max Williams A/D | 6|1|2||5 дня падения, 1 дня в 
+ 0,00 ROSN|199|24|Max Williams A/D | 6|1|3||5 дня падения, 1 дня в 
+ 0,00 ROSN|176|24|Max Williams A/D | 7|1|1||5 дня падения, 1 дня в 
+ 0,00 ROSN|176|24|Max Williams A/D | 7|1|2||5 дня падения, 1 дня в 
+ 0,00 ROSN|175|24|Max Williams A/D | 7|1|3||5 дня падения, 1 дня в 
+ 0,00 ROSN|158|24|Max Williams A/D | 8|1|1||5 дня падения, 1 дня в 
+ 0,00 ROSN|158|24|Max Williams A/D | 8|1|2||5 дня падения, 1 дня в 
+ 0,00 ROSN|158|24|Max Williams A/D | 8|1|3||5 дня падения, 1 дня в 
+ 0,00 ROSN|146|24|Max Williams A/D | 9|1|1||5 дня падения, 1 дня в 
+ 0,00 ROSN|146|24|Max Williams A/D | 9|1|2||5 дня падения, 1 дня в 
+ 0,00 ROSN|146|24|Max Williams A/D | 9|1|3||5 дня падения, 1 дня в 
+ 0,00 ROSN|140|24|Max Williams A/D |10|1|1||5 дня падения, 1 дня в 
+ 0,00 ROSN|140|24|Max Williams A/D |10|1|2||5 дня падения, 1 дня в 
+ 0,00 ROSN|140|24|Max Williams A/D |10|1|3||5 дня падения, 1 дня в 
+ 0,00 ROSN|126|24|Max Williams A/D |11|1|1||5 дня падения, 1 дня в 
+ 0,00 ROSN|126|24|Max Williams A/D |11|1|2||5 дня падения, 1 дня в 
+ 0,00 ROSN|126|24|Max Williams A/D |11|1|3||5 дня падения, 1 дня в 
+ 0,00 ROSN|124|24|Max Williams A/D |12|1|1||5 дня падения, 1 дня в 
+ 0,00 ROSN|124|24|Max Williams A/D |12|1|2||5 дня падения, 1 дня в 
+ 0,00 ROSN|124|24|Max Williams A/D |12|1|3||5 дня падения, 1 дня в 
+ 0,00 ROSN|106|11|Max Williams A/D |15|1|1||6 дня падения, 1 дня в 
+ 0,00 ROSN|106|11|Max Williams A/D |15|1|2||6 дня падения, 1 дня в 
+ 0,00 ROSN|106|11|Max Williams A/D |15|1|3||6 дня падения, 1 дня в 
+ 0,00 ROSN|102|11|Max Williams A/D |16|1|1||6 дня падения, 1 дня в 
+ 0,00 ROSN|102|11|Max Williams A/D |16|1|2||6 дня падения, 1 дня в 
+ 0,00 ROSN|102|11|Max Williams A/D |16|1|3||6 дня падения, 1 дня в 
+ 0,00 ROSN|98|11|Max Williams A/D |17|1|1||6 дня падения, 1 дня в 
+ 0,00 ROSN|98|11|Max Williams A/D |17|1|2||6 дня падения, 1 дня в 
+ 0,00 ROSN|98|11|Max Williams A/D |17|1|3||6 дня падения, 1 дня в 
+ 0,00 ROSN|94|11|Max Williams A/D |18|1|1||6 дня падения, 1 дня в 
+ 0,00 ROSN|94|11|Max Williams A/D |18|1|2||6 дня падения, 1 дня в 
+ 0,00 ROSN|94|11|Max Williams A/D |18|1|3||6 дня падения, 1 дня в 
+ 0,00 ROSN|89|11|Max Williams A/D |19|1|1||6 дня падения, 1 дня в 
+ 0,00 ROSN|89|11|Max Williams A/D |19|1|2||6 дня падения, 1 дня в 
+ 0,00 ROSN|89|11|Max Williams A/D |19|1|3||6 дня падения, 1 дня в 
+ 0,00 ROSN|85|11|Max Williams A/D |20|1|1||6 дня падения, 1 дня в 
+ 0,00 ROSN|85|11|Max Williams A/D |20|1|2||6 дня падения, 1 дня в 
+ 0,00 ROSN|85|11|Max Williams A/D |20|1|3||6 дня падения, 1 дня в 
+ 0,00 ROSN|80|11|Max Williams A/D |21|1|1||6 дня падения, 1 дня в 
+ 0,00 ROSN|80|11|Max Williams A/D |21|1|2||6 дня падения, 1 дня в 
+ 0,00 ROSN|80|11|Max Williams A/D |21|1|3||6 дня падения, 1 дня в 
+ 0,00 ROSN|73|11|Max Williams A/D |22|1|1||6 дня падения, 1 дня в 
+ 0,00 ROSN|73|11|Max Williams A/D |22|1|2||6 дня падения, 1 дня в 
+ 0,00 ROSN|73|11|Max Williams A/D |22|1|3||6 дня падения, 1 дня в 
+ 0,00 ROSN|72|11|Max Williams A/D |23|1|1||6 дня падения, 1 дня в 
+ 0,00 ROSN|72|11|Max Williams A/D |23|1|2||6 дня падения, 1 дня в 
+ 0,00 ROSN|72|11|Max Williams A/D |23|1|3||6 дня падения, 1 дня в 
+ 0,00 ROSN|71|11|Max Williams A/D |24|1|1||6 дня падения, 1 дня в 
+ 0,00 ROSN|71|11|Max Williams A/D |24|1|2||6 дня падения, 1 дня в 
+ 0,00 ROSN|71|11|Max Williams A/D |24|1|3||6 дня падения, 1 дня в 
+ 0,00 ROSN|70|11|Max Williams A/D |25|1|1||6 дня падения, 1 дня в 
+ 0,00 ROSN|70|11|Max Williams A/D |25|1|2||6 дня падения, 1 дня в 
+ 0,00 ROSN|70|11|Max Williams A/D |25|1|3||6 дня падения, 1 дня в 
+ 0,00 ROSN|280|45|Min Williams A/D | 4|1|1||4 дня роста, 1 дня в 
+ 0,00 ROSN|280|45|Min Williams A/D | 4|1|2||4 дня роста, 1 дня в 
+ 0,00 ROSN|280|45|Min Williams A/D | 4|1|3||4 дня роста, 1 дня в 
+ 0,00 ROSN|239|45|Min Williams A/D | 5|1|1||4 дня роста, 1 дня в 
+ 0,00 ROSN|239|45|Min Williams A/D | 5|1|2||4 дня роста, 1 дня в 
+ 0,00 ROSN|239|45|Min Williams A/D | 5|1|3||4 дня роста, 1 дня в 
+ 0,00 ROSN|194|20|Min Williams A/D | 7|1|1||5 дня роста, 1 дня в 
+ 0,00 ROSN|194|20|Min Williams A/D | 7|1|2||5 дня роста, 1 дня в 
+ 0,00 ROSN|194|20|Min Williams A/D | 7|1|3||5 дня роста, 1 дня в 
+ 0,00 ROSN|176|20|Min Williams A/D | 8|1|1||5 дня роста, 1 дня в 
+ 0,00 ROSN|176|20|Min Williams A/D | 8|1|2||5 дня роста, 1 дня в 
+ 0,00 ROSN|176|20|Min Williams A/D | 8|1|3||5 дня роста, 1 дня в 
+ 0,00 ROSN|166|20|Min Williams A/D | 9|1|1||5 дня роста, 1 дня в 
+ 0,00 ROSN|166|20|Min Williams A/D | 9|1|2||5 дня роста, 1 дня в 
+ 0,00 ROSN|166|20|Min Williams A/D | 9|1|3||5 дня роста, 1 дня в 
+ 0,00 ROSN|155|20|Min Williams A/D |10|1|1||5 дня роста, 1 дня в 
+ 0,00 ROSN|155|20|Min Williams A/D |10|1|2||5 дня роста, 1 дня в 
+ 0,00 ROSN|155|20|Min Williams A/D |10|1|3||5 дня роста, 1 дня в 
+ 0,00 ROSN|148|20|Min Williams A/D |11|1|1||5 дня роста, 1 дня в 
+ 0,00 ROSN|148|20|Min Williams A/D |11|1|2||5 дня роста, 1 дня в 
+ 0,00 ROSN|148|20|Min Williams A/D |11|1|3||5 дня роста, 1 дня в 
+ 0,00 ROSN|133|20|Min Williams A/D |12|1|1||5 дня роста, 1 дня в 
+ 0,00 ROSN|133|20|Min Williams A/D |12|1|2||5 дня роста, 1 дня в 
+ 0,00 ROSN|133|20|Min Williams A/D |12|1|3||5 дня роста, 1 дня в 
+ 0,00 ROSN|126|20|Min Williams A/D |13|1|1||5 дня роста, 1 дня в 
+ 0,00 ROSN|126|20|Min Williams A/D |13|1|2||5 дня роста, 1 дня в 
+ 0,00 ROSN|126|20|Min Williams A/D |13|1|3||5 дня роста, 1 дня в 
+ 0,00 ROSN|122|20|Min Williams A/D |14|1|1||5 дня роста, 1 дня в 
+ 0,00 ROSN|122|20|Min Williams A/D |14|1|2||5 дня роста, 1 дня в 
+ 0,00 ROSN|122|20|Min Williams A/D |14|1|3||5 дня роста, 1 дня в 
+ 0,00 ROSN|117|20|Min Williams A/D |15|1|1||5 дня роста, 1 дня в 
+ 0,00 ROSN|117|20|Min Williams A/D |15|1|2||5 дня роста, 1 дня в 
+ 0,00 ROSN|117|20|Min Williams A/D |15|1|3||5 дня роста, 1 дня в 
+ 0,00 ROSN|111|20|Min Williams A/D |16|1|1||5 дня роста, 1 дня в 
+ 0,00 ROSN|111|20|Min Williams A/D |16|1|2||5 дня роста, 1 дня в 
+ 0,00 ROSN|111|20|Min Williams A/D |16|1|3||5 дня роста, 1 дня в 
+ 0,00 ROSN|106|20|Min Williams A/D |17|1|1||5 дня роста, 1 дня в 
+ 0,00 ROSN|106|20|Min Williams A/D |17|1|2||5 дня роста, 1 дня в 
+ 0,00 ROSN|106|20|Min Williams A/D |17|1|3||5 дня роста, 1 дня в 
+ 0,00 ROSN|102|20|Min Williams A/D |18|1|1||5 дня роста, 1 дня в 
+ 0,00 ROSN|102|20|Min Williams A/D |18|1|2||5 дня роста, 1 дня в 
+ 0,00 ROSN|102|20|Min Williams A/D |18|1|3||5 дня роста, 1 дня в 
+ 0,00 ROSN|80|8|Min Williams A/D |23|1|1||6 дня роста, 1 дня в 
+ 0,00 ROSN|80|8|Min Williams A/D |23|1|2||6 дня роста, 1 дня в 
+ 0,00 ROSN|80|8|Min Williams A/D |23|1|3||6 дня роста, 1 дня в 
+ 0,00 ROSN|74|8|Min Williams A/D |24|1|1||6 дня роста, 1 дня в 
+ 0,00 ROSN|74|8|Min Williams A/D |24|1|2||6 дня роста, 1 дня в 
+ 0,00 ROSN|74|8|Min Williams A/D |24|1|3||6 дня роста, 1 дня в 
+ 0,00 ROSN|68|8|Min Williams A/D |25|1|1||6 дня роста, 1 дня в 
+ 0,00 ROSN|68|8|Min Williams A/D |25|1|2||6 дня роста, 1 дня в 
+ 0,00 ROSN|68|8|Min Williams A/D |25|1|3||6 дня роста, 1 дня в 
+ 0,00 RTKM|221|43|Max Williams A/D | 4|1|1||5 дня падения, 1 дня в 
+ 0,00 RTKM|221|43|Max Williams A/D | 4|1|2||5 дня падения, 1 дня в 
+ 0,00 RTKM|221|43|Max Williams A/D | 4|1|3||5 дня падения, 1 дня в 
+ 0,00 RTKM|184|20|Max Williams A/D | 5|1|1||6 дня падения, 1 дня в 
+ 0,00 RTKM|184|20|Max Williams A/D | 5|1|2||6 дня падения, 1 дня в 
+ 0,00 RTKM|184|20|Max Williams A/D | 5|1|3||6 дня падения, 1 дня в 
+ 0,00 RTKM|157|20|Max Williams A/D | 6|1|1||6 дня падения, 1 дня в 
+ 0,00 RTKM|157|20|Max Williams A/D | 6|1|2||6 дня падения, 1 дня в 
+ 0,00 RTKM|157|20|Max Williams A/D | 6|1|3||6 дня падения, 1 дня в 
+ 0,00 RTKM|142|20|Max Williams A/D | 7|1|1||6 дня падения, 1 дня в 
+ 0,00 RTKM|142|20|Max Williams A/D | 7|1|2||6 дня падения, 1 дня в 
+ 0,00 RTKM|142|20|Max Williams A/D | 7|1|3||6 дня падения, 1 дня в 
+ 0,00 RTKM|125|20|Max Williams A/D | 8|1|1||6 дня падения, 1 дня в 
+ 0,00 RTKM|125|13|Max Williams A/D | 8|1|1||7 дня падения, 1 дня в 
+ 0,00 RTKM|125|20|Max Williams A/D | 8|1|2||6 дня падения, 1 дня в 
+ 0,00 RTKM|125|13|Max Williams A/D | 8|1|2||7 дня падения, 1 дня в 
+ 0,00 RTKM|125|20|Max Williams A/D | 8|1|3||6 дня падения, 1 дня в 
+ 0,00 RTKM|125|13|Max Williams A/D | 8|1|3||7 дня падения, 1 дня в 
+ 0,00 RTKM|119|20|Max Williams A/D | 9|1|1||6 дня падения, 1 дня в 
+ 0,00 RTKM|119|13|Max Williams A/D | 9|1|1||7 дня падения, 1 дня в 
+ 0,00 RTKM|119|20|Max Williams A/D | 9|1|2||6 дня падения, 1 дня в 
+ 0,00 RTKM|119|13|Max Williams A/D | 9|1|2||7 дня падения, 1 дня в 
+ 0,00 RTKM|119|20|Max Williams A/D | 9|1|3||6 дня падения, 1 дня в 
+ 0,00 RTKM|119|13|Max Williams A/D | 9|1|3||7 дня падения, 1 дня в 
+ 0,00 RTKM|110|20|Max Williams A/D |10|1|1||6 дня падения, 1 дня в 
+ 0,00 RTKM|110|13|Max Williams A/D |10|1|1||7 дня падения, 1 дня в 
+ 0,00 RTKM|110|20|Max Williams A/D |10|1|2||6 дня падения, 1 дня в 
+ 0,00 RTKM|110|13|Max Williams A/D |10|1|2||7 дня падения, 1 дня в 
+ 0,00 RTKM|110|20|Max Williams A/D |10|1|3||6 дня падения, 1 дня в 
+ 0,00 RTKM|110|13|Max Williams A/D |10|1|3||7 дня падения, 1 дня в 
+ 0,00 RTKM|98|13|Max Williams A/D |11|1|1||7 дня падения, 1 дня в 
+ 0,00 RTKM|98|13|Max Williams A/D |11|1|2||7 дня падения, 1 дня в 
+ 0,00 RTKM|98|13|Max Williams A/D |11|1|3||7 дня падения, 1 дня в 
+ 0,00 RTKM|89|13|Max Williams A/D |12|1|1||7 дня падения, 1 дня в 
+ 0,00 RTKM|89|13|Max Williams A/D |12|1|2||7 дня падения, 1 дня в 
+ 0,00 RTKM|89|13|Max Williams A/D |12|1|3||7 дня падения, 1 дня в 
+ 0,00 RTKM|85|13|Max Williams A/D |13|1|1||7 дня падения, 1 дня в 
+ 0,00 RTKM|85|13|Max Williams A/D |13|1|2||7 дня падения, 1 дня в 
+ 0,00 RTKM|85|13|Max Williams A/D |13|1|3||7 дня падения, 1 дня в 
+ 0,00 RTKM|80|13|Max Williams A/D |14|1|1||7 дня падения, 1 дня в 
+ 0,00 RTKM|80|13|Max Williams A/D |14|1|2||7 дня падения, 1 дня в 
+ 0,00 RTKM|80|13|Max Williams A/D |14|1|3||7 дня падения, 1 дня в 
+ 0,00 RTKM|77|13|Max Williams A/D |15|1|1||7 дня падения, 1 дня в 
+ 0,00 RTKM|77|13|Max Williams A/D |15|1|2||7 дня падения, 1 дня в 
+ 0,00 RTKM|77|13|Max Williams A/D |15|1|3||7 дня падения, 1 дня в 
+ 0,00 RTKM|74|13|Max Williams A/D |16|1|1||7 дня падения, 1 дня в 
+ 0,00 RTKM|74|13|Max Williams A/D |16|1|2||7 дня падения, 1 дня в 
+ 0,00 RTKM|74|13|Max Williams A/D |16|1|3||7 дня падения, 1 дня в 
+ 0,00 RTKM|71|13|Max Williams A/D |17|1|1||7 дня падения, 1 дня в 
+ 0,00 RTKM|71|13|Max Williams A/D |17|1|2||7 дня падения, 1 дня в 
+ 0,00 RTKM|71|13|Max Williams A/D |17|1|3||7 дня падения, 1 дня в 
+ 0,00 RTKM|66|13|Max Williams A/D |18|1|1||7 дня падения, 1 дня в 
+ 0,00 RTKM|66|13|Max Williams A/D |18|1|2||7 дня падения, 1 дня в 
+ 0,00 RTKM|66|13|Max Williams A/D |18|1|3||7 дня падения, 1 дня в 
+ 0,00 RTKM|52|262|Max Williams A/D |21|1|1||2 дня падения, 1 дня в 
+ 0,00 RTKM|51|262|Max Williams A/D |22|1|1||2 дня падения, 1 дня в 
+ 0,00 RTKM|46|262|Max Williams A/D |23|1|1||2 дня падения, 1 дня в 
+ 0,00 RTKM|45|262|Max Williams A/D |24|1|1||2 дня падения, 1 дня в 
+ 0,00 RTKM|41|262|Max Williams A/D |25|1|1||2 дня падения, 1 дня в 
+ 0,00 RTKM|350|37|Min Williams A/D | 3|1|1||4 дня роста, 1 дня в 
+ 0,00 RTKM|349|37|Min Williams A/D | 3|1|2||4 дня роста, 1 дня в 
+ 0,00 RTKM|296|37|Min Williams A/D | 4|1|1||4 дня роста, 1 дня в 
+ 0,00 RTKM|295|37|Min Williams A/D | 4|1|2||4 дня роста, 1 дня в 
+ 0,00 RTKM|271|37|Min Williams A/D | 5|1|1||4 дня роста, 1 дня в 
+ 0,00 RTKM|270|37|Min Williams A/D | 5|1|2||4 дня роста, 1 дня в 
+ 0,00 RTKM|248|37|Min Williams A/D | 6|1|1||4 дня роста, 1 дня в 
+ 0,00 RTKM|247|37|Min Williams A/D | 6|1|2||4 дня роста, 1 дня в 
+ 0,00 RTKM|224|37|Min Williams A/D | 7|1|1||4 дня роста, 1 дня в 
+ 0,00 RTKM|223|37|Min Williams A/D | 7|1|2||4 дня роста, 1 дня в 
+ 0,00 RTKM|215|37|Min Williams A/D | 8|1|1||4 дня роста, 1 дня в 
+ 0,00 RTKM|214|37|Min Williams A/D | 8|1|2||4 дня роста, 1 дня в 
+ 0,00 RTKM|204|37|Min Williams A/D | 9|1|1||4 дня роста, 1 дня в 
+ 0,00 RTKM|204|21|Min Williams A/D | 9|1|1||5 дня роста, 1 дня в 
+ 0,00 RTKM|203|37|Min Williams A/D | 9|1|2||4 дня роста, 1 дня в 
+ 0,00 RTKM|203|21|Min Williams A/D | 9|1|2||5 дня роста, 1 дня в 
+ 0,00 RTKM|203|37|Min Williams A/D | 9|1|3||4 дня роста, 1 дня в 
+ 0,00 RTKM|203|21|Min Williams A/D | 9|1|3||5 дня роста, 1 дня в 
+ 0,00 RTKM|194|37|Min Williams A/D |10|1|1||4 дня роста, 1 дня в 
+ 0,00 RTKM|194|21|Min Williams A/D |10|1|1||5 дня роста, 1 дня в 
+ 0,00 RTKM|193|37|Min Williams A/D |10|1|2||4 дня роста, 1 дня в 
+ 0,00 RTKM|193|21|Min Williams A/D |10|1|2||5 дня роста, 1 дня в 
+ 0,00 RTKM|193|37|Min Williams A/D |10|1|3||4 дня роста, 1 дня в 
+ 0,00 RTKM|193|21|Min Williams A/D |10|1|3||5 дня роста, 1 дня в 
+ 0,00 RTKM|187|37|Min Williams A/D |11|1|1||4 дня роста, 1 дня в 
+ 0,00 RTKM|187|21|Min Williams A/D |11|1|1||5 дня роста, 1 дня в 
+ 0,00 RTKM|186|37|Min Williams A/D |11|1|2||4 дня роста, 1 дня в 
+ 0,00 RTKM|186|21|Min Williams A/D |11|1|2||5 дня роста, 1 дня в 
+ 0,00 RTKM|186|37|Min Williams A/D |11|1|3||4 дня роста, 1 дня в 
+ 0,00 RTKM|186|21|Min Williams A/D |11|1|3||5 дня роста, 1 дня в 
+ 0,00 RTKM|179|21|Min Williams A/D |12|1|1||5 дня роста, 1 дня в 
+ 0,00 RTKM|178|21|Min Williams A/D |12|1|2||5 дня роста, 1 дня в 
+ 0,00 RTKM|178|21|Min Williams A/D |12|1|3||5 дня роста, 1 дня в 
+ 0,00 RTKM|173|21|Min Williams A/D |13|1|1||5 дня роста, 1 дня в 
+ 0,00 RTKM|172|21|Min Williams A/D |13|1|2||5 дня роста, 1 дня в 
+ 0,00 RTKM|172|21|Min Williams A/D |13|1|3||5 дня роста, 1 дня в 
+ 0,00 RTKM|167|21|Min Williams A/D |14|1|1||5 дня роста, 1 дня в 
+ 0,00 RTKM|166|21|Min Williams A/D |14|1|2||5 дня роста, 1 дня в 
+ 0,00 RTKM|166|21|Min Williams A/D |14|1|3||5 дня роста, 1 дня в 
+ 0,00 RTKM|160|21|Min Williams A/D |15|1|1||5 дня роста, 1 дня в 
+ 0,00 RTKM|159|21|Min Williams A/D |15|1|2||5 дня роста, 1 дня в 
+ 0,00 RTKM|159|21|Min Williams A/D |15|1|3||5 дня роста, 1 дня в 
+ 0,00 RTKM|158|21|Min Williams A/D |16|1|1||5 дня роста, 1 дня в 
+ 0,00 RTKM|157|21|Min Williams A/D |16|1|2||5 дня роста, 1 дня в 
+ 0,00 RTKM|157|21|Min Williams A/D |16|1|3||5 дня роста, 1 дня в 
+ 0,00 RTKM|152|21|Min Williams A/D |17|1|1||5 дня роста, 1 дня в 
+ 0,00 RTKM|151|21|Min Williams A/D |17|1|2||5 дня роста, 1 дня в 
+ 0,00 RTKM|151|21|Min Williams A/D |17|1|3||5 дня роста, 1 дня в 
+ 0,00 RTKM|150|21|Min Williams A/D |18|1|1||5 дня роста, 1 дня в 
+ 0,00 RTKM|149|21|Min Williams A/D |18|1|2||5 дня роста, 1 дня в 
+ 0,00 RTKM|149|21|Min Williams A/D |18|1|3||5 дня роста, 1 дня в 
+ 0,00 RTKM|145|21|Min Williams A/D |19|1|1||5 дня роста, 1 дня в 
+ 0,00 RTKM|144|21|Min Williams A/D |19|1|2||5 дня роста, 1 дня в 
+ 0,00 RTKM|144|21|Min Williams A/D |19|1|3||5 дня роста, 1 дня в 
+ 0,00 RTKM|140|21|Min Williams A/D |20|1|1||5 дня роста, 1 дня в 
+ 0,00 RTKM|139|21|Min Williams A/D |20|1|2||5 дня роста, 1 дня в 
+ 0,00 RTKM|139|21|Min Williams A/D |20|1|3||5 дня роста, 1 дня в 
+ 0,00 RTKM|137|21|Min Williams A/D |21|1|1||5 дня роста, 1 дня в 
+ 0,00 RTKM|136|21|Min Williams A/D |21|1|2||5 дня роста, 1 дня в 
+ 0,00 RTKM|136|21|Min Williams A/D |21|1|3||5 дня роста, 1 дня в 
+ 0,00 RTKM|133|21|Min Williams A/D |22|1|1||5 дня роста, 1 дня в 
+ 0,00 RTKM|132|21|Min Williams A/D |22|1|2||5 дня роста, 1 дня в 
+ 0,00 RTKM|132|21|Min Williams A/D |22|1|3||5 дня роста, 1 дня в 
+ 0,00 RTKM|129|21|Min Williams A/D |23|1|1||5 дня роста, 1 дня в 
+ 0,00 RTKM|129|13|Min Williams A/D |23|1|1||6 дня роста, 1 дня в 
+ 0,00 RTKM|128|21|Min Williams A/D |23|1|2||5 дня роста, 1 дня в 
+ 0,00 RTKM|128|13|Min Williams A/D |23|1|2||6 дня роста, 1 дня в 
+ 0,00 RTKM|128|21|Min Williams A/D |23|1|3||5 дня роста, 1 дня в 
+ 0,00 RTKM|128|13|Min Williams A/D |23|1|3||6 дня роста, 1 дня в 
+ 0,00 RTKM|126|21|Min Williams A/D |24|1|1||5 дня роста, 1 дня в 
+ 0,00 RTKM|126|13|Min Williams A/D |24|1|1||6 дня роста, 1 дня в 
+ 0,00 RTKM|125|21|Min Williams A/D |24|1|2||5 дня роста, 1 дня в 
+ 0,00 RTKM|125|13|Min Williams A/D |24|1|2||6 дня роста, 1 дня в 
+ 0,00 RTKM|125|21|Min Williams A/D |24|1|3||5 дня роста, 1 дня в 
+ 0,00 RTKM|125|13|Min Williams A/D |24|1|3||6 дня роста, 1 дня в 
+ 0,00 RTKM|122|21|Min Williams A/D |25|1|1||5 дня роста, 1 дня в 
+ 0,00 RTKM|122|13|Min Williams A/D |25|1|1||6 дня роста, 1 дня в 
+ 0,00 RTKM|121|21|Min Williams A/D |25|1|2||5 дня роста, 1 дня в 
+ 0,00 RTKM|121|13|Min Williams A/D |25|1|2||6 дня роста, 1 дня в 
+ 0,00 RTKM|121|21|Min Williams A/D |25|1|3||5 дня роста, 1 дня в 
+ 0,00 RTKM|121|13|Min Williams A/D |25|1|3||6 дня роста, 1 дня в 
+ 0,00 SBER|322|51|Max Williams A/D | 3|1|2||4 дня падения, 1 дня в 
+ 0,00 SBER|265|51|Max Williams A/D | 4|1|1||4 дня падения, 1 дня в 
+ 0,00 SBER|265|51|Max Williams A/D | 4|1|2||4 дня падения, 1 дня в 
+ 0,00 SBER|235|26|Max Williams A/D | 5|1|1||5 дня падения, 1 дня в 
+ 0,00 SBER|235|26|Max Williams A/D | 5|1|2||5 дня падения, 1 дня в 
+ 0,00 SBER|235|26|Max Williams A/D | 5|1|3||5 дня падения, 1 дня в 
+ 0,00 SBER|210|26|Max Williams A/D | 6|1|1||5 дня падения, 1 дня в 
+ 0,00 SBER|210|26|Max Williams A/D | 6|1|2||5 дня падения, 1 дня в 
+ 0,00 SBER|210|26|Max Williams A/D | 6|1|3||5 дня падения, 1 дня в 
+ 0,00 SBER|187|26|Max Williams A/D | 7|1|1||5 дня падения, 1 дня в 
+ 0,00 SBER|187|26|Max Williams A/D | 7|1|2||5 дня падения, 1 дня в 
+ 0,00 SBER|187|26|Max Williams A/D | 7|1|3||5 дня падения, 1 дня в 
+ 0,00 SBER|170|26|Max Williams A/D | 8|1|1||5 дня падения, 1 дня в 
+ 0,00 SBER|170|26|Max Williams A/D | 8|1|2||5 дня падения, 1 дня в 
+ 0,00 SBER|170|26|Max Williams A/D | 8|1|3||5 дня падения, 1 дня в 
+ 0,00 SBER|161|26|Max Williams A/D | 9|1|1||5 дня падения, 1 дня в 
+ 0,00 SBER|161|26|Max Williams A/D | 9|1|2||5 дня падения, 1 дня в 
+ 0,00 SBER|161|26|Max Williams A/D | 9|1|3||5 дня падения, 1 дня в 
+ 0,00 SBER|151|26|Max Williams A/D |10|1|1||5 дня падения, 1 дня в 
+ 0,00 SBER|151|26|Max Williams A/D |10|1|2||5 дня падения, 1 дня в 
+ 0,00 SBER|151|26|Max Williams A/D |10|1|3||5 дня падения, 1 дня в 
+ 0,00 SBER|140|26|Max Williams A/D |11|1|1||5 дня падения, 1 дня в 
+ 0,00 SBER|140|26|Max Williams A/D |11|1|2||5 дня падения, 1 дня в 
+ 0,00 SBER|140|26|Max Williams A/D |11|1|3||5 дня падения, 1 дня в 
+ 0,00 SBER|131|26|Max Williams A/D |12|1|1||5 дня падения, 1 дня в 
+ 0,00 SBER|131|26|Max Williams A/D |12|1|2||5 дня падения, 1 дня в 
+ 0,00 SBER|131|26|Max Williams A/D |12|1|3||5 дня падения, 1 дня в 
+ 0,00 SBER|99|10|Max Williams A/D |18|1|1||6 дня падения, 1 дня в 
+ 0,00 SBER|99|10|Max Williams A/D |18|1|2||6 дня падения, 1 дня в 
+ 0,00 SBER|99|10|Max Williams A/D |18|1|3||6 дня падения, 1 дня в 
+ 0,00 SBER|97|10|Max Williams A/D |19|1|1||6 дня падения, 1 дня в 
+ 0,00 SBER|97|10|Max Williams A/D |19|1|2||6 дня падения, 1 дня в 
+ 0,00 SBER|97|10|Max Williams A/D |19|1|3||6 дня падения, 1 дня в 
+ 0,00 SBER|93|10|Max Williams A/D |20|1|1||6 дня падения, 1 дня в 
+ 0,00 SBER|93|10|Max Williams A/D |20|1|2||6 дня падения, 1 дня в 
+ 0,00 SBER|93|10|Max Williams A/D |20|1|3||6 дня падения, 1 дня в 
+ 0,00 SBER|89|10|Max Williams A/D |21|1|1||6 дня падения, 1 дня в 
+ 0,00 SBER|89|10|Max Williams A/D |21|1|2||6 дня падения, 1 дня в 
+ 0,00 SBER|89|10|Max Williams A/D |21|1|3||6 дня падения, 1 дня в 
+ 0,00 SBER|87|10|Max Williams A/D |22|1|1||6 дня падения, 1 дня в 
+ 0,00 SBER|87|10|Max Williams A/D |22|1|2||6 дня падения, 1 дня в 
+ 0,00 SBER|87|10|Max Williams A/D |22|1|3||6 дня падения, 1 дня в 
+ 0,00 SBER|87|10|Max Williams A/D |23|1|1||6 дня падения, 1 дня в 
+ 0,00 SBER|87|10|Max Williams A/D |23|1|2||6 дня падения, 1 дня в 
+ 0,00 SBER|87|10|Max Williams A/D |23|1|3||6 дня падения, 1 дня в 
+ 0,00 SBER|84|10|Max Williams A/D |24|1|1||6 дня падения, 1 дня в 
+ 0,00 SBER|84|10|Max Williams A/D |24|1|2||6 дня падения, 1 дня в 
+ 0,00 SBER|84|10|Max Williams A/D |24|1|3||6 дня падения, 1 дня в 
+ 0,00 SBER|83|10|Max Williams A/D |25|1|1||6 дня падения, 1 дня в 
+ 0,00 SBER|83|10|Max Williams A/D |25|1|2||6 дня падения, 1 дня в 
+ 0,00 SBER|83|10|Max Williams A/D |25|1|3||6 дня падения, 1 дня в 
+ 0,00 SBER|313|33|Min Williams A/D | 3|1|2||4 дня роста, 1 дня в 
+ 0,00 SBER|312|33|Min Williams A/D | 3|1|3||4 дня роста, 1 дня в 
+ 0,00 SBER|261|33|Min Williams A/D | 4|1|1||4 дня роста, 1 дня в 
+ 0,00 SBER|260|33|Min Williams A/D | 4|1|2||4 дня роста, 1 дня в 
+ 0,00 SBER|259|33|Min Williams A/D | 4|1|3||4 дня роста, 1 дня в 
+ 0,00 SBER|224|33|Min Williams A/D | 5|1|1||4 дня роста, 1 дня в 
+ 0,00 SBER|223|33|Min Williams A/D | 5|1|2||4 дня роста, 1 дня в 
+ 0,00 SBER|222|33|Min Williams A/D | 5|1|3||4 дня роста, 1 дня в 
+ 0,00 SBER|204|33|Min Williams A/D | 6|1|1||4 дня роста, 1 дня в 
+ 0,00 SBER|203|33|Min Williams A/D | 6|1|2||4 дня роста, 1 дня в 
+ 0,00 SBER|202|33|Min Williams A/D | 6|1|3||4 дня роста, 1 дня в 
+ 0,00 SBER|189|33|Min Williams A/D | 7|1|1||4 дня роста, 1 дня в 
+ 0,00 SBER|188|33|Min Williams A/D | 7|1|2||4 дня роста, 1 дня в 
+ 0,00 SBER|187|33|Min Williams A/D | 7|1|3||4 дня роста, 1 дня в 
+ 0,00 SBER|169|33|Min Williams A/D | 8|1|1||4 дня роста, 1 дня в 
+ 0,00 SBER|168|33|Min Williams A/D | 8|1|2||4 дня роста, 1 дня в 
+ 0,00 SBER|167|33|Min Williams A/D | 8|1|3||4 дня роста, 1 дня в 
+ 0,00 SBER|99|10|Min Williams A/D |24|1|1||5 дня роста, 1 дня в 
+ 0,00 SBER|98|10|Min Williams A/D |24|1|2||5 дня роста, 1 дня в 
+ 0,00 SBER|97|10|Min Williams A/D |24|1|3||5 дня роста, 1 дня в 
+ 0,00 SBER|99|10|Min Williams A/D |25|1|1||5 дня роста, 1 дня в 
+ 0,00 SBER|98|10|Min Williams A/D |25|1|2||5 дня роста, 1 дня в 
+ 0,00 SBER|97|10|Min Williams A/D |25|1|3||5 дня роста, 1 дня в 
+ 1,92 RTKM|52|262|Max Williams A/D |21|1|2||2 дня падения, 1 дня в 
+ 1,96 RTKM|51|262|Max Williams A/D |22|1|2||2 дня падения, 1 дня в 
+ 1,96 SBER|322|51|Max Williams A/D | 3|1|1||4 дня падения, 1 дня в 
+ 2,04 GMKN|308|49|Max Williams A/D | 3|1|1||4 дня падения, 1 дня в 
+ 2,04 GMKN|308|49|Max Williams A/D | 3|1|2||4 дня падения, 1 дня в 
+ 2,04 GMKN|308|49|Max Williams A/D | 3|1|3||4 дня падения, 1 дня в 
+ 2,04 GMKN|262|49|Max Williams A/D | 4|1|1||4 дня падения, 1 дня в 
+ 2,04 GMKN|262|49|Max Williams A/D | 4|1|3||4 дня падения, 1 дня в 
+ 2,08 NVTK|302|48|Min Williams A/D | 3|1|1||4 дня роста, 1 дня в 
+ 2,17 ROSN|313|46|Max Williams A/D | 3|1|1||4 дня падения, 1 дня в 
+ 2,17 ROSN|313|46|Max Williams A/D | 3|1|2||4 дня падения, 1 дня в 
+ 2,17 ROSN|253|46|Max Williams A/D | 4|1|3||4 дня падения, 1 дня в 
+ 2,17 RTKM|46|262|Max Williams A/D |23|1|2||2 дня падения, 1 дня в 
+ 2,22 ROSN|338|45|Min Williams A/D | 3|1|1||4 дня роста, 1 дня в 
+ 2,22 ROSN|337|45|Min Williams A/D | 3|1|2||4 дня роста, 1 дня в 
+ 2,22 ROSN|337|45|Min Williams A/D | 3|1|3||4 дня роста, 1 дня в 
+ 2,22 RTKM|45|262|Max Williams A/D |24|1|2||2 дня падения, 1 дня в 
+ 2,33 RTKM|279|43|Max Williams A/D | 3|1|1||5 дня падения, 1 дня в 
+ 2,33 RTKM|279|43|Max Williams A/D | 3|1|2||5 дня падения, 1 дня в 
+ 2,33 RTKM|278|43|Max Williams A/D | 3|1|3||5 дня падения, 1 дня в 
+ 2,44 RTKM|41|262|Max Williams A/D |25|1|2||2 дня падения, 1 дня в 
+ 2,50 NVTK|341|40|Max Williams A/D | 3|1|1||4 дня падения, 1 дня в 
+ 2,50 NVTK|283|40|Max Williams A/D | 4|1|1||4 дня падения, 1 дня в 
+ 2,50 NVTK|246|40|Max Williams A/D | 5|1|3||4 дня падения, 1 дня в 
+ 2,50 NVTK|222|40|Max Williams A/D | 6|1|3||4 дня падения, 1 дня в 
+ 2,50 NVTK|203|40|Max Williams A/D | 7|1|3||4 дня падения, 1 дня в 
+ 2,70 RTKM|349|37|Min Williams A/D | 3|1|3||4 дня роста, 1 дня в 
+ 2,70 RTKM|295|37|Min Williams A/D | 4|1|3||4 дня роста, 1 дня в 
+ 2,70 RTKM|270|37|Min Williams A/D | 5|1|3||4 дня роста, 1 дня в 
+ 2,70 RTKM|247|37|Min Williams A/D | 6|1|3||4 дня роста, 1 дня в 
+ 2,70 RTKM|223|37|Min Williams A/D | 7|1|3||4 дня роста, 1 дня в 
+ 2,70 RTKM|214|37|Min Williams A/D | 8|1|3||4 дня роста, 1 дня в 
+ 2,78 GAZP|302|36|Max Williams A/D | 3|1|1||5 дня падения, 1 дня в 
+ 2,78 GAZP|302|36|Max Williams A/D | 3|1|2||5 дня падения, 1 дня в 
+ 2,86 GAZP|212|35|Min Williams A/D | 7|1|3||4 дня роста, 1 дня в 
+ 2,86 GAZP|200|35|Min Williams A/D | 8|1|3||4 дня роста, 1 дня в 
+ 2,86 GAZP|188|35|Min Williams A/D | 9|1|3||4 дня роста, 1 дня в 
+ 2,86 GAZP|177|35|Min Williams A/D |10|1|3||4 дня роста, 1 дня в 
+ 3,45 LKOH|318|58|Max Williams A/D | 3|1|3||4 дня падения, 1 дня в 
+ 3,57 LKOH|237|28|Max Williams A/D | 5|1|2||5 дня падения, 1 дня в 
+ 3,57 LKOH|217|28|Max Williams A/D | 6|1|2||5 дня падения, 1 дня в 
+ 3,57 LKOH|200|28|Max Williams A/D | 7|1|2||5 дня падения, 1 дня в 
+ 3,57 LKOH|191|28|Max Williams A/D | 8|1|2||5 дня падения, 1 дня в 
+ 3,57 LKOH|176|28|Max Williams A/D | 9|1|2||5 дня падения, 1 дня в 
+ 3,57 LKOH|166|28|Max Williams A/D |10|1|2||5 дня падения, 1 дня в 
+ 3,57 LKOH|159|28|Max Williams A/D |11|1|2||5 дня падения, 1 дня в 
+ 3,57 LKOH|153|28|Max Williams A/D |12|1|2||5 дня падения, 1 дня в 
+ 3,57 LKOH|144|28|Max Williams A/D |13|1|2||5 дня падения, 1 дня в 
+ 3,85 LKOH|304|52|Min Williams A/D | 3|1|1||4 дня роста, 1 дня в 
+ 3,85 LKOH|303|52|Min Williams A/D | 3|1|2||4 дня роста, 1 дня в 
+ 3,85 LKOH|302|52|Min Williams A/D | 3|1|3||4 дня роста, 1 дня в 
+ 3,92 SBER|322|51|Max Williams A/D | 3|1|3||4 дня падения, 1 дня в 
+ 3,92 SBER|265|51|Max Williams A/D | 4|1|3||4 дня падения, 1 дня в 
+ 4,35 LKOH|214|23|Min Williams A/D | 5|1|2||5 дня роста, 1 дня в 
+ 4,35 LKOH|213|23|Min Williams A/D | 5|1|3||5 дня роста, 1 дня в 
+ 4,35 LKOH|188|23|Min Williams A/D | 6|1|2||5 дня роста, 1 дня в 
+ 4,35 LKOH|187|23|Min Williams A/D | 6|1|3||5 дня роста, 1 дня в 
+ 4,35 ROSN|312|46|Max Williams A/D | 3|1|3||4 дня падения, 1 дня в 
+ 5,00 NVTK|340|40|Max Williams A/D | 3|1|3||4 дня падения, 1 дня в 
+ 5,00 NVTK|282|40|Max Williams A/D | 4|1|3||4 дня падения, 1 дня в 
+ 5,17 LKOH|318|58|Max Williams A/D | 3|1|1||4 дня падения, 1 дня в 
+ 5,71 GAZP|347|35|Min Williams A/D | 3|1|3||4 дня роста, 1 дня в 
+ 5,71 GAZP|286|35|Min Williams A/D | 4|1|3||4 дня роста, 1 дня в 
+ 5,71 GAZP|251|35|Min Williams A/D | 5|1|3||4 дня роста, 1 дня в 
+ 5,71 GAZP|228|35|Min Williams A/D | 6|1|3||4 дня роста, 1 дня в 
+ 6,06 SBER|314|33|Min Williams A/D | 3|1|1||4 дня роста, 1 дня в 
+ 6,90 LKOH|318|58|Max Williams A/D | 3|1|2||4 дня падения, 1 дня в 
+ 7,14 LKOH|266|28|Max Williams A/D | 4|1|2||5 дня падения, 1 дня в 
+ 9,09 ROSN|74|11|Min Williams A/D |24|1|3||6 дня падения, 1 дня в 
+ 9,09 ROSN|68|11|Min Williams A/D |25|1|3||6 дня падения, 1 дня в 
+12,50 ROSN|80|8|Max Williams A/D |21|1|3||6 дня роста, 1 дня в 
+12,50 ROSN|73|8|Max Williams A/D |22|1|3||6 дня роста, 1 дня в 
+12,50 ROSN|72|8|Max Williams A/D |23|1|3||6 дня роста, 1 дня в 
+12,50 ROSN|71|8|Max Williams A/D |24|1|3||6 дня роста, 1 дня в 
+12,50 ROSN|70|8|Max Williams A/D |25|1|3||6 дня роста, 1 дня в 
+18,18 ROSN|80|11|Min Williams A/D |23|1|3||6 дня падения, 1 дня в 
+25,00 ROSN|71|8|Max Williams A/D |24|1|2||6 дня роста, 1 дня в 
+25,00 ROSN|70|8|Max Williams A/D |25|1|2||6 дня роста, 1 дня в 
+27,27 LKOH|99|11|Max Williams A/D |25|1|3||6 дня роста, 1 дня в 
+27,27 ROSN|88|11|Min Williams A/D |21|1|3||6 дня падения, 1 дня в 
+27,27 ROSN|83|11|Min Williams A/D |22|1|3||6 дня падения, 1 дня в 
+27,27 ROSN|74|11|Min Williams A/D |24|1|2||6 дня падения, 1 дня в 
+27,27 ROSN|68|11|Min Williams A/D |25|1|2||6 дня падения, 1 дня в 
+27,45 RTKM|51|262|Max Williams A/D |22|1|3||2 дня падения, 1 дня в 
+28,57 LKOH|62|7|Min Williams A/D |23|1|3||7 дня падения, 1 дня в 
+28,57 LKOH|60|7|Min Williams A/D |24|1|3||7 дня падения, 1 дня в 
+28,57 LKOH|57|7|Min Williams A/D |25|1|3||7 дня падения, 1 дня в 
+28,85 RTKM|52|262|Max Williams A/D |21|1|3||2 дня падения, 1 дня в 
+29,27 RTKM|41|262|Max Williams A/D |25|1|3||2 дня падения, 1 дня в 
+30,00 GAZP|68|10|Max Williams A/D |24|1|3||5 дня роста, 1 дня в 
+30,00 GAZP|66|10|Max Williams A/D |25|1|3||5 дня роста, 1 дня в 
+30,00 SBER|87|10|Max Williams A/D |22|1|3||5 дня роста, 1 дня в 
+30,00 SBER|87|10|Max Williams A/D |23|1|3||5 дня роста, 1 дня в 
+30,00 SBER|84|10|Max Williams A/D |24|1|3||5 дня роста, 1 дня в 
+30,00 SBER|83|10|Max Williams A/D |25|1|3||5 дня роста, 1 дня в 
+30,43 RTKM|46|262|Max Williams A/D |23|1|3||2 дня падения, 1 дня в 
+30,77 RTKM|125|13|Min Williams A/D |24|1|3||7 дня падения, 1 дня в 
+30,77 RTKM|121|13|Min Williams A/D |25|1|3||7 дня падения, 1 дня в 
+31,11 RTKM|45|262|Max Williams A/D |24|1|3||2 дня падения, 1 дня в 
+33,33 GMKN|99|12|Max Williams A/D |21|1|3||5 дня роста, 1 дня в 
+33,33 GMKN|96|12|Max Williams A/D |22|1|3||5 дня роста, 1 дня в 
+33,33 GMKN|96|12|Max Williams A/D |23|1|3||5 дня роста, 1 дня в 
+33,33 GMKN|94|12|Max Williams A/D |24|1|3||5 дня роста, 1 дня в 
+33,33 GMKN|93|12|Max Williams A/D |25|1|3||5 дня роста, 1 дня в 
+33,33 LKOH|62|12|Min Williams A/D |23|1|3||6 дня падения, 1 дня в 
+33,33 LKOH|61|12|Min Williams A/D |24|1|2||6 дня падения, 1 дня в 
+35,00 RTKM|125|20|Min Williams A/D |24|1|3||6 дня падения, 1 дня в 
+35,00 RTKM|121|20|Min Williams A/D |25|1|3||6 дня падения, 1 дня в 
+35,71 GAZP|112|14|Min Williams A/D |23|1|3||6 дня падения, 1 дня в 
+35,71 GAZP|106|14|Min Williams A/D |24|1|3||6 дня падения, 1 дня в 
+35,71 GAZP|104|14|Min Williams A/D |25|1|1||6 дня падения, 1 дня в 
+35,71 GAZP|102|14|Min Williams A/D |25|1|3||6 дня падения, 1 дня в 
+36,36 LKOH|100|11|Max Williams A/D |24|1|3||6 дня роста, 1 дня в 
+36,36 ROSN|95|11|Min Williams A/D |19|1|3||6 дня падения, 1 дня в 
+36,36 ROSN|91|11|Min Williams A/D |20|1|3||6 дня падения, 1 дня в 
+36,36 ROSN|83|11|Min Williams A/D |22|1|2||6 дня падения, 1 дня в 
+36,36 ROSN|80|11|Min Williams A/D |23|1|1||6 дня падения, 1 дня в 
+36,36 ROSN|80|11|Min Williams A/D |23|1|2||6 дня падения, 1 дня в 
+36,36 ROSN|74|11|Min Williams A/D |24|1|1||6 дня падения, 1 дня в 
+36,36 ROSN|68|11|Min Williams A/D |25|1|1||6 дня падения, 1 дня в 
+37,50 ROSN|80|8|Max Williams A/D |21|1|2||6 дня роста, 1 дня в 
+37,50 ROSN|73|8|Max Williams A/D |22|1|2||6 дня роста, 1 дня в 
+37,50 ROSN|72|8|Max Williams A/D |23|1|2||6 дня роста, 1 дня в 
+37,50 ROSN|71|8|Max Williams A/D |24|1|1||6 дня роста, 1 дня в 
+37,50 ROSN|70|8|Max Williams A/D |25|1|1||6 дня роста, 1 дня в 
+37,50 ROSN|133|24|Min Williams A/D |12|1|3||5 дня падения, 1 дня в 
+37,50 ROSN|126|24|Min Williams A/D |13|1|3||5 дня падения, 1 дня в 
+37,50 ROSN|122|24|Min Williams A/D |14|1|3||5 дня падения, 1 дня в 
+38,46 RTKM|74|13|Max Williams A/D |16|1|3||6 дня роста, 1 дня в 
+38,46 RTKM|71|13|Max Williams A/D |17|1|3||6 дня роста, 1 дня в 
+38,46 RTKM|66|13|Max Williams A/D |18|1|3||6 дня роста, 1 дня в 
+38,46 RTKM|128|13|Min Williams A/D |23|1|3||7 дня падения, 1 дня в 
+40,00 GAZP|92|10|Max Williams A/D |17|1|3||5 дня роста, 1 дня в 
+40,00 GAZP|89|10|Max Williams A/D |18|1|3||5 дня роста, 1 дня в 
+40,00 GAZP|87|10|Max Williams A/D |19|1|3||5 дня роста, 1 дня в 
+40,00 GAZP|82|10|Max Williams A/D |20|1|3||5 дня роста, 1 дня в 
+40,00 GAZP|80|10|Max Williams A/D |21|1|3||5 дня роста, 1 дня в 
+40,00 GAZP|75|10|Max Williams A/D |22|1|3||5 дня роста, 1 дня в 
+40,00 GAZP|71|10|Max Williams A/D |23|1|3||5 дня роста, 1 дня в 
+40,00 ROSN|102|20|Max Williams A/D |16|1|3||5 дня роста, 1 дня в 
+40,00 RTKM|139|20|Min Williams A/D |20|1|3||6 дня падения, 1 дня в 
+40,00 RTKM|136|20|Min Williams A/D |21|1|3||6 дня падения, 1 дня в 
+40,00 RTKM|132|20|Min Williams A/D |22|1|3||6 дня падения, 1 дня в 
+40,00 RTKM|128|20|Min Williams A/D |23|1|3||6 дня падения, 1 дня в 
+40,00 SBER|89|10|Max Williams A/D |21|1|3||5 дня роста, 1 дня в 
+40,00 SBER|97|10|Min Williams A/D |24|1|3||6 дня падения, 1 дня в 
+40,00 SBER|97|10|Min Williams A/D |25|1|3||6 дня падения, 1 дня в 
+41,18 NVTK|92|17|Min Williams A/D |15|1|3||5 дня падения, 1 дня в 
+41,18 NVTK|87|17|Min Williams A/D |16|1|3||5 дня падения, 1 дня в 
+41,18 NVTK|86|17|Min Williams A/D |17|1|3||5 дня падения, 1 дня в 
+41,67 GMKN|118|12|Max Williams A/D |14|1|3||5 дня роста, 1 дня в 
+41,67 GMKN|115|12|Max Williams A/D |15|1|3||5 дня роста, 1 дня в 
+41,67 GMKN|113|12|Max Williams A/D |16|1|3||5 дня роста, 1 дня в 
+41,67 GMKN|108|12|Max Williams A/D |17|1|3||5 дня роста, 1 дня в 
+41,67 GMKN|106|12|Max Williams A/D |18|1|3||5 дня роста, 1 дня в 
+41,67 GMKN|103|12|Max Williams A/D |19|1|3||5 дня роста, 1 дня в 
+41,67 GMKN|102|12|Max Williams A/D |20|1|3||5 дня роста, 1 дня в 
+41,67 LKOH|69|12|Min Williams A/D |21|1|3||6 дня падения, 1 дня в 
+41,67 LKOH|64|12|Min Williams A/D |22|1|3||6 дня падения, 1 дня в 
+41,67 LKOH|63|12|Min Williams A/D |23|1|2||6 дня падения, 1 дня в 
+42,86 GAZP|115|14|Min Williams A/D |22|1|3||6 дня падения, 1 дня в 
+42,86 GAZP|107|14|Min Williams A/D |24|1|2||6 дня падения, 1 дня в 
+42,86 GAZP|103|14|Min Williams A/D |25|1|2||6 дня падения, 1 дня в 
+42,86 LKOH|69|7|Min Williams A/D |21|1|3||7 дня падения, 1 дня в 
+42,86 LKOH|64|7|Min Williams A/D |22|1|3||7 дня падения, 1 дня в 
+42,86 LKOH|61|7|Min Williams A/D |24|1|2||7 дня падения, 1 дня в 
+42,86 LKOH|58|7|Min Williams A/D |25|1|2||7 дня падения, 1 дня в 
+43,33 GMKN|156|30|Max Williams A/D | 8|1|3||4 дня роста, 1 дня в 
+43,48 LKOH|121|23|Max Williams A/D |18|1|3||5 дня роста, 1 дня в 
+43,48 LKOH|117|23|Max Williams A/D |19|1|3||5 дня роста, 1 дня в 
+44,44 NVTK|61|9|Min Williams A/D |25|1|3||6 дня падения, 1 дня в 
+45,00 RTKM|144|20|Min Williams A/D |19|1|3||6 дня падения, 1 дня в 
+45,00 RTKM|125|20|Min Williams A/D |24|1|2||6 дня падения, 1 дня в 
+45,00 RTKM|121|20|Min Williams A/D |25|1|2||6 дня падения, 1 дня в 
+45,45 LKOH|104|11|Max Williams A/D |23|1|3||6 дня роста, 1 дня в 
+45,45 ROSN|106|11|Min Williams A/D |17|1|3||6 дня падения, 1 дня в 
+45,45 ROSN|102|11|Min Williams A/D |18|1|3||6 дня падения, 1 дня в 
+45,45 ROSN|88|11|Min Williams A/D |21|1|2||6 дня падения, 1 дня в 
+45,45 ROSN|83|11|Min Williams A/D |22|1|1||6 дня падения, 1 дня в 
+45,83 ROSN|166|24|Min Williams A/D | 9|1|3||5 дня падения, 1 дня в 
+45,83 ROSN|155|24|Min Williams A/D |10|1|3||5 дня падения, 1 дня в 
+45,83 ROSN|148|24|Min Williams A/D |11|1|3||5 дня падения, 1 дня в 
+46,15 RTKM|80|13|Max Williams A/D |14|1|3||6 дня роста, 1 дня в 
+46,15 RTKM|77|13|Max Williams A/D |15|1|3||6 дня роста, 1 дня в 
+46,15 RTKM|66|13|Max Williams A/D |18|1|2||6 дня роста, 1 дня в 
+46,15 RTKM|128|13|Min Williams A/D |23|1|2||7 дня падения, 1 дня в 
+46,15 RTKM|125|13|Min Williams A/D |24|1|2||7 дня падения, 1 дня в 
+46,15 RTKM|121|13|Min Williams A/D |25|1|2||7 дня падения, 1 дня в 
+46,43 LKOH|141|28|Min Williams A/D | 9|1|3||5 дня падения, 1 дня в 
+46,67 GMKN|178|30|Max Williams A/D | 7|1|3||4 дня роста, 1 дня в 
+47,06 NVTK|100|17|Min Williams A/D |13|1|3||5 дня падения, 1 дня в 
+47,06 NVTK|94|17|Min Williams A/D |14|1|3||5 дня падения, 1 дня в 
+47,37 GMKN|117|19|Min Williams A/D |15|1|3||5 дня падения, 1 дня в 
+47,37 GMKN|117|19|Min Williams A/D |16|1|3||5 дня падения, 1 дня в 
+47,37 GMKN|114|19|Min Williams A/D |17|1|3||5 дня падения, 1 дня в 
+47,37 GMKN|111|19|Min Williams A/D |18|1|3||5 дня падения, 1 дня в 
+47,37 GMKN|110|19|Min Williams A/D |19|1|3||5 дня падения, 1 дня в 
+47,37 GMKN|104|19|Min Williams A/D |20|1|3||5 дня падения, 1 дня в 
+47,37 GMKN|103|19|Min Williams A/D |21|1|3||5 дня падения, 1 дня в 
+47,37 GMKN|101|19|Min Williams A/D |22|1|3||5 дня падения, 1 дня в 
+47,37 GMKN|97|19|Min Williams A/D |23|1|3||5 дня падения, 1 дня в 
+48,57 GAZP|185|35|Max Williams A/D | 6|1|3||4 дня роста, 1 дня в 
+50,00 GAZP|97|10|Max Williams A/D |16|1|3||5 дня роста, 1 дня в 
+50,00 GAZP|68|10|Max Williams A/D |24|1|2||5 дня роста, 1 дня в 
+50,00 GAZP|66|10|Max Williams A/D |25|1|2||5 дня роста, 1 дня в 
+50,00 GAZP|119|14|Min Williams A/D |20|1|3||6 дня падения, 1 дня в 
+50,00 GAZP|119|14|Min Williams A/D |21|1|3||6 дня падения, 1 дня в 
+50,00 GAZP|108|14|Min Williams A/D |24|1|1||6 дня падения, 1 дня в 
+50,00 GMKN|204|30|Max Williams A/D | 6|1|3||4 дня роста, 1 дня в 
+50,00 GMKN|99|12|Max Williams A/D |21|1|2||5 дня роста, 1 дня в 
+50,00 GMKN|96|12|Max Williams A/D |22|1|2||5 дня роста, 1 дня в 
+50,00 GMKN|96|12|Max Williams A/D |23|1|2||5 дня роста, 1 дня в 
+50,00 GMKN|94|12|Max Williams A/D |24|1|2||5 дня роста, 1 дня в 
+50,00 GMKN|93|12|Max Williams A/D |25|1|2||5 дня роста, 1 дня в 
+50,00 LKOH|142|28|Min Williams A/D | 9|1|2||5 дня падения, 1 дня в 
+50,00 LKOH|115|12|Min Williams A/D |12|1|2||6 дня падения, 1 дня в 
+50,00 LKOH|114|12|Min Williams A/D |12|1|3||6 дня падения, 1 дня в 
+50,00 LKOH|110|12|Min Williams A/D |13|1|2||6 дня падения, 1 дня в 
+50,00 LKOH|109|12|Min Williams A/D |13|1|3||6 дня падения, 1 дня в 
+50,00 LKOH|105|12|Min Williams A/D |14|1|2||6 дня падения, 1 дня в 
+50,00 LKOH|104|12|Min Williams A/D |14|1|3||6 дня падения, 1 дня в 
+50,00 LKOH|99|12|Min Williams A/D |15|1|2||6 дня падения, 1 дня в 
+50,00 LKOH|98|12|Min Williams A/D |15|1|3||6 дня падения, 1 дня в 
+50,00 LKOH|93|12|Min Williams A/D |16|1|2||6 дня падения, 1 дня в 
+50,00 LKOH|92|12|Min Williams A/D |16|1|3||6 дня падения, 1 дня в 
+50,00 LKOH|89|12|Min Williams A/D |17|1|2||6 дня падения, 1 дня в 
+50,00 LKOH|88|12|Min Williams A/D |17|1|3||6 дня падения, 1 дня в 
+50,00 LKOH|85|12|Min Williams A/D |18|1|2||6 дня падения, 1 дня в 
+50,00 LKOH|84|12|Min Williams A/D |18|1|3||6 дня падения, 1 дня в 
+50,00 LKOH|78|12|Min Williams A/D |19|1|2||6 дня падения, 1 дня в 
+50,00 LKOH|77|12|Min Williams A/D |19|1|3||6 дня падения, 1 дня в 
+50,00 LKOH|74|12|Min Williams A/D |20|1|2||6 дня падения, 1 дня в 
+50,00 LKOH|73|12|Min Williams A/D |20|1|3||6 дня падения, 1 дня в 
+50,00 LKOH|70|12|Min Williams A/D |21|1|2||6 дня падения, 1 дня в 
+50,00 LKOH|65|12|Min Williams A/D |22|1|2||6 дня падения, 1 дня в 
+50,00 ROSN|73|8|Max Williams A/D |22|1|1||6 дня роста, 1 дня в 
+50,00 ROSN|72|8|Max Williams A/D |23|1|1||6 дня роста, 1 дня в 
+50,00 RTKM|149|20|Min Williams A/D |18|1|3||6 дня падения, 1 дня в 
+50,00 RTKM|139|20|Min Williams A/D |20|1|2||6 дня падения, 1 дня в 
+50,00 RTKM|137|20|Min Williams A/D |21|1|1||6 дня падения, 1 дня в 
+50,00 RTKM|136|20|Min Williams A/D |21|1|2||6 дня падения, 1 дня в 
+50,00 RTKM|133|20|Min Williams A/D |22|1|1||6 дня падения, 1 дня в 
+50,00 RTKM|132|20|Min Williams A/D |22|1|2||6 дня падения, 1 дня в 
+50,00 RTKM|129|20|Min Williams A/D |23|1|1||6 дня падения, 1 дня в 
+50,00 RTKM|128|20|Min Williams A/D |23|1|2||6 дня падения, 1 дня в 
+50,00 RTKM|126|20|Min Williams A/D |24|1|1||6 дня падения, 1 дня в 
+50,00 RTKM|122|20|Min Williams A/D |25|1|1||6 дня падения, 1 дня в 
+50,00 SBER|93|10|Max Williams A/D |20|1|3||5 дня роста, 1 дня в 
+50,00 SBER|84|10|Max Williams A/D |24|1|2||5 дня роста, 1 дня в 
+50,00 SBER|83|10|Max Williams A/D |25|1|2||5 дня роста, 1 дня в 
+50,00 SBER|98|10|Min Williams A/D |24|1|2||6 дня падения, 1 дня в 
+50,00 SBER|98|10|Min Williams A/D |25|1|2||6 дня падения, 1 дня в 
+52,17 LKOH|126|23|Max Williams A/D |17|1|3||5 дня роста, 1 дня в 
+52,63 GMKN|118|19|Min Williams A/D |14|1|3||5 дня падения, 1 дня в 
+53,57 LKOH|166|28|Min Williams A/D | 7|1|2||5 дня падения, 1 дня в 
+53,57 LKOH|152|28|Min Williams A/D | 8|1|2||5 дня падения, 1 дня в 
+53,85 RTKM|85|13|Max Williams A/D |13|1|3||6 дня роста, 1 дня в 
+53,85 RTKM|74|13|Max Williams A/D |16|1|2||6 дня роста, 1 дня в 
+53,85 RTKM|71|13|Max Williams A/D |17|1|2||6 дня роста, 1 дня в 
+53,85 RTKM|129|13|Min Williams A/D |23|1|1||7 дня падения, 1 дня в 
+53,85 RTKM|126|13|Min Williams A/D |24|1|1||7 дня падения, 1 дня в 
+53,85 RTKM|122|13|Min Williams A/D |25|1|1||7 дня падения, 1 дня в 
+54,17 ROSN|176|24|Min Williams A/D | 8|1|3||5 дня падения, 1 дня в 
+54,55 LKOH|108|11|Max Williams A/D |22|1|3||6 дня роста, 1 дня в 
+54,55 LKOH|99|11|Max Williams A/D |25|1|2||6 дня роста, 1 дня в 
+54,55 ROSN|95|11|Min Williams A/D |19|1|2||6 дня падения, 1 дня в 
+54,55 ROSN|91|11|Min Williams A/D |20|1|2||6 дня падения, 1 дня в 
+54,55 ROSN|88|11|Min Williams A/D |21|1|1||6 дня падения, 1 дня в 
+55,00 ROSN|111|20|Max Williams A/D |14|1|3||5 дня роста, 1 дня в 
+55,00 ROSN|106|20|Max Williams A/D |15|1|3||5 дня роста, 1 дня в 
+55,00 RTKM|159|20|Min Williams A/D |15|1|3||6 дня падения, 1 дня в 
+55,00 RTKM|157|20|Min Williams A/D |16|1|3||6 дня падения, 1 дня в 
+55,00 RTKM|151|20|Min Williams A/D |17|1|3||6 дня падения, 1 дня в 
+55,00 RTKM|144|20|Min Williams A/D |19|1|2||6 дня падения, 1 дня в 
+55,00 RTKM|140|20|Min Williams A/D |20|1|1||6 дня падения, 1 дня в 
+55,56 NVTK|87|9|Min Williams A/D |16|1|3||6 дня падения, 1 дня в 
+55,56 NVTK|86|9|Min Williams A/D |17|1|3||6 дня падения, 1 дня в 
+55,56 NVTK|81|9|Min Williams A/D |18|1|3||6 дня падения, 1 дня в 
+55,56 NVTK|77|9|Min Williams A/D |19|1|3||6 дня падения, 1 дня в 
+55,56 NVTK|74|9|Min Williams A/D |20|1|3||6 дня падения, 1 дня в 
+55,56 NVTK|72|9|Min Williams A/D |21|1|3||6 дня падения, 1 дня в 
+55,56 NVTK|69|9|Min Williams A/D |22|1|3||6 дня падения, 1 дня в 
+55,56 NVTK|66|9|Min Williams A/D |23|1|3||6 дня падения, 1 дня в 
+55,56 NVTK|63|9|Min Williams A/D |24|1|3||6 дня падения, 1 дня в 
+55,56 RTKM|74|9|Max Williams A/D |16|1|3||7 дня роста, 1 дня в 
+55,56 RTKM|71|9|Max Williams A/D |17|1|3||7 дня роста, 1 дня в 
+55,56 RTKM|66|9|Max Williams A/D |18|1|2||7 дня роста, 1 дня в 
+55,56 RTKM|66|9|Max Williams A/D |18|1|3||7 дня роста, 1 дня в 
+55,56 RTKM|59|9|Max Williams A/D |19|1|2||7 дня роста, 1 дня в 
+55,56 RTKM|59|9|Max Williams A/D |19|1|3||7 дня роста, 1 дня в 
+55,56 RTKM|55|9|Max Williams A/D |20|1|2||7 дня роста, 1 дня в 
+55,56 RTKM|55|9|Max Williams A/D |20|1|3||7 дня роста, 1 дня в 
+55,56 RTKM|52|9|Max Williams A/D |21|1|2||7 дня роста, 1 дня в 
+55,56 RTKM|52|9|Max Williams A/D |21|1|3||7 дня роста, 1 дня в 
+55,56 RTKM|51|9|Max Williams A/D |22|1|2||7 дня роста, 1 дня в 
+55,56 RTKM|51|9|Max Williams A/D |22|1|3||7 дня роста, 1 дня в 
+55,56 RTKM|46|9|Max Williams A/D |23|1|2||7 дня роста, 1 дня в 
+55,56 RTKM|46|9|Max Williams A/D |23|1|3||7 дня роста, 1 дня в 
+56,52 LKOH|128|23|Max Williams A/D |16|1|3||5 дня роста, 1 дня в 
+56,52 LKOH|117|23|Max Williams A/D |19|1|2||5 дня роста, 1 дня в 
+57,14 GAZP|139|14|Min Williams A/D |15|1|3||6 дня падения, 1 дня в 
+57,14 GAZP|133|14|Min Williams A/D |16|1|3||6 дня падения, 1 дня в 
+57,14 GAZP|128|14|Min Williams A/D |17|1|3||6 дня падения, 1 дня в 
+57,14 GAZP|125|14|Min Williams A/D |18|1|3||6 дня падения, 1 дня в 
+57,14 GAZP|122|14|Min Williams A/D |19|1|3||6 дня падения, 1 дня в 
+57,14 GAZP|114|14|Min Williams A/D |23|1|1||6 дня падения, 1 дня в 
+57,14 GAZP|113|14|Min Williams A/D |23|1|2||6 дня падения, 1 дня в 
+57,14 LKOH|188|28|Min Williams A/D | 6|1|2||5 дня падения, 1 дня в 
+57,14 LKOH|165|28|Min Williams A/D | 7|1|3||5 дня падения, 1 дня в 
+57,14 LKOH|151|28|Min Williams A/D | 8|1|3||5 дня падения, 1 дня в 
+57,14 LKOH|63|7|Min Williams A/D |23|1|2||7 дня падения, 1 дня в 
+57,14 LKOH|59|7|Min Williams A/D |25|1|1||7 дня падения, 1 дня в 
+57,58 SBER|170|33|Max Williams A/D | 8|1|3||4 дня роста, 1 дня в 
+57,89 GMKN|126|19|Min Williams A/D |12|1|3||5 дня падения, 1 дня в 
+57,89 GMKN|121|19|Min Williams A/D |13|1|3||5 дня падения, 1 дня в 
+58,33 GMKN|118|12|Max Williams A/D |14|1|2||5 дня роста, 1 дня в 
+58,33 GMKN|115|12|Max Williams A/D |15|1|2||5 дня роста, 1 дня в 
+58,33 GMKN|113|12|Max Williams A/D |16|1|2||5 дня роста, 1 дня в 
+58,33 GMKN|108|12|Max Williams A/D |17|1|2||5 дня роста, 1 дня в 
+58,33 GMKN|106|12|Max Williams A/D |18|1|2||5 дня роста, 1 дня в 
+58,33 GMKN|103|12|Max Williams A/D |19|1|2||5 дня роста, 1 дня в 
+58,33 GMKN|102|12|Max Williams A/D |20|1|2||5 дня роста, 1 дня в 
+58,33 GMKN|99|12|Max Williams A/D |21|1|1||5 дня роста, 1 дня в 
+58,33 GMKN|96|12|Max Williams A/D |22|1|1||5 дня роста, 1 дня в 
+58,33 GMKN|96|12|Max Williams A/D |23|1|1||5 дня роста, 1 дня в 
+58,33 GMKN|94|12|Max Williams A/D |24|1|1||5 дня роста, 1 дня в 
+58,33 GMKN|93|12|Max Williams A/D |25|1|1||5 дня роста, 1 дня в 
+58,33 LKOH|62|12|Min Williams A/D |24|1|1||6 дня падения, 1 дня в 
+58,82 NVTK|105|17|Min Williams A/D |12|1|3||5 дня падения, 1 дня в 
+60,00 GAZP|214|35|Max Williams A/D | 5|1|3||4 дня роста, 1 дня в 
+60,00 GAZP|82|10|Max Williams A/D |20|1|2||5 дня роста, 1 дня в 
+60,00 GAZP|80|10|Max Williams A/D |21|1|2||5 дня роста, 1 дня в 
+60,00 GAZP|75|10|Max Williams A/D |22|1|1||5 дня роста, 1 дня в 
+60,00 GAZP|75|10|Max Williams A/D |22|1|2||5 дня роста, 1 дня в 
+60,00 GAZP|71|10|Max Williams A/D |23|1|1||5 дня роста, 1 дня в 
+60,00 GAZP|71|10|Max Williams A/D |23|1|2||5 дня роста, 1 дня в 
+60,00 GAZP|68|10|Max Williams A/D |24|1|1||5 дня роста, 1 дня в 
+60,00 GAZP|66|10|Max Williams A/D |25|1|1||5 дня роста, 1 дня в 
+60,00 GMKN|218|30|Max Williams A/D | 5|1|3||4 дня роста, 1 дня в 
+60,00 GMKN|156|30|Max Williams A/D | 8|1|2||4 дня роста, 1 дня в 
+60,00 ROSN|116|20|Max Williams A/D |13|1|3||5 дня роста, 1 дня в 
+60,00 RTKM|166|20|Min Williams A/D |14|1|3||6 дня падения, 1 дня в 
+60,00 RTKM|149|20|Min Williams A/D |18|1|2||6 дня падения, 1 дня в 
+60,00 RTKM|145|20|Min Williams A/D |19|1|1||6 дня падения, 1 дня в 
+60,00 SBER|99|10|Max Williams A/D |18|1|3||5 дня роста, 1 дня в 
+60,00 SBER|97|10|Max Williams A/D |19|1|3||5 дня роста, 1 дня в 
+60,00 SBER|89|10|Max Williams A/D |21|1|1||5 дня роста, 1 дня в 
+60,00 SBER|89|10|Max Williams A/D |21|1|2||5 дня роста, 1 дня в 
+60,00 SBER|87|10|Max Williams A/D |22|1|1||5 дня роста, 1 дня в 
+60,00 SBER|87|10|Max Williams A/D |22|1|2||5 дня роста, 1 дня в 
+60,00 SBER|87|10|Max Williams A/D |23|1|1||5 дня роста, 1 дня в 
+60,00 SBER|87|10|Max Williams A/D |23|1|2||5 дня роста, 1 дня в 
+60,00 SBER|84|10|Max Williams A/D |24|1|1||5 дня роста, 1 дня в 
+60,00 SBER|83|10|Max Williams A/D |25|1|1||5 дня роста, 1 дня в 
+60,71 LKOH|250|28|Min Williams A/D | 4|1|2||5 дня падения, 1 дня в 
+60,71 LKOH|214|28|Min Williams A/D | 5|1|2||5 дня падения, 1 дня в 
+60,71 LKOH|187|28|Min Williams A/D | 6|1|3||5 дня падения, 1 дня в 
+60,87 LKOH|139|23|Max Williams A/D |14|1|3||5 дня роста, 1 дня в 
+60,87 LKOH|133|23|Max Williams A/D |15|1|3||5 дня роста, 1 дня в 
+60,87 LKOH|128|23|Max Williams A/D |16|1|1||5 дня роста, 1 дня в 
+60,87 LKOH|126|23|Max Williams A/D |17|1|1||5 дня роста, 1 дня в 
+60,87 LKOH|121|23|Max Williams A/D |18|1|1||5 дня роста, 1 дня в 
+60,87 LKOH|121|23|Max Williams A/D |18|1|2||5 дня роста, 1 дня в 
+60,87 LKOH|117|23|Max Williams A/D |19|1|1||5 дня роста, 1 дня в 
+61,54 RTKM|80|13|Max Williams A/D |14|1|2||6 дня роста, 1 дня в 
+61,54 RTKM|77|13|Max Williams A/D |15|1|2||6 дня роста, 1 дня в 
+61,54 RTKM|66|13|Max Williams A/D |18|1|1||6 дня роста, 1 дня в 
+61,90 RTKM|110|21|Max Williams A/D |10|1|3||5 дня роста, 1 дня в 
+62,50 ROSN|80|8|Max Williams A/D |21|1|1||6 дня роста, 1 дня в 
+62,50 ROSN|194|24|Min Williams A/D | 7|1|3||5 дня падения, 1 дня в 
+63,16 GMKN|129|19|Min Williams A/D |11|1|3||5 дня падения, 1 дня в 
+63,16 GMKN|98|19|Min Williams A/D |23|1|1||5 дня падения, 1 дня в 
+63,16 GMKN|97|19|Min Williams A/D |23|1|2||5 дня падения, 1 дня в 
+63,33 GMKN|178|30|Max Williams A/D | 7|1|2||4 дня роста, 1 дня в 
+63,64 LKOH|108|11|Max Williams A/D |22|1|1||6 дня роста, 1 дня в 
+63,64 LKOH|104|11|Max Williams A/D |23|1|1||6 дня роста, 1 дня в 
+63,64 LKOH|100|11|Max Williams A/D |24|1|1||6 дня роста, 1 дня в 
+63,64 LKOH|100|11|Max Williams A/D |24|1|2||6 дня роста, 1 дня в 
+63,64 LKOH|99|11|Max Williams A/D |25|1|1||6 дня роста, 1 дня в 
+63,64 ROSN|106|11|Min Williams A/D |17|1|2||6 дня падения, 1 дня в 
+63,64 ROSN|102|11|Min Williams A/D |18|1|2||6 дня падения, 1 дня в 
+63,64 ROSN|91|11|Min Williams A/D |20|1|1||6 дня падения, 1 дня в 
+64,29 GAZP|130|14|Min Williams A/D |17|1|1||6 дня падения, 1 дня в 
+64,29 GAZP|127|14|Min Williams A/D |18|1|1||6 дня падения, 1 дня в 
+64,29 GAZP|124|14|Min Williams A/D |19|1|1||6 дня падения, 1 дня в 
+64,29 GAZP|121|14|Min Williams A/D |20|1|1||6 дня падения, 1 дня в 
+64,29 GAZP|121|14|Min Williams A/D |21|1|1||6 дня падения, 1 дня в 
+64,29 GAZP|117|14|Min Williams A/D |22|1|1||6 дня падения, 1 дня в 
+64,29 GAZP|116|14|Min Williams A/D |22|1|2||6 дня падения, 1 дня в 
+64,29 LKOH|249|28|Min Williams A/D | 4|1|3||5 дня падения, 1 дня в 
+64,29 LKOH|213|28|Min Williams A/D | 5|1|3||5 дня падения, 1 дня в 
+64,71 NVTK|136|17|Min Williams A/D | 9|1|3||5 дня падения, 1 дня в 
+64,71 NVTK|122|17|Min Williams A/D |10|1|3||5 дня падения, 1 дня в 
+64,71 NVTK|116|17|Min Williams A/D |11|1|3||5 дня падения, 1 дня в 
+65,00 RTKM|178|20|Min Williams A/D |12|1|3||6 дня падения, 1 дня в 
+65,00 RTKM|172|20|Min Williams A/D |13|1|3||6 дня падения, 1 дня в 
+65,00 RTKM|152|20|Min Williams A/D |17|1|1||6 дня падения, 1 дня в 
+65,00 RTKM|151|20|Min Williams A/D |17|1|2||6 дня падения, 1 дня в 
+65,00 RTKM|150|20|Min Williams A/D |18|1|1||6 дня падения, 1 дня в 
+65,22 LKOH|159|23|Max Williams A/D |11|1|1||5 дня роста, 1 дня в 
+65,22 LKOH|153|23|Max Williams A/D |12|1|1||5 дня роста, 1 дня в 
+65,22 LKOH|153|23|Max Williams A/D |12|1|3||5 дня роста, 1 дня в 
+65,22 LKOH|144|23|Max Williams A/D |13|1|1||5 дня роста, 1 дня в 
+65,22 LKOH|144|23|Max Williams A/D |13|1|3||5 дня роста, 1 дня в 
+65,22 LKOH|139|23|Max Williams A/D |14|1|1||5 дня роста, 1 дня в 
+65,22 LKOH|133|23|Max Williams A/D |15|1|1||5 дня роста, 1 дня в 
+65,22 LKOH|128|23|Max Williams A/D |16|1|2||5 дня роста, 1 дня в 
+65,22 LKOH|126|23|Max Williams A/D |17|1|2||5 дня роста, 1 дня в 
+65,38 SBER|142|26|Min Williams A/D |12|1|3||5 дня падения, 1 дня в 
+65,38 SBER|136|26|Min Williams A/D |13|1|3||5 дня падения, 1 дня в 
+65,38 SBER|133|26|Min Williams A/D |14|1|3||5 дня падения, 1 дня в 
+65,38 SBER|131|26|Min Williams A/D |15|1|3||5 дня падения, 1 дня в 
+66,67 GMKN|118|12|Max Williams A/D |14|1|1||5 дня роста, 1 дня в 
+66,67 GMKN|115|12|Max Williams A/D |15|1|1||5 дня роста, 1 дня в 
+66,67 GMKN|113|12|Max Williams A/D |16|1|1||5 дня роста, 1 дня в 
+66,67 GMKN|108|12|Max Williams A/D |17|1|1||5 дня роста, 1 дня в 
+66,67 GMKN|106|12|Max Williams A/D |18|1|1||5 дня роста, 1 дня в 
+66,67 GMKN|103|12|Max Williams A/D |19|1|1||5 дня роста, 1 дня в 
+66,67 GMKN|102|12|Max Williams A/D |20|1|1||5 дня роста, 1 дня в 
+66,67 LKOH|64|12|Min Williams A/D |23|1|1||6 дня падения, 1 дня в 
+66,67 NVTK|87|9|Min Williams A/D |16|1|2||6 дня падения, 1 дня в 
+66,67 NVTK|86|9|Min Williams A/D |17|1|2||6 дня падения, 1 дня в 
+66,67 NVTK|81|9|Min Williams A/D |18|1|2||6 дня падения, 1 дня в 
+66,67 NVTK|77|9|Min Williams A/D |19|1|2||6 дня падения, 1 дня в 
+66,67 NVTK|74|9|Min Williams A/D |20|1|2||6 дня падения, 1 дня в 
+66,67 NVTK|72|9|Min Williams A/D |21|1|2||6 дня падения, 1 дня в 
+66,67 NVTK|69|9|Min Williams A/D |22|1|2||6 дня падения, 1 дня в 
+66,67 NVTK|66|9|Min Williams A/D |23|1|2||6 дня падения, 1 дня в 
+66,67 NVTK|63|9|Min Williams A/D |24|1|2||6 дня падения, 1 дня в 
+66,67 NVTK|61|9|Min Williams A/D |25|1|2||6 дня падения, 1 дня в 
+66,67 ROSN|126|24|Min Williams A/D |13|1|2||5 дня падения, 1 дня в 
+66,67 ROSN|122|24|Min Williams A/D |14|1|2||5 дня падения, 1 дня в 
+66,67 RTKM|80|9|Max Williams A/D |14|1|3||7 дня роста, 1 дня в 
+66,67 RTKM|77|9|Max Williams A/D |15|1|3||7 дня роста, 1 дня в 
+66,67 RTKM|74|9|Max Williams A/D |16|1|2||7 дня роста, 1 дня в 
+66,67 RTKM|71|9|Max Williams A/D |17|1|2||7 дня роста, 1 дня в 
+66,67 RTKM|59|9|Max Williams A/D |19|1|1||7 дня роста, 1 дня в 
+66,67 RTKM|55|9|Max Williams A/D |20|1|1||7 дня роста, 1 дня в 
+66,67 RTKM|52|9|Max Williams A/D |21|1|1||7 дня роста, 1 дня в 
+66,67 RTKM|51|9|Max Williams A/D |22|1|1||7 дня роста, 1 дня в 
+66,67 RTKM|46|9|Max Williams A/D |23|1|1||7 дня роста, 1 дня в 
+66,67 SBER|187|33|Max Williams A/D | 7|1|3||4 дня роста, 1 дня в 
+68,42 GMKN|144|19|Min Williams A/D | 9|1|3||5 дня падения, 1 дня в 
+68,42 GMKN|137|19|Min Williams A/D |10|1|3||5 дня падения, 1 дня в 
+68,42 GMKN|127|19|Min Williams A/D |12|1|1||5 дня падения, 1 дня в 
+68,42 GMKN|122|19|Min Williams A/D |13|1|1||5 дня падения, 1 дня в 
+68,42 GMKN|119|19|Min Williams A/D |14|1|1||5 дня падения, 1 дня в 
+68,42 GMKN|118|19|Min Williams A/D |15|1|1||5 дня падения, 1 дня в 
+68,42 GMKN|118|19|Min Williams A/D |16|1|1||5 дня падения, 1 дня в 
+68,42 GMKN|115|19|Min Williams A/D |17|1|1||5 дня падения, 1 дня в 
+68,42 GMKN|112|19|Min Williams A/D |18|1|1||5 дня падения, 1 дня в 
+68,42 GMKN|111|19|Min Williams A/D |19|1|1||5 дня падения, 1 дня в 
+68,42 GMKN|105|19|Min Williams A/D |20|1|1||5 дня падения, 1 дня в 
+68,42 GMKN|104|19|Min Williams A/D |21|1|1||5 дня падения, 1 дня в 
+68,42 GMKN|102|19|Min Williams A/D |22|1|1||5 дня падения, 1 дня в 
+68,97 LKOH|303|58|Min Williams A/D | 3|1|2||4 дня падения, 1 дня в 
+69,23 RTKM|98|13|Max Williams A/D |11|1|3||6 дня роста, 1 дня в 
+69,23 RTKM|89|13|Max Williams A/D |12|1|3||6 дня роста, 1 дня в 
+69,23 RTKM|85|13|Max Williams A/D |13|1|2||6 дня роста, 1 дня в 
+69,23 RTKM|74|13|Max Williams A/D |16|1|1||6 дня роста, 1 дня в 
+69,23 RTKM|71|13|Max Williams A/D |17|1|1||6 дня роста, 1 дня в 
+69,23 SBER|158|26|Min Williams A/D | 9|1|3||5 дня падения, 1 дня в 
+69,23 SBER|152|26|Min Williams A/D |10|1|3||5 дня падения, 1 дня в 
+69,23 SBER|148|26|Min Williams A/D |11|1|3||5 дня падения, 1 дня в 
+69,57 LKOH|200|23|Max Williams A/D | 7|1|1||5 дня роста, 1 дня в 
+69,57 LKOH|191|23|Max Williams A/D | 8|1|1||5 дня роста, 1 дня в 
+69,57 LKOH|176|23|Max Williams A/D | 9|1|1||5 дня роста, 1 дня в 
+69,57 LKOH|166|23|Max Williams A/D |10|1|1||5 дня роста, 1 дня в 
+69,57 LKOH|166|23|Max Williams A/D |10|1|3||5 дня роста, 1 дня в 
+69,57 LKOH|159|23|Max Williams A/D |11|1|3||5 дня роста, 1 дня в 
+69,57 LKOH|139|23|Max Williams A/D |14|1|2||5 дня роста, 1 дня в 
+69,57 LKOH|133|23|Max Williams A/D |15|1|2||5 дня роста, 1 дня в 
+69,57 ROSN|239|46|Min Williams A/D | 5|1|3||4 дня падения, 1 дня в 
+69,70 SBER|210|33|Max Williams A/D | 6|1|3||4 дня роста, 1 дня в 
+70,00 GAZP|97|10|Max Williams A/D |16|1|1||5 дня роста, 1 дня в 
+70,00 GAZP|97|10|Max Williams A/D |16|1|2||5 дня роста, 1 дня в 
+70,00 GAZP|92|10|Max Williams A/D |17|1|1||5 дня роста, 1 дня в 
+70,00 GAZP|92|10|Max Williams A/D |17|1|2||5 дня роста, 1 дня в 
+70,00 GAZP|89|10|Max Williams A/D |18|1|1||5 дня роста, 1 дня в 
+70,00 GAZP|89|10|Max Williams A/D |18|1|2||5 дня роста, 1 дня в 
+70,00 GAZP|87|10|Max Williams A/D |19|1|1||5 дня роста, 1 дня в 
+70,00 GAZP|87|10|Max Williams A/D |19|1|2||5 дня роста, 1 дня в 
+70,00 GAZP|82|10|Max Williams A/D |20|1|1||5 дня роста, 1 дня в 
+70,00 GAZP|80|10|Max Williams A/D |21|1|1||5 дня роста, 1 дня в 
+70,00 GMKN|204|30|Max Williams A/D | 6|1|2||4 дня роста, 1 дня в 
+70,00 NVTK|205|40|Min Williams A/D | 5|1|3||4 дня падения, 1 дня в 
+70,00 ROSN|126|20|Max Williams A/D |11|1|3||5 дня роста, 1 дня в 
+70,00 ROSN|124|20|Max Williams A/D |12|1|3||5 дня роста, 1 дня в 
+70,00 RTKM|186|20|Min Williams A/D |11|1|3||6 дня падения, 1 дня в 
+70,00 RTKM|167|20|Min Williams A/D |14|1|1||6 дня падения, 1 дня в 
+70,00 RTKM|166|20|Min Williams A/D |14|1|2||6 дня падения, 1 дня в 
+70,00 RTKM|160|20|Min Williams A/D |15|1|1||6 дня падения, 1 дня в 
+70,00 RTKM|159|20|Min Williams A/D |15|1|2||6 дня падения, 1 дня в 
+70,00 RTKM|158|20|Min Williams A/D |16|1|1||6 дня падения, 1 дня в 
+70,00 RTKM|157|20|Min Williams A/D |16|1|2||6 дня падения, 1 дня в 
+70,00 SBER|99|10|Max Williams A/D |18|1|1||5 дня роста, 1 дня в 
+70,00 SBER|97|10|Max Williams A/D |19|1|1||5 дня роста, 1 дня в 
+70,00 SBER|93|10|Max Williams A/D |20|1|1||5 дня роста, 1 дня в 
+70,00 SBER|93|10|Max Williams A/D |20|1|2||5 дня роста, 1 дня в 
+70,59 NVTK|148|17|Min Williams A/D | 8|1|3||5 дня падения, 1 дня в 
+70,59 NVTK|92|17|Min Williams A/D |15|1|2||5 дня падения, 1 дня в 
+70,59 NVTK|87|17|Min Williams A/D |16|1|2||5 дня падения, 1 дня в 
+70,59 NVTK|86|17|Min Williams A/D |17|1|2||5 дня падения, 1 дня в 
+70,69 LKOH|302|58|Min Williams A/D | 3|1|3||4 дня падения, 1 дня в 
+70,83 ROSN|215|24|Min Williams A/D | 6|1|3||5 дня падения, 1 дня в 
+70,83 ROSN|133|24|Min Williams A/D |12|1|2||5 дня падения, 1 дня в 
+71,43 GAZP|248|35|Max Williams A/D | 4|1|3||4 дня роста, 1 дня в 
+71,43 GAZP|140|14|Min Williams A/D |15|1|2||6 дня падения, 1 дня в 
+71,43 GAZP|135|14|Min Williams A/D |16|1|1||6 дня падения, 1 дня в 
+71,43 GAZP|134|14|Min Williams A/D |16|1|2||6 дня падения, 1 дня в 
+71,43 GAZP|129|14|Min Williams A/D |17|1|2||6 дня падения, 1 дня в 
+71,43 GAZP|126|14|Min Williams A/D |18|1|2||6 дня падения, 1 дня в 
+71,43 GAZP|123|14|Min Williams A/D |19|1|2||6 дня падения, 1 дня в 
+71,43 GAZP|120|14|Min Williams A/D |20|1|2||6 дня падения, 1 дня в 
+71,43 GAZP|120|14|Min Williams A/D |21|1|2||6 дня падения, 1 дня в 
+71,43 LKOH|70|7|Min Williams A/D |21|1|2||7 дня падения, 1 дня в 
+71,43 LKOH|65|7|Min Williams A/D |22|1|2||7 дня падения, 1 дня в 
+71,43 LKOH|62|7|Min Williams A/D |24|1|1||7 дня падения, 1 дня в 
+71,43 NVTK|102|14|Max Williams A/D |22|1|3||6 дня роста, 1 дня в 
+71,43 NVTK|101|14|Max Williams A/D |23|1|3||6 дня роста, 1 дня в 
+71,43 NVTK|99|14|Max Williams A/D |24|1|3||6 дня роста, 1 дня в 
+71,43 NVTK|98|14|Max Williams A/D |25|1|3||6 дня роста, 1 дня в 
+71,43 RTKM|119|21|Max Williams A/D | 9|1|3||5 дня роста, 1 дня в 
+71,43 RTKM|110|21|Max Williams A/D |10|1|2||5 дня роста, 1 дня в 
+72,50 NVTK|238|40|Min Williams A/D | 4|1|3||4 дня падения, 1 дня в 
+72,55 SBER|259|51|Min Williams A/D | 4|1|3||4 дня падения, 1 дня в 
+72,73 LKOH|108|11|Max Williams A/D |22|1|2||6 дня роста, 1 дня в 
+72,73 LKOH|104|11|Max Williams A/D |23|1|2||6 дня роста, 1 дня в 
+72,73 NVTK|114|22|Max Williams A/D |18|1|3||5 дня роста, 1 дня в 
+72,73 NVTK|112|22|Max Williams A/D |19|1|3||5 дня роста, 1 дня в 
+72,73 ROSN|95|11|Min Williams A/D |19|1|1||6 дня падения, 1 дня в 
+72,73 SBER|235|33|Max Williams A/D | 5|1|3||4 дня роста, 1 дня в 
+73,08 SBER|167|26|Min Williams A/D | 8|1|3||5 дня падения, 1 дня в 
+73,68 GMKN|177|19|Min Williams A/D | 7|1|1||5 дня падения, 1 дня в 
+73,68 GMKN|162|19|Min Williams A/D | 8|1|1||5 дня падения, 1 дня в 
+73,68 GMKN|161|19|Min Williams A/D | 8|1|3||5 дня падения, 1 дня в 
+73,68 GMKN|145|19|Min Williams A/D | 9|1|1||5 дня падения, 1 дня в 
+73,68 GMKN|138|19|Min Williams A/D |10|1|1||5 дня падения, 1 дня в 
+73,68 GMKN|130|19|Min Williams A/D |11|1|1||5 дня падения, 1 дня в 
+73,68 GMKN|111|19|Min Williams A/D |18|1|2||5 дня падения, 1 дня в 
+73,68 GMKN|110|19|Min Williams A/D |19|1|2||5 дня падения, 1 дня в 
+73,68 GMKN|104|19|Min Williams A/D |20|1|2||5 дня падения, 1 дня в 
+73,68 GMKN|103|19|Min Williams A/D |21|1|2||5 дня падения, 1 дня в 
+73,68 GMKN|101|19|Min Williams A/D |22|1|2||5 дня падения, 1 дня в 
+73,91 LKOH|217|23|Max Williams A/D | 6|1|1||5 дня роста, 1 дня в 
+73,91 LKOH|217|23|Max Williams A/D | 6|1|2||5 дня роста, 1 дня в 
+73,91 LKOH|200|23|Max Williams A/D | 7|1|2||5 дня роста, 1 дня в 
+73,91 LKOH|191|23|Max Williams A/D | 8|1|2||5 дня роста, 1 дня в 
+73,91 LKOH|191|23|Max Williams A/D | 8|1|3||5 дня роста, 1 дня в 
+73,91 LKOH|176|23|Max Williams A/D | 9|1|2||5 дня роста, 1 дня в 
+73,91 LKOH|176|23|Max Williams A/D | 9|1|3||5 дня роста, 1 дня в 
+73,91 LKOH|166|23|Max Williams A/D |10|1|2||5 дня роста, 1 дня в 
+73,91 LKOH|159|23|Max Williams A/D |11|1|2||5 дня роста, 1 дня в 
+73,91 LKOH|153|23|Max Williams A/D |12|1|2||5 дня роста, 1 дня в 
+73,91 LKOH|144|23|Max Williams A/D |13|1|2||5 дня роста, 1 дня в 
+75,00 LKOH|143|28|Min Williams A/D | 9|1|1||5 дня падения, 1 дня в 
+75,00 LKOH|116|12|Min Williams A/D |12|1|1||6 дня падения, 1 дня в 
+75,00 LKOH|111|12|Min Williams A/D |13|1|1||6 дня падения, 1 дня в 
+75,00 LKOH|106|12|Min Williams A/D |14|1|1||6 дня падения, 1 дня в 
+75,00 LKOH|100|12|Min Williams A/D |15|1|1||6 дня падения, 1 дня в 
+75,00 LKOH|94|12|Min Williams A/D |16|1|1||6 дня падения, 1 дня в 
+75,00 LKOH|90|12|Min Williams A/D |17|1|1||6 дня падения, 1 дня в 
+75,00 LKOH|86|12|Min Williams A/D |18|1|1||6 дня падения, 1 дня в 
+75,00 LKOH|79|12|Min Williams A/D |19|1|1||6 дня падения, 1 дня в 
+75,00 LKOH|75|12|Min Williams A/D |20|1|1||6 дня падения, 1 дня в 
+75,00 LKOH|71|12|Min Williams A/D |21|1|1||6 дня падения, 1 дня в 
+75,00 LKOH|66|12|Min Williams A/D |22|1|1||6 дня падения, 1 дня в 
+75,00 NVTK|246|48|Max Williams A/D | 5|1|3||4 дня роста, 1 дня в 
+75,00 ROSN|102|20|Max Williams A/D |16|1|2||5 дня роста, 1 дня в 
+75,00 ROSN|239|24|Min Williams A/D | 5|1|3||5 дня падения, 1 дня в 
+75,00 RTKM|194|20|Min Williams A/D |10|1|1||6 дня падения, 1 дня в 
+75,00 RTKM|193|20|Min Williams A/D |10|1|3||6 дня падения, 1 дня в 
+75,00 RTKM|187|20|Min Williams A/D |11|1|1||6 дня падения, 1 дня в 
+75,00 RTKM|186|20|Min Williams A/D |11|1|2||6 дня падения, 1 дня в 
+75,00 RTKM|179|20|Min Williams A/D |12|1|1||6 дня падения, 1 дня в 
+75,00 RTKM|178|20|Min Williams A/D |12|1|2||6 дня падения, 1 дня в 
+75,00 RTKM|173|20|Min Williams A/D |13|1|1||6 дня падения, 1 дня в 
+75,00 RTKM|172|20|Min Williams A/D |13|1|2||6 дня падения, 1 дня в 
+75,86 LKOH|304|58|Min Williams A/D | 3|1|1||4 дня падения, 1 дня в 
+76,67 GMKN|262|30|Max Williams A/D | 4|1|3||4 дня роста, 1 дня в 
+76,67 GMKN|156|30|Max Williams A/D | 8|1|1||4 дня роста, 1 дня в 
+76,74 RTKM|247|43|Min Williams A/D | 6|1|3||5 дня падения, 1 дня в 
+76,74 RTKM|224|43|Min Williams A/D | 7|1|1||5 дня падения, 1 дня в 
+76,74 RTKM|223|43|Min Williams A/D | 7|1|3||5 дня падения, 1 дня в 
+76,92 RTKM|125|13|Max Williams A/D | 8|1|2||6 дня роста, 1 дня в 
+76,92 RTKM|119|13|Max Williams A/D | 9|1|2||6 дня роста, 1 дня в 
+76,92 RTKM|110|13|Max Williams A/D |10|1|2||6 дня роста, 1 дня в 
+76,92 RTKM|110|13|Max Williams A/D |10|1|3||6 дня роста, 1 дня в 
+76,92 RTKM|98|13|Max Williams A/D |11|1|2||6 дня роста, 1 дня в 
+76,92 RTKM|89|13|Max Williams A/D |12|1|2||6 дня роста, 1 дня в 
+76,92 RTKM|80|13|Max Williams A/D |14|1|1||6 дня роста, 1 дня в 
+76,92 RTKM|77|13|Max Williams A/D |15|1|1||6 дня роста, 1 дня в 
+76,92 SBER|202|26|Min Williams A/D | 6|1|3||5 дня падения, 1 дня в 
+76,92 SBER|187|26|Min Williams A/D | 7|1|3||5 дня падения, 1 дня в 
+76,92 SBER|159|26|Min Williams A/D | 9|1|2||5 дня падения, 1 дня в 
+76,92 SBER|153|26|Min Williams A/D |10|1|2||5 дня падения, 1 дня в 
+76,92 SBER|149|26|Min Williams A/D |11|1|2||5 дня падения, 1 дня в 
+76,92 SBER|143|26|Min Williams A/D |12|1|2||5 дня падения, 1 дня в 
+76,92 SBER|137|26|Min Williams A/D |13|1|2||5 дня падения, 1 дня в 
+76,92 SBER|134|26|Min Williams A/D |14|1|2||5 дня падения, 1 дня в 
+76,92 SBER|132|26|Min Williams A/D |15|1|2||5 дня падения, 1 дня в 
+77,14 GAZP|185|35|Max Williams A/D | 6|1|2||4 дня роста, 1 дня в 
+77,27 NVTK|120|22|Max Williams A/D |17|1|3||5 дня роста, 1 дня в 
+77,27 NVTK|114|22|Max Williams A/D |18|1|2||5 дня роста, 1 дня в 
+77,27 NVTK|112|22|Max Williams A/D |19|1|2||5 дня роста, 1 дня в 
+77,50 NVTK|301|40|Min Williams A/D | 3|1|3||4 дня падения, 1 дня в 
+77,78 GAZP|349|36|Min Williams A/D | 3|1|1||5 дня падения, 1 дня в 
+77,78 GAZP|288|36|Min Williams A/D | 4|1|1||5 дня падения, 1 дня в 
+77,78 GAZP|253|36|Min Williams A/D | 5|1|1||5 дня падения, 1 дня в 
+77,78 GAZP|230|36|Min Williams A/D | 6|1|1||5 дня падения, 1 дня в 
+77,78 GAZP|214|36|Min Williams A/D | 7|1|1||5 дня падения, 1 дня в 
+77,78 GAZP|202|36|Min Williams A/D | 8|1|1||5 дня падения, 1 дня в 
+77,78 GAZP|190|36|Min Williams A/D | 9|1|1||5 дня падения, 1 дня в 
+77,78 GAZP|188|36|Min Williams A/D | 9|1|3||5 дня падения, 1 дня в 
+77,78 NVTK|87|9|Min Williams A/D |16|1|1||6 дня падения, 1 дня в 
+77,78 NVTK|86|9|Min Williams A/D |17|1|1||6 дня падения, 1 дня в 
+77,78 NVTK|81|9|Min Williams A/D |18|1|1||6 дня падения, 1 дня в 
+77,78 NVTK|77|9|Min Williams A/D |19|1|1||6 дня падения, 1 дня в 
+77,78 NVTK|74|9|Min Williams A/D |20|1|1||6 дня падения, 1 дня в 
+77,78 NVTK|72|9|Min Williams A/D |21|1|1||6 дня падения, 1 дня в 
+77,78 NVTK|69|9|Min Williams A/D |22|1|1||6 дня падения, 1 дня в 
+77,78 NVTK|66|9|Min Williams A/D |23|1|1||6 дня падения, 1 дня в 
+77,78 NVTK|63|9|Min Williams A/D |24|1|1||6 дня падения, 1 дня в 
+77,78 NVTK|61|9|Min Williams A/D |25|1|1||6 дня падения, 1 дня в 
+77,78 RTKM|85|9|Max Williams A/D |13|1|3||7 дня роста, 1 дня в 
+77,78 RTKM|80|9|Max Williams A/D |14|1|2||7 дня роста, 1 дня в 
+77,78 RTKM|77|9|Max Williams A/D |15|1|2||7 дня роста, 1 дня в 
+77,78 RTKM|66|9|Max Williams A/D |18|1|1||7 дня роста, 1 дня в 
+78,26 LKOH|217|23|Max Williams A/D | 6|1|3||5 дня роста, 1 дня в 
+78,26 LKOH|200|23|Max Williams A/D | 7|1|3||5 дня роста, 1 дня в 
+78,57 LKOH|251|28|Min Williams A/D | 4|1|1||5 дня падения, 1 дня в 
+78,57 LKOH|215|28|Min Williams A/D | 5|1|1||5 дня падения, 1 дня в 
+78,57 LKOH|189|28|Min Williams A/D | 6|1|1||5 дня падения, 1 дня в 
+78,57 LKOH|167|28|Min Williams A/D | 7|1|1||5 дня падения, 1 дня в 
+78,57 LKOH|153|28|Min Williams A/D | 8|1|1||5 дня падения, 1 дня в 
+78,57 NVTK|114|14|Max Williams A/D |18|1|3||6 дня роста, 1 дня в 
+78,57 NVTK|112|14|Max Williams A/D |19|1|3||6 дня роста, 1 дня в 
+78,57 NVTK|108|14|Max Williams A/D |20|1|3||6 дня роста, 1 дня в 
+78,57 NVTK|106|14|Max Williams A/D |21|1|3||6 дня роста, 1 дня в 
+78,79 SBER|187|33|Max Williams A/D | 7|1|1||4 дня роста, 1 дня в 
+78,79 SBER|170|33|Max Williams A/D | 8|1|1||4 дня роста, 1 дня в 
+78,79 SBER|170|33|Max Williams A/D | 8|1|2||4 дня роста, 1 дня в 
+78,85 LKOH|266|52|Max Williams A/D | 4|1|3||4 дня роста, 1 дня в 
+78,95 GMKN|190|19|Min Williams A/D | 6|1|3||5 дня падения, 1 дня в 
+78,95 GMKN|176|19|Min Williams A/D | 7|1|3||5 дня падения, 1 дня в 
+78,95 GMKN|118|19|Min Williams A/D |14|1|2||5 дня падения, 1 дня в 
+78,95 GMKN|117|19|Min Williams A/D |15|1|2||5 дня падения, 1 дня в 
+78,95 GMKN|117|19|Min Williams A/D |16|1|2||5 дня падения, 1 дня в 
+78,95 GMKN|114|19|Min Williams A/D |17|1|2||5 дня падения, 1 дня в 
+79,07 RTKM|350|43|Min Williams A/D | 3|1|1||5 дня падения, 1 дня в 
+79,07 RTKM|349|43|Min Williams A/D | 3|1|2||5 дня падения, 1 дня в 
+79,07 RTKM|296|43|Min Williams A/D | 4|1|1||5 дня падения, 1 дня в 
+79,07 RTKM|295|43|Min Williams A/D | 4|1|2||5 дня падения, 1 дня в 
+79,07 RTKM|271|43|Min Williams A/D | 5|1|1||5 дня падения, 1 дня в 
+79,07 RTKM|270|43|Min Williams A/D | 5|1|2||5 дня падения, 1 дня в 
+79,07 RTKM|270|43|Min Williams A/D | 5|1|3||5 дня падения, 1 дня в 
+79,07 RTKM|248|43|Min Williams A/D | 6|1|1||5 дня падения, 1 дня в 
+79,07 RTKM|247|43|Min Williams A/D | 6|1|2||5 дня падения, 1 дня в 
+79,07 RTKM|223|43|Min Williams A/D | 7|1|2||5 дня падения, 1 дня в 
+79,17 ROSN|166|24|Min Williams A/D | 9|1|2||5 дня падения, 1 дня в 
+79,17 ROSN|155|24|Min Williams A/D |10|1|2||5 дня падения, 1 дня в 
+79,17 ROSN|148|24|Min Williams A/D |11|1|2||5 дня падения, 1 дня в 
+79,17 ROSN|126|24|Min Williams A/D |13|1|1||5 дня падения, 1 дня в 
+79,17 ROSN|122|24|Min Williams A/D |14|1|1||5 дня падения, 1 дня в 
+79,41 GAZP|349|68|Min Williams A/D | 3|1|1||4 дня падения, 1 дня в 
+80,00 GAZP|302|35|Max Williams A/D | 3|1|3||4 дня роста, 1 дня в 
+80,00 GMKN|262|30|Max Williams A/D | 4|1|2||4 дня роста, 1 дня в 
+80,00 GMKN|218|30|Max Williams A/D | 5|1|2||4 дня роста, 1 дня в 
+80,00 GMKN|178|30|Max Williams A/D | 7|1|1||4 дня роста, 1 дня в 
+80,00 ROSN|111|20|Max Williams A/D |14|1|2||5 дня роста, 1 дня в 
+80,00 ROSN|106|20|Max Williams A/D |15|1|2||5 дня роста, 1 дня в 
+80,00 RTKM|193|20|Min Williams A/D |10|1|2||6 дня падения, 1 дня в 
+80,00 SBER|99|10|Max Williams A/D |18|1|2||5 дня роста, 1 дня в 
+80,00 SBER|97|10|Max Williams A/D |19|1|2||5 дня роста, 1 дня в 
+80,00 SBER|99|10|Min Williams A/D |24|1|1||6 дня падения, 1 дня в 
+80,00 SBER|99|10|Min Williams A/D |25|1|1||6 дня падения, 1 дня в 
+80,43 ROSN|280|46|Min Williams A/D | 4|1|3||4 дня падения, 1 дня в 
+80,56 GAZP|212|36|Min Williams A/D | 7|1|3||5 дня падения, 1 дня в 
+80,56 GAZP|200|36|Min Williams A/D | 8|1|3||5 дня падения, 1 дня в 
+80,77 LKOH|318|52|Max Williams A/D | 3|1|1||4 дня роста, 1 дня в 
+80,77 LKOH|266|52|Max Williams A/D | 4|1|1||4 дня роста, 1 дня в 
+80,77 SBER|222|26|Min Williams A/D | 5|1|3||5 дня падения, 1 дня в 
+80,77 SBER|203|26|Min Williams A/D | 6|1|2||5 дня падения, 1 дня в 
+80,77 SBER|188|26|Min Williams A/D | 7|1|2||5 дня падения, 1 дня в 
+80,77 SBER|168|26|Min Williams A/D | 8|1|2||5 дня падения, 1 дня в 
+80,95 RTKM|125|21|Max Williams A/D | 8|1|3||5 дня роста, 1 дня в 
+80,95 RTKM|119|21|Max Williams A/D | 9|1|2||5 дня роста, 1 дня в 
+81,40 RTKM|349|43|Min Williams A/D | 3|1|3||5 дня падения, 1 дня в 
+81,40 RTKM|295|43|Min Williams A/D | 4|1|3||5 дня падения, 1 дня в 
+81,63 GMKN|309|49|Min Williams A/D | 3|1|1||4 дня падения, 1 дня в 
+81,82 NVTK|186|22|Max Williams A/D | 8|1|3||5 дня роста, 1 дня в 
+81,82 NVTK|168|22|Max Williams A/D | 9|1|2||5 дня роста, 1 дня в 
+81,82 NVTK|168|22|Max Williams A/D | 9|1|3||5 дня роста, 1 дня в 
+81,82 NVTK|159|22|Max Williams A/D |10|1|2||5 дня роста, 1 дня в 
+81,82 NVTK|159|22|Max Williams A/D |10|1|3||5 дня роста, 1 дня в 
+81,82 NVTK|152|22|Max Williams A/D |11|1|1||5 дня роста, 1 дня в 
+81,82 NVTK|152|22|Max Williams A/D |11|1|2||5 дня роста, 1 дня в 
+81,82 NVTK|152|22|Max Williams A/D |11|1|3||5 дня роста, 1 дня в 
+81,82 NVTK|143|22|Max Williams A/D |12|1|1||5 дня роста, 1 дня в 
+81,82 NVTK|143|22|Max Williams A/D |12|1|2||5 дня роста, 1 дня в 
+81,82 NVTK|143|22|Max Williams A/D |12|1|3||5 дня роста, 1 дня в 
+81,82 NVTK|141|22|Max Williams A/D |13|1|1||5 дня роста, 1 дня в 
+81,82 NVTK|141|22|Max Williams A/D |13|1|2||5 дня роста, 1 дня в 
+81,82 NVTK|141|22|Max Williams A/D |13|1|3||5 дня роста, 1 дня в 
+81,82 NVTK|133|22|Max Williams A/D |14|1|1||5 дня роста, 1 дня в 
+81,82 NVTK|133|22|Max Williams A/D |14|1|2||5 дня роста, 1 дня в 
+81,82 NVTK|133|22|Max Williams A/D |14|1|3||5 дня роста, 1 дня в 
+81,82 NVTK|129|22|Max Williams A/D |15|1|1||5 дня роста, 1 дня в 
+81,82 NVTK|129|22|Max Williams A/D |15|1|2||5 дня роста, 1 дня в 
+81,82 NVTK|129|22|Max Williams A/D |15|1|3||5 дня роста, 1 дня в 
+81,82 NVTK|125|22|Max Williams A/D |16|1|1||5 дня роста, 1 дня в 
+81,82 NVTK|125|22|Max Williams A/D |16|1|2||5 дня роста, 1 дня в 
+81,82 NVTK|125|22|Max Williams A/D |16|1|3||5 дня роста, 1 дня в 
+81,82 NVTK|120|22|Max Williams A/D |17|1|1||5 дня роста, 1 дня в 
+81,82 NVTK|120|22|Max Williams A/D |17|1|2||5 дня роста, 1 дня в 
+81,82 NVTK|114|22|Max Williams A/D |18|1|1||5 дня роста, 1 дня в 
+81,82 NVTK|112|22|Max Williams A/D |19|1|1||5 дня роста, 1 дня в 
+81,82 ROSN|106|11|Min Williams A/D |17|1|1||6 дня падения, 1 дня в 
+81,82 ROSN|102|11|Min Williams A/D |18|1|1||6 дня падения, 1 дня в 
+81,82 SBER|187|33|Max Williams A/D | 7|1|2||4 дня роста, 1 дня в 
+82,35 NVTK|100|17|Min Williams A/D |13|1|2||5 дня падения, 1 дня в 
+82,35 NVTK|94|17|Min Williams A/D |14|1|2||5 дня падения, 1 дня в 
+82,35 NVTK|92|17|Min Williams A/D |15|1|1||5 дня падения, 1 дня в 
+82,35 NVTK|87|17|Min Williams A/D |16|1|1||5 дня падения, 1 дня в 
+82,35 NVTK|86|17|Min Williams A/D |17|1|1||5 дня падения, 1 дня в 
+82,35 SBER|312|51|Min Williams A/D | 3|1|3||4 дня падения, 1 дня в 
+82,61 ROSN|337|46|Min Williams A/D | 3|1|3||4 дня падения, 1 дня в 
+82,69 LKOH|318|52|Max Williams A/D | 3|1|3||4 дня роста, 1 дня в 
+83,33 GAZP|348|36|Min Williams A/D | 3|1|2||5 дня падения, 1 дня в 
+83,33 GAZP|287|36|Min Williams A/D | 4|1|2||5 дня падения, 1 дня в 
+83,33 GAZP|252|36|Min Williams A/D | 5|1|2||5 дня падения, 1 дня в 
+83,33 GAZP|251|36|Min Williams A/D | 5|1|3||5 дня падения, 1 дня в 
+83,33 GAZP|229|36|Min Williams A/D | 6|1|2||5 дня падения, 1 дня в 
+83,33 GAZP|228|36|Min Williams A/D | 6|1|3||5 дня падения, 1 дня в 
+83,33 GAZP|213|36|Min Williams A/D | 7|1|2||5 дня падения, 1 дня в 
+83,33 GAZP|201|36|Min Williams A/D | 8|1|2||5 дня падения, 1 дня в 
+83,33 GAZP|189|36|Min Williams A/D | 9|1|2||5 дня падения, 1 дня в 
+83,33 GMKN|204|30|Max Williams A/D | 6|1|1||4 дня роста, 1 дня в 
+83,33 ROSN|133|24|Min Williams A/D |12|1|1||5 дня падения, 1 дня в 
+83,67 GMKN|308|49|Min Williams A/D | 3|1|3||4 дня падения, 1 дня в 
+83,82 GAZP|348|68|Min Williams A/D | 3|1|2||4 дня падения, 1 дня в 
+84,21 GMKN|144|19|Min Williams A/D | 9|1|2||5 дня падения, 1 дня в 
+84,21 GMKN|137|19|Min Williams A/D |10|1|2||5 дня падения, 1 дня в 
+84,21 GMKN|129|19|Min Williams A/D |11|1|2||5 дня падения, 1 дня в 
+84,21 GMKN|126|19|Min Williams A/D |12|1|2||5 дня падения, 1 дня в 
+84,21 GMKN|121|19|Min Williams A/D |13|1|2||5 дня падения, 1 дня в 
+84,31 SBER|314|51|Min Williams A/D | 3|1|1||4 дня падения, 1 дня в 
+84,31 SBER|261|51|Min Williams A/D | 4|1|1||4 дня падения, 1 дня в 
+84,62 RTKM|119|13|Max Williams A/D | 9|1|3||6 дня роста, 1 дня в 
+84,62 RTKM|98|13|Max Williams A/D |11|1|1||6 дня роста, 1 дня в 
+84,62 RTKM|89|13|Max Williams A/D |12|1|1||6 дня роста, 1 дня в 
+84,62 RTKM|85|13|Max Williams A/D |13|1|1||6 дня роста, 1 дня в 
+84,62 SBER|260|26|Min Williams A/D | 4|1|2||5 дня падения, 1 дня в 
+84,62 SBER|223|26|Min Williams A/D | 5|1|2||5 дня падения, 1 дня в 
+84,85 SBER|210|33|Max Williams A/D | 6|1|1||4 дня роста, 1 дня в 
+84,85 SBER|210|33|Max Williams A/D | 6|1|2||4 дня роста, 1 дня в 
+85,00 NVTK|205|40|Min Williams A/D | 5|1|2||4 дня падения, 1 дня в 
+85,00 ROSN|140|20|Max Williams A/D |10|1|3||5 дня роста, 1 дня в 
+85,00 ROSN|116|20|Max Williams A/D |13|1|2||5 дня роста, 1 дня в 
+85,29 GAZP|347|68|Min Williams A/D | 3|1|3||4 дня падения, 1 дня в 
+85,71 GAZP|214|35|Max Williams A/D | 5|1|2||4 дня роста, 1 дня в 
+85,71 LKOH|66|7|Min Williams A/D |22|1|1||7 дня падения, 1 дня в 
+85,71 LKOH|64|7|Min Williams A/D |23|1|1||7 дня падения, 1 дня в 
+85,71 NVTK|133|14|Max Williams A/D |14|1|1||6 дня роста, 1 дня в 
+85,71 NVTK|133|14|Max Williams A/D |14|1|2||6 дня роста, 1 дня в 
+85,71 NVTK|133|14|Max Williams A/D |14|1|3||6 дня роста, 1 дня в 
+85,71 NVTK|129|14|Max Williams A/D |15|1|1||6 дня роста, 1 дня в 
+85,71 NVTK|129|14|Max Williams A/D |15|1|2||6 дня роста, 1 дня в 
+85,71 NVTK|129|14|Max Williams A/D |15|1|3||6 дня роста, 1 дня в 
+85,71 NVTK|125|14|Max Williams A/D |16|1|1||6 дня роста, 1 дня в 
+85,71 NVTK|125|14|Max Williams A/D |16|1|2||6 дня роста, 1 дня в 
+85,71 NVTK|125|14|Max Williams A/D |16|1|3||6 дня роста, 1 дня в 
+85,71 NVTK|120|14|Max Williams A/D |17|1|1||6 дня роста, 1 дня в 
+85,71 NVTK|120|14|Max Williams A/D |17|1|2||6 дня роста, 1 дня в 
+85,71 NVTK|120|14|Max Williams A/D |17|1|3||6 дня роста, 1 дня в 
+85,71 NVTK|114|14|Max Williams A/D |18|1|1||6 дня роста, 1 дня в 
+85,71 NVTK|114|14|Max Williams A/D |18|1|2||6 дня роста, 1 дня в 
+85,71 NVTK|112|14|Max Williams A/D |19|1|1||6 дня роста, 1 дня в 
+85,71 NVTK|112|14|Max Williams A/D |19|1|2||6 дня роста, 1 дня в 
+85,71 NVTK|108|14|Max Williams A/D |20|1|1||6 дня роста, 1 дня в 
+85,71 NVTK|108|14|Max Williams A/D |20|1|2||6 дня роста, 1 дня в 
+85,71 NVTK|106|14|Max Williams A/D |21|1|1||6 дня роста, 1 дня в 
+85,71 NVTK|106|14|Max Williams A/D |21|1|2||6 дня роста, 1 дня в 
+85,71 NVTK|102|14|Max Williams A/D |22|1|1||6 дня роста, 1 дня в 
+85,71 NVTK|102|14|Max Williams A/D |22|1|2||6 дня роста, 1 дня в 
+85,71 NVTK|101|14|Max Williams A/D |23|1|1||6 дня роста, 1 дня в 
+85,71 NVTK|101|14|Max Williams A/D |23|1|2||6 дня роста, 1 дня в 
+85,71 NVTK|99|14|Max Williams A/D |24|1|1||6 дня роста, 1 дня в 
+85,71 NVTK|99|14|Max Williams A/D |24|1|2||6 дня роста, 1 дня в 
+85,71 NVTK|98|14|Max Williams A/D |25|1|1||6 дня роста, 1 дня в 
+85,71 NVTK|98|14|Max Williams A/D |25|1|2||6 дня роста, 1 дня в 
+85,71 RTKM|184|21|Max Williams A/D | 5|1|1||5 дня роста, 1 дня в 
+85,71 RTKM|184|21|Max Williams A/D | 5|1|2||5 дня роста, 1 дня в 
+85,71 RTKM|157|21|Max Williams A/D | 6|1|1||5 дня роста, 1 дня в 
+85,71 RTKM|157|21|Max Williams A/D | 6|1|2||5 дня роста, 1 дня в 
+85,71 RTKM|142|21|Max Williams A/D | 7|1|1||5 дня роста, 1 дня в 
+85,71 RTKM|142|21|Max Williams A/D | 7|1|2||5 дня роста, 1 дня в 
+85,71 RTKM|142|21|Max Williams A/D | 7|1|3||5 дня роста, 1 дня в 
+85,71 RTKM|125|21|Max Williams A/D | 8|1|1||5 дня роста, 1 дня в 
+85,71 RTKM|125|21|Max Williams A/D | 8|1|2||5 дня роста, 1 дня в 
+85,71 RTKM|119|21|Max Williams A/D | 9|1|1||5 дня роста, 1 дня в 
+85,71 RTKM|110|21|Max Williams A/D |10|1|1||5 дня роста, 1 дня в 
+86,11 GAZP|347|36|Min Williams A/D | 3|1|3||5 дня падения, 1 дня в 
+86,11 GAZP|286|36|Min Williams A/D | 4|1|3||5 дня падения, 1 дня в 
+86,36 NVTK|203|22|Max Williams A/D | 7|1|3||5 дня роста, 1 дня в 
+86,36 NVTK|186|22|Max Williams A/D | 8|1|2||5 дня роста, 1 дня в 
+86,36 NVTK|168|22|Max Williams A/D | 9|1|1||5 дня роста, 1 дня в 
+86,36 NVTK|159|22|Max Williams A/D |10|1|1||5 дня роста, 1 дня в 
+86,49 RTKM|221|37|Max Williams A/D | 4|1|2||4 дня роста, 1 дня в 
+86,67 GMKN|262|30|Max Williams A/D | 4|1|1||4 дня роста, 1 дня в 
+86,67 GMKN|218|30|Max Williams A/D | 5|1|1||4 дня роста, 1 дня в 
+86,96 ROSN|337|46|Min Williams A/D | 3|1|2||4 дня падения, 1 дня в 
+86,96 ROSN|280|46|Min Williams A/D | 4|1|2||4 дня падения, 1 дня в 
+86,96 ROSN|239|46|Min Williams A/D | 5|1|2||4 дня падения, 1 дня в 
+87,50 NVTK|301|40|Min Williams A/D | 3|1|2||4 дня падения, 1 дня в 
+87,50 NVTK|238|40|Min Williams A/D | 4|1|2||4 дня падения, 1 дня в 
+87,50 ROSN|194|24|Min Williams A/D | 7|1|2||5 дня падения, 1 дня в 
+87,50 ROSN|176|24|Min Williams A/D | 8|1|2||5 дня падения, 1 дня в 
+87,50 ROSN|166|24|Min Williams A/D | 9|1|1||5 дня падения, 1 дня в 
+87,50 ROSN|155|24|Min Williams A/D |10|1|1||5 дня падения, 1 дня в 
+87,50 ROSN|148|24|Min Williams A/D |11|1|1||5 дня падения, 1 дня в 
+87,76 GMKN|308|49|Min Williams A/D | 3|1|2||4 дня падения, 1 дня в 
+87,88 SBER|322|33|Max Williams A/D | 3|1|1||4 дня роста, 1 дня в 
+87,88 SBER|265|33|Max Williams A/D | 4|1|1||4 дня роста, 1 дня в 
+87,88 SBER|235|33|Max Williams A/D | 5|1|1||4 дня роста, 1 дня в 
+87,88 SBER|235|33|Max Williams A/D | 5|1|2||4 дня роста, 1 дня в 
+88,24 NVTK|136|17|Min Williams A/D | 9|1|2||5 дня падения, 1 дня в 
+88,24 NVTK|122|17|Min Williams A/D |10|1|2||5 дня падения, 1 дня в 
+88,24 NVTK|116|17|Min Williams A/D |11|1|2||5 дня падения, 1 дня в 
+88,24 NVTK|105|17|Min Williams A/D |12|1|2||5 дня падения, 1 дня в 
+88,24 NVTK|100|17|Min Williams A/D |13|1|1||5 дня падения, 1 дня в 
+88,24 NVTK|94|17|Min Williams A/D |14|1|1||5 дня падения, 1 дня в 
+88,24 SBER|260|51|Min Williams A/D | 4|1|2||4 дня падения, 1 дня в 
+88,46 LKOH|318|52|Max Williams A/D | 3|1|2||4 дня роста, 1 дня в 
+88,46 LKOH|266|52|Max Williams A/D | 4|1|2||4 дня роста, 1 дня в 
+88,46 SBER|259|26|Min Williams A/D | 4|1|3||5 дня падения, 1 дня в 
+88,46 SBER|169|26|Min Williams A/D | 8|1|1||5 дня падения, 1 дня в 
+88,46 SBER|160|26|Min Williams A/D | 9|1|1||5 дня падения, 1 дня в 
+88,46 SBER|154|26|Min Williams A/D |10|1|1||5 дня падения, 1 дня в 
+88,46 SBER|150|26|Min Williams A/D |11|1|1||5 дня падения, 1 дня в 
+88,46 SBER|144|26|Min Williams A/D |12|1|1||5 дня падения, 1 дня в 
+88,46 SBER|138|26|Min Williams A/D |13|1|1||5 дня падения, 1 дня в 
+88,46 SBER|135|26|Min Williams A/D |14|1|1||5 дня падения, 1 дня в 
+88,46 SBER|133|26|Min Williams A/D |15|1|1||5 дня падения, 1 дня в 
+88,89 RTKM|89|9|Max Williams A/D |12|1|1||7 дня роста, 1 дня в 
+88,89 RTKM|89|9|Max Williams A/D |12|1|2||7 дня роста, 1 дня в 
+88,89 RTKM|89|9|Max Williams A/D |12|1|3||7 дня роста, 1 дня в 
+88,89 RTKM|85|9|Max Williams A/D |13|1|1||7 дня роста, 1 дня в 
+88,89 RTKM|85|9|Max Williams A/D |13|1|2||7 дня роста, 1 дня в 
+88,89 RTKM|80|9|Max Williams A/D |14|1|1||7 дня роста, 1 дня в 
+88,89 RTKM|77|9|Max Williams A/D |15|1|1||7 дня роста, 1 дня в 
+88,89 RTKM|74|9|Max Williams A/D |16|1|1||7 дня роста, 1 дня в 
+88,89 RTKM|71|9|Max Williams A/D |17|1|1||7 дня роста, 1 дня в 
+89,19 RTKM|279|37|Max Williams A/D | 3|1|2||4 дня роста, 1 дня в 
+89,19 RTKM|221|37|Max Williams A/D | 4|1|3||4 дня роста, 1 дня в 
+89,47 GMKN|176|19|Min Williams A/D | 7|1|2||5 дня падения, 1 дня в 
+89,47 GMKN|161|19|Min Williams A/D | 8|1|2||5 дня падения, 1 дня в 
+90,00 ROSN|200|20|Max Williams A/D | 6|1|2||5 дня роста, 1 дня в 
+90,00 ROSN|176|20|Max Williams A/D | 7|1|2||5 дня роста, 1 дня в 
+90,00 ROSN|158|20|Max Williams A/D | 8|1|2||5 дня роста, 1 дня в 
+90,00 ROSN|146|20|Max Williams A/D | 9|1|2||5 дня роста, 1 дня в 
+90,00 ROSN|146|20|Max Williams A/D | 9|1|3||5 дня роста, 1 дня в 
+90,00 ROSN|140|20|Max Williams A/D |10|1|2||5 дня роста, 1 дня в 
+90,00 ROSN|126|20|Max Williams A/D |11|1|2||5 дня роста, 1 дня в 
+90,00 ROSN|124|20|Max Williams A/D |12|1|2||5 дня роста, 1 дня в 
+90,00 ROSN|102|20|Max Williams A/D |16|1|1||5 дня роста, 1 дня в 
+90,20 SBER|313|51|Min Williams A/D | 3|1|2||4 дня падения, 1 дня в 
+90,48 RTKM|157|21|Max Williams A/D | 6|1|3||5 дня роста, 1 дня в 
+90,91 NVTK|203|22|Max Williams A/D | 7|1|2||5 дня роста, 1 дня в 
+90,91 SBER|322|33|Max Williams A/D | 3|1|2||4 дня роста, 1 дня в 
+90,91 SBER|265|33|Max Williams A/D | 4|1|2||4 дня роста, 1 дня в 
+90,91 SBER|265|33|Max Williams A/D | 4|1|3||4 дня роста, 1 дня в 
+91,30 ROSN|338|46|Min Williams A/D | 3|1|1||4 дня падения, 1 дня в 
+91,30 ROSN|280|46|Min Williams A/D | 4|1|1||4 дня падения, 1 дня в 
+91,30 ROSN|239|46|Min Williams A/D | 5|1|1||4 дня падения, 1 дня в 
+91,43 GAZP|185|35|Max Williams A/D | 6|1|1||4 дня роста, 1 дня в 
+91,67 NVTK|282|48|Max Williams A/D | 4|1|3||4 дня роста, 1 дня в 
+91,67 ROSN|239|24|Min Williams A/D | 5|1|1||5 дня падения, 1 дня в 
+91,67 ROSN|239|24|Min Williams A/D | 5|1|2||5 дня падения, 1 дня в 
+91,67 ROSN|215|24|Min Williams A/D | 6|1|1||5 дня падения, 1 дня в 
+91,67 ROSN|215|24|Min Williams A/D | 6|1|2||5 дня падения, 1 дня в 
+91,67 ROSN|194|24|Min Williams A/D | 7|1|1||5 дня падения, 1 дня в 
+91,67 ROSN|176|24|Min Williams A/D | 8|1|1||5 дня падения, 1 дня в 
+91,89 RTKM|279|37|Max Williams A/D | 3|1|1||4 дня роста, 1 дня в 
+91,89 RTKM|278|37|Max Williams A/D | 3|1|3||4 дня роста, 1 дня в 
+91,89 RTKM|221|37|Max Williams A/D | 4|1|1||4 дня роста, 1 дня в 
+92,31 RTKM|125|13|Max Williams A/D | 8|1|1||6 дня роста, 1 дня в 
+92,31 RTKM|125|13|Max Williams A/D | 8|1|3||6 дня роста, 1 дня в 
+92,31 RTKM|119|13|Max Williams A/D | 9|1|1||6 дня роста, 1 дня в 
+92,31 RTKM|110|13|Max Williams A/D |10|1|1||6 дня роста, 1 дня в 
+92,31 SBER|224|26|Min Williams A/D | 5|1|1||5 дня падения, 1 дня в 
+92,31 SBER|204|26|Min Williams A/D | 6|1|1||5 дня падения, 1 дня в 
+92,31 SBER|189|26|Min Williams A/D | 7|1|1||5 дня падения, 1 дня в 
+93,33 ROSN|313|45|Max Williams A/D | 3|1|2||4 дня роста, 1 дня в 
+93,33 ROSN|254|45|Max Williams A/D | 4|1|2||4 дня роста, 1 дня в 
+93,33 ROSN|253|45|Max Williams A/D | 4|1|3||4 дня роста, 1 дня в 
+93,94 SBER|322|33|Max Williams A/D | 3|1|3||4 дня роста, 1 дня в 
+94,12 NVTK|148|17|Min Williams A/D | 8|1|1||5 дня падения, 1 дня в 
+94,12 NVTK|148|17|Min Williams A/D | 8|1|2||5 дня падения, 1 дня в 
+94,12 NVTK|136|17|Min Williams A/D | 9|1|1||5 дня падения, 1 дня в 
+94,12 NVTK|122|17|Min Williams A/D |10|1|1||5 дня падения, 1 дня в 
+94,12 NVTK|116|17|Min Williams A/D |11|1|1||5 дня падения, 1 дня в 
+94,12 NVTK|105|17|Min Williams A/D |12|1|1||5 дня падения, 1 дня в 
+94,29 GAZP|302|35|Max Williams A/D | 3|1|1||4 дня роста, 1 дня в 
+94,29 GAZP|302|35|Max Williams A/D | 3|1|2||4 дня роста, 1 дня в 
+94,29 GAZP|248|35|Max Williams A/D | 4|1|1||4 дня роста, 1 дня в 
+94,29 GAZP|248|35|Max Williams A/D | 4|1|2||4 дня роста, 1 дня в 
+94,29 GAZP|214|35|Max Williams A/D | 5|1|1||4 дня роста, 1 дня в 
+94,74 GMKN|190|19|Min Williams A/D | 6|1|2||5 дня падения, 1 дня в 
+95,00 NVTK|302|40|Min Williams A/D | 3|1|1||4 дня падения, 1 дня в 
+95,00 NVTK|238|40|Min Williams A/D | 4|1|1||4 дня падения, 1 дня в 
+95,00 NVTK|205|40|Min Williams A/D | 5|1|1||4 дня падения, 1 дня в 
+95,00 ROSN|200|20|Max Williams A/D | 6|1|1||5 дня роста, 1 дня в 
+95,00 ROSN|199|20|Max Williams A/D | 6|1|3||5 дня роста, 1 дня в 
+95,00 ROSN|176|20|Max Williams A/D | 7|1|1||5 дня роста, 1 дня в 
+95,00 ROSN|175|20|Max Williams A/D | 7|1|3||5 дня роста, 1 дня в 
+95,00 ROSN|158|20|Max Williams A/D | 8|1|1||5 дня роста, 1 дня в 
+95,00 ROSN|158|20|Max Williams A/D | 8|1|3||5 дня роста, 1 дня в 
+95,00 ROSN|146|20|Max Williams A/D | 9|1|1||5 дня роста, 1 дня в 
+95,00 ROSN|140|20|Max Williams A/D |10|1|1||5 дня роста, 1 дня в 
+95,00 ROSN|126|20|Max Williams A/D |11|1|1||5 дня роста, 1 дня в 
+95,00 ROSN|124|20|Max Williams A/D |12|1|1||5 дня роста, 1 дня в 
+95,00 ROSN|116|20|Max Williams A/D |13|1|1||5 дня роста, 1 дня в 
+95,00 ROSN|111|20|Max Williams A/D |14|1|1||5 дня роста, 1 дня в 
+95,00 ROSN|106|20|Max Williams A/D |15|1|1||5 дня роста, 1 дня в 
+95,24 RTKM|184|21|Max Williams A/D | 5|1|3||5 дня роста, 1 дня в 
+95,45 NVTK|186|22|Max Williams A/D | 8|1|1||5 дня роста, 1 дня в 
+95,56 ROSN|313|45|Max Williams A/D | 3|1|1||4 дня роста, 1 дня в 
+95,56 ROSN|254|45|Max Williams A/D | 4|1|1||4 дня роста, 1 дня в 
+95,83 NVTK|341|48|Max Williams A/D | 3|1|1||4 дня роста, 1 дня в 
+95,83 NVTK|283|48|Max Williams A/D | 4|1|1||4 дня роста, 1 дня в 
+95,83 NVTK|246|48|Max Williams A/D | 5|1|1||4 дня роста, 1 дня в 
+95,83 NVTK|246|48|Max Williams A/D | 5|1|2||4 дня роста, 1 дня в 
+97,78 ROSN|312|45|Max Williams A/D | 3|1|3||4 дня роста, 1 дня в 
+97,92 NVTK|341|48|Max Williams A/D | 3|1|2||4 дня роста, 1 дня в 
+97,92 NVTK|340|48|Max Williams A/D | 3|1|3||4 дня роста, 1 дня в 
+97,92 NVTK|283|48|Max Williams A/D | 4|1|2||4 дня роста, 1 дня в 
+100,00 NVTK|203|22|Max Williams A/D | 7|1|1||5 дня роста, 1 дня в

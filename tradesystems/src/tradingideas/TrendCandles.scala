@@ -34,9 +34,9 @@ class LongTrendCandles(override val checkDays: Int, override val positionDays: I
     override val desc: String = checkDays + " дня " + direction + ", " + positionDays + " дня в "
 }
 
-class PositiveTrendCandles(checkDays: Int, positionDays: Int)
+case class PositiveTrendCandles(override val checkDays: Int, override val positionDays: Int)
     extends LongTrendCandles(checkDays, positionDays, _.buyProfit > 0, "роста")
-class NegativeTrendCandles(checkDays: Int, positionDays: Int)
+case class NegativeTrendCandles(override val checkDays: Int, override val positionDays: Int)
     extends LongTrendCandles(checkDays, positionDays, _.sellProfit > 0, "падения")
 class PositiveEnoughTrendCandles(checkDays: Int, positionDays: Int)
     extends LongTrendCandles(checkDays, positionDays, _.buyProfitPct > 0.15, "уверенного роста")
