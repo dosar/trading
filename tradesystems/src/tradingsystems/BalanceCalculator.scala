@@ -1,10 +1,10 @@
 package tradingsystems
 
-import org.joda.time.LocalDate
+import org.joda.time.LocalDateTime
 
 object BalanceCalculator
 {
-    type StartDate = LocalDate; type EndDate = LocalDate
+    type StartDate = LocalDateTime; type EndDate = LocalDateTime
 
     def balanceHistoryM(monthProfits: Array[MonthProfit]): Balance =
     {
@@ -24,7 +24,7 @@ object BalanceCalculator
     }
 }
 
-case class Balance(profit: AccumulatedProfit, positiveStartDatePositions: Array[LocalDate], negativeStartDatePositions: Array[LocalDate])
+case class Balance(profit: AccumulatedProfit, positiveStartDatePositions: Array[LocalDateTime], negativeStartDatePositions: Array[LocalDateTime])
 {
     lazy val daysCount = profit.profits.length
     lazy val positiveDeals = positiveStartDatePositions.length

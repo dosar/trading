@@ -6,7 +6,7 @@ import scala.io.Source
 import scala.collection.mutable.ArrayBuffer
 import scala.util.matching.Regex
 import tradingsystems.{TradingData, YearProfit}
-import org.joda.time.LocalDate
+import org.joda.time.LocalDateTime
 
 /**
  * @author alespuh
@@ -16,6 +16,7 @@ trait VolatileDaysCombinationStatisticalPrinter
 {
     class SimplePrinter(val ticker: String, override val targetProfit: Double = 19) extends VolatileDaysStatisticalPrinter
 
+    type PeriodTime = LocalDateTime
     val strategiesFile = "trading_ideas.txt"
     val targetProfit: Double = 50
 
@@ -114,13 +115,13 @@ trait VolatileDaysCombinationStatisticalPrinter
         new TradingPositionAnalyzer(Vector()).getStatistics(mergedDays.sortBy(_._1.toDate).toArray).toVector
     }
 
-    def mergeUnique[TP](master: Vector[(LocalDate, LocalDate, TP)], slave: Vector[(LocalDate, LocalDate, TP)]) =
+    def mergeUnique[TP](master: Vector[(PeriodTime, PeriodTime, TP)], slave: Vector[(PeriodTime, PeriodTime, TP)]) =
         master ++ slave.filterNot(gp => master.exists(hasIntersection(gp, _)))
 
-    def dateIn(date: LocalDate, range: (LocalDate, LocalDate, _)) =
+    def dateIn(date: PeriodTime, range: (PeriodTime, PeriodTime, _)) =
         date.compareTo(range._1) >= 0 && date.compareTo(range._2) <= 0
 
-    def hasIntersection(left: (LocalDate, LocalDate, _), right: (LocalDate, LocalDate, _)) =
+    def hasIntersection(left: (PeriodTime, PeriodTime, _), right: (PeriodTime, PeriodTime, _)) =
         dateIn(left._1, right) || dateIn(left._2, right) || dateIn(right._1, left) || dateIn(right._2, left)
 
     def parseInput(input: Iterator[String]): Map[Ticker, Vector[CombinationElement]] =

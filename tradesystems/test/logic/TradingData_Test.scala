@@ -5,7 +5,7 @@ import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 import tradingsystems.{Candle, TradingData}
 import org.joda.time.LocalDate
-import tradinganalyzers.statistics.StandardImporter
+import tradinganalyzers.statistics.DayStandardImporter
 import util.TradingImplicits.toDoubleImplicits
 
 /**
@@ -20,7 +20,7 @@ class TradingData_Test extends FunSuite with TestUtils
 
     test("sber atr14")
     {
-        val sber = StandardImporter.importSber
+        val sber = DayStandardImporter.sber
         assert(2.17 === sber.atr14(getIndex(sber, new LocalDate(2013, 4, 17))).roundP(2))
         assert(2.65 === sber.atr14(getIndex(sber, new LocalDate(2013, 5, 8))).roundP(2))
         assert(2.47 === sber.atr14(getIndex(sber, new LocalDate(2013, 5, 22))).roundP(2))
@@ -28,7 +28,7 @@ class TradingData_Test extends FunSuite with TestUtils
 
     test("sber williamsAD")
     {
-        val sber = StandardImporter.importSber
+        val sber = DayStandardImporter.sber
         assert(16.39 === sber.williamsAD(getIndex(sber, new LocalDate(2013, 1, 23))).roundP(2))
         assert(15.42 === sber.williamsAD(getIndex(sber, new LocalDate(2013, 1, 24))).roundP(2))
         assert(17.16 === sber.williamsAD(getIndex(sber, new LocalDate(2013, 1, 25))).roundP(2))

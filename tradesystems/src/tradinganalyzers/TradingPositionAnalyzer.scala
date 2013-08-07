@@ -1,7 +1,7 @@
 package tradinganalyzers
 
 import tradingsystems._
-import org.joda.time.LocalDate
+import org.joda.time.LocalDateTime
 import tradingsystems.BalanceCalculator._
 import util.TradingImplicits.toSeqImplicits
 import tradingsystems.TradingData
@@ -40,7 +40,7 @@ class TradingPositionAnalyzer(positions: Array[(TradingPosition, TradingOp)])
 
     def getStatistics: Array[YearProfit] = getStatistics(positionDatesProfit)
 
-    def getStatistics(datesProfits: Array[(LocalDate, LocalDate, Profit)]): Array[YearProfit] =
+    def getStatistics(datesProfits: Array[(LocalDateTime, LocalDateTime, Profit)]): Array[YearProfit] =
     {
         val yearProfits = datesProfits
             .groupBy{case (date, _, _) => (date.getYear, date.getMonthOfYear)}.toVector
@@ -56,7 +56,7 @@ class TradingPositionAnalyzer(positions: Array[(TradingPosition, TradingOp)])
         yearProfits.sortBy(_.year).toArray
     }
 
-    def positionDatesProfit: Array[(LocalDate, LocalDate, Profit)] =
+    def positionDatesProfit: Array[(LocalDateTime, LocalDateTime, Profit)] =
     {
         //считаем профиты по позициям и определяем период в течение которого позиция по факту удерживалась
         val profitPositions = positions.map
@@ -69,9 +69,9 @@ class TradingPositionAnalyzer(positions: Array[(TradingPosition, TradingOp)])
     }
 
     //фильтруем пересекающиеся позиции, оставляя более ранние
-    def filterOverlappedPositions(profitPositions: Array[(LocalDate, LocalDate, Profit)]) =
+    def filterOverlappedPositions(profitPositions: Array[(LocalDateTime, LocalDateTime, Profit)]) =
     {
-        profitPositions.foldLeft(Vector[(LocalDate, LocalDate, Profit)]())
+        profitPositions.foldLeft(Vector[(LocalDateTime, LocalDateTime, Profit)]())
         {
             case (vector, (startDate, endDate, profit)) =>
                 val previousEndDate = vector.lastOption.map(_._2)

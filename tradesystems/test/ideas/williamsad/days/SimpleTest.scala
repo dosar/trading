@@ -1,4 +1,4 @@
-package ideas.williamsad
+package ideas.williamsad.days
 
 import tradinganalyzers.statistics.VolatileDaysStatisticalPrinter
 import tradingideas.{WilliamsAdMin, WilliamsAdMax, TradingIdea}

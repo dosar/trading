@@ -1,7 +1,7 @@
 package ideas.combination.trendvstrend
 
 import tradingideas.{NegativeTrendCandles, PositiveTrendCandles, WilliamsAdMin, WilliamsAdMax}
-import tradinganalyzers.statistics.{StandardImporter, StrategiesCombinator, StrategyIdeaData}
+import tradinganalyzers.statistics.{DayStandardImporter, StrategiesCombinator, StrategyIdeaData}
 import tradinganalyzers.TradingOp._
 import tradingsystems.TradingData
 import org.scalatest.FunSuite

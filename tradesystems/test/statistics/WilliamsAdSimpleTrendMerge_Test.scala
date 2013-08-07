@@ -5,7 +5,7 @@ import org.scalatest.junit.JUnitRunner
 import org.scalatest.FunSuite
 import logic.TestUtils
 import tradingideas._
-import tradinganalyzers.statistics.StandardImporter._
+import tradinganalyzers.statistics.DayStandardImporter._
 import tradinganalyzers.TradingOp._
 import tradingsystems.TradingData
 import scala.Double
@@ -88,7 +88,7 @@ class WilliamsAdSimpleTrendMerge_Test extends FunSuite with TestUtils
             (for(period <- 3 to 25; daysAfter <- 1 to 3) yield new WilliamsAdMin(period, 1, daysAfter))
         val simpleTrends = (for(checkDays <- 2 to 7) yield new PositiveTrendCandles(checkDays, 1)) ++
             (for(checkDays <- 2 to 7) yield new NegativeTrendCandles(checkDays, 1))
-        val datas = Vector(importGazp, importGmkn, importLkoh, importNvtk, importRosn, importRtkm, importSber)
+        val datas = Vector(gazp, gmkn, lkoh, nvtk, rosn, rtkm, sber)
         //посмотреть не только точные совпадения
         val intersectionPercent = (for(data <- datas; wl <- williamses; trend <- simpleTrends) yield
         {

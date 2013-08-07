@@ -5,7 +5,7 @@ import org.scalatest.junit.JUnitRunner
 import org.scalatest.FunSuite
 import tradingideas.{WilliamsAdMin, WilliamsAdMax}
 import tradingsystems.TradingData
-import tradinganalyzers.statistics.StandardImporter
+import tradinganalyzers.statistics.DayStandardImporter
 
 /**
  * @author alespuh
@@ -14,16 +14,16 @@ import tradinganalyzers.statistics.StandardImporter
 @RunWith(classOf[JUnitRunner])
 class WilliamsAdRtkmVsAllCombination_Test extends FunSuite with WilliamsAdSuccessfulStrategies
 {
-    test("rtkm VS gazp"){ checkCombination(gazpBestStrategies, StandardImporter.importGazp, 60) }
-    test("rtkm VS gmkn"){ checkCombination(gmknBestStrategies, StandardImporter.importGmkn, 60) }
-    test("rtkm VS lkoh"){ checkCombination(lkohBestStrategies, StandardImporter.importLkoh, 60) }
-    test("rtkm VS nvtk"){ checkCombination(nvtkBestStrategies, StandardImporter.importNvtk, 60) }
-    test("rtkm VS rosn"){ checkCombination(rosnBestStrategies, StandardImporter.importRosn, 60) }
-    test("rtkm VS rtkm"){ checkCombination(rtkmBestStrategies, StandardImporter.importRtkm, 60) }
-    test("rtkm VS sber"){ checkCombination(sberBestStrategies, StandardImporter.importSber, 60) }
+    test("rtkm VS gazp"){ checkCombination(gazpBestStrategies, DayStandardImporter.gazp, 60) }
+    test("rtkm VS gmkn"){ checkCombination(gmknBestStrategies, DayStandardImporter.gmkn, 60) }
+    test("rtkm VS lkoh"){ checkCombination(lkohBestStrategies, DayStandardImporter.lkoh, 60) }
+    test("rtkm VS nvtk"){ checkCombination(nvtkBestStrategies, DayStandardImporter.nvtk, 60) }
+    test("rtkm VS rosn"){ checkCombination(rosnBestStrategies, DayStandardImporter.rosn, 60) }
+    test("rtkm VS rtkm"){ checkCombination(rtkmBestStrategies, DayStandardImporter.rtkm, 60) }
+    test("rtkm VS sber"){ checkCombination(sberBestStrategies, DayStandardImporter.sber, 60) }
 
     def checkCombination(otherStrategies: Vector[(WilliamsAdMax, WilliamsAdMin)], otherData: TradingData, targetProfit: Int)
     {
-        checkCombination(StandardImporter.importRtkm, rtkmBestStrategies, otherData, otherStrategies, targetProfit)
+        checkCombination(DayStandardImporter.rtkm, rtkmBestStrategies, otherData, otherStrategies, targetProfit)
     }
 }

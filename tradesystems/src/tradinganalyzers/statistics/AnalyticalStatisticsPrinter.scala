@@ -1,38 +1,12 @@
 package tradinganalyzers.statistics
 
-import org.joda.time.LocalDate
-import scala.io.Source
 import tradinganalyzers.{TradingPositionAnalyzer, TradingPosition, TradingOp}
 import tradingsystems._
-
-object StandardImporter
-{
-    def standardImport(ticker: String): TradingData =
-    {
-        val importFile = ".\\" + ticker + "_2010_2013_1day.txt"
-        val data = (for(line <- Source.fromFile(importFile).getLines(); cells = line.split(',');
-            date = cells(0); open = cells(2); high = cells(3); low = cells(4); close = cells(5); volume = cells(6))
-        yield
-        {
-            Candle(date = new LocalDate(date.take(4).toInt, date.take(6).drop(4).toInt, date.take(8).drop(6).toInt),
-                open.toDouble, high.toDouble, low.toDouble, close.toDouble, volume.toInt)
-        }).toVector
-        TradingData(data, ticker)
-    }
-
-    def importSber = standardImport("SBER")
-    def importGazp = standardImport("GAZP")
-    def importNvtk = standardImport("NVTK")
-    def importGmkn = standardImport("GMKN")
-    def importRosn = standardImport("ROSN")
-    def importRtkm = standardImport("RTKM")
-    def importLkoh = standardImport("LKOH")
-}
 
 trait AnalyticalStatisticsPrinter
 {
     val ticker: String
-    lazy val data: TradingData = StandardImporter.standardImport(ticker)
+    lazy val data: TradingData = DayStandardImporter.standardImport(ticker)
     val targetProfit: Double = 19.0
 
     def analyzeIdea(candleOps: (Vector[TradingPosition], TradingOp)*) =

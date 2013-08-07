@@ -5,7 +5,7 @@ import org.scalatest.junit.JUnitRunner
 import org.scalatest.FunSuite
 import logic.TestUtils
 import featuresextractors.{TrendStat, DaysDirectionSignalExtractor}
-import tradinganalyzers.statistics.{StandardImporter, AnalyticalStatisticsPrinter}
+import tradinganalyzers.statistics.{DayStandardImporter, AnalyticalStatisticsPrinter}
 import tradingsystems.TradingData
 
 /**
@@ -32,11 +32,11 @@ class Stocks1DayCandlesSignalExtractor_Test extends FunSuite with TestUtils
         }
     }
 
-    test("brute force signals on SBER"){ check(StandardImporter.importSber) }
-    test("brute force signals on RTKM"){ check(StandardImporter.importRtkm) }
-    test("brute force signals on ROSN"){ check(StandardImporter.importRosn) }
-    test("brute force signals on NVTK"){ check(StandardImporter.importNvtk) }
-    test("brute force signals on LKOH"){ check(StandardImporter.importLkoh) }
-    test("brute force signals on GMKN"){ check(StandardImporter.importGmkn) }
-    test("brute force signals on GAZP"){ check(StandardImporter.importGazp) }
+    test("brute force signals on SBER"){ check(DayStandardImporter.sber) }
+    test("brute force signals on RTKM"){ check(DayStandardImporter.rtkm) }
+    test("brute force signals on ROSN"){ check(DayStandardImporter.rosn) }
+    test("brute force signals on NVTK"){ check(DayStandardImporter.nvtk) }
+    test("brute force signals on LKOH"){ check(DayStandardImporter.lkoh) }
+    test("brute force signals on GMKN"){ check(DayStandardImporter.gmkn) }
+    test("brute force signals on GAZP"){ check(DayStandardImporter.gazp) }
 }

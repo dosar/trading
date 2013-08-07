@@ -1,4 +1,4 @@
-package ideas.williamsad
+package ideas.williamsad.days
 
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner

@@ -2,7 +2,7 @@ package parsing
 
 import org.scalatest.FunSuite
 import logic.TestUtils
-import tradinganalyzers.statistics.StandardImporter._
+import tradinganalyzers.statistics.DayStandardImporter._
 import tradingideas._
 import tradingsystems.TradingData
 import tradingsystems.TradingData
@@ -15,7 +15,7 @@ object SimpleTrendWilliamsAdOutputParser
 {
     def parse(strRepresentation: String): Vector[(TradingData, Int => WilliamsAdIdea, Int => LongTrendCandles)] =
     {
-        val datas = Vector(importGazp, importGmkn, importLkoh, importNvtk, importRosn, importRtkm, importSber)
+        val datas = Vector(gazp, gmkn, lkoh, nvtk, rosn, rtkm, sber)
             .map(data => (data.ticker, data)).toMap
         strRepresentation.stripMargin.split("\n").map{
             oneComb =>
@@ -55,23 +55,23 @@ class ParseSimpleTrendWilliamsAdOutput_Test extends FunSuite with TestUtils
                          |    30,43 SBER|161|223|Max Williams A/D | 9|1|3||2 дня падения, 1 дня в
                          |""").iterator
 
-    test("1") { check(importGazp, new WilliamsAdMin(8, _, 3), new NegativeTrendCandles(2, _), parsedIterator.next()) }
-    test("16") { check(importLkoh, new WilliamsAdMin(21, _, 2), new NegativeTrendCandles(3, _), parsedIterator.next()) }
-    test("2") { check(importRtkm, new WilliamsAdMin(10, _, 3), new NegativeTrendCandles(2, _), parsedIterator.next()) }
-    test("3") { check(importGazp, new WilliamsAdMin(12, _, 3), new NegativeTrendCandles(2, _), parsedIterator.next()) }
-    test("17") { check(importLkoh, new WilliamsAdMin(23, _, 2), new NegativeTrendCandles(3, _), parsedIterator.next()) }
-    test("4") { check(importRosn, new WilliamsAdMax(11, _, 3), new NegativeTrendCandles(2, _), parsedIterator.next()) }
-    test("5") { check(importRtkm, new WilliamsAdMin(18, _, 3), new NegativeTrendCandles(2, _), parsedIterator.next()) }
-    test("6") { check(importRtkm, new WilliamsAdMin(20, _, 3), new NegativeTrendCandles(3, _), parsedIterator.next()) }
-    test("7") { check(importNvtk, new WilliamsAdMin(7, _, 3), new PositiveTrendCandles(2, _), parsedIterator.next()) }
-    test("8") { check(importRtkm, new WilliamsAdMin(22, _, 3), new NegativeTrendCandles(3, _), parsedIterator.next()) }
-    test("9") { check(importRosn, new WilliamsAdMax(4, _, 3), new PositiveTrendCandles(2, _), parsedIterator.next()) }
-    test("10") { check(importRosn, new WilliamsAdMin(5, _, 3), new PositiveTrendCandles(2, _), parsedIterator.next()) }
-    test("11") { check(importRtkm, new WilliamsAdMin(6, _, 3), new NegativeTrendCandles(2, _), parsedIterator.next()) }
-    test("12") { check(importSber, new WilliamsAdMin(12, _, 3), new NegativeTrendCandles(3, _), parsedIterator.next()) }
-    test("13") { check(importRtkm, new WilliamsAdMin(24, _, 3), new NegativeTrendCandles(3, _), parsedIterator.next()) }
-    test("14") { check(importGazp, new WilliamsAdMin(11, _, 3), new NegativeTrendCandles(2, _), parsedIterator.next()) }
-    test("15") { check(importSber, new WilliamsAdMax(9, _, 3), new NegativeTrendCandles(2, _), parsedIterator.next()) }
+    test("1") { check(gazp, new WilliamsAdMin(8, _, 3), new NegativeTrendCandles(2, _), parsedIterator.next()) }
+    test("16") { check(lkoh, new WilliamsAdMin(21, _, 2), new NegativeTrendCandles(3, _), parsedIterator.next()) }
+    test("2") { check(rtkm, new WilliamsAdMin(10, _, 3), new NegativeTrendCandles(2, _), parsedIterator.next()) }
+    test("3") { check(gazp, new WilliamsAdMin(12, _, 3), new NegativeTrendCandles(2, _), parsedIterator.next()) }
+    test("17") { check(lkoh, new WilliamsAdMin(23, _, 2), new NegativeTrendCandles(3, _), parsedIterator.next()) }
+    test("4") { check(rosn, new WilliamsAdMax(11, _, 3), new NegativeTrendCandles(2, _), parsedIterator.next()) }
+    test("5") { check(rtkm, new WilliamsAdMin(18, _, 3), new NegativeTrendCandles(2, _), parsedIterator.next()) }
+    test("6") { check(rtkm, new WilliamsAdMin(20, _, 3), new NegativeTrendCandles(3, _), parsedIterator.next()) }
+    test("7") { check(nvtk, new WilliamsAdMin(7, _, 3), new PositiveTrendCandles(2, _), parsedIterator.next()) }
+    test("8") { check(rtkm, new WilliamsAdMin(22, _, 3), new NegativeTrendCandles(3, _), parsedIterator.next()) }
+    test("9") { check(rosn, new WilliamsAdMax(4, _, 3), new PositiveTrendCandles(2, _), parsedIterator.next()) }
+    test("10") { check(rosn, new WilliamsAdMin(5, _, 3), new PositiveTrendCandles(2, _), parsedIterator.next()) }
+    test("11") { check(rtkm, new WilliamsAdMin(6, _, 3), new NegativeTrendCandles(2, _), parsedIterator.next()) }
+    test("12") { check(sber, new WilliamsAdMin(12, _, 3), new NegativeTrendCandles(3, _), parsedIterator.next()) }
+    test("13") { check(rtkm, new WilliamsAdMin(24, _, 3), new NegativeTrendCandles(3, _), parsedIterator.next()) }
+    test("14") { check(gazp, new WilliamsAdMin(11, _, 3), new NegativeTrendCandles(2, _), parsedIterator.next()) }
+    test("15") { check(sber, new WilliamsAdMax(9, _, 3), new NegativeTrendCandles(2, _), parsedIterator.next()) }
 
 
     def check(data: TradingData, williamsAdF: Int => WilliamsAdIdea, simpleTrendF: Int => LongTrendCandles,

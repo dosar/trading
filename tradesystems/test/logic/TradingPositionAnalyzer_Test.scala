@@ -5,18 +5,18 @@ import org.scalatest.junit.JUnitRunner
 import org.scalatest.FunSuite
 import tradinganalyzers.{TradingPositionAnalyzer, TradingOp, TradingPosition}
 import tradingsystems._
-import org.joda.time.LocalDate
+import org.joda.time.LocalDateTime
 import tradingideas.{PositiveTrendCandles, LongTrendCandles}
 import tradingsystems.Balance
 import tradingsystems.MonthProfit
 import tradingsystems.YearProfit
-import tradinganalyzers.statistics.{StandardImporter, AnalyticalStatisticsPrinter}
+import tradinganalyzers.statistics.{DayStandardImporter, AnalyticalStatisticsPrinter}
 
 @RunWith(classOf[JUnitRunner])
 class TradingPositionAnalyzer_Test extends FunSuite with TestUtils with AnalyticalStatisticsPrinter
 {
     val ticker: String = null
-    override lazy val data = new TradingData(StandardImporter.importSber.data.filter(_.date.getYear == 2013), "SBER")
+    override lazy val data = new TradingData(DayStandardImporter.sber.data.filter(_.date.getYear == 2013), "SBER")
     val sell = TradingOp.sell(1, 5)
     val tradingPositions = new PositiveTrendCandles(3, 3).filterInterestingPositions(data)
     val profits = new TradingPositionAnalyzer(Vector((tradingPositions, sell))).positionDatesProfit
@@ -27,8 +27,8 @@ class TradingPositionAnalyzer_Test extends FunSuite with TestUtils with Analytic
 
     def testPositionProfit(startDate: (Year, Month, Day), endDate: (Year, Month, Day), profit: (Start, CloseMinusOpen))
     {
-        val start = new LocalDate(startDate._1, startDate._2, startDate._3)
-        val end = new LocalDate(endDate._1, endDate._2, endDate._3)
+        val start = new LocalDateTime(startDate._1, startDate._2, startDate._3)
+        val end = new LocalDateTime(endDate._1, endDate._2, endDate._3)
         val actualProfit = profitsIterator.next()
         assert(start === actualProfit._1)
         assert(end === actualProfit._2)
@@ -50,8 +50,8 @@ class TradingPositionAnalyzer_Test extends FunSuite with TestUtils with Analytic
             assert(expectedProfit.start === actualProfit.start)
             assert(expectedProfit.change.nonStrict === actualProfit.change)
         }
-        assert(positiveStartDatePositions.map(d => new LocalDate(d._1, d._2, d._3)).toSet === balance.positiveStartDatePositions.toSet)
-        assert(negativeStartDatePositions.map(d => new LocalDate(d._1, d._2, d._3)).toSet === balance.negativeStartDatePositions.toSet)
+        assert(positiveStartDatePositions.map(d => new LocalDateTime(d._1, d._2, d._3)).toSet === balance.positiveStartDatePositions.toSet)
+        assert(negativeStartDatePositions.map(d => new LocalDateTime(d._1, d._2, d._3)).toSet === balance.negativeStartDatePositions.toSet)
     }
 
     test("1 day"){ testPositionProfit((2013, 1, 15), (2013, 1, 17), (100.7, -0.45)) }
@@ -85,8 +85,8 @@ class TradingPositionAnalyzer_Test extends FunSuite with TestUtils with Analytic
     test("positionDatesProfit with overlapping positions")
     {
         val analyzer: TradingPositionAnalyzer = new TradingPositionAnalyzer(Vector.empty)
-        val firstPosition = (new LocalDate(2013, 1, 1), new LocalDate(2013, 1, 7), null)
-        val secondPosition = (new LocalDate(2013, 1, 7), new LocalDate(2013, 1, 10), null)
+        val firstPosition = (new LocalDateTime(2013, 1, 1), new LocalDateTime(2013, 1, 7), null)
+        val secondPosition = (new LocalDateTime(2013, 1, 7), new LocalDateTime(2013, 1, 10), null)
         val filteredPositions = analyzer.filterOverlappedPositions(Array(firstPosition, secondPosition))
         assert(1 === filteredPositions.length)
         assert(firstPosition === filteredPositions(0))

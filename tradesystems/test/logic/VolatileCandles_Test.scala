@@ -7,7 +7,7 @@ import tradingideas.{PositiveTrendCandles, LongTrendCandles}
 import tradingsystems.{Candle, TradingData}
 import org.joda.time.LocalDate
 import tradinganalyzers.TradingPosition
-import tradinganalyzers.statistics.{StandardImporter, AnalyticalStatisticsPrinter}
+import tradinganalyzers.statistics.{DayStandardImporter, AnalyticalStatisticsPrinter}
 import tradingsystems.Candle
 
 @RunWith(classOf[JUnitRunner])
@@ -16,7 +16,7 @@ class VolatileCandles_Test extends FunSuite with TestUtils with AnalyticalStatis
 //    нужно чтобы было минимум 2 торговых дня
 //    также нужно чтобы было вытряхивание по стопу тому или другому
     val ticker: String = null
-    override lazy val data = new TradingData(StandardImporter.importSber.data.filter(_.date.getYear == 2013), "SBER")
+    override lazy val data = new TradingData(DayStandardImporter.sber.data.filter(_.date.getYear == 2013), "SBER")
 
     test("filter for 2 days rising and position for 4 days")
     {

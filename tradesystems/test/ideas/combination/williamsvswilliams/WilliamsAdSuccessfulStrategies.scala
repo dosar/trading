@@ -2,7 +2,7 @@ package ideas.combination.williamsvswilliams
 
 import tradingideas.{WilliamsAdMin, WilliamsAdMax}
 import tradingsystems.TradingData
-import tradinganalyzers.statistics.{StrategyIdeaData, StrategiesCombinator, StandardImporter}
+import tradinganalyzers.statistics.{StrategyIdeaData, StrategiesCombinator, DayStandardImporter}
 import tradinganalyzers.TradingOp._
 import tradingsystems.TradingData
 import tradinganalyzers.statistics.StrategyIdeaData

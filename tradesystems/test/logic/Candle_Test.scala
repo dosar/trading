@@ -4,7 +4,7 @@ import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 import org.scalatest.FunSuite
 import tradingsystems._
-import org.joda.time.LocalDate
+import org.joda.time.LocalDateTime
 import tradingsystems.Balance
 import tradingsystems.Candle
 import tradingsystems.Profit
@@ -30,10 +30,12 @@ trait TestUtils
     def inputCandles(changes: Vector[(Open, Close)]) =
         TradingData(changes.map(pair => candle(pair._1, pair._2)).toVector, "")
 
-    def createBalance(profits: Profits, positiveStartDatePositions: Dates, negativeStartDatePositions: Dates) =
-        Balance(AccumulatedProfit.Accumulator(profits.map(p => Profit(p._1, p._2)).toArray),
-            positiveStartDatePositions.map(d => new LocalDate(d._1, d._2, d._3)).toArray,
-            negativeStartDatePositions.map(date => new LocalDate(date._1, date._2, date._3)).toArray)
+    def createBalance(profits: Profits, positiveStartDatePositions: Dates, negativeStartDatePositions: Dates): Balance =
+    {
+        val positive = positiveStartDatePositions.map(d => new LocalDateTime(d._1, d._2, d._3, 0, 0)).toArray
+        val negative = negativeStartDatePositions.map(d => new LocalDateTime(d._1, d._2, d._3, 0, 0)).toArray
+        Balance(AccumulatedProfit.Accumulator(profits.map(p => Profit(p._1, p._2)).toArray), positive, negative)
+    }
 
     def createProfits(profits: Profits): Array[Profit] = profits.map(p => Profit(p._1, p._2)).toArray
 
@@ -42,7 +44,7 @@ trait TestUtils
     val m3 = MonthProfit(3, createBalance(Vector((80.0, -2.0)), Vector(), Vector((2013, 3, 2))))
 
     protected implicit def toLocalDate(origin: (Year, Month, Day)) =
-        new Object { def toLocalDate = new LocalDate(origin._1, origin._2, origin._3) }
+        new Object { def toLocalDate = new LocalDateTime(origin._1, origin._2, origin._3) }
 
     protected implicit def nonStrict(origin: Double) =
     {

@@ -3,7 +3,7 @@ package logic
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 import org.scalatest.FunSuite
-import tradinganalyzers.statistics.{StandardImporter, StrategyElement, StrategiesCombinator, CombinationBruteForces}
+import tradinganalyzers.statistics.{DayStandardImporter, StrategyElement, StrategiesCombinator, CombinationBruteForces}
 import tradingideas.{WilliamsAdMin, WilliamsAdMax, NegativeTrendCandles, PositiveTrendCandles}
 
 /**
@@ -15,10 +15,10 @@ class CombinationBruteForces_Test extends FunSuite with TestUtils
 {
     test("SBER positive trend vs RTKM williams ad")
     {
-        val sber = StandardImporter.importSber
-        val rtkm = StandardImporter.importRtkm
-        val lkoh = StandardImporter.importLkoh
-        val nvtk = StandardImporter.importNvtk
+        val sber = DayStandardImporter.sber
+        val rtkm = DayStandardImporter.rtkm
+        val lkoh = DayStandardImporter.lkoh
+        val nvtk = DayStandardImporter.nvtk
         new StrategiesCombinator
         {
             override lazy val targetProfit: Int = 60

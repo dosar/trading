@@ -5,7 +5,7 @@ import org.scalatest.junit.JUnitRunner
 import org.scalatest.FunSuite
 import featuresextractors.SimpleFeatureExtractor
 import tradingsystems.{Candle, TradingData}
-import tradinganalyzers.statistics.{StandardImporter, AnalyticalStatisticsPrinter}
+import tradinganalyzers.statistics.{DayStandardImporter, AnalyticalStatisticsPrinter}
 import logic.TestUtils
 
 /**
@@ -16,7 +16,7 @@ import logic.TestUtils
 class SimpleFeatureExtractor_Test extends FunSuite with TestUtils
 {
     val extractor = new SimpleFeatureExtractor()
-    val sberCandles = StandardImporter.importSber
+    val sberCandles = DayStandardImporter.sber
     var currentDay: Iterator[Double] = null
 
     def forr(dayFeatures: Array[Double])(f: => Unit)

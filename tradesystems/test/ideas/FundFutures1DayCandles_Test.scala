@@ -4,7 +4,7 @@ import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.junit.JUnitRunner
 import tradingsystems.Candle
-import tradinganalyzers.statistics.{StandardImporter, AnalyticalStatisticsPrinter, TooTrendyDaysStatisticalPrinter}
+import tradinganalyzers.statistics.{DayStandardImporter, AnalyticalStatisticsPrinter, TooTrendyDaysStatisticalPrinter}
 
 /**
  * @author alespuh
@@ -15,7 +15,7 @@ class FundFutures1DayCandles_Test extends FunSuite
 {
     class SimpleTest(val ticker: String) extends TooTrendyDaysStatisticalPrinter
     {
-        override lazy val data = StandardImporter.standardImport("goods\\" + ticker)
+        override lazy val data = DayStandardImporter.standardImport("goods\\" + ticker)
     }
 
     test("brent 1 day candles standard test") { new SimpleTest("BRENT").standardTest(5, 1) }

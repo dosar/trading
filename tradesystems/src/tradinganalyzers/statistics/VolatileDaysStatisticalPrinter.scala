@@ -14,23 +14,24 @@ trait VolatileDaysStatisticalPrinter extends AnalyticalStatisticsPrinter
         for((op1CheckDays, op1PositionDays) <- oneStrategyDays; (op2CheckDays, op2PositionDays) <- oneStrategyDays)
             yield (op1CheckDays, op1PositionDays, op2CheckDays, op2PositionDays)
 
-    def standardTest(stopMultiplierSteps: Int = 5, stopMultiplierStep: Double = 0.1, takeProfitStart: Int = 3)
+    def standardTestSP(stops: IndexedSeq[Double], takeProfits: IndexedSeq[Double])
     {
         println(ticker)
 
-        val takeProfitRange = takeProfitStart to takeProfitStart + 5
-        val stopRange = (1 to stopMultiplierSteps).map(_ * stopMultiplierStep)
-        val statistics = twoStrategiesStatistics(stopRange, takeProfitRange) ++
-            oneStrategyStatistics(stopRange, takeProfitRange, getOp1Idea, "роста", " " * 30) ++
-            oneStrategyStatistics(stopRange, takeProfitRange, getOp2Idea, "падения", " " * 27)
+        val statistics = twoStrategiesStatistics(stops, takeProfits) ++
+            oneStrategyStatistics(stops, takeProfits, getOp1Idea, "роста", " " * 30) ++
+            oneStrategyStatistics(stops, takeProfits, getOp2Idea, "падения", " " * 27)
 
         val result = statistics.flatten.toVector
         YearProfitStatistics.printStatistics(result)
     }
 
+    def standardTest(stopMultiplierSteps: Int = 5, stopMultiplierStep: Double = 0.1, takeProfitStart: Int = 3) =
+        standardTestSP((1 to stopMultiplierSteps).map(_ * stopMultiplierStep), (takeProfitStart to takeProfitStart + 5).map(_.toDouble))
+
     import TradingOp._
 
-    def oneStrategyStatistics(stopRange: IndexedSeq[Double], takeProfitRange: Range,
+    def oneStrategyStatistics(stopRange: IndexedSeq[Double], takeProfitRange: IndexedSeq[Double],
         getOpIdea: (Int, Int) => TradingIdea, checkConditionDescription: String, opDescPostfix: String) =
     {
         for((checkDays, daysInPosition) <- optimize(oneStrategyDays)) yield
@@ -49,7 +50,7 @@ trait VolatileDaysStatisticalPrinter extends AnalyticalStatisticsPrinter
         }
     }
 
-    def twoStrategiesStatistics(stopRange: IndexedSeq[Double], takeProfitRange: Range.Inclusive) =
+    def twoStrategiesStatistics(stopRange: IndexedSeq[Double], takeProfitRange: IndexedSeq[Double]) =
     {
         for((op1CheckDays, op1PositionDays, op2CheckDays, op2PositionDays) <- optimize(twoStrategiesDays))
         yield

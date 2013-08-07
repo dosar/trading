@@ -3,7 +3,7 @@ package ideas
 import org.scalatest.FunSuite
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
-import tradinganalyzers.statistics.{StandardImporter, AnalyticalStatisticsPrinter, VolatileDaysStatisticalPrinter}
+import tradinganalyzers.statistics.{DayStandardImporter, AnalyticalStatisticsPrinter, VolatileDaysStatisticalPrinter}
 import util.TradingImplicits.toSeqImplicits
 import java.lang.Math._
 import featuresextractors.SimpleFeatureExtractor
@@ -23,7 +23,7 @@ class NeuralNetworkPreparation_Test extends FunSuite with TestUtils
 {
     class SimpleTest(val ticker: String, override val targetProfit: Double = 19) extends VolatileDaysStatisticalPrinter
 
-    val sber: TradingData = StandardImporter.importSber
+    val sber: TradingData = DayStandardImporter.sber
 
     test("profit limit for stocks 1 day of 2013 year")
     {

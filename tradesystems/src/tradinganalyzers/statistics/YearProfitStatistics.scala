@@ -6,7 +6,7 @@ import scala.Array
 import tradinganalyzers.TradingOp._
 import tradinganalyzers.{TradingPositionAnalyzer, TradingOp}
 import tradingideas.TradingIdea
-import org.joda.time.LocalDate
+import org.joda.time.LocalDateTime
 
 object YearProfitStatistics
 {
@@ -20,7 +20,7 @@ object YearProfitStatistics
         val profits = yps.flatMap(_.balance.profit.profits.map(_.profit * 100))
         val dateTimes = yps.flatMap(yp => yp.balance.positiveStartDatePositions ++ yp.balance.negativeStartDatePositions)
             .sortBy(_.toDate)
-        for((date, profit) <- dateTimes.zipAll(profits, LocalDate.now(), 0.0))
+        for((date, profit) <- dateTimes.zipAll(profits, LocalDateTime.now(), 0.0))
             println(Vector(date.getYear, date.getMonthOfYear, date.getDayOfMonth, profit.toString.replace(",", ".")).mkString(","))
     }
 

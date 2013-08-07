@@ -3,7 +3,7 @@ package ideas.combination
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 import org.scalatest.FunSuite
-import tradinganalyzers.statistics.{StrategyElement, StrategiesCombinator, StandardImporter}
+import tradinganalyzers.statistics.{StrategyElement, StrategiesCombinator, DayStandardImporter}
 import tradingideas._
 import tradinganalyzers.statistics.StrategyElement
 
@@ -14,7 +14,7 @@ class SimpleTest(positiveDaysCount: Vector[Int], positiveDaysPosition: Vector[In
 {
     def combine()
     {
-        val sber = StandardImporter.importSber
+        val sber = DayStandardImporter.sber
         //на каждом for'е фильтруем дни
         //во внутреннем цикле переставляем дни
         //перебираем операции

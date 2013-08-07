@@ -7,7 +7,7 @@ import org.junit.runner.RunWith
 import tradingsystems.TradingData
 import tradingideas.SignalCandles
 import tradinganalyzers.{TradingOp, TradingPositionAnalyzer}
-import tradinganalyzers.statistics.{StandardImporter, YearProfitStatistics}
+import tradinganalyzers.statistics.{DayStandardImporter, YearProfitStatistics}
 
 /**
  * @author alespuh
@@ -36,20 +36,20 @@ class Stocks1DayCandlesSignalDays_Test extends FunSuite with TestUtils
     test("SBER -1|-1|-1       1-6, 1-7 на покупку 2-4, 2-6, 2-7 на покупку")
     {
         val signal = Vector(-1, -1, -1)
-        bruteForceSignal(signal, 1 to 6, StandardImporter.importSber, TradingOp.buy, 18)
-        bruteForceSignal(signal, 1 to 7, StandardImporter.importSber, TradingOp.buy, 18)
-        bruteForceSignal(signal, 2 to 4, StandardImporter.importSber, TradingOp.buy, 0)
-        bruteForceSignal(signal, 2 to 6, StandardImporter.importSber, TradingOp.buy, 7)
-        bruteForceSignal(signal, 2 to 7, StandardImporter.importSber, TradingOp.buy, 3)
+        bruteForceSignal(signal, 1 to 6, DayStandardImporter.sber, TradingOp.buy, 18)
+        bruteForceSignal(signal, 1 to 7, DayStandardImporter.sber, TradingOp.buy, 18)
+        bruteForceSignal(signal, 2 to 4, DayStandardImporter.sber, TradingOp.buy, 0)
+        bruteForceSignal(signal, 2 to 6, DayStandardImporter.sber, TradingOp.buy, 7)
+        bruteForceSignal(signal, 2 to 7, DayStandardImporter.sber, TradingOp.buy, 3)
     }
 
     test("SBER 1|1|-1|-1       3-3 на продажу, 3-7 на покупку")
     {
         val signal = Vector(1, 1, -1, -1)
-        bruteForceSignal(signal, 3 to 3, StandardImporter.importSber, TradingOp.sell, 0)
-        bruteForceSignal(signal, 3 to 7, StandardImporter.importSber, TradingOp.buy, 1)
-        bruteForceSignal(signal, 1 to 3, StandardImporter.importSber, TradingOp.buy, 0)
-        bruteForceSignal(Vector(-1, -1, 1, 1), 1 to 4, StandardImporter.importSber, TradingOp.sell, 0)
+        bruteForceSignal(signal, 3 to 3, DayStandardImporter.sber, TradingOp.sell, 0)
+        bruteForceSignal(signal, 3 to 7, DayStandardImporter.sber, TradingOp.buy, 1)
+        bruteForceSignal(signal, 1 to 3, DayStandardImporter.sber, TradingOp.buy, 0)
+        bruteForceSignal(Vector(-1, -1, 1, 1), 1 to 4, DayStandardImporter.sber, TradingOp.sell, 0)
 
     }
 
@@ -57,60 +57,60 @@ class Stocks1DayCandlesSignalDays_Test extends FunSuite with TestUtils
     {
         val signal = Vector(-1, -1, -1, -1)
 //        слишком мало сигналов для 2013
-        bruteForceSignal(signal, 1 to 3, StandardImporter.importSber, TradingOp.buy, 2)
-        bruteForceSignal(signal, 1 to 7, StandardImporter.importSber, TradingOp.buy, 2)
+        bruteForceSignal(signal, 1 to 3, DayStandardImporter.sber, TradingOp.buy, 2)
+        bruteForceSignal(signal, 1 to 7, DayStandardImporter.sber, TradingOp.buy, 2)
     }
 
     test("SBER -1|-1|1|-1     6-6, 6-7 на продажу")
     {
         val signal = Vector(-1, -1, 1, -1)
         // странный сигнал какой-то
-        bruteForceSignal(signal, 6 to 6, StandardImporter.importSber, TradingOp.sell, 0)
-        bruteForceSignal(signal, 6 to 7, StandardImporter.importSber, TradingOp.sell, 5)
+        bruteForceSignal(signal, 6 to 6, DayStandardImporter.sber, TradingOp.sell, 0)
+        bruteForceSignal(signal, 6 to 7, DayStandardImporter.sber, TradingOp.sell, 5)
     }
 
     test("ROSN -1|-1|1|-1     2-2, 4-4, 4-5 на покупку")
     {
         val signal = Vector(-1, -1, 1, -1)
-        bruteForceSignal(signal, 2 to 2, StandardImporter.importRosn, TradingOp.buy, 0)
-        bruteForceSignal(signal, 4 to 4, StandardImporter.importRosn, TradingOp.buy, 0)
-        bruteForceSignal(signal, 4 to 5, StandardImporter.importRosn, TradingOp.buy, 0)
+        bruteForceSignal(signal, 2 to 2, DayStandardImporter.rosn, TradingOp.buy, 0)
+        bruteForceSignal(signal, 4 to 4, DayStandardImporter.rosn, TradingOp.buy, 0)
+        bruteForceSignal(signal, 4 to 5, DayStandardImporter.rosn, TradingOp.buy, 0)
     }
 
     test("LKOH -1|-1|1|1     5-7 на покупку")
     {
-        bruteForceSignal(Vector(-1, -1, 1, 1), 5 to 7, StandardImporter.importLkoh, TradingOp.buy, 0)
+        bruteForceSignal(Vector(-1, -1, 1, 1), 5 to 7, DayStandardImporter.lkoh, TradingOp.buy, 0)
     }
 
     test("LKOH 1|-1|-1|-1    2-5 на покупку")
     {
-        bruteForceSignal(Vector(1, -1, -1, -1), 2 to 5, StandardImporter.importLkoh, TradingOp.buy, 3)
+        bruteForceSignal(Vector(1, -1, -1, -1), 2 to 5, DayStandardImporter.lkoh, TradingOp.buy, 3)
     }
 
     test("LKOH 1|-1|1|-1     1-7, 3-4 на покупку")
     {
         val signal = Vector(1, -1, 1, -1)
-        bruteForceSignal(signal, 1 to 7, StandardImporter.importLkoh, TradingOp.buy, 0)
-        bruteForceSignal(signal, 3 to 4, StandardImporter.importLkoh, TradingOp.buy, 1)
+        bruteForceSignal(signal, 1 to 7, DayStandardImporter.lkoh, TradingOp.buy, 0)
+        bruteForceSignal(signal, 3 to 4, DayStandardImporter.lkoh, TradingOp.buy, 1)
     }
 
     test("GMKN 1|1|-1|-1      3-7, 4-7 на покупку")
     {
         val signal = Vector(1, 1, -1, -1)
-        bruteForceSignal(signal, 3 to 7, StandardImporter.importGmkn, TradingOp.buy, 0)
-        bruteForceSignal(signal, 4 to 7, StandardImporter.importGmkn, TradingOp.buy, 0)
+        bruteForceSignal(signal, 3 to 7, DayStandardImporter.gmkn, TradingOp.buy, 0)
+        bruteForceSignal(signal, 4 to 7, DayStandardImporter.gmkn, TradingOp.buy, 0)
     }
 
     test("GMKN -1|-1|-1|-1    1-4 на покупку")
     {
         val signal = Vector(-1, -1, -1, -1)
-        bruteForceSignal(signal, 1 to 4, StandardImporter.importGmkn, TradingOp.buy, 0)
+        bruteForceSignal(signal, 1 to 4, DayStandardImporter.gmkn, TradingOp.buy, 0)
     }
 
     test("GAZP -1|-1|-1|-1    1-6 на покупку")
     {
         val signal = Vector(-1, -1, -1, -1)
-        bruteForceSignal(signal, 1 to 6, StandardImporter.importGazp, TradingOp.buy, 0)
+        bruteForceSignal(signal, 1 to 6, DayStandardImporter.gazp, TradingOp.buy, 0)
     }
 
     test("нужно оттестировать сигналы и торговые позиции")
