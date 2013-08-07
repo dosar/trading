@@ -23,7 +23,7 @@ case class TradingData(data: Vector[Candle], ticker: String)
 
     def desc = ticker
     lazy val length = data.length
-    lazy val atr14: Vector[Double] = AverageTrueRange(this, 14).values
+    lazy val atr14: Vector[Double] = AverageTrueRange(this).values
     lazy val williamsAD: Vector[Double] = WilliamsAD(this).values
 }
 
@@ -50,6 +50,12 @@ case class WilliamsAD(candles: TradingData)
 
     def trueRangeHigh(i: Int) = max(candles(i).high, candles(i - 1).close)
     def trueRangeLow(i: Int) = min(candles(i).low, candles(i - 1).close)
+}
+
+case class SimpleMovingAverage(data: TradingData, candleFunc: Candle => Double, period: Int = 14)
+{
+    val values: Vector[Double] =
+        data.movingFunc(period, trRange => trRange.map(i => candleFunc(data(i))).sum / trRange.length)//считаем среднее за 14 дней
 }
 
 case class AverageTrueRange(data: TradingData, period: Int = 14)
