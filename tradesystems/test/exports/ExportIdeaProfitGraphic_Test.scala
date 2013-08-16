@@ -4,7 +4,7 @@ import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 import org.scalatest.FunSuite
 import logic.TestUtils
-import tradinganalyzers.statistics.{StrategyIdeaData, YearProfitStatistics}
+import tradinganalyzers.statistics.{HourStandardImporter, StrategyIdeaData, YearProfitStatistics}
 import tradinganalyzers.statistics.DayStandardImporter._
 import tradinganalyzers.TradingOp._
 import tradingideas.{NegativeTrendCandles, WilliamsAdMin, PositiveTrendCandles, WilliamsAdMax}
@@ -16,6 +16,13 @@ import tradingideas.{NegativeTrendCandles, WilliamsAdMin, PositiveTrendCandles, 
 @RunWith(classOf[JUnitRunner])
 class ExportIdeaProfitGraphic_Test extends FunSuite with TestUtils
 {
+    test("best sber hour strategy")
+    {
+        val sber = HourStandardImporter.sber
+        YearProfitStatistics.exportData((StrategyIdeaData(sber, new WilliamsAdMax(3, 5, 1)), buy(0.25, 25)),
+            (StrategyIdeaData(sber, new WilliamsAdMin(3, 6, 1)), sell(0.25, 25)))
+    }
+
     test("64% williams vs trend")
     {
         YearProfitStatistics.exportData((StrategyIdeaData(sber, new WilliamsAdMax(3, 3, 2)), sell(4, 9)),

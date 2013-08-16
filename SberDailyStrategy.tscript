@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExportScriptData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Code><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<GraphDataBase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="GraphViewData">
+  <EditData VersionString="2.2" TemplateClass="Script">
+    <ViewModel>
+      <Model>
+        <Block Key="Sber" Category="SECURITY" Location="80 42" TypeName="SecuritySourceItem">
+          <EditItem CodeName="Sber" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" />
+        </Block>
+        <Block Key="Comission1" Category="Usual" Location="65 -195.99999999999997" TypeName="CommissionItem">
+          <EditItem CodeName="Comission1" IsParametersVisible="true" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.RelativeCommission, TSLab.Script.Handlers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="long" Category="Usual" Location="1044 -334" TypeName="OpenPositionByMarketItem">
+          <EditItem CodeName="var0" IsParametersVisible="true" OnlyValueHandlersCanUsed="true">
+            <Parameters>
+              <Parameter Name="Shares" TypeName="Double" Value="20" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Pane Key="Main" Category="GraphPane" Location="65 -97.999999999999972" Order="0" HideLegend="false" SizePct="275.23386001706683" LeftAxisPrecision="0" RightAxisPrecision="0" />
+        <Block Key="stopLong" Category="Usual" Location="1545 -238.95999999999998" TypeName="ClosePositionByStopItem">
+          <EditItem CodeName="stopLong" IsParametersVisible="false" OnlyValueHandlersCanUsed="true">
+            <Parameters>
+              <Parameter Name="Slippage" TypeName="Double" Value="0" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="buyPrice" Category="Usual" Location="1227 -442.96000000000004" TypeName="ConverterItem">
+          <EditItem CodeName="buyPrice" IsParametersVisible="false" OnlyValueHandlersCanUsed="true" HandlerTypeName="TSLab.Script.Handlers.EntryPrice, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="Формула2" Category="Formula" Location="1292 -371.96000000000004" TypeName="DoubleCustomHandlerItem" Width="160" Height="40.74" OpenParams="false">
+          <EditItem CodeName="Формула2" IsParametersVisible="false" OnlyValueHandlersCanUsed="true" HandlerTypeName="TSLab.ScriptEngine.Template.DoubleCustomHandlerItem+Handler, TSLab.ScriptEngine, Version=1.2.8.26, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="Expression" TypeName="String" Value="Math.Max(StopPrice, Math.Max(buyPrice, Close[i]) * (1 - buyPriceStopPct/100))" />
+              <Parameter Name="StartIndex" TypeName="Int32" Value="0" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="buyPriceStopPct" Category="Usual" Location="44 544.04" TypeName="ConverterItem">
+          <EditItem CodeName="buyPriceStopPct" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.ConstGen, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="Close" Category="Usual" Location="366 22.039999999999992" TypeName="ConverterItem">
+          <EditItem CodeName="Close" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.Close, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="StopPrice" Category="Usual" Location="1620 -473.96000000000004" TypeName="ValueUpdater">
+          <EditItem CodeName="StopPrice" IsParametersVisible="false" OnlyValueHandlersCanUsed="true" HandlerTypeName="TSLab.ScriptEngine.Template.ValueUpdater+Handler, TSLab.ScriptEngine, Version=1.2.8.26, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="StartFrom" TypeName="Double" Value="-1" />
+              <Parameter Name="NotClear" TypeName="Boolean" Value="false" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="Open" Category="Usual" Location="366 101.03999999999999" TypeName="ConverterItem">
+          <EditItem CodeName="Open" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.Open, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="ЕстьАктивПозиц1" Category="Usual" Location="352 -37.850000000000023" TypeName="ConverterItem">
+          <EditItem CodeName="ЕстьАктивПозиц1" IsParametersVisible="false" OnlyValueHandlersCanUsed="true" HandlerTypeName="TSLab.Script.Handlers.HasPositionActive, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="HasntPosition" Category="Usual" Location="545 -46.850000000000051" TypeName="ConverterItem">
+          <EditItem CodeName="HasntPosition" IsParametersVisible="false" OnlyValueHandlersCanUsed="true" HandlerTypeName="TSLab.Script.Handlers.Not, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="Item8" Category="Formula" Location="1615 -350.96000000000004" TypeName="BoolCustomHandlerItem" Width="160" Height="40.74" OpenParams="true">
+          <EditItem CodeName="Item8" IsParametersVisible="true" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.ScriptEngine.Template.BoolCustomHandlerItem+Handler, TSLab.ScriptEngine, Version=1.2.8.26, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="Expression" TypeName="String" Value="Close[i] - Open[i] &gt; 0" />
+              <Parameter Name="StartIndex" TypeName="Int32" Value="1" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Pane Key="StochSignal" Category="GraphPane" Location="65 238.18999999999994" Order="2" HideLegend="false" SizePct="62.423345269311575" LeftAxisPrecision="0" RightAxisPrecision="0" />
+        <Block Key="StochK1" Category="Usual" Location="351 -107.96000000000001" TypeName="ConverterItem">
+          <EditItem CodeName="StochK1" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.StochK, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="StochEma" Category="Usual" Location="391 -364.95999999999992" TypeName="ConverterItem">
+          <EditItem CodeName="StochEma" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.SMMA, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="StochDiff" Category="Formula" Location="338 -263.96000000000004" TypeName="DoubleCustomHandlerItem" Width="160" Height="39" OpenParams="false">
+          <EditItem CodeName="StochDiff" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.ScriptEngine.Template.DoubleCustomHandlerItem+Handler, TSLab.ScriptEngine, Version=1.2.8.26, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="Expression" TypeName="String" Value="StochK1[i] - StochEma[i]" />
+              <Parameter Name="StartIndex" TypeName="Int32" Value="0" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="stochSignalZero" Category="Usual" Location="79 -249.96000000000004" TypeName="ConverterItem">
+          <EditItem CodeName="stochSignalZero" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.ConstGen, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="StochDiffSma" Category="Usual" Location="530 -189.96000000000004" TypeName="ConverterItem">
+          <EditItem CodeName="StochDiffSma" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.SMMA, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="Atr" Category="Usual" Location="368 206.03999999999996" TypeName="ConverterItem">
+          <EditItem CodeName="Atr" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.AverageTrueRange, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="Period" TypeName="Int32" Value="7" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="CloseAtrP" Category="Formula" Location="370 350.03999999999996" TypeName="DoubleCustomHandlerItem" Width="160" Height="39" OpenParams="false">
+          <EditItem CodeName="CloseAtrP" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.ScriptEngine.Template.DoubleCustomHandlerItem+Handler, TSLab.ScriptEngine, Version=1.2.8.26, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="Expression" TypeName="String" Value="Close[i] + Atr[i]" />
+              <Parameter Name="StartIndex" TypeName="Int32" Value="0" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="CloseAtrM" Category="Formula" Location="376 440.03999999999996" TypeName="DoubleCustomHandlerItem" Width="160" Height="39" OpenParams="false">
+          <EditItem CodeName="CloseAtrM" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.ScriptEngine.Template.DoubleCustomHandlerItem+Handler, TSLab.ScriptEngine, Version=1.2.8.26, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="Expression" TypeName="String" Value="Close[i] - Atr[i]" />
+              <Parameter Name="StartIndex" TypeName="Int32" Value="0" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="CloseAtrMax" Category="Usual" Location="581 347.03999999999996" TypeName="ConverterItem">
+          <EditItem CodeName="CloseAtrMax" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.Lowest, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="Period" TypeName="Int32" Value="3" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="МинимумЗа1" Category="Usual" Location="583 435.03999999999996" TypeName="ConverterItem">
+          <EditItem CodeName="МинимумЗа1" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.Highest, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="Period" TypeName="Int32" Value="3" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="2PointsLine" Category="Formula" Location="499 172.03999999999996" TypeName="DoubleCustomHandlerItem" Width="160" Height="39" OpenParams="false">
+          <EditItem CodeName="var1" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.ScriptEngine.Template.DoubleCustomHandlerItem+Handler, TSLab.ScriptEngine, Version=1.2.8.26, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="Expression" TypeName="String" Value="2*Open[i-1] - Open[i-2]" />
+              <Parameter Name="StartIndex" TypeName="Int32" Value="0" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Pane Key="_2PointsSignalPane" Category="GraphPane" Location="64 97.039999999999964" Order="1" HideLegend="false" SizePct="47.442071026614016" LeftAxisPrecision="0" RightAxisPrecision="0" />
+        <Block Key="BuySignal" Category="Formula" Location="501 253.03999999999996" TypeName="DoubleCustomHandlerItem" Width="160" Height="39" OpenParams="false">
+          <EditItem CodeName="BuySignal" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.ScriptEngine.Template.DoubleCustomHandlerItem+Handler, TSLab.ScriptEngine, Version=1.2.8.26, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="Expression" TypeName="String" Value="i &lt; 2 ? 0 : Close[i] - 2PointsLine[i]" />
+              <Parameter Name="StartIndex" TypeName="Int32" Value="0" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="BuySignalExists" Category="Formula" Location="656 -381.96000000000004" TypeName="BoolCustomHandlerItem" Width="160" Height="40.74" OpenParams="false">
+          <EditItem CodeName="BuySignalExists" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.ScriptEngine.Template.BoolCustomHandlerItem+Handler, TSLab.ScriptEngine, Version=1.2.8.26, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="Expression" TypeName="String" Value="BuySignal[i] &gt; _2PointsZero" />
+              <Parameter Name="StartIndex" TypeName="Int32" Value="1" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="High" Category="Usual" Location="347 -166.96" TypeName="ConverterItem">
+          <EditItem CodeName="High" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.High, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="_2PointsZero" Category="Usual" Location="-95 433.03999999999996" TypeName="ConverterItem">
+          <EditItem CodeName="_2PointsZero" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.ConstGen, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="intersectSignalLevel" Category="Formula" Location="655 -277.96000000000004" TypeName="BoolCustomHandlerItem" Width="160" Height="40.74" OpenParams="false">
+          <EditItem CodeName="intersectSignalLevel" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.ScriptEngine.Template.BoolCustomHandlerItem+Handler, TSLab.ScriptEngine, Version=1.2.8.26, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="Expression" TypeName="String" Value="(StochDiffSma[i] &gt; stochSignalZero &amp;&amp; StochDiffSma[i-1] &lt;= stochSignalZero) || (StochDiffSma[i-1] &gt; stochSignalZero &amp;&amp; StochDiffSma[i-2] &lt;= stochSignalZero) || (StochDiffSma[i-2] &gt; stochSignalZero &amp;&amp; StochDiffSma[i-3] &lt;= stochSignalZero) || (StochDiffSma[i-3] &gt; stochSignalZero &amp;&amp; StochDiffSma[i-4] &lt;= stochSignalZero) " />
+              <Parameter Name="StartIndex" TypeName="Int32" Value="1" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="longPositionVol" Category="Usual" Location="872 -472.96000000000004" TypeName="ConverterItem">
+          <EditItem CodeName="longPositionVol" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.ConstGen, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="Value" TypeName="Double" Value="2" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="stochLow" Category="Usual" Location="71 461.03999999999996" TypeName="ConverterItem">
+          <EditItem CodeName="stochLow" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.ConstGen, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="stochHigh" Category="Usual" Location="203 458.03999999999996" TypeName="ConverterItem">
+          <EditItem CodeName="stochHigh" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.ConstGen, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="RelativeStochDiffSma" Category="Usual" Location="-156 324.03999999999996" TypeName="ConverterItem">
+          <EditItem CodeName="RelativeStochDiffSma" IsParametersVisible="true" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.Relative, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="MaxRelativeStochDiffSma" Category="Usual" Location="-163 208.03999999999996" TypeName="ConverterItem">
+          <EditItem CodeName="MaxRelativeStochDiffSma" IsParametersVisible="true" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.Highest, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="short" Category="Usual" Location="1040 -173.96000000000004" TypeName="OpenPositionByMarketItem">
+          <EditItem CodeName="var2" IsParametersVisible="true" OnlyValueHandlersCanUsed="true">
+            <Parameters>
+              <Parameter Name="Shares" TypeName="Double" Value="20" />
+              <Parameter Name="Long" TypeName="Boolean" Value="false" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="sellPrice" Category="Usual" Location="1276 -163.96" TypeName="ConverterItem">
+          <EditItem CodeName="sellPrice" IsParametersVisible="false" OnlyValueHandlersCanUsed="true" HandlerTypeName="TSLab.Script.Handlers.EntryPrice, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="smaDiffOnMaxLevel" Category="Formula" Location="708 46.039999999999964" TypeName="BoolCustomHandlerItem" Width="160" Height="68.740000000000009" OpenParams="true">
+          <EditItem CodeName="smaDiffOnMaxLevel" IsParametersVisible="true" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.ScriptEngine.Template.BoolCustomHandlerItem+Handler, TSLab.ScriptEngine, Version=1.2.8.26, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="Expression" TypeName="String" Value="(RelativeStochDiffSma[i] == MaxRelativeStochDiffSma[i]) || (RelativeStochDiffSma[i-1] == MaxRelativeStochDiffSma[i-1]) || (RelativeStochDiffSma[i-2] == MaxRelativeStochDiffSma[i-2]) || (RelativeStochDiffSma[i-3] == MaxRelativeStochDiffSma[i-3])" />
+              <Parameter Name="StartIndex" TypeName="Int32" Value="1" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="SellSignalExists" Category="Formula" Location="701 -56.960000000000036" TypeName="BoolCustomHandlerItem" Width="160" Height="68.740000000000009" OpenParams="true">
+          <EditItem CodeName="SellSignalExists" IsParametersVisible="true" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.ScriptEngine.Template.BoolCustomHandlerItem+Handler, TSLab.ScriptEngine, Version=1.2.8.26, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="Expression" TypeName="String" Value="BuySignal[i] &lt; _2PointsZero" />
+              <Parameter Name="StartIndex" TypeName="Int32" Value="1" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="CantSell" Category="Usual" Location="906 -90.960000000000036" TypeName="ConverterItem">
+          <EditItem CodeName="CantSell" IsParametersVisible="true" OnlyValueHandlersCanUsed="true" HandlerTypeName="TSLab.Script.Handlers.Not, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="CanBuy" Category="Usual" Location="898 -254.96000000000004" TypeName="TwoOrMoreInputsItem">
+          <EditItem CodeName="CanBuy" IsParametersVisible="true" OnlyValueHandlersCanUsed="true" HandlerTypeName="TSLab.Script.Handlers.And, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="Формула1" Category="Formula" Location="1386 -161.95999999999998" TypeName="DoubleCustomHandlerItem" Width="160" Height="40.74" OpenParams="false">
+          <EditItem CodeName="Формула1" IsParametersVisible="false" OnlyValueHandlersCanUsed="true" HandlerTypeName="TSLab.ScriptEngine.Template.DoubleCustomHandlerItem+Handler, TSLab.ScriptEngine, Version=1.2.8.26, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="Expression" TypeName="String" Value="Math.Min(sellStopPrice == 0 ? sellPrice * (1 + sellPriceStopPct/100) : sellStopPrice, Math.Min(sellPrice, Close[i]) * (1 + sellPriceStopPct/100))" />
+              <Parameter Name="StartIndex" TypeName="Int32" Value="0" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="sellStopPrice" Category="Usual" Location="1310 -87.960000000000036" TypeName="ValueUpdater">
+          <EditItem CodeName="sellStopPrice" IsParametersVisible="true" OnlyValueHandlersCanUsed="true" HandlerTypeName="TSLab.ScriptEngine.Template.ValueUpdater+Handler, TSLab.ScriptEngine, Version=1.2.8.26, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="StartFrom" TypeName="Double" Value="0" />
+              <Parameter Name="NotClear" TypeName="Boolean" Value="false" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="stopShort" Category="Usual" Location="1547 -96.960000000000036" TypeName="ClosePositionByStopItem">
+          <EditItem CodeName="stopShort" IsParametersVisible="true" OnlyValueHandlersCanUsed="true">
+            <Parameters>
+              <Parameter Name="Slippage" TypeName="Double" Value="0" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="CanSell" Category="Usual" Location="1073.5 -71.885000000000048" TypeName="TwoOrMoreInputsItem">
+          <EditItem CodeName="CanSell" IsParametersVisible="true" OnlyValueHandlersCanUsed="true" HandlerTypeName="TSLab.Script.Handlers.And, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="Item9" Category="Formula" Location="1587 -178.96" TypeName="BoolCustomHandlerItem" Width="160" Height="40.74" OpenParams="true">
+          <EditItem CodeName="Item9" IsParametersVisible="true" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.ScriptEngine.Template.BoolCustomHandlerItem+Handler, TSLab.ScriptEngine, Version=1.2.8.26, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="Expression" TypeName="String" Value="Close[i] - Open[i] &lt; 0" />
+              <Parameter Name="StartIndex" TypeName="Int32" Value="1" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Block Key="stopLongByShort" Category="Usual" Location="1096 -249.96" TypeName="ClosePositionByMarketItem">
+          <EditItem CodeName="stopLongByShort" IsParametersVisible="true" OnlyValueHandlersCanUsed="true" />
+        </Block>
+        <Block Key="ЕстьАктиКороПоз1" Category="Usual" Location="485 51.039999999999964" TypeName="ConverterItem">
+          <EditItem CodeName="ЕстьАктиКороПоз1" IsParametersVisible="true" OnlyValueHandlersCanUsed="true" HandlerTypeName="TSLab.Script.Handlers.HasShortPositionActive, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="HasntSellPosition" Category="Usual" Location="736 209.03999999999996" TypeName="ConverterItem">
+          <EditItem CodeName="HasntSellPosition" IsParametersVisible="true" OnlyValueHandlersCanUsed="true" HandlerTypeName="TSLab.Script.Handlers.Not, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="sellPriceStopPct" Category="Usual" Location="217 541.04" TypeName="ConverterItem">
+          <EditItem CodeName="sellPriceStopPct" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.ConstGen, TSLab.Script.Handlers, Version=1.2.8.0, Culture=neutral, PublicKeyToken=null" />
+        </Block>
+        <Block Key="shortPositionVol" Category="Usual" Location="848 -412.96000000000004" TypeName="ConverterItem">
+          <EditItem CodeName="shortPositionVol" IsParametersVisible="false" OnlyValueHandlersCanUsed="false" HandlerTypeName="TSLab.Script.Handlers.ConstGen, TSLab.Script.Handlers, Version=1.2.8.23, Culture=neutral, PublicKeyToken=null">
+            <Parameters>
+              <Parameter Name="Value" TypeName="Double" Value="1" />
+            </Parameters>
+          </EditItem>
+        </Block>
+        <Link From="Sber" To="Comission1" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="Sber" To="long" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <GraphLink From="Sber" To="Main" FromPort="Out" ToPort="RIGHT" Category="ChartCandleLink">
+          <Data>
+            <GraphData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ListStyle="LINE" CandleStyle="BAR" LineStyle="SOLID" Color="197379" AltColor="0" Opacity="0" HideLastValue="false" Thickness="2" PaneSide="RIGHT" Visible="true" ShowTrades="true" ShowPositionStop="true" ShowPositionText="true" ShowPositionIcon="true" />
+          </Data>
+        </GraphLink>
+        <Link From="long" To="stopLong" FromPort="Out" ToPort="Pos" ToPortNum="0" />
+        <Link From="long" To="buyPrice" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="buyPrice" To="Формула2" FromPort="Out" ToPortNum="0" />
+        <Link From="Sber" To="Close" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="Close" To="Формула2" FromPort="Out" ToPortNum="1" />
+        <Link From="Sber" To="Open" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="Sber" To="ЕстьАктивПозиц1" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="ЕстьАктивПозиц1" To="HasntPosition" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="Close" To="Item8" FromPort="Out" ToPortNum="2" />
+        <Link From="Open" To="Item8" FromPort="Out" ToPortNum="3" />
+        <Link From="Sber" To="StochK1" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="StochK1" To="StochEma" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="StochEma" To="StochDiff" FromPort="Out" ToPortNum="0" />
+        <Link From="StochK1" To="StochDiff" FromPort="Out" ToPortNum="1" />
+        <GraphLink From="StochDiff" To="StochSignal" FromPort="Out" ToPort="RIGHT" Category="ChartLineLink">
+          <Data>
+            <GraphData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ListStyle="LINE" CandleStyle="BAR_CANDLE" LineStyle="SOLID" Color="11141285" AltColor="0" Opacity="0" HideLastValue="false" Thickness="1" PaneSide="RIGHT" Visible="true" ShowTrades="true" ShowPositionStop="true" ShowPositionText="true" ShowPositionIcon="true" />
+          </Data>
+        </GraphLink>
+        <GraphLink From="stochSignalZero" To="StochSignal" FromPort="Out" ToPort="RIGHT" Category="ChartLineLink">
+          <Data>
+            <GraphData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ListStyle="LINE" CandleStyle="BAR_CANDLE" LineStyle="SOLID" Color="0" AltColor="0" Opacity="0" HideLastValue="false" Thickness="1" PaneSide="RIGHT" Visible="true" ShowTrades="true" ShowPositionStop="true" ShowPositionText="true" ShowPositionIcon="true" />
+          </Data>
+        </GraphLink>
+        <Link From="StochDiff" To="StochDiffSma" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <GraphLink From="StochDiffSma" To="StochSignal" FromPort="Out" ToPort="RIGHT" Category="ChartLineLink">
+          <Data>
+            <GraphData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ListStyle="LINE" CandleStyle="BAR_CANDLE" LineStyle="SOLID" Color="10944512" AltColor="0" Opacity="0" HideLastValue="false" Thickness="1" PaneSide="RIGHT" Visible="true" ShowTrades="true" ShowPositionStop="true" ShowPositionText="true" ShowPositionIcon="true" />
+          </Data>
+        </GraphLink>
+        <Link From="Sber" To="Atr" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="Close" To="CloseAtrP" FromPort="Out" ToPortNum="0" />
+        <Link From="Atr" To="CloseAtrP" FromPort="Out" ToPortNum="1" />
+        <Link From="Atr" To="CloseAtrM" FromPort="Out" ToPortNum="0" />
+        <Link From="Close" To="CloseAtrM" FromPort="Out" ToPortNum="1" />
+        <Link From="CloseAtrP" To="CloseAtrMax" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="CloseAtrM" To="МинимумЗа1" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="2PointsLine" To="BuySignal" FromPort="Out" ToPortNum="0" />
+        <Link From="Close" To="BuySignal" FromPort="Out" ToPortNum="1" />
+        <GraphLink From="BuySignal" To="_2PointsSignalPane" FromPort="Out" ToPort="RIGHT" Category="ChartLineLink">
+          <Data>
+            <GraphData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ListStyle="LINE" CandleStyle="BAR_CANDLE" LineStyle="SOLID" Color="53760" AltColor="0" Opacity="0" HideLastValue="false" Thickness="1" PaneSide="RIGHT" Visible="true" ShowTrades="true" ShowPositionStop="true" ShowPositionText="true" ShowPositionIcon="true" />
+          </Data>
+        </GraphLink>
+        <Link From="BuySignal" To="BuySignalExists" FromPort="Out" ToPortNum="0" />
+        <Link From="Sber" To="High" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="High" To="2PointsLine" FromPort="Out" ToPortNum="2" />
+        <GraphLink From="_2PointsZero" To="_2PointsSignalPane" FromPort="Out" ToPort="RIGHT" Category="ChartLineLink">
+          <Data>
+            <GraphData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ListStyle="LINE" CandleStyle="BAR_CANDLE" LineStyle="SOLID" Color="244" AltColor="0" Opacity="0" HideLastValue="false" Thickness="1" PaneSide="RIGHT" Visible="true" ShowTrades="true" ShowPositionStop="true" ShowPositionText="true" ShowPositionIcon="true" />
+          </Data>
+        </GraphLink>
+        <Link From="StochDiffSma" To="BuySignalExists" FromPort="Out" ToPortNum="1" />
+        <Link From="StochDiffSma" To="intersectSignalLevel" FromPort="Out" ToPortNum="0" />
+        <Link From="longPositionVol" To="long" FromPort="Out" ToPort="Shares" ToPortNum="2" />
+        <Link From="StopPrice" To="Формула2" FromPort="Out" ToPortNum="0" />
+        <Link From="Формула2" To="StopPrice" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="Item8" To="StopPrice" FromPort="Out" ToPort="Eq" ToPortNum="1" />
+        <Link From="StochDiffSma" To="RelativeStochDiffSma" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <GraphLink From="RelativeStochDiffSma" To="StochSignal" FromPort="Out" ToPort="LEFT" Category="ChartLineLink">
+          <Data>
+            <GraphData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ListStyle="LINE" CandleStyle="BAR_CANDLE" LineStyle="SOLID" Color="0" AltColor="0" Opacity="0" HideLastValue="false" Thickness="2" PaneSide="LEFT" Visible="true" ShowTrades="true" ShowPositionStop="true" ShowPositionText="true" ShowPositionIcon="true" />
+          </Data>
+        </GraphLink>
+        <Link From="RelativeStochDiffSma" To="MaxRelativeStochDiffSma" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <GraphLink From="MaxRelativeStochDiffSma" To="StochSignal" FromPort="Out" ToPort="LEFT" Category="ChartLineLink">
+          <Data>
+            <GraphData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ListStyle="LINE" CandleStyle="BAR_CANDLE" LineStyle="SOLID" Color="43008" AltColor="0" Opacity="0" HideLastValue="false" Thickness="2" PaneSide="LEFT" Visible="true" ShowTrades="true" ShowPositionStop="true" ShowPositionText="true" ShowPositionIcon="true" />
+          </Data>
+        </GraphLink>
+        <Link From="StopPrice" To="stopLong" FromPort="Out" ToPort="Prc" ToPortNum="2" />
+        <Link From="short" To="sellPrice" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="Sber" To="short" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="StochDiffSma" To="smaDiffOnMaxLevel" FromPort="Out" ToPortNum="0" />
+        <Link From="RelativeStochDiffSma" To="smaDiffOnMaxLevel" FromPort="Out" ToPortNum="1" />
+        <Link From="MaxRelativeStochDiffSma" To="smaDiffOnMaxLevel" FromPort="Out" ToPortNum="2" />
+        <Link From="BuySignal" To="smaDiffOnMaxLevel" FromPort="Out" ToPortNum="3" />
+        <Link From="CanBuy" To="long" FromPort="Out" ToPort="Eq" ToPortNum="1" />
+        <Link From="sellPrice" To="Формула1" FromPort="Out" ToPortNum="0" />
+        <Link From="Формула1" To="sellStopPrice" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="sellStopPrice" To="Формула1" FromPort="Out" ToPortNum="1" />
+        <Link From="sellStopPrice" To="stopShort" FromPort="Out" ToPort="Prc" ToPortNum="2" />
+        <Link From="short" To="stopShort" FromPort="Out" ToPort="Pos" ToPortNum="0" />
+        <Link From="SellSignalExists" To="CanSell" FromPort="Out" ToPort="1" ToPortNum="0" />
+        <Link From="smaDiffOnMaxLevel" To="CanSell" FromPort="Out" ToPort="2" ToPortNum="1" />
+        <Link From="CanSell" To="CantSell" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="BuySignal" To="SellSignalExists" FromPort="Out" ToPortNum="0" />
+        <Link From="CanSell" To="short" FromPort="Out" ToPort="Eq" ToPortNum="1" />
+        <Link From="Item9" To="sellStopPrice" FromPort="Out" ToPort="Eq" ToPortNum="1" />
+        <Link From="Close" To="Item9" FromPort="Out" ToPortNum="0" />
+        <Link From="Open" To="Item9" FromPort="Out" ToPortNum="1" />
+        <Link From="long" To="stopLongByShort" FromPort="Out" ToPort="Pos" ToPortNum="0" />
+        <Link From="Sber" To="ЕстьАктиКороПоз1" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="ЕстьАктиКороПоз1" To="HasntSellPosition" FromPort="Out" ToPort="Src" ToPortNum="0" />
+        <Link From="HasntSellPosition" To="CanSell" FromPort="Out" ToPort="3" ToPortNum="2" />
+        <Link From="CanSell" To="stopLongByShort" FromPort="Out" ToPort="Eq" ToPortNum="1" />
+        <Link From="BuySignalExists" To="CanBuy" FromPort="Out" ToPort="1" ToPortNum="0" />
+        <Link From="CantSell" To="CanBuy" FromPort="Out" ToPort="4" ToPortNum="3" />
+        <Link From="CanBuy" To="StopPrice" FromPort="Out" ToPort="EqClear" ToPortNum="2" />
+        <Link From="HasntPosition" To="CanBuy" FromPort="Out" ToPort="3" ToPortNum="2" />
+        <Link From="shortPositionVol" To="short" FromPort="Out" ToPort="Shares" ToPortNum="2" />
+        <Link From="intersectSignalLevel" To="CanBuy" FromPort="Out" ToPort="2" ToPortNum="1" />
+      </Model>
+    </ViewModel>
+  </EditData>
+  <Options xsi:type="LabOptions">
+    <BarSize>6</BarSize>
+    <Indent>0</Indent>
+    <HideValues>false</HideValues>
+    <IntervalBase>DAYS</IntervalBase>
+    <Interval>1</Interval>
+    <RecalcInterval>INTERVAL</RecalcInterval>
+    <DateFrom>2009-12-01T00:00:00</DateFrom>
+    <UseDateFrom>true</UseDateFrom>
+    <DateTo>2013-08-20T00:00:00</DateTo>
+    <UseDateTo>false</UseDateTo>
+    <MaxDays>0</MaxDays>
+    <SessionBegin>2000-01-01T00:00:00</SessionBegin>
+    <SessionEnd>2000-01-01T00:00:00</SessionEnd>
+    <DecompressMethod>Method1</DecompressMethod>
+    <TradeFromBar>5</TradeFromBar>
+    <MaxCandels>0</MaxCandels>
+    <RtUpdates>false</RtUpdates>
+    <CalcForEachSecurity>true</CalcForEachSecurity>
+    <NotUsePositions>false</NotUsePositions>
+    <InitDeposit>100000</InitDeposit>
+    <LabCalcType>CalcDeposit</LabCalcType>
+    <TradeMode>All</TradeMode>
+    <SaveLayout>false</SaveLayout>
+  </Options>
+  <Mappings>
+    <Sources>
+      <Source DataSourceName="Finam" SecurityId="SBER:1" Name="Sber">
+        <Records />
+      </Source>
+    </Sources>
+    <Parameters>
+      <Parameter xsi:type="OptimData" Name="Период" InvariantName="Period" ItemName="MaxRelativeStochDiffSma" CodeName="MaxRelativeStochDiffSma_Period" Visible="true" UsedInOptimization="false" Value="21" TypeName="Double" MinValue="0" MaxValue="100" Step="1" />
+      <Parameter xsi:type="OptimData" Name="Период" InvariantName="Period" ItemName="StochDiffSma" CodeName="StochDiffSma_Period" Visible="true" UsedInOptimization="false" Value="9" TypeName="Double" MinValue="0" MaxValue="100" Step="1" />
+      <Parameter xsi:type="OptimData" Name="Сдвиг" InvariantName="Shift" ItemName="StochDiffSma" CodeName="StochDiffSma_Shift" Visible="true" UsedInOptimization="false" Value="57" TypeName="Double" MinValue="0" MaxValue="100" Step="1" />
+      <Parameter xsi:type="OptimData" Name="Период" InvariantName="Period" ItemName="StochEma" CodeName="StochEma_Period" Visible="true" UsedInOptimization="false" Value="22" TypeName="Double" MinValue="0" MaxValue="100" Step="1" />
+      <Parameter xsi:type="OptimData" Name="Сдвиг" InvariantName="Shift" ItemName="StochEma" CodeName="StochEma_Shift" Visible="true" UsedInOptimization="false" Value="87" TypeName="Double" MinValue="0" MaxValue="100" Step="1" />
+      <Parameter xsi:type="OptimData" Name="Период" InvariantName="Period" ItemName="StochK1" CodeName="StochK1_Period" Visible="true" UsedInOptimization="false" Value="3" TypeName="Double" MinValue="0" MaxValue="100" Step="1" />
+      <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="_2PointsZero" CodeName="_2PointsZero_Value" Visible="true" UsedInOptimization="false" Value="-3.6" TypeName="Double" MinValue="-10" MaxValue="10" Step="0.1" />
+      <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="buyPriceStopPct" CodeName="buyPriceStopPct_Value" Visible="true" UsedInOptimization="false" Value="9.6" TypeName="Double" MinValue="0.1" MaxValue="10" Step="0.1" />
+      <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="sellPriceStopPct" CodeName="sellPriceStopPct_Value" Visible="true" UsedInOptimization="false" Value="5.6" TypeName="Double" MinValue="0" MaxValue="10" Step="0.1" />
+      <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="stochHigh" CodeName="stochHigh_Value" Visible="true" UsedInOptimization="false" Value="70" TypeName="Double" MinValue="0" MaxValue="100" Step="1" />
+      <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="stochLow" CodeName="stochLow_Value" Visible="true" UsedInOptimization="false" Value="30" TypeName="Double" MinValue="0" MaxValue="100" Step="1" />
+      <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="stochSignalZero" CodeName="stochSignalZero_Value" Visible="true" UsedInOptimization="false" Value="1.8" TypeName="Double" MinValue="-10" MaxValue="10" Step="0.1" />
+    </Parameters>
+  </Mappings>
+  <Iterations>20301</Iterations>
+  <OptParametersRecords>
+    <OptParametersRecord>
+      <Mappings>
+        <Sources>
+          <Source DataSourceName="Finam" SecurityId="SBER:1" Name="Sber">
+            <Records />
+          </Source>
+        </Sources>
+        <Parameters>
+          <Parameter xsi:type="OptimData" Name="Период" InvariantName="Period" ItemName="MaxRelativeStochDiffSma" CodeName="MaxRelativeStochDiffSma_Period" Visible="true" UsedInOptimization="false" Value="12" TypeName="Double" MinValue="0" MaxValue="26" Step="1" />
+          <Parameter xsi:type="OptimData" Name="Период" InvariantName="Period" ItemName="StochDiffSma" CodeName="StochDiffSma_Period" Visible="true" UsedInOptimization="false" Value="14" TypeName="Double" MinValue="0" MaxValue="16" Step="1" />
+          <Parameter xsi:type="OptimData" Name="Сдвиг" InvariantName="Shift" ItemName="StochDiffSma" CodeName="StochDiffSma_Shift" Visible="true" UsedInOptimization="false" Value="0" TypeName="Double" MinValue="0" MaxValue="10" Step="1" />
+          <Parameter xsi:type="OptimData" Name="Период" InvariantName="Period" ItemName="StochEma" CodeName="StochEma_Period" Visible="true" UsedInOptimization="false" Value="3" TypeName="Double" MinValue="0" MaxValue="5" Step="1" />
+          <Parameter xsi:type="OptimData" Name="Сдвиг" InvariantName="Shift" ItemName="StochEma" CodeName="StochEma_Shift" Visible="true" UsedInOptimization="false" Value="1" TypeName="Double" MinValue="0" MaxValue="10" Step="1" />
+          <Parameter xsi:type="OptimData" Name="Период" InvariantName="Period" ItemName="StochK1" CodeName="StochK1_Period" Visible="true" UsedInOptimization="false" Value="3" TypeName="Double" MinValue="0" MaxValue="5" Step="1" />
+          <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="_2PointsZero" CodeName="_2PointsZero_Value" Visible="true" UsedInOptimization="true" Value="-3.6" TypeName="Double" MinValue="-10" MaxValue="2" Step="0.1" />
+          <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="buyPriceStopPct" CodeName="buyPriceStopPct_Value" Visible="true" UsedInOptimization="false" Value="1.3" TypeName="Double" MinValue="0.1" MaxValue="5" Step="0.1" />
+          <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="sellPriceStopPct" CodeName="sellPriceStopPct_Value" Visible="true" UsedInOptimization="false" Value="4.9" TypeName="Double" MinValue="0" MaxValue="5" Step="0.1" />
+          <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="stochHigh" CodeName="stochHigh_Value" Visible="true" UsedInOptimization="false" Value="70" TypeName="Double" MinValue="0" MaxValue="100" Step="1" />
+          <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="stochLow" CodeName="stochLow_Value" Visible="true" UsedInOptimization="false" Value="30" TypeName="Double" MinValue="0" MaxValue="100" Step="1" />
+          <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="stochSignalZero" CodeName="stochSignalZero_Value" Visible="true" UsedInOptimization="true" Value="-0.1" TypeName="Double" MinValue="-10" MaxValue="5" Step="0.1" />
+        </Parameters>
+      </Mappings>
+      <Comment>более менее адекватные 55%</Comment>
+      <Created>2013-08-16T02:24:21.7832031+06:00</Created>
+    </OptParametersRecord>
+    <OptParametersRecord>
+      <Mappings>
+        <Sources>
+          <Source DataSourceName="Finam" SecurityId="SBER:1" Name="Sber">
+            <Records />
+          </Source>
+        </Sources>
+        <Parameters>
+          <Parameter xsi:type="OptimData" Name="Период" InvariantName="Period" ItemName="MaxRelativeStochDiffSma" CodeName="MaxRelativeStochDiffSma_Period" Visible="true" UsedInOptimization="false" Value="21" TypeName="Double" MinValue="0" MaxValue="100" Step="1" />
+          <Parameter xsi:type="OptimData" Name="Период" InvariantName="Period" ItemName="StochDiffSma" CodeName="StochDiffSma_Period" Visible="true" UsedInOptimization="false" Value="9" TypeName="Double" MinValue="0" MaxValue="100" Step="1" />
+          <Parameter xsi:type="OptimData" Name="Сдвиг" InvariantName="Shift" ItemName="StochDiffSma" CodeName="StochDiffSma_Shift" Visible="true" UsedInOptimization="false" Value="57" TypeName="Double" MinValue="0" MaxValue="100" Step="1" />
+          <Parameter xsi:type="OptimData" Name="Период" InvariantName="Period" ItemName="StochEma" CodeName="StochEma_Period" Visible="true" UsedInOptimization="false" Value="22" TypeName="Double" MinValue="0" MaxValue="100" Step="1" />
+          <Parameter xsi:type="OptimData" Name="Сдвиг" InvariantName="Shift" ItemName="StochEma" CodeName="StochEma_Shift" Visible="true" UsedInOptimization="false" Value="87" TypeName="Double" MinValue="0" MaxValue="100" Step="1" />
+          <Parameter xsi:type="OptimData" Name="Период" InvariantName="Period" ItemName="StochK1" CodeName="StochK1_Period" Visible="true" UsedInOptimization="false" Value="3" TypeName="Double" MinValue="0" MaxValue="100" Step="1" />
+          <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="_2PointsZero" CodeName="_2PointsZero_Value" Visible="true" UsedInOptimization="true" Value="-3.6" TypeName="Double" MinValue="-10" MaxValue="10" Step="0.1" />
+          <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="buyPriceStopPct" CodeName="buyPriceStopPct_Value" Visible="true" UsedInOptimization="true" Value="9.6" TypeName="Double" MinValue="0.1" MaxValue="10" Step="0.1" />
+          <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="sellPriceStopPct" CodeName="sellPriceStopPct_Value" Visible="true" UsedInOptimization="false" Value="5.6" TypeName="Double" MinValue="0" MaxValue="10" Step="0.1" />
+          <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="stochHigh" CodeName="stochHigh_Value" Visible="true" UsedInOptimization="false" Value="70" TypeName="Double" MinValue="0" MaxValue="100" Step="1" />
+          <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="stochLow" CodeName="stochLow_Value" Visible="true" UsedInOptimization="false" Value="30" TypeName="Double" MinValue="0" MaxValue="100" Step="1" />
+          <Parameter xsi:type="OptimData" Name="Значение" InvariantName="Value" ItemName="stochSignalZero" CodeName="stochSignalZero_Value" Visible="true" UsedInOptimization="false" Value="1.8" TypeName="Double" MinValue="-10" MaxValue="10" Step="0.1" />
+        </Parameters>
+      </Mappings>
+      <Comment>не самые адекватные 77%</Comment>
+      <Created>2013-08-16T14:55:22.0615234+06:00</Created>
+    </OptParametersRecord>
+  </OptParametersRecords>
+</GraphDataBase>]]></Code>
+  <Settings2><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<LabSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <RealtimeSettings>
+    <Options>
+      <DefEntryApprove>false</DefEntryApprove>
+      <DefExitApprove>false</DefExitApprove>
+      <AutoEntryBars>0</AutoEntryBars>
+      <AutoCloseBars>0</AutoCloseBars>
+      <Slippage>0</Slippage>
+      <SlippagePct>0</SlippagePct>
+      <TakeProfitNoSlippage>false</TakeProfitNoSlippage>
+      <OpenPositionNoSlippage>false</OpenPositionNoSlippage>
+      <ByMarketAsLimt>false</ByMarketAsLimt>
+      <InvalidStopsByMarket>false</InvalidStopsByMarket>
+      <RemoveInactivePositions>true</RemoveInactivePositions>
+      <WarnSkippedOpenPositions>true</WarnSkippedOpenPositions>
+      <NotOpenIfHasSkippedExit>false</NotOpenIfHasSkippedExit>
+      <NoCalcInfo>false</NoCalcInfo>
+      <MaxBarsForSignal>0</MaxBarsForSignal>
+      <WaitExecutionExitBars>0</WaitExecutionExitBars>
+      <WaitExecutionEntryBars>0</WaitExecutionEntryBars>
+    </Options>
+    <Mappings>
+      <Sources />
+      <Parameters />
+    </Mappings>
+    <AppearanceOptions>
+      <Background>
+        <A>255</A>
+        <R>245</R>
+        <G>245</G>
+        <B>245</B>
+        <ScA>1</ScA>
+        <ScR>0.913098633</ScR>
+        <ScG>0.913098633</ScG>
+        <ScB>0.913098633</ScB>
+      </Background>
+      <Foreground>
+        <A>255</A>
+        <R>0</R>
+        <G>0</G>
+        <B>0</B>
+        <ScA>1</ScA>
+        <ScR>0</ScR>
+        <ScG>0</ScG>
+        <ScB>0</ScB>
+      </Foreground>
+      <ShowCaption>true</ShowCaption>
+      <FontSize>11</FontSize>
+    </AppearanceOptions>
+  </RealtimeSettings>
+</LabSettings>]]></Settings2>
+</ExportScriptData>

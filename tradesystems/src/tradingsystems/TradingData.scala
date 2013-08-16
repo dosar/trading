@@ -45,17 +45,20 @@ case class WilliamsAD(candles: TradingData)
 
     def accumulationDistribution(i: Int) =
         if(candles(i).close > candles(i - 1).close) candles(i).close - trueRangeLow(i)
-        else if(candles(i).close < candles(i - 1).close) candles(i).close - trueRangeHigh (i)
+        else if(candles(i).close < candles(i - 1).close) candles(i).close - trueRangeHigh(i)
         else 0.0
 
     def trueRangeHigh(i: Int) = max(candles(i).high, candles(i - 1).close)
     def trueRangeLow(i: Int) = min(candles(i).low, candles(i - 1).close)
 }
 
-case class SimpleMovingAverage(data: TradingData, candleFunc: Candle => Double, period: Int = 14)
+case class SimpleMovingAverage(data: Vector[Double], period: Int = 14)
 {
-    val values: Vector[Double] =
-        data.movingFunc(period, trRange => trRange.map(i => candleFunc(data(i))).sum / trRange.length)//считаем среднее за 14 дней
+    val values: Vector[Double] = for(ind <- (0 until data.length).toVector) yield
+    {
+        val range = max(ind - (period - 1), 0) to ind
+        range.map(data).sum / range.length
+    }
 }
 
 case class AverageTrueRange(data: TradingData, period: Int = 14)

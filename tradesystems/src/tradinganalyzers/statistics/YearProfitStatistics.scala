@@ -21,7 +21,14 @@ object YearProfitStatistics
         val dateTimes = yps.flatMap(yp => yp.balance.positiveStartDatePositions ++ yp.balance.negativeStartDatePositions)
             .sortBy(_.toDate)
         for((date, profit) <- dateTimes.zipAll(profits, LocalDateTime.now(), 0.0))
-            println(Vector(date.getYear, date.getMonthOfYear, date.getDayOfMonth, profit.toString.replace(",", ".")).mkString(","))
+        {
+            val year = date.getYear
+            val month = date.getMonthOfYear
+            val day = date.getDayOfMonth
+            val hour = date.getHourOfDay
+            val minute = date.getMinuteOfHour
+            println(Vector(year, month, day, hour, minute, profit.toString.replace(",", ".")).mkString(","))
+        }
     }
 
     def runIdea(stops: Vector[Double], takeProfits: Vector[Double], targetProfit: Double, ideasWithOp: (StrategyIdeaData, TradingOpFunc)*)
